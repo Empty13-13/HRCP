@@ -1,0 +1,43 @@
+.footer {
+  background: #FFE585;
+  max-height: 163px;
+  
+  &__container {
+  }
+  
+  &__body {
+    padding: 45px 0;
+  }
+  
+  &__nav {
+    margin-bottom: 38px;
+  }
+  
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  &__link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: $mainColor;
+    transition: color 0.3s ease 0s;
+    
+    @media (any-hover: hover){
+      &:hover{
+        color: $blueColor;
+      }
+    }
+  }
+  
+  &__copyright {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: $mainColor;
+    text-align: center;
+  }
+}

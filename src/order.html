@@ -1,0 +1,1395 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Оформление заказа"
+})
+<body>
+<div class="wrapper">
+  <header class="header">
+    <div class="header__container">
+      <div class="header__body">
+        <div class="header__up up-header">
+          <div class="up-header__body">
+            <a href="" class="up-header__main _href">Главная </a>
+            <button type="button" class="up-header__catalog-btn"><img src="img/icons/catalog.svg"
+                                                                      alt=""><span>Каталог</span></button>
+            <div class="up-header__search search-up-header">
+              <div class="search-up-header__body">
+                <select name="" id="" class="_hidden">
+                  <option value="" class="search-up-header__option">Выбрать сток/
+                                                                    маркетплейс
+                  </option>
+                  <option value="0" class="search-up-header__option">Lorem ipsum dolor</option>
+                  <option value="1" class="search-up-header__option">2</option>
+                  <option value="2" class="search-up-header__option">3</option>
+                  <option value="3" class="search-up-header__option">4</option>
+                </select>
+                <span class="line"></span>
+                <div class="search-up-header__search">
+                  <input placeholder="Введите название товара или ссылку " type="text" class="search-up-header__input">
+                  <button class="search-up-header__photo">
+                    <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M21.4717 6.66022V17.5589C21.4717 18.88 20.4617 19.9671 19.2057 19.9671H3.266C2.02294 19.9671 1 18.8937 1 17.5589V6.66022C1 5.33916 2.00999 4.25204 3.266 4.25204H6.16648L6.74916 0.770508H15.8002L16.3181 4.25204H19.2057C20.4617 4.25204 21.4717 5.3254 21.4717 6.66022Z"
+                        stroke="black" stroke-miterlimit="10" stroke-linejoin="round"/>
+                      <path
+                        d="M11 16.6937C13.2091 16.6937 15 14.7926 15 12.4474C15 10.1023 13.2091 8.20117 11 8.20117C8.79086 8.20117 7 10.1023 7 12.4474C7 14.7926 8.79086 16.6937 11 16.6937Z"
+                        stroke="black" stroke-miterlimit="10" stroke-linejoin="round"/>
+                    </svg>
+                  </button>
+                  <button class="search-up-header__button"><img src="img/icons/search.svg" alt=""><span>Найти</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <a href="" class="up-header__man _href">Пользователю</a>
+          </div>
+        </div>
+        <div class="header__center center-header">
+          <div class="center-header__body">
+            <div class="center-header__block _href"><a href="" class="center-header__btn ">
+              <img src="img/icons/header/login.svg" alt="login" class="center-header__img">Вход/Регестрация</a>
+            </div>
+            <span class="line"></span>
+            <div class="center-header__block _href"><a href="" class="center-header__btn ">
+              <img src="img/icons/header/bell.svg" alt="bells" class="center-header__img">Уведомления</a>
+            </div>
+            <span class="line"></span>
+            <div class="center-header__block _href"><a href="" class="center-header__btn ">
+              <img src="img/icons/header/eye.svg" alt="watch" class="center-header__img">Вы недавно смотрели</a>
+            </div>
+            <span class="line"></span>
+            <div class="center-header__block _href"><a href="" class="center-header__btn ">
+              <img src="img/icons/header/favorite.svg" alt="favourite" class="center-header__img">Избранное</a>
+            </div>
+            <span class="line"></span>
+            <div class="center-header__block _href"><a href="" class="center-header__btn ">
+              <img src="img/icons/header/trash.svg" alt="trash" class="center-header__img">Корзина</a>
+            </div>
+          </div>
+        </div>
+        <div class="header__bottom bottom-header">
+          <div class="bottom-header__body">
+            <ul class="bottom-header__breadcrumb breadcrumb">
+              <li><a class="breadcrumb__link _href" href="#">Главная</a></li>
+              <li class="_active"><a class="breadcrumb__link" href=""></a>Корзина</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="page">
+
+    <div class="order">
+      <div class="order__container">
+        <ul class="trash__nav nav-trash">
+          <li class="nav-trash__item"><a href="/trash.html" class="nav-trash__link">Корзина</a></li>
+          <li class="nav-trash__item _active"><a href="/order.html" class="nav-trash__link">Оформление заказа</a></li>
+          <li class="nav-trash__item"><a href="/paymant.html" class="nav-trash__link">Оплата</a></li>
+          <li class="nav-trash__item"><a href="/agree.html" class="nav-trash__link">Подтверждение</a></li>
+        </ul>
+        <div class="order__body">
+          <p class="order__info">Заполните ваши реквизиты, данные, контакты, адреса согласно таблице договора
+                                 (оферты)</p>
+          <div class="order__block">
+            <div class="order__column order__left left-order">
+              <div class="left-order__body">
+                <div class="left-order__input-block input-block-left-order">
+                  <label for="orderName">Имя (физ. лица/организации)</label>
+                  <input data-required autocomplete="off" type="text" name="form[]" data-error="Заполните поле"
+                         id="orderName" class="input">
+                </div>
+                <div class="left-order__input-block input-block-left-order">
+                  <label for="orderPatronymic">Отчество</label>
+                  <input data-required autocomplete="off" type="text" name="form[]" data-error="Заполните поле"
+                         id="orderPatronymic" class="input">
+                </div>
+                <div class="left-order__input-block input-block-left-order">
+                  <label for="orderSurname">Фамилия</label>
+                  <input data-required autocomplete="off" type="text" name="form[]" data-error="Заполните поле"
+                         id="orderSurname" class="input">
+                </div>
+                <div class="left-order__input-block input-block-left-order">
+                  <label for="orderLegalForm">Юр. форма</label>
+                  <select data-search data-required id="orderLegalForm" name="form[]" class="large">
+                    <option value="" selected>Выбрать юр. форму</option>
+                    <option value="2">Физ лицо</option>
+                    <option value="3">Самозанятый</option>
+                    <option value="4">ИП</option>
+                    <option value="5">ООО АО ОДО</option>
+                    <option value="6">ЗАО</option>
+                  </select>
+                  <p>
+                    Выберите из предложенного перечня вашу юридическую форму (статус), а если ни один не подошел из
+                    предложенного списка, то можете в окне в ручную набрать свое название формы юр. лица (статуса)
+                  </p>
+                </div>
+                <div class="left-order__input-block50 input-block50-left-order">
+                  <label for="orderTIN">ИНН Заказчика</label>
+                  <input data-required autocomplete="off" type="text" name="form[]" data-error="Заполните поле"
+                         id="orderTIN" class="input">
+                </div>
+                <div class="left-order__input-block50 input-block50-left-order">
+                  <label for="orderCPP">КПП Заказчика</label>
+                  <input data-required autocomplete="off" type="text" name="form[]" data-error="Заполните поле"
+                         id="orderCPP" class="input">
+                </div>
+                <div class="left-order__details details-left-order">
+                  <h3 class="details-left-order__title">Банковские реквизиты Заказчика</h3>
+                  <div class="details-left-order__body">
+                    <div class="details-left-order__input-block input-block-details-left-order">
+                      <label for="orderSettlement">р/с (л/с)</label>
+                      <input data-required autocomplete="off" type="text" name="form[]" data-error="Заполните поле"
+                             id="orderSettlement" class="input">
+                    </div>
+                    <div class="details-left-order__input-block input-block-details-left-order">
+                      <label for="orderBank">в банке</label>
+                      <input data-required autocomplete="off" type="text" name="form[]" data-error="Заполните поле"
+                             id="orderBank" class="input">
+                    </div>
+                    <div class="details-left-order__input-block input-block-details-left-order">
+                      <label for="orderCity">в городе</label>
+                      <input data-required autocomplete="off" type="text" name="form[]" data-error="Заполните поле"
+                             id="orderCity" class="input">
+                    </div>
+                    <div class="details-left-order__input-block input-block-details-left-order">
+                      <label for="orderCorrespondent">к/с</label>
+                      <input data-required autocomplete="off" type="text" name="form[]" data-error="Заполните поле"
+                             id="orderCorrespondent" class="input">
+                    </div>
+                    <div class="details-left-order__input-block input-block-details-left-order">
+                      <label for="orderBIC">БИК банка</label>
+                      <input data-required autocomplete="off" type="text" name="form[]" data-error="Заполните поле"
+                             id="orderBIC" class="input">
+                    </div>
+                  </div>
+                </div>
+                <div class="left-order__details details-left-order">
+                  <h3 class="details-left-order__title">Паспортные данные Заказчика</h3>
+                  <div class="details-left-order__body">
+                    <div class="input-block-details-left-order input-block-details-left-order__series">
+                      <label for="orderSeries">Серия</label>
+                      <input data-required autocomplete="off" type="text" name="form[]" data-error="Заполните поле"
+                             id="orderSeries" class="input">
+                    </div>
+                    <div class="input-block-details-left-order input-block-details-left-order__number ">
+                      <label for="orderNumber">Номер</label>
+                      <input data-required autocomplete="off" type="text" name="form[]" data-error="Заполните поле"
+                             id="orderNumber" class="input">
+                    </div>
+                    <div class="input-block-details-left-order input-block-details-left-order__date">
+                      <label for="orderDate">Дата выдачи</label>
+                      <input data-required autocomplete="off" type="text" maxlength="10" name="form[]" data-error="Заполните поле"
+                             placeholder="дд.мм.гггг" id="orderDate" class="input">
+                    </div>
+                    <div class="input-block-details-left-order input-block-details-left-order__authority">
+                      <label for="orderAuthority">Орган, выдавший паспорт</label>
+                      <input data-required autocomplete="off" type="text" name="form[]" data-error="Заполните поле"
+                             id="orderAuthority" class="input">
+                    </div>
+                    <div class="input-block-details-left-order input-block-details-left-order__male">
+                      <label>Пол</label>
+                      <div class="options">
+                        <div class="options__item">
+                          <input hidden id="male_1" class="options__input" checked type="radio" value="1" name="male">
+                          <label
+                            for="male_1" class="options__label"><span class="options__text">М</span>
+                          </label>
+                        </div>
+
+                        <div class="options__item">
+                          <input hidden id="male_2" class="options__input" type="radio" value="2" name="male">
+                          <label for="male_2" class="options__label">
+                            <span class="options__text">Ж</span>
+                          </label>
+                        </div>
+                      </div>
+
+                    </div>
+                    <div class="input-block-details-left-order input-block-details-left-order__birthday">
+                      <label for="orderBirthday">Дата
+                                                 рождения</label>
+                      <input data-required autocomplete="off" type="text" maxlength="10"  placeholder="дд.мм.гггг" name="form[]"
+                             data-error="Заполните поле"
+                             id="orderBirthday" class="input">
+                    </div>
+                    <div class="input-block-details-left-order input-block-details-left-order__tel">
+                      <label for="orderTel"> Телефон/
+                                             мессенджер</label>
+                      <input data-required autocomplete="off" type="text" name="form[]" data-error="Заполните поле"
+                             placeholder="+ (код страны) ___-___-__-__"
+                             id="orderTel" class="input">
+                    </div>
+                    <div class="input-block-details-left-order input-block-details-left-order__email">
+                      <label for="orderEmail">Электронная почта</label>
+                      <input data-required autocomplete="off" type="text" name="form[]" data-error="Заполните поле"
+                             id="orderEmail" class="input">
+                    </div>
+                  </div>
+                </div>
+                <div class="left-order__adress adress-left-order">
+                  <div class="adress-left-order__title">Адрес, юридический (прописка, регистрация) Заказчика (индекс,
+                                                        страна, регион, район, населенный пункт, улица, дом, строение,
+                                                        корпус, квартира (офис, склад))*
+                  </div>
+                  <table data-requiredTable class="adress-left-info-submit-trash__table">
+                    <tr>
+                      <th></th>
+                      <th>Индекс</th>
+                      <th>Страна</th>
+                      <th>Регион</th>
+                      <th>Район</th>
+                      <th>Населенный
+                          пункт
+                      </th>
+                      <th>Улица</th>
+                      <th>Дом</th>
+                      <th>Строение</th>
+                      <th>Корпус</th>
+                      <th>Квартира,
+                          офис, склад
+                      </th>
+                    </tr>
+                    <tr>
+                      <td valign="top">
+                        <div class="options__item">
+                          <input hidden id="225420" class="options__input" type="radio" value="1" name="adress">
+                          <label for="225420" class="options__label">
+                            <span class="options__text"></span>
+                          </label>
+                        </div>
+                      </td>
+                      <td valign="top">
+                        <label for="225420" class="adress-left-info-submit-trash__text">225420</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225420" class="adress-left-info-submit-trash__text">Россия</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225420" class="adress-left-info-submit-trash__text">Иркутская область</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225420" class="adress-left-info-submit-trash__text">Название
+                                                                                        района</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225420" class="adress-left-info-submit-trash__text">Название
+                                                                                        населенного пункта</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225420" class="adress-left-info-submit-trash__text">Название
+                                                                                        улицы</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225420" class="adress-left-info-submit-trash__text">325</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225420" class="adress-left-info-submit-trash__text">63</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225420" class="adress-left-info-submit-trash__text">2</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225420" class="adress-left-info-submit-trash__text">2</label>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">
+                        <div class="options__item">
+                          <input hidden id="225421" class="options__input" type="radio" value="1" name="adress">
+                          <label for="225421" class="options__label">
+                            <span class="options__text"></span>
+                          </label>
+                        </div>
+                      </td>
+                      <td valign="top">
+                        <label for="225421" class="adress-left-info-submit-trash__text">225421</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225421" class="adress-left-info-submit-trash__text">Россия</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225421" class="adress-left-info-submit-trash__text">Иркутская область</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225421" class="adress-left-info-submit-trash__text">Название
+                                                                                        района</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225421" class="adress-left-info-submit-trash__text">Название
+                                                                                        населенного пункта</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225421" class="adress-left-info-submit-trash__text">Название
+                                                                                        улицы</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225421" class="adress-left-info-submit-trash__text">325</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225421" class="adress-left-info-submit-trash__text">63</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225421" class="adress-left-info-submit-trash__text">2</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225421" class="adress-left-info-submit-trash__text">2</label>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">
+                        <div class="options__item">
+                          <input hidden id="225422" class="options__input" type="radio" value="1" name="adress">
+                          <label for="225422" class="options__label">
+                            <span class="options__text"></span>
+                          </label>
+                        </div>
+                      </td>
+                      <td valign="top">
+                        <label for="225422" class="adress-left-info-submit-trash__text">225422</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225422" class="adress-left-info-submit-trash__text">Россия</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225422" class="adress-left-info-submit-trash__text">Иркутская область</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225422" class="adress-left-info-submit-trash__text">Название
+                                                                                        района</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225422" class="adress-left-info-submit-trash__text">Название
+                                                                                        населенного пункта</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225422" class="adress-left-info-submit-trash__text">Название
+                                                                                        улицы</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225422" class="adress-left-info-submit-trash__text">325</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225422" class="adress-left-info-submit-trash__text">63</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225422" class="adress-left-info-submit-trash__text">2</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225422" class="adress-left-info-submit-trash__text">2</label>
+                      </td>
+                    </tr>
+                  </table>
+                  <button type="button" data-acceptbtn class="adress-left-info-submit-trash__btnSubmit _blueBtn"
+                          onclick="">Применить
+                  </button>
+                  <a href="#" data-popup="#addAddress" class="adress-left-info-submit-trash__btnSubmit _whiteBtn">Добавить
+                                                                                                                  другой
+                                                                                                                  адрес
+                  </a>
+                  <a href="#" data-popup="#editAddress" class="adress-left-info-submit-trash__btnSubmit _whiteBtn">
+                    <span>
+                    <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path
+  d="M5.18771 14.0007C5.18478 14.0038 5.18052 14.0049 5.17747 14.0079C5.15256 14.0329 5.12374 14.0533 5.09222 14.0684C5.089 14.0699 5.08627 14.0722 5.083 14.0736L5.07874 14.076L2.7518 15.0267L0.424705 15.9775C0.368964 16.0003 0.308013 16.0059 0.249221 15.9937C0.19043 15.9816 0.136317 15.9521 0.0934296 15.9089C0.0505419 15.8656 0.0207167 15.8105 0.00756073 15.7502C-0.00559616 15.6898 -0.0015192 15.6268 0.0192976 15.5688L0.909065 13.0822L1.79868 10.5958L1.80063 10.592C1.80215 10.5879 1.80472 10.5845 1.80639 10.5806C1.81947 10.5499 1.83716 10.5216 1.85881 10.4967C1.86199 10.493 1.86305 10.4881 1.86643 10.4845L11.496 0.194614C11.6174 0.0699723 11.7817 0 11.953 0C12.1244 0 12.2887 0.0699723 12.4101 0.194614L14.8171 2.76693C14.9345 2.89421 15 3.06315 15 3.23882C15 3.41449 14.9346 3.58345 14.8172 3.71076L5.18771 14.0007ZM0.842232 15.1183L2.09239 14.6075L1.32023 13.7825L0.842232 15.1183ZM1.55878 13.1153L2.7165 14.3524L4.41934 13.6568L2.20985 11.2961L1.55878 13.1153ZM14.3705 3.21149L11.9426 0.639173L2.52119 10.7067L4.96447 13.3174L14.3706 3.2662C14.3769 3.25854 14.3803 3.24884 14.3803 3.23882C14.3802 3.2288 14.3768 3.21912 14.3705 3.21149Z"
+  fill="#80A4DE"/>
+</svg>
+<path
+  d="M5.18771 14.0007C5.18478 14.0038 5.18052 14.0049 5.17747 14.0079C5.15256 14.0329 5.12374 14.0533 5.09222 14.0684C5.089 14.0699 5.08627 14.0722 5.083 14.0736L5.07874 14.076L2.7518 15.0267L0.424705 15.9775C0.368964 16.0003 0.308013 16.0059 0.249221 15.9937C0.19043 15.9816 0.136317 15.9521 0.0934296 15.9089C0.0505419 15.8656 0.0207167 15.8105 0.00756073 15.7502C-0.00559616 15.6898 -0.0015192 15.6268 0.0192976 15.5688L0.909065 13.0822L1.79868 10.5958L1.80063 10.592C1.80215 10.5879 1.80472 10.5845 1.80639 10.5806C1.81947 10.5499 1.83716 10.5216 1.85881 10.4967C1.86199 10.493 1.86305 10.4881 1.86643 10.4845L11.496 0.194614C11.6174 0.0699723 11.7817 0 11.953 0C12.1244 0 12.2887 0.0699723 12.4101 0.194614L14.8171 2.76693C14.9345 2.89421 15 3.06315 15 3.23882C15 3.41449 14.9346 3.58345 14.8172 3.71076L5.18771 14.0007ZM0.842232 15.1183L2.09239 14.6075L1.32023 13.7825L0.842232 15.1183ZM1.55878 13.1153L2.7165 14.3524L4.41934 13.6568L2.20985 11.2961L1.55878 13.1153ZM14.3705 3.21149L11.9426 0.639173L2.52119 10.7067L4.96447 13.3174L14.3706 3.2662C14.3769 3.25854 14.3803 3.24884 14.3803 3.23882C14.3802 3.2288 14.3768 3.21912 14.3705 3.21149Z"
+  fill="#80A4DE"/>
+                      </svg>
+                  </span>Редактировать
+                  </a>
+                </div>
+                <div class="left-order__adress adress-left-order">
+                  <div class="adress-left-order__title">Адрес фактический (почтовый) Заказчика (индекс, страна, регион,
+                                                        район, населенный пункт, улица, дом, строение, корпус, квартира
+                                                        (офис, склад))*
+                  </div>
+                  <table data-requiredTable class="adress-left-info-submit-trash__table">
+                    <tr>
+                      <th></th>
+                      <th>Индекс</th>
+                      <th>Страна</th>
+                      <th>Регион</th>
+                      <th>Район</th>
+                      <th>Населенный
+                          пункт
+                      </th>
+                      <th>Улица</th>
+                      <th>Дом</th>
+                      <th>Строение</th>
+                      <th>Корпус</th>
+                      <th>Квартира,
+                          офис, склад
+                      </th>
+                    </tr>
+                    <tr>
+                      <td valign="top">
+                        <div class="options__item">
+                          <input hidden id="225430" class="options__input" checked type="radio" value="1"
+                                 name="adress2">
+                          <label for="225430" class="options__label">
+                            <span class="options__text"></span>
+                          </label>
+                        </div>
+                      </td>
+                      <td valign="top">
+                        <label for="225430" class="adress-left-info-submit-trash__text">225430</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225430" class="adress-left-info-submit-trash__text">Россия</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225430" class="adress-left-info-submit-trash__text">Иркутская область</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225430" class="adress-left-info-submit-trash__text">Название
+                                                                                        района</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225430" class="adress-left-info-submit-trash__text">Название
+                                                                                        населенного пункта</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225430" class="adress-left-info-submit-trash__text">Название
+                                                                                        улицы</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225430" class="adress-left-info-submit-trash__text">325</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225430" class="adress-left-info-submit-trash__text">63</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225430" class="adress-left-info-submit-trash__text">2</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225430" class="adress-left-info-submit-trash__text">2</label>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">
+                        <div class="options__item">
+                          <input hidden id="225431" class="options__input" type="radio" value="1" name="adress2">
+                          <label for="225431" class="options__label">
+                            <span class="options__text"></span>
+                          </label>
+                        </div>
+                      </td>
+                      <td valign="top">
+                        <label for="225431" class="adress-left-info-submit-trash__text">225431</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225431" class="adress-left-info-submit-trash__text">Россия</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225431" class="adress-left-info-submit-trash__text">Иркутская область</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225431" class="adress-left-info-submit-trash__text">Название
+                                                                                        района</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225431" class="adress-left-info-submit-trash__text">Название
+                                                                                        населенного пункта</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225431" class="adress-left-info-submit-trash__text">Название
+                                                                                        улицы</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225431" class="adress-left-info-submit-trash__text">325</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225431" class="adress-left-info-submit-trash__text">63</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225431" class="adress-left-info-submit-trash__text">2</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225431" class="adress-left-info-submit-trash__text">2</label>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">
+                        <div class="options__item">
+                          <input hidden id="225432" class="options__input" type="radio" value="1" name="adress2">
+                          <label for="225432" class="options__label">
+                            <span class="options__text"></span>
+                          </label>
+                        </div>
+                      </td>
+                      <td valign="top">
+                        <label for="225432" class="adress-left-info-submit-trash__text">225432</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225432" class="adress-left-info-submit-trash__text">Россия</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225432" class="adress-left-info-submit-trash__text">Иркутская область</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225432" class="adress-left-info-submit-trash__text">Название
+                                                                                        района</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225432" class="adress-left-info-submit-trash__text">Название
+                                                                                        населенного пункта</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225432" class="adress-left-info-submit-trash__text">Название
+                                                                                        улицы</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225432" class="adress-left-info-submit-trash__text">325</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225432" class="adress-left-info-submit-trash__text">63</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225432" class="adress-left-info-submit-trash__text">2</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225432" class="adress-left-info-submit-trash__text">2</label>
+                      </td>
+                    </tr>
+                  </table>
+                  <button type="button" data-acceptbtn class="adress-left-info-submit-trash__btnSubmit _blueBtn"
+                          onclick="">Применить
+                  </button>
+                  <a href="#" data-popup="#addAddress" class="adress-left-info-submit-trash__btnSubmit _whiteBtn">Добавить
+                                                                                                                  другой
+                                                                                                                  адрес
+                  </a>
+                  <a href="#" data-popup="#editAddress" class="adress-left-info-submit-trash__btnSubmit _whiteBtn">
+                    <span>
+                    <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path
+  d="M5.18771 14.0007C5.18478 14.0038 5.18052 14.0049 5.17747 14.0079C5.15256 14.0329 5.12374 14.0533 5.09222 14.0684C5.089 14.0699 5.08627 14.0722 5.083 14.0736L5.07874 14.076L2.7518 15.0267L0.424705 15.9775C0.368964 16.0003 0.308013 16.0059 0.249221 15.9937C0.19043 15.9816 0.136317 15.9521 0.0934296 15.9089C0.0505419 15.8656 0.0207167 15.8105 0.00756073 15.7502C-0.00559616 15.6898 -0.0015192 15.6268 0.0192976 15.5688L0.909065 13.0822L1.79868 10.5958L1.80063 10.592C1.80215 10.5879 1.80472 10.5845 1.80639 10.5806C1.81947 10.5499 1.83716 10.5216 1.85881 10.4967C1.86199 10.493 1.86305 10.4881 1.86643 10.4845L11.496 0.194614C11.6174 0.0699723 11.7817 0 11.953 0C12.1244 0 12.2887 0.0699723 12.4101 0.194614L14.8171 2.76693C14.9345 2.89421 15 3.06315 15 3.23882C15 3.41449 14.9346 3.58345 14.8172 3.71076L5.18771 14.0007ZM0.842232 15.1183L2.09239 14.6075L1.32023 13.7825L0.842232 15.1183ZM1.55878 13.1153L2.7165 14.3524L4.41934 13.6568L2.20985 11.2961L1.55878 13.1153ZM14.3705 3.21149L11.9426 0.639173L2.52119 10.7067L4.96447 13.3174L14.3706 3.2662C14.3769 3.25854 14.3803 3.24884 14.3803 3.23882C14.3802 3.2288 14.3768 3.21912 14.3705 3.21149Z"
+  fill="#80A4DE"/>
+</svg>
+<path
+  d="M5.18771 14.0007C5.18478 14.0038 5.18052 14.0049 5.17747 14.0079C5.15256 14.0329 5.12374 14.0533 5.09222 14.0684C5.089 14.0699 5.08627 14.0722 5.083 14.0736L5.07874 14.076L2.7518 15.0267L0.424705 15.9775C0.368964 16.0003 0.308013 16.0059 0.249221 15.9937C0.19043 15.9816 0.136317 15.9521 0.0934296 15.9089C0.0505419 15.8656 0.0207167 15.8105 0.00756073 15.7502C-0.00559616 15.6898 -0.0015192 15.6268 0.0192976 15.5688L0.909065 13.0822L1.79868 10.5958L1.80063 10.592C1.80215 10.5879 1.80472 10.5845 1.80639 10.5806C1.81947 10.5499 1.83716 10.5216 1.85881 10.4967C1.86199 10.493 1.86305 10.4881 1.86643 10.4845L11.496 0.194614C11.6174 0.0699723 11.7817 0 11.953 0C12.1244 0 12.2887 0.0699723 12.4101 0.194614L14.8171 2.76693C14.9345 2.89421 15 3.06315 15 3.23882C15 3.41449 14.9346 3.58345 14.8172 3.71076L5.18771 14.0007ZM0.842232 15.1183L2.09239 14.6075L1.32023 13.7825L0.842232 15.1183ZM1.55878 13.1153L2.7165 14.3524L4.41934 13.6568L2.20985 11.2961L1.55878 13.1153ZM14.3705 3.21149L11.9426 0.639173L2.52119 10.7067L4.96447 13.3174L14.3706 3.2662C14.3769 3.25854 14.3803 3.24884 14.3803 3.23882C14.3802 3.2288 14.3768 3.21912 14.3705 3.21149Z"
+  fill="#80A4DE"/>
+                      </svg>
+                  </span>Редактировать
+                  </a>
+                </div>
+                <div class="left-order__adress adress-left-order">
+                  <div class="adress-left-order__title">Адрес склада (грузового терминала (двора) ТК) Заказчика (индекс,
+                                                        страна, регион, район, населенный пункт, улица, дом, строение,
+                                                        корпус, квартира (офис, склад))*
+                  </div>
+                  <table data-requiredTable class="adress-left-info-submit-trash__table">
+                    <tr>
+                      <th></th>
+                      <th>Индекс</th>
+                      <th>Страна</th>
+                      <th>Регион</th>
+                      <th>Район</th>
+                      <th>Населенный
+                          пункт
+                      </th>
+                      <th>Улица</th>
+                      <th>Дом</th>
+                      <th>Строение</th>
+                      <th>Корпус</th>
+                      <th>Квартира,
+                          офис, склад
+                      </th>
+                    </tr>
+                    <tr>
+                      <td valign="top">
+                        <div class="options__item">
+                          <input hidden id="225440" class="options__input" checked type="radio" value="1"
+                                 name="adress3">
+                          <label for="225440" class="options__label">
+                            <span class="options__text"></span>
+                          </label>
+                        </div>
+                      </td>
+                      <td valign="top">
+                        <label for="225440" class="adress-left-info-submit-trash__text">225440</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225440" class="adress-left-info-submit-trash__text">Россия</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225440" class="adress-left-info-submit-trash__text">Иркутская область</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225440" class="adress-left-info-submit-trash__text">Название
+                                                                                        района</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225440" class="adress-left-info-submit-trash__text">Название
+                                                                                        населенного пункта</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225440" class="adress-left-info-submit-trash__text">Название
+                                                                                        улицы</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225440" class="adress-left-info-submit-trash__text">325</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225440" class="adress-left-info-submit-trash__text">63</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225440" class="adress-left-info-submit-trash__text">2</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225440" class="adress-left-info-submit-trash__text">2</label>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">
+                        <div class="options__item">
+                          <input hidden id="225441" class="options__input" type="radio" value="1" name="adress3">
+                          <label for="225441" class="options__label">
+                            <span class="options__text"></span>
+                          </label>
+                        </div>
+                      </td>
+                      <td valign="top">
+                        <label for="225441" class="adress-left-info-submit-trash__text">225441</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225441" class="adress-left-info-submit-trash__text">Россия</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225441" class="adress-left-info-submit-trash__text">Иркутская область</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225441" class="adress-left-info-submit-trash__text">Название
+                                                                                        района</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225441" class="adress-left-info-submit-trash__text">Название
+                                                                                        населенного пункта</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225441" class="adress-left-info-submit-trash__text">Название
+                                                                                        улицы</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225441" class="adress-left-info-submit-trash__text">325</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225441" class="adress-left-info-submit-trash__text">63</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225441" class="adress-left-info-submit-trash__text">2</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225441" class="adress-left-info-submit-trash__text">2</label>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">
+                        <div class="options__item">
+                          <input hidden id="225442" class="options__input" type="radio" value="1" name="adress3">
+                          <label for="225442" class="options__label">
+                            <span class="options__text"></span>
+                          </label>
+                        </div>
+                      </td>
+                      <td valign="top">
+                        <label for="225442" class="adress-left-info-submit-trash__text">225442</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225442" class="adress-left-info-submit-trash__text">Россия</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225442" class="adress-left-info-submit-trash__text">Иркутская область</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225442" class="adress-left-info-submit-trash__text">Название
+                                                                                        района</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225442" class="adress-left-info-submit-trash__text">Название
+                                                                                        населенного пункта</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225442" class="adress-left-info-submit-trash__text">Название
+                                                                                        улицы</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225442" class="adress-left-info-submit-trash__text">325</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225442" class="adress-left-info-submit-trash__text">63</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225442" class="adress-left-info-submit-trash__text">2</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225442" class="adress-left-info-submit-trash__text">2</label>
+                      </td>
+                    </tr>
+                  </table>
+                  <button type="button" data-acceptbtn class="adress-left-info-submit-trash__btnSubmit _blueBtn"
+                          onclick="">Применить
+                  </button>
+                  <a href="#" data-popup="#addAddress" class="adress-left-info-submit-trash__btnSubmit _whiteBtn">Добавить
+                                                                                                                  другой
+                                                                                                                  адрес
+                  </a>
+                  <a href="#" data-popup="#editAddress" class="adress-left-info-submit-trash__btnSubmit _whiteBtn">
+                    <span>
+                    <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path
+  d="M5.18771 14.0007C5.18478 14.0038 5.18052 14.0049 5.17747 14.0079C5.15256 14.0329 5.12374 14.0533 5.09222 14.0684C5.089 14.0699 5.08627 14.0722 5.083 14.0736L5.07874 14.076L2.7518 15.0267L0.424705 15.9775C0.368964 16.0003 0.308013 16.0059 0.249221 15.9937C0.19043 15.9816 0.136317 15.9521 0.0934296 15.9089C0.0505419 15.8656 0.0207167 15.8105 0.00756073 15.7502C-0.00559616 15.6898 -0.0015192 15.6268 0.0192976 15.5688L0.909065 13.0822L1.79868 10.5958L1.80063 10.592C1.80215 10.5879 1.80472 10.5845 1.80639 10.5806C1.81947 10.5499 1.83716 10.5216 1.85881 10.4967C1.86199 10.493 1.86305 10.4881 1.86643 10.4845L11.496 0.194614C11.6174 0.0699723 11.7817 0 11.953 0C12.1244 0 12.2887 0.0699723 12.4101 0.194614L14.8171 2.76693C14.9345 2.89421 15 3.06315 15 3.23882C15 3.41449 14.9346 3.58345 14.8172 3.71076L5.18771 14.0007ZM0.842232 15.1183L2.09239 14.6075L1.32023 13.7825L0.842232 15.1183ZM1.55878 13.1153L2.7165 14.3524L4.41934 13.6568L2.20985 11.2961L1.55878 13.1153ZM14.3705 3.21149L11.9426 0.639173L2.52119 10.7067L4.96447 13.3174L14.3706 3.2662C14.3769 3.25854 14.3803 3.24884 14.3803 3.23882C14.3802 3.2288 14.3768 3.21912 14.3705 3.21149Z"
+  fill="#80A4DE"/>
+</svg>
+<path
+  d="M5.18771 14.0007C5.18478 14.0038 5.18052 14.0049 5.17747 14.0079C5.15256 14.0329 5.12374 14.0533 5.09222 14.0684C5.089 14.0699 5.08627 14.0722 5.083 14.0736L5.07874 14.076L2.7518 15.0267L0.424705 15.9775C0.368964 16.0003 0.308013 16.0059 0.249221 15.9937C0.19043 15.9816 0.136317 15.9521 0.0934296 15.9089C0.0505419 15.8656 0.0207167 15.8105 0.00756073 15.7502C-0.00559616 15.6898 -0.0015192 15.6268 0.0192976 15.5688L0.909065 13.0822L1.79868 10.5958L1.80063 10.592C1.80215 10.5879 1.80472 10.5845 1.80639 10.5806C1.81947 10.5499 1.83716 10.5216 1.85881 10.4967C1.86199 10.493 1.86305 10.4881 1.86643 10.4845L11.496 0.194614C11.6174 0.0699723 11.7817 0 11.953 0C12.1244 0 12.2887 0.0699723 12.4101 0.194614L14.8171 2.76693C14.9345 2.89421 15 3.06315 15 3.23882C15 3.41449 14.9346 3.58345 14.8172 3.71076L5.18771 14.0007ZM0.842232 15.1183L2.09239 14.6075L1.32023 13.7825L0.842232 15.1183ZM1.55878 13.1153L2.7165 14.3524L4.41934 13.6568L2.20985 11.2961L1.55878 13.1153ZM14.3705 3.21149L11.9426 0.639173L2.52119 10.7067L4.96447 13.3174L14.3706 3.2662C14.3769 3.25854 14.3803 3.24884 14.3803 3.23882C14.3802 3.2288 14.3768 3.21912 14.3705 3.21149Z"
+  fill="#80A4DE"/>
+                      </svg>
+                  </span>Редактировать
+                  </a>
+                </div>
+                <div class="left-order__adress adress-left-order">
+                  <div class="adress-left-order__title">Адрес доставки в стране получателя*
+                  </div>
+                  <table data-requiredTable class="adress-left-info-submit-trash__table">
+                    <tr>
+                      <th></th>
+                      <th>Индекс</th>
+                      <th>Страна</th>
+                      <th>Регион</th>
+                      <th>Район</th>
+                      <th>Населенный
+                          пункт
+                      </th>
+                      <th>Улица</th>
+                      <th>Дом</th>
+                      <th>Строение</th>
+                      <th>Корпус</th>
+                      <th>Квартира,
+                          офис, склад
+                      </th>
+                    </tr>
+                    <tr>
+                      <td valign="top">
+                        <div class="options__item">
+                          <input hidden id="225450" class="options__input" checked type="radio" value="1"
+                                 name="adress4">
+                          <label for="225450" class="options__label">
+                            <span class="options__text"></span>
+                          </label>
+                        </div>
+                      </td>
+                      <td valign="top">
+                        <label for="225450" class="adress-left-info-submit-trash__text">225450</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225450" class="adress-left-info-submit-trash__text">Россия</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225450" class="adress-left-info-submit-trash__text">Иркутская область</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225450" class="adress-left-info-submit-trash__text">Название
+                                                                                        района</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225450" class="adress-left-info-submit-trash__text">Название
+                                                                                        населенного пункта</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225450" class="adress-left-info-submit-trash__text">Название
+                                                                                        улицы</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225450" class="adress-left-info-submit-trash__text">325</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225450" class="adress-left-info-submit-trash__text">63</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225450" class="adress-left-info-submit-trash__text">2</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225450" class="adress-left-info-submit-trash__text">2</label>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">
+                        <div class="options__item">
+                          <input hidden id="225451" class="options__input" type="radio" value="1" name="adress4">
+                          <label for="225451" class="options__label">
+                            <span class="options__text"></span>
+                          </label>
+                        </div>
+                      </td>
+                      <td valign="top">
+                        <label for="225451" class="adress-left-info-submit-trash__text">225451</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225451" class="adress-left-info-submit-trash__text">Россия</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225451" class="adress-left-info-submit-trash__text">Иркутская область</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225451" class="adress-left-info-submit-trash__text">Название
+                                                                                        района</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225451" class="adress-left-info-submit-trash__text">Название
+                                                                                        населенного пункта</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225451" class="adress-left-info-submit-trash__text">Название
+                                                                                        улицы</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225451" class="adress-left-info-submit-trash__text">325</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225451" class="adress-left-info-submit-trash__text">63</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225451" class="adress-left-info-submit-trash__text">2</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225451" class="adress-left-info-submit-trash__text">2</label>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">
+                        <div class="options__item">
+                          <input hidden id="225452" class="options__input" type="radio" value="1" name="adress4">
+                          <label for="225452" class="options__label">
+                            <span class="options__text"></span>
+                          </label>
+                        </div>
+                      </td>
+                      <td valign="top">
+                        <label for="225452" class="adress-left-info-submit-trash__text">225452</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225452" class="adress-left-info-submit-trash__text">Россия</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225452" class="adress-left-info-submit-trash__text">Иркутская область</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225452" class="adress-left-info-submit-trash__text">Название
+                                                                                        района</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225452" class="adress-left-info-submit-trash__text">Название
+                                                                                        населенного пункта</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225452" class="adress-left-info-submit-trash__text">Название
+                                                                                        улицы</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225452" class="adress-left-info-submit-trash__text">325</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225452" class="adress-left-info-submit-trash__text">63</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225452" class="adress-left-info-submit-trash__text">2</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225452" class="adress-left-info-submit-trash__text">2</label>
+                      </td>
+                    </tr>
+                  </table>
+                  <button type="button" data-acceptbtn class="adress-left-info-submit-trash__btnSubmit _blueBtn"
+                          onclick="">Применить
+                  </button>
+                  <a href="#" data-popup="#addAddress" class="adress-left-info-submit-trash__btnSubmit _whiteBtn">Добавить
+                                                                                                                  другой
+                                                                                                                  адрес
+                  </a>
+                  <a href="#" data-popup="#editAddress" class="adress-left-info-submit-trash__btnSubmit _whiteBtn">
+                    <span>
+                    <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path
+  d="M5.18771 14.0007C5.18478 14.0038 5.18052 14.0049 5.17747 14.0079C5.15256 14.0329 5.12374 14.0533 5.09222 14.0684C5.089 14.0699 5.08627 14.0722 5.083 14.0736L5.07874 14.076L2.7518 15.0267L0.424705 15.9775C0.368964 16.0003 0.308013 16.0059 0.249221 15.9937C0.19043 15.9816 0.136317 15.9521 0.0934296 15.9089C0.0505419 15.8656 0.0207167 15.8105 0.00756073 15.7502C-0.00559616 15.6898 -0.0015192 15.6268 0.0192976 15.5688L0.909065 13.0822L1.79868 10.5958L1.80063 10.592C1.80215 10.5879 1.80472 10.5845 1.80639 10.5806C1.81947 10.5499 1.83716 10.5216 1.85881 10.4967C1.86199 10.493 1.86305 10.4881 1.86643 10.4845L11.496 0.194614C11.6174 0.0699723 11.7817 0 11.953 0C12.1244 0 12.2887 0.0699723 12.4101 0.194614L14.8171 2.76693C14.9345 2.89421 15 3.06315 15 3.23882C15 3.41449 14.9346 3.58345 14.8172 3.71076L5.18771 14.0007ZM0.842232 15.1183L2.09239 14.6075L1.32023 13.7825L0.842232 15.1183ZM1.55878 13.1153L2.7165 14.3524L4.41934 13.6568L2.20985 11.2961L1.55878 13.1153ZM14.3705 3.21149L11.9426 0.639173L2.52119 10.7067L4.96447 13.3174L14.3706 3.2662C14.3769 3.25854 14.3803 3.24884 14.3803 3.23882C14.3802 3.2288 14.3768 3.21912 14.3705 3.21149Z"
+  fill="#80A4DE"/>
+</svg>
+<path
+  d="M5.18771 14.0007C5.18478 14.0038 5.18052 14.0049 5.17747 14.0079C5.15256 14.0329 5.12374 14.0533 5.09222 14.0684C5.089 14.0699 5.08627 14.0722 5.083 14.0736L5.07874 14.076L2.7518 15.0267L0.424705 15.9775C0.368964 16.0003 0.308013 16.0059 0.249221 15.9937C0.19043 15.9816 0.136317 15.9521 0.0934296 15.9089C0.0505419 15.8656 0.0207167 15.8105 0.00756073 15.7502C-0.00559616 15.6898 -0.0015192 15.6268 0.0192976 15.5688L0.909065 13.0822L1.79868 10.5958L1.80063 10.592C1.80215 10.5879 1.80472 10.5845 1.80639 10.5806C1.81947 10.5499 1.83716 10.5216 1.85881 10.4967C1.86199 10.493 1.86305 10.4881 1.86643 10.4845L11.496 0.194614C11.6174 0.0699723 11.7817 0 11.953 0C12.1244 0 12.2887 0.0699723 12.4101 0.194614L14.8171 2.76693C14.9345 2.89421 15 3.06315 15 3.23882C15 3.41449 14.9346 3.58345 14.8172 3.71076L5.18771 14.0007ZM0.842232 15.1183L2.09239 14.6075L1.32023 13.7825L0.842232 15.1183ZM1.55878 13.1153L2.7165 14.3524L4.41934 13.6568L2.20985 11.2961L1.55878 13.1153ZM14.3705 3.21149L11.9426 0.639173L2.52119 10.7067L4.96447 13.3174L14.3706 3.2662C14.3769 3.25854 14.3803 3.24884 14.3803 3.23882C14.3802 3.2288 14.3768 3.21912 14.3705 3.21149Z"
+  fill="#80A4DE"/>
+                      </svg>
+                  </span>Редактировать
+                  </a>
+                </div>
+                <div data-checkboxies class="left-order__checkboxes checkboxes-left-order">
+                  <div class="checkboxes-left-order__checkbox">
+                    <input id="c_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+                           name="form[]">
+                    <label for="c_1" class="checkbox__label"><span class="checkbox__text">Я согласен (на) с условиями договора оферты (пользовательским соглашением) и правилами сайта* </span></label>
+                  </div>
+                  <div class="checkboxes-left-order__checkbox">
+                    <input id="c_2" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+                           name="form[]">
+                    <label for="c_2" class="checkbox__label"><span class="checkbox__text">Я подтверждаю, что я совершеннолетний (яя) и я согласен (на) хранение, обработку и предоставления третьим лицам своих персональных данных»;</span></label>
+                  </div>
+                  <div class="checkboxes-left-order__checkbox">
+                    <input id="c_3" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+                           name="form[]">
+                    <label for="c_3" class="checkbox__label"><span class="checkbox__text">Я прочитал (ла) договор оферты (пользовательское соглашение) и политику в отношении обработки персональных данных и принимаю их</span></label>
+                  </div>
+                </div>
+                <p class="left-order__sure">*- поля обязательные для заполнения</p>
+                <div class="left-order__navigation navigation-left-order">
+                  <a href="index.html" class="navigation-left-order__btn _whiteBtn">
+                    <span>
+                      <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.47803 11.957L0.999987 6.47899" stroke="#80A4DE" stroke-linecap="round"/>
+<path d="M6.479 1L1.00096 6.47804" stroke="#80A4DE" stroke-linecap="round"/>
+</svg>
+                    </span>
+                    Вернуться к покупкам
+                  </a>
+                  <button id="submitBtn" type="submit" disabled class="navigation-left-order__btn _blueBtn">
+                    Продолжить оформление*
+                    <span>
+                      <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.47852 1L10.9566 6.47804" stroke="white" stroke-linecap="round"/>
+<path d="M5.47754 11.957L10.9556 6.47899" stroke="white" stroke-linecap="round"/>
+</svg>
+                    </span>
+                  </button>
+                </div>
+                <p class="left-order__warning"> *Внимание, стоимость доставки указанная в “Корзине” является неточной,
+                                                так как рассчитана по примерному весу и может отличаться. Точная
+                                                стоимость доставки будет известна после того, как все товары из заказа
+                                                придут в пункт выдачи и будут взвешены и обмеряны. Если вес и объем
+                                                заказа окажется выше, Вам необходимо будет произвести доплату за
+                                                доставку согласно договора/оферты. Нажимая на кнопку “Оформить заказ”,
+                                                "Продолжить оформление", Вы соглашаетесь с данным примечанием, если у
+                                                Вас остались вопросы напишите оператору на сайте.
+                </p>
+                <p class="left-order__warning">В случае изменения курсов валют, тарифов (цен) услуг, логистическими,
+                                               транспортными, почтовыми, таможенными, пограничными службами и другими
+                                               коммерческими, государственными структурами причастных к закупке,
+                                               логистике, оформлению груза (товара, заказа, услуги), а также в случае
+                                               изменения налогообложения, таможенных пошлин и сборов,
+                                               во время нахождения груза (товара, заказа) в пути, будет осуществлен
+                                               перерасчет доставки груза (товара, заказа, услуги)
+                                               по факту его поступления в пункт выдачи. Нажимая кнопки "Оформить заказ",
+                                               "Продолжить оформление" Вы соглашаетесь
+                                               с данным примечанием.</p>
+                <p class="left-order__warning">Цена доставки груза (товара, заказа, услуги) по стране продавца
+                                               (производителя) за рубежом может быть изменена
+                                               в зависимости от количества груза (товара, заказа, услуги) и от
+                                               количества продавцов (производителей) поставляющих товар (заказ, груз,
+                                               услугу). Нажимая кнопки "Оформить заказ", "Продолжить оформление" Вы
+                                               соглашаетесь с данным примечанием.
+                </p>
+                <p class="left-order__warning">
+                  Внесения изменений в данные пользователя/заказчика в разделах "Корзины" при оформлении заказа, приводят к изменению данных пользователя/заказчика в его "Личном кабинете"
+                </p>
+                <p class="left-order__warning">
+                  Выбор из списка подходящего адреса при оформлении заказа осуществляется путем проставления курсором отметки в перовые ячейки строки выбранного адреса. После выбора остальные адреса скрываются. Что бы вновь увидеть весь список адресов, необходимо обратно в ячейке отжать курсором отметку напротив выбранного адреса.
+                </p>
+              </div>
+            </div>
+            <div class="order__column order__right right-order _side-wrapper">
+              <div class="right-order__body">
+                <div id="bodyFixBlock" class="right-info-submit-trash__body">
+                  <button id="fixBtnOrder" type="button" class="right-info-submit-trash__fix _whiteBtn">
+                    <span>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path
+  d="M15.4367 3.56473L12.4204 0.544844C12.0544 0.195104 11.5678 0 11.0618 0C10.5558 0 10.0692 0.195101 9.70308 0.544844C9.41066 0.833933 9.21993 1.21048 9.16006 1.61755C9.10008 2.02471 9.17405 2.44032 9.3707 2.80157L6.03705 5.30347L6.03716 5.30359C5.49867 4.9687 4.82979 4.92158 4.24993 5.17779C3.67008 5.43401 3.2539 5.96046 3.1382 6.58432C3.02239 7.20831 3.22177 7.84927 3.67111 8.2969L5.32844 9.95619L0.152571 15.1397C0.0560841 15.233 0.00120299 15.361 1.9554e-05 15.4953C-0.00116576 15.6295 0.0515809 15.7586 0.146408 15.8534C0.241116 15.9484 0.37008 16.0012 0.504139 16C0.638201 15.9988 0.766098 15.9438 0.859261 15.8472L6.03513 10.6652L7.69246 12.3245C8.13955 12.7738 8.7794 12.9732 9.40231 12.8573C10.0252 12.7413 10.5508 12.325 10.8067 11.7448C11.0627 11.1646 11.016 10.4953 10.6821 9.95628L13.181 6.61716H13.1812C13.7265 6.9091 14.3792 6.91942 14.9336 6.64493C15.4878 6.37043 15.8758 5.84495 15.9751 5.23378C16.0744 4.62274 15.873 4.00112 15.4342 3.56486L15.4367 3.56473ZM9.70223 11.6168C9.52917 11.7897 9.2947 11.8868 9.05031 11.8868C8.80577 11.8868 8.57132 11.7897 8.39826 11.6168L6.38864 9.60477L4.37795 7.59064C4.15688 7.35519 4.07498 7.02124 4.16174 6.71009C4.24863 6.39893 4.49162 6.15576 4.80253 6.06912C5.11332 5.98237 5.44686 6.06473 5.68191 6.28617L9.70226 10.3113C9.87496 10.4846 9.97192 10.7193 9.97192 10.9641C9.97192 11.2088 9.87496 11.4435 9.70226 11.6168L9.70223 11.6168ZM10.0021 9.19536L6.79652 5.98597L10.0103 3.5726L12.4094 5.97454L10.0021 9.19536ZM14.7298 5.57765H14.7297C14.5565 5.75032 14.3222 5.84728 14.0778 5.84728C13.8333 5.84728 13.599 5.75032 13.4258 5.57765L10.4101 2.55789C10.1822 2.32375 10.095 1.98637 10.181 1.67093C10.2668 1.35537 10.513 1.10901 10.828 1.02297C11.1431 0.937054 11.4801 1.02428 11.714 1.25237L14.7303 4.27226C14.9028 4.44552 14.9998 4.68027 14.9998 4.92495C14.9998 5.16966 14.9028 5.40451 14.7303 5.57765L14.7298 5.57765Z"
+  fill="#80A4DE"/>
+</svg>
+                  </span>Закрепить окно
+                  </button>
+                  <p class="right-info-submit-trash__order">Сумма заказа:<br>
+                                                            3 000 000 ₽</p>
+                  <table class="right-info-submit-trash__table">
+                    <tr>
+                      <td class="right-info-submit-trash__name-table">Стоимость товара:</td>
+                      <td><p class="right-info-submit-trash__text-table">3 000 000 ₽</p></td>
+                    </tr>
+                    <tr>
+                      <td class="right-info-submit-trash__name-table">Стоимость доставки:</td>
+                      <td><p class="right-info-submit-trash__text-table">50₽*</p></td>
+                    </tr>
+                    <tr>
+                      <td class="right-info-submit-trash__name-table">Общий вес:</td>
+                      <td><p class="right-info-submit-trash__text-table">2 кг</p></td>
+                    </tr>
+                    <tr>
+                      <td class="right-info-submit-trash__name-table">Количество позиций:</td>
+                      <td><p class="right-info-submit-trash__text-table">2 шт</p></td>
+                    </tr>
+                    <tr>
+                      <td class="right-info-submit-trash__name-table">К оплате:</td>
+                      <td><p class="right-info-submit-trash__text-table">3 000 005₽*</p></td>
+                    </tr>
+                  </table>
+                </div>
+                <div class="right-order__products products-right-order">
+                  <div class="products-right-order__checkbox">
+                    <input id="allEventBtn" data-error="Ошибка" class="checkbox__input" type="checkbox"
+                           value="1"
+                           name="form[]">
+                    <label for="allEventBtn" class="checkbox__label"><span
+                      class="checkbox__text">Выбрать все товары</span></label>
+                  </div>
+                  <button type="button" id="deleteBtnTrash" class="products-right-order__deleteBtn _whiteBtn">
+									  <span>
+										<svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path
+                        d="M9.48069 13.5218C9.72245 13.5218 9.91823 13.326 9.91823 13.0843V5.64262C9.91823 5.40086 9.72245 5.20508 9.48069 5.20508C9.23894 5.20508 9.04315 5.40086 9.04315 5.64262V13.0843C9.04315 13.326 9.23894 13.5218 9.48069 13.5218Z"
+                        fill="#80A4DE"></path>
+											<path
+                        d="M6.99989 13.5218C7.24164 13.5218 7.43743 13.326 7.43743 13.0843V5.64262C7.43743 5.40086 7.24164 5.20508 6.99989 5.20508C6.75813 5.20508 6.56235 5.40086 6.56235 5.64262V13.0843C6.56235 13.326 6.75813 13.5218 6.99989 13.5218Z"
+                        fill="#80A4DE"></path>
+											<path
+                        d="M4.51957 13.5218C4.76133 13.5218 4.95711 13.326 4.95711 13.0843V5.64262C4.95711 5.40086 4.76133 5.20508 4.51957 5.20508C4.27782 5.20508 4.08203 5.40086 4.08203 5.64262V13.0843C4.08203 13.326 4.27758 13.5218 4.51957 13.5218Z"
+                        fill="#80A4DE"></path>
+											<path
+                        d="M8.24041 0.242188H5.75985C4.83483 0.242188 4.0818 0.93945 4.0818 1.79586V2.72228H0.798501C0.556746 2.72228 0.360962 2.91806 0.360962 3.15982C0.360962 3.40157 0.556746 3.59736 0.798501 3.59736H1.60147V14.3223C1.60147 15.2478 2.35404 16.0006 3.27906 16.0006H10.7207C11.6462 16.0006 12.399 15.2478 12.399 14.3223V3.59736H13.2015C13.4433 3.59736 13.6391 3.40157 13.6391 3.15982C13.6391 2.91806 13.4433 2.72228 13.2015 2.72228H9.91822V1.79586C9.91822 0.93945 9.16542 0.242188 8.24041 0.242188ZM4.95711 1.79586C4.95711 1.42833 5.32464 1.11727 5.76008 1.11727H8.24041C8.67585 1.11727 9.04338 1.42833 9.04338 1.79586V2.72228H4.95711V1.79586ZM11.5239 14.3223C11.5239 14.765 11.1634 15.1255 10.7207 15.1255H3.27906C2.83639 15.1255 2.47655 14.765 2.47655 14.3223V3.59736H11.5239V14.3223Z"
+                        fill="#80A4DE"></path>
+										</svg>
+									</span>
+                    Удалить выбранные
+                  </button>
+                  <button type="button" id="goAllToFavouriteBtnTrash"
+                          class="products-right-order__favoriteBtn _blueBtn">
+									  <span>
+										<svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path
+                        d="M11.5 0C10.125 0 8.85 0.625 8 1.675C7.15 0.625 5.875 0 4.5 0C2.025 0 0 2.025 0 4.5C0 9.225 7.425 13.75 7.75 13.925C7.825 13.975 7.925 14 8 14C8.075 14 8.175 13.975 8.25 13.925C8.575 13.75 16 9.225 16 4.5C16 2.025 13.975 0 11.5 0ZM8 12.9C6.7 12.075 1 8.2 1 4.5C1 2.575 2.575 1 4.5 1C5.775 1 6.95 1.7 7.575 2.8C7.75 3.125 8.275 3.125 8.45 2.8C9.05 1.7 10.225 1 11.5 1C13.425 1 15 2.575 15 4.5C15 8.2 9.3 12.075 8 12.9Z"
+                        fill="white"></path>
+										</svg>
+									</span>
+                    Выбранные в избранное
+                  </button>
+                  <ol id="productListTrash" class="products-right-order__list">
+                    <li class="products-right-order__item">
+                      <div class="products-right-order__product product-products-right-order">
+                        <div class="product-products-right-order__up up-product-products-right-order">
+                          <div class="up-product-products-right-order__checkbox">
+                            <input id="product-products-right-order" data-error="Ошибка" class="checkbox__input"
+                                   type="checkbox" value="1"
+                                   name="form[]">
+                            <label for="product-products-right-order" class="checkbox__label"><span
+                              class="checkbox__text"></span></label>
+                          </div>
+                          <div class="up-product-products-right-order__img">
+                            <img class="up-product-products-right-order__img_main" src="img/product/1.jpg" alt="">
+                            <img data-favourite src="img/catalog/favorite.svg" alt=""
+                                 class="up-product-products-right-order__img_favourite">
+                            <img src="img/catalog/favorite-ful.svg" alt=""
+                                 class="up-product-products-right-order__img_favourite-full">
+                          </div>
+                        </div>
+                        <div class="product-products-right-order__body">
+                          <h3 class="product-products-right-order__title">10 м водонепроницаемый Самоклеящиеся обои
+                                                                          чистый пигмент цветная сетка красный Обои флип
+                                                                          новый Стикер бумага спальня теплый фон
+                                                                          украшения стены</h3>
+                          <div class="product-products-right-order__price">1 000 000 - 3 000 000 $</div>
+                          <div class="product-products-right-order__disconut">2 000 000 - 3 000 000₽</div>
+                          <div class="quantity">
+                            <span>Количество: </span>
+                            <button type="button" class="quantity__button quantity__button_minus">-</button>
+                            <div class="quantity__input">
+                              <input readonly autocomplete="off" type="text" name="form[]" value="1">
+                            </div>
+                            <button type="button" class="quantity__button quantity__button_plus">+</button>
+                          </div>
+                          <a href="/product.html" class="product-products-right-order__config _blueBtn">
+															<span>
+																<svg width="15" height="13" viewBox="0 0 15 13" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+<path
+  d="M0.609868 2.85597H2.1866C2.45435 3.80796 3.33196 4.4922 4.35832 4.4922C5.38469 4.4922 6.2623 3.79308 6.53005 2.85597H13.5063C13.8485 2.85597 14.1162 2.57334 14.1162 2.2461C14.1162 1.91885 13.8336 1.63623 13.5063 1.63623H6.53005C6.2623 0.684242 5.38469 0 4.35832 0C3.33196 0 2.45435 0.699117 2.1866 1.63623H0.609868C0.267747 1.63623 0 1.91885 0 2.2461C0 2.57334 0.282622 2.85597 0.609868 2.85597ZM4.35832 1.20486C4.92357 1.20486 5.38469 1.66598 5.38469 2.23122C5.38469 2.79647 4.92357 3.25759 4.35832 3.25759C3.79308 3.25759 3.33196 2.79647 3.33196 2.23122C3.33196 1.66598 3.79308 1.20486 4.35832 1.20486Z"
+  fill="white"/>
+<path
+  d="M13.5212 5.89014H11.9445C11.6767 4.93815 10.7991 4.25391 9.77276 4.25391C8.7464 4.25391 7.86878 4.95302 7.60104 5.89014H0.609868C0.267747 5.89014 0 6.17276 0 6.5C0 6.82725 0.282622 7.10987 0.609868 7.10987H7.58616C7.85391 8.06186 8.73152 8.7461 9.75789 8.7461C10.7842 8.7461 11.6619 8.04699 11.9296 7.10987H13.5063C13.8485 7.10987 14.1162 6.82725 14.1162 6.5C14.1162 6.17276 13.8485 5.89014 13.5212 5.89014ZM9.77276 7.52637C9.20752 7.52637 8.7464 7.06525 8.7464 6.5C8.7464 5.93476 9.20752 5.47364 9.77276 5.47364C10.338 5.47364 10.7991 5.93476 10.7991 6.5C10.7991 7.06525 10.338 7.52637 9.77276 7.52637Z"
+  fill="white"/>
+<path
+  d="M13.5212 10.144H6.53005C6.2623 9.19205 5.38469 8.50781 4.35832 8.50781C3.33196 8.50781 2.45435 9.20693 2.1866 10.144H0.609868C0.267747 10.144 0 10.4267 0 10.7539C0 11.096 0.282622 11.3638 0.609868 11.3638H2.1866C2.45435 12.3158 3.33196 13 4.35832 13C5.38469 13 6.2623 12.3009 6.53005 11.3638H13.5063C13.8485 11.3638 14.1162 11.0812 14.1162 10.7539C14.1311 10.4267 13.8485 10.144 13.5212 10.144ZM4.35832 11.7951C3.79308 11.7951 3.33196 11.334 3.33196 10.7688C3.33196 10.2035 3.79308 9.74242 4.35832 9.74242C4.92357 9.74242 5.38469 10.2035 5.38469 10.7688C5.38469 11.334 4.92357 11.7951 4.35832 11.7951Z"
+  fill="white"/>
+</svg>
+
+
+															</span>
+                            Изменить конфигурацию
+                          </a>
+                          <button id="deleteItemTrashBtn" type="button"
+                                  class="product-products-right-order__delete _whiteBtn">
+															<span>
+																<svg width="14" height="16" viewBox="0 0 14 16" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+																	<path
+                                    d="M9.48066 13.5218C9.72242 13.5218 9.9182 13.326 9.9182 13.0843V5.64262C9.9182 5.40086 9.72242 5.20508 9.48066 5.20508C9.23891 5.20508 9.04312 5.40086 9.04312 5.64262V13.0843C9.04312 13.326 9.23891 13.5218 9.48066 13.5218Z"
+                                    fill="#80A4DE"></path>
+																	<path
+                                    d="M6.99988 13.5218C7.24163 13.5218 7.43742 13.326 7.43742 13.0843V5.64262C7.43742 5.40086 7.24163 5.20508 6.99988 5.20508C6.75812 5.20508 6.56234 5.40086 6.56234 5.64262V13.0843C6.56234 13.326 6.75812 13.5218 6.99988 13.5218Z"
+                                    fill="#80A4DE"></path>
+																	<path
+                                    d="M4.51956 13.5218C4.76131 13.5218 4.95709 13.326 4.95709 13.0843V5.64262C4.95709 5.40086 4.76131 5.20508 4.51956 5.20508C4.2778 5.20508 4.08202 5.40086 4.08202 5.64262V13.0843C4.08202 13.326 4.27757 13.5218 4.51956 13.5218Z"
+                                    fill="#80A4DE"></path>
+																	<path
+                                    d="M8.24039 0.242188H5.75983C4.83482 0.242188 4.08178 0.93945 4.08178 1.79586V2.72228H0.798486C0.556731 2.72228 0.360947 2.91806 0.360947 3.15982C0.360947 3.40157 0.556731 3.59736 0.798486 3.59736H1.60146V14.3223C1.60146 15.2478 2.35403 16.0006 3.27904 16.0006H10.7207C11.6462 16.0006 12.399 15.2478 12.399 14.3223V3.59736H13.2015C13.4433 3.59736 13.639 3.40157 13.639 3.15982C13.639 2.91806 13.4433 2.72228 13.2015 2.72228H9.91821V1.79586C9.91821 0.93945 9.16541 0.242188 8.24039 0.242188ZM4.95709 1.79586C4.95709 1.42833 5.32463 1.11727 5.76007 1.11727H8.24039C8.67583 1.11727 9.04336 1.42833 9.04336 1.79586V2.72228H4.95709V1.79586ZM11.5239 14.3223C11.5239 14.765 11.1634 15.1255 10.7207 15.1255H3.27904C2.83637 15.1255 2.47654 14.765 2.47654 14.3223V3.59736H11.5239V14.3223Z"
+                                    fill="#80A4DE"></path>
+																</svg></span>
+                            Удалить товар
+                          </button>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="products-right-order__item">
+                      <div class="products-right-order__product product-products-right-order">
+                        <div class="product-products-right-order__up up-product-products-right-order">
+                          <div class="up-product-products-right-order__checkbox">
+                            <input id="product-products-right-order2" data-error="Ошибка" class="checkbox__input"
+                                   type="checkbox" value="1"
+                                   name="form[]">
+                            <label for="product-products-right-order2" class="checkbox__label"><span
+                              class="checkbox__text"></span></label>
+                          </div>
+                          <div class="up-product-products-right-order__img">
+                            <img class="up-product-products-right-order__img_main" src="img/product/1.jpg" alt="">
+                            <img data-favourite src="img/catalog/favorite.svg" alt=""
+                                 class="up-product-products-right-order__img_favourite">
+                            <img src="img/catalog/favorite-ful.svg" alt=""
+                                 class="up-product-products-right-order__img_favourite-full">
+                          </div>
+                        </div>
+                        <div class="product-products-right-order__body">
+                          <h3 class="product-products-right-order__title">10 м водонепроницаемый Самоклеящиеся обои
+                                                                          чистый пигмент цветная сетка красный Обои флип
+                                                                          новый Стикер бумага спальня теплый фон
+                                                                          украшения стены</h3>
+                          <div class="product-products-right-order__price">1 000 000 - 3 000 000 $</div>
+                          <div class="product-products-right-order__disconut">2 000 000 - 3 000 000₽</div>
+                          <div class="quantity">
+                            <span>Количество: </span>
+                            <button type="button" class="quantity__button quantity__button_minus">-</button>
+                            <div class="quantity__input">
+                              <input readonly autocomplete="off" type="text" name="form[]" value="1">
+                            </div>
+                            <button type="button" class="quantity__button quantity__button_plus">+</button>
+                          </div>
+                          <a href="/product.html" class="product-products-right-order__config _blueBtn">
+															<span>
+																<svg width="15" height="13" viewBox="0 0 15 13" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+<path
+  d="M0.609868 2.85597H2.1866C2.45435 3.80796 3.33196 4.4922 4.35832 4.4922C5.38469 4.4922 6.2623 3.79308 6.53005 2.85597H13.5063C13.8485 2.85597 14.1162 2.57334 14.1162 2.2461C14.1162 1.91885 13.8336 1.63623 13.5063 1.63623H6.53005C6.2623 0.684242 5.38469 0 4.35832 0C3.33196 0 2.45435 0.699117 2.1866 1.63623H0.609868C0.267747 1.63623 0 1.91885 0 2.2461C0 2.57334 0.282622 2.85597 0.609868 2.85597ZM4.35832 1.20486C4.92357 1.20486 5.38469 1.66598 5.38469 2.23122C5.38469 2.79647 4.92357 3.25759 4.35832 3.25759C3.79308 3.25759 3.33196 2.79647 3.33196 2.23122C3.33196 1.66598 3.79308 1.20486 4.35832 1.20486Z"
+  fill="white"/>
+<path
+  d="M13.5212 5.89014H11.9445C11.6767 4.93815 10.7991 4.25391 9.77276 4.25391C8.7464 4.25391 7.86878 4.95302 7.60104 5.89014H0.609868C0.267747 5.89014 0 6.17276 0 6.5C0 6.82725 0.282622 7.10987 0.609868 7.10987H7.58616C7.85391 8.06186 8.73152 8.7461 9.75789 8.7461C10.7842 8.7461 11.6619 8.04699 11.9296 7.10987H13.5063C13.8485 7.10987 14.1162 6.82725 14.1162 6.5C14.1162 6.17276 13.8485 5.89014 13.5212 5.89014ZM9.77276 7.52637C9.20752 7.52637 8.7464 7.06525 8.7464 6.5C8.7464 5.93476 9.20752 5.47364 9.77276 5.47364C10.338 5.47364 10.7991 5.93476 10.7991 6.5C10.7991 7.06525 10.338 7.52637 9.77276 7.52637Z"
+  fill="white"/>
+<path
+  d="M13.5212 10.144H6.53005C6.2623 9.19205 5.38469 8.50781 4.35832 8.50781C3.33196 8.50781 2.45435 9.20693 2.1866 10.144H0.609868C0.267747 10.144 0 10.4267 0 10.7539C0 11.096 0.282622 11.3638 0.609868 11.3638H2.1866C2.45435 12.3158 3.33196 13 4.35832 13C5.38469 13 6.2623 12.3009 6.53005 11.3638H13.5063C13.8485 11.3638 14.1162 11.0812 14.1162 10.7539C14.1311 10.4267 13.8485 10.144 13.5212 10.144ZM4.35832 11.7951C3.79308 11.7951 3.33196 11.334 3.33196 10.7688C3.33196 10.2035 3.79308 9.74242 4.35832 9.74242C4.92357 9.74242 5.38469 10.2035 5.38469 10.7688C5.38469 11.334 4.92357 11.7951 4.35832 11.7951Z"
+  fill="white"/>
+</svg>
+
+
+															</span>
+                            Изменить конфигурацию
+                          </a>
+                          <button id="deleteItemTrashBtn" type="button"
+                                  class="product-products-right-order__delete _whiteBtn">
+															<span>
+																<svg width="14" height="16" viewBox="0 0 14 16" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+																	<path
+                                    d="M9.48066 13.5218C9.72242 13.5218 9.9182 13.326 9.9182 13.0843V5.64262C9.9182 5.40086 9.72242 5.20508 9.48066 5.20508C9.23891 5.20508 9.04312 5.40086 9.04312 5.64262V13.0843C9.04312 13.326 9.23891 13.5218 9.48066 13.5218Z"
+                                    fill="#80A4DE"></path>
+																	<path
+                                    d="M6.99988 13.5218C7.24163 13.5218 7.43742 13.326 7.43742 13.0843V5.64262C7.43742 5.40086 7.24163 5.20508 6.99988 5.20508C6.75812 5.20508 6.56234 5.40086 6.56234 5.64262V13.0843C6.56234 13.326 6.75812 13.5218 6.99988 13.5218Z"
+                                    fill="#80A4DE"></path>
+																	<path
+                                    d="M4.51956 13.5218C4.76131 13.5218 4.95709 13.326 4.95709 13.0843V5.64262C4.95709 5.40086 4.76131 5.20508 4.51956 5.20508C4.2778 5.20508 4.08202 5.40086 4.08202 5.64262V13.0843C4.08202 13.326 4.27757 13.5218 4.51956 13.5218Z"
+                                    fill="#80A4DE"></path>
+																	<path
+                                    d="M8.24039 0.242188H5.75983C4.83482 0.242188 4.08178 0.93945 4.08178 1.79586V2.72228H0.798486C0.556731 2.72228 0.360947 2.91806 0.360947 3.15982C0.360947 3.40157 0.556731 3.59736 0.798486 3.59736H1.60146V14.3223C1.60146 15.2478 2.35403 16.0006 3.27904 16.0006H10.7207C11.6462 16.0006 12.399 15.2478 12.399 14.3223V3.59736H13.2015C13.4433 3.59736 13.639 3.40157 13.639 3.15982C13.639 2.91806 13.4433 2.72228 13.2015 2.72228H9.91821V1.79586C9.91821 0.93945 9.16541 0.242188 8.24039 0.242188ZM4.95709 1.79586C4.95709 1.42833 5.32463 1.11727 5.76007 1.11727H8.24039C8.67583 1.11727 9.04336 1.42833 9.04336 1.79586V2.72228H4.95709V1.79586ZM11.5239 14.3223C11.5239 14.765 11.1634 15.1255 10.7207 15.1255H3.27904C2.83637 15.1255 2.47654 14.765 2.47654 14.3223V3.59736H11.5239V14.3223Z"
+                                    fill="#80A4DE"></path>
+																</svg></span>
+                            Удалить товар
+                          </button>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="products-right-order__item">
+                      <div class="products-right-order__product product-products-right-order">
+                        <div class="product-products-right-order__up up-product-products-right-order">
+                          <div class="up-product-products-right-order__checkbox">
+                            <input id="product-products-right-order3" data-error="Ошибка" class="checkbox__input"
+                                   type="checkbox" value="1"
+                                   name="form[]">
+                            <label for="product-products-right-order3" class="checkbox__label"><span
+                              class="checkbox__text"></span></label>
+                          </div>
+                          <div class="up-product-products-right-order__img">
+                            <img class="up-product-products-right-order__img_main" src="img/product/1.jpg" alt="">
+                            <img data-favourite src="img/catalog/favorite.svg" alt=""
+                                 class="up-product-products-right-order__img_favourite">
+                            <img src="img/catalog/favorite-ful.svg" alt=""
+                                 class="up-product-products-right-order__img_favourite-full">
+                          </div>
+                        </div>
+                        <div class="product-products-right-order__body">
+                          <h3 class="product-products-right-order__title">10 м водонепроницаемый Самоклеящиеся обои
+                                                                          чистый пигмент цветная сетка красный Обои флип
+                                                                          новый Стикер бумага спальня теплый фон
+                                                                          украшения стены</h3>
+                          <div class="product-products-right-order__price">1 000 000 - 3 000 000 $</div>
+                          <div class="product-products-right-order__disconut">2 000 000 - 3 000 000₽</div>
+                          <div class="quantity">
+                            <span>Количество: </span>
+                            <button type="button" class="quantity__button quantity__button_minus">-</button>
+                            <div class="quantity__input">
+                              <input readonly autocomplete="off" type="text" name="form[]" value="1">
+                            </div>
+                            <button type="button" class="quantity__button quantity__button_plus">+</button>
+                          </div>
+                          <a href="/product.html" class="product-products-right-order__config _blueBtn">
+															<span>
+																<svg width="15" height="13" viewBox="0 0 15 13" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+<path
+  d="M0.609868 2.85597H2.1866C2.45435 3.80796 3.33196 4.4922 4.35832 4.4922C5.38469 4.4922 6.2623 3.79308 6.53005 2.85597H13.5063C13.8485 2.85597 14.1162 2.57334 14.1162 2.2461C14.1162 1.91885 13.8336 1.63623 13.5063 1.63623H6.53005C6.2623 0.684242 5.38469 0 4.35832 0C3.33196 0 2.45435 0.699117 2.1866 1.63623H0.609868C0.267747 1.63623 0 1.91885 0 2.2461C0 2.57334 0.282622 2.85597 0.609868 2.85597ZM4.35832 1.20486C4.92357 1.20486 5.38469 1.66598 5.38469 2.23122C5.38469 2.79647 4.92357 3.25759 4.35832 3.25759C3.79308 3.25759 3.33196 2.79647 3.33196 2.23122C3.33196 1.66598 3.79308 1.20486 4.35832 1.20486Z"
+  fill="white"/>
+<path
+  d="M13.5212 5.89014H11.9445C11.6767 4.93815 10.7991 4.25391 9.77276 4.25391C8.7464 4.25391 7.86878 4.95302 7.60104 5.89014H0.609868C0.267747 5.89014 0 6.17276 0 6.5C0 6.82725 0.282622 7.10987 0.609868 7.10987H7.58616C7.85391 8.06186 8.73152 8.7461 9.75789 8.7461C10.7842 8.7461 11.6619 8.04699 11.9296 7.10987H13.5063C13.8485 7.10987 14.1162 6.82725 14.1162 6.5C14.1162 6.17276 13.8485 5.89014 13.5212 5.89014ZM9.77276 7.52637C9.20752 7.52637 8.7464 7.06525 8.7464 6.5C8.7464 5.93476 9.20752 5.47364 9.77276 5.47364C10.338 5.47364 10.7991 5.93476 10.7991 6.5C10.7991 7.06525 10.338 7.52637 9.77276 7.52637Z"
+  fill="white"/>
+<path
+  d="M13.5212 10.144H6.53005C6.2623 9.19205 5.38469 8.50781 4.35832 8.50781C3.33196 8.50781 2.45435 9.20693 2.1866 10.144H0.609868C0.267747 10.144 0 10.4267 0 10.7539C0 11.096 0.282622 11.3638 0.609868 11.3638H2.1866C2.45435 12.3158 3.33196 13 4.35832 13C5.38469 13 6.2623 12.3009 6.53005 11.3638H13.5063C13.8485 11.3638 14.1162 11.0812 14.1162 10.7539C14.1311 10.4267 13.8485 10.144 13.5212 10.144ZM4.35832 11.7951C3.79308 11.7951 3.33196 11.334 3.33196 10.7688C3.33196 10.2035 3.79308 9.74242 4.35832 9.74242C4.92357 9.74242 5.38469 10.2035 5.38469 10.7688C5.38469 11.334 4.92357 11.7951 4.35832 11.7951Z"
+  fill="white"/>
+</svg>
+
+
+															</span>
+                            Изменить конфигурацию
+                          </a>
+                          <button id="deleteItemTrashBtn" type="button"
+                                  class="product-products-right-order__delete _whiteBtn">
+															<span>
+																<svg width="14" height="16" viewBox="0 0 14 16" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+																	<path
+                                    d="M9.48066 13.5218C9.72242 13.5218 9.9182 13.326 9.9182 13.0843V5.64262C9.9182 5.40086 9.72242 5.20508 9.48066 5.20508C9.23891 5.20508 9.04312 5.40086 9.04312 5.64262V13.0843C9.04312 13.326 9.23891 13.5218 9.48066 13.5218Z"
+                                    fill="#80A4DE"></path>
+																	<path
+                                    d="M6.99988 13.5218C7.24163 13.5218 7.43742 13.326 7.43742 13.0843V5.64262C7.43742 5.40086 7.24163 5.20508 6.99988 5.20508C6.75812 5.20508 6.56234 5.40086 6.56234 5.64262V13.0843C6.56234 13.326 6.75812 13.5218 6.99988 13.5218Z"
+                                    fill="#80A4DE"></path>
+																	<path
+                                    d="M4.51956 13.5218C4.76131 13.5218 4.95709 13.326 4.95709 13.0843V5.64262C4.95709 5.40086 4.76131 5.20508 4.51956 5.20508C4.2778 5.20508 4.08202 5.40086 4.08202 5.64262V13.0843C4.08202 13.326 4.27757 13.5218 4.51956 13.5218Z"
+                                    fill="#80A4DE"></path>
+																	<path
+                                    d="M8.24039 0.242188H5.75983C4.83482 0.242188 4.08178 0.93945 4.08178 1.79586V2.72228H0.798486C0.556731 2.72228 0.360947 2.91806 0.360947 3.15982C0.360947 3.40157 0.556731 3.59736 0.798486 3.59736H1.60146V14.3223C1.60146 15.2478 2.35403 16.0006 3.27904 16.0006H10.7207C11.6462 16.0006 12.399 15.2478 12.399 14.3223V3.59736H13.2015C13.4433 3.59736 13.639 3.40157 13.639 3.15982C13.639 2.91806 13.4433 2.72228 13.2015 2.72228H9.91821V1.79586C9.91821 0.93945 9.16541 0.242188 8.24039 0.242188ZM4.95709 1.79586C4.95709 1.42833 5.32463 1.11727 5.76007 1.11727H8.24039C8.67583 1.11727 9.04336 1.42833 9.04336 1.79586V2.72228H4.95709V1.79586ZM11.5239 14.3223C11.5239 14.765 11.1634 15.1255 10.7207 15.1255H3.27904C2.83637 15.1255 2.47654 14.765 2.47654 14.3223V3.59736H11.5239V14.3223Z"
+                                    fill="#80A4DE"></path>
+																</svg></span>
+                            Удалить товар
+                          </button>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="products-right-order__item">
+                      <div class="products-right-order__product product-products-right-order">
+                        <div class="product-products-right-order__up up-product-products-right-order">
+                          <div class="up-product-products-right-order__checkbox">
+                            <input id="product-products-right-order4" data-error="Ошибка" class="checkbox__input"
+                                   type="checkbox" value="1"
+                                   name="form[]">
+                            <label for="product-products-right-order4" class="checkbox__label"><span
+                              class="checkbox__text"></span></label>
+                          </div>
+                          <div class="up-product-products-right-order__img">
+                            <img class="up-product-products-right-order__img_main" src="img/product/1.jpg" alt="">
+                            <img data-favourite src="img/catalog/favorite.svg" alt=""
+                                 class="up-product-products-right-order__img_favourite">
+                            <img src="img/catalog/favorite-ful.svg" alt=""
+                                 class="up-product-products-right-order__img_favourite-full">
+                          </div>
+                        </div>
+                        <div class="product-products-right-order__body">
+                          <h3 class="product-products-right-order__title">10 м водонепроницаемый Самоклеящиеся обои
+                                                                          чистый пигмент цветная сетка красный Обои флип
+                                                                          новый Стикер бумага спальня теплый фон
+                                                                          украшения стены</h3>
+                          <div class="product-products-right-order__price">1 000 000 - 3 000 000 $</div>
+                          <div class="product-products-right-order__disconut">2 000 000 - 3 000 000₽</div>
+                          <div class="quantity">
+                            <span>Количество: </span>
+                            <button type="button" class="quantity__button quantity__button_minus">-</button>
+                            <div class="quantity__input">
+                              <input readonly autocomplete="off" type="text" name="form[]" value="1">
+                            </div>
+                            <button type="button" class="quantity__button quantity__button_plus">+</button>
+                          </div>
+                          <a href="/product.html" class="product-products-right-order__config _blueBtn">
+															<span>
+																<svg width="15" height="13" viewBox="0 0 15 13" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+<path
+  d="M0.609868 2.85597H2.1866C2.45435 3.80796 3.33196 4.4922 4.35832 4.4922C5.38469 4.4922 6.2623 3.79308 6.53005 2.85597H13.5063C13.8485 2.85597 14.1162 2.57334 14.1162 2.2461C14.1162 1.91885 13.8336 1.63623 13.5063 1.63623H6.53005C6.2623 0.684242 5.38469 0 4.35832 0C3.33196 0 2.45435 0.699117 2.1866 1.63623H0.609868C0.267747 1.63623 0 1.91885 0 2.2461C0 2.57334 0.282622 2.85597 0.609868 2.85597ZM4.35832 1.20486C4.92357 1.20486 5.38469 1.66598 5.38469 2.23122C5.38469 2.79647 4.92357 3.25759 4.35832 3.25759C3.79308 3.25759 3.33196 2.79647 3.33196 2.23122C3.33196 1.66598 3.79308 1.20486 4.35832 1.20486Z"
+  fill="white"/>
+<path
+  d="M13.5212 5.89014H11.9445C11.6767 4.93815 10.7991 4.25391 9.77276 4.25391C8.7464 4.25391 7.86878 4.95302 7.60104 5.89014H0.609868C0.267747 5.89014 0 6.17276 0 6.5C0 6.82725 0.282622 7.10987 0.609868 7.10987H7.58616C7.85391 8.06186 8.73152 8.7461 9.75789 8.7461C10.7842 8.7461 11.6619 8.04699 11.9296 7.10987H13.5063C13.8485 7.10987 14.1162 6.82725 14.1162 6.5C14.1162 6.17276 13.8485 5.89014 13.5212 5.89014ZM9.77276 7.52637C9.20752 7.52637 8.7464 7.06525 8.7464 6.5C8.7464 5.93476 9.20752 5.47364 9.77276 5.47364C10.338 5.47364 10.7991 5.93476 10.7991 6.5C10.7991 7.06525 10.338 7.52637 9.77276 7.52637Z"
+  fill="white"/>
+<path
+  d="M13.5212 10.144H6.53005C6.2623 9.19205 5.38469 8.50781 4.35832 8.50781C3.33196 8.50781 2.45435 9.20693 2.1866 10.144H0.609868C0.267747 10.144 0 10.4267 0 10.7539C0 11.096 0.282622 11.3638 0.609868 11.3638H2.1866C2.45435 12.3158 3.33196 13 4.35832 13C5.38469 13 6.2623 12.3009 6.53005 11.3638H13.5063C13.8485 11.3638 14.1162 11.0812 14.1162 10.7539C14.1311 10.4267 13.8485 10.144 13.5212 10.144ZM4.35832 11.7951C3.79308 11.7951 3.33196 11.334 3.33196 10.7688C3.33196 10.2035 3.79308 9.74242 4.35832 9.74242C4.92357 9.74242 5.38469 10.2035 5.38469 10.7688C5.38469 11.334 4.92357 11.7951 4.35832 11.7951Z"
+  fill="white"/>
+</svg>
+
+
+															</span>
+                            Изменить конфигурацию
+                          </a>
+                          <button id="deleteItemTrashBtn" type="button"
+                                  class="product-products-right-order__delete _whiteBtn">
+															<span>
+																<svg width="14" height="16" viewBox="0 0 14 16" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+																	<path
+                                    d="M9.48066 13.5218C9.72242 13.5218 9.9182 13.326 9.9182 13.0843V5.64262C9.9182 5.40086 9.72242 5.20508 9.48066 5.20508C9.23891 5.20508 9.04312 5.40086 9.04312 5.64262V13.0843C9.04312 13.326 9.23891 13.5218 9.48066 13.5218Z"
+                                    fill="#80A4DE"></path>
+																	<path
+                                    d="M6.99988 13.5218C7.24163 13.5218 7.43742 13.326 7.43742 13.0843V5.64262C7.43742 5.40086 7.24163 5.20508 6.99988 5.20508C6.75812 5.20508 6.56234 5.40086 6.56234 5.64262V13.0843C6.56234 13.326 6.75812 13.5218 6.99988 13.5218Z"
+                                    fill="#80A4DE"></path>
+																	<path
+                                    d="M4.51956 13.5218C4.76131 13.5218 4.95709 13.326 4.95709 13.0843V5.64262C4.95709 5.40086 4.76131 5.20508 4.51956 5.20508C4.2778 5.20508 4.08202 5.40086 4.08202 5.64262V13.0843C4.08202 13.326 4.27757 13.5218 4.51956 13.5218Z"
+                                    fill="#80A4DE"></path>
+																	<path
+                                    d="M8.24039 0.242188H5.75983C4.83482 0.242188 4.08178 0.93945 4.08178 1.79586V2.72228H0.798486C0.556731 2.72228 0.360947 2.91806 0.360947 3.15982C0.360947 3.40157 0.556731 3.59736 0.798486 3.59736H1.60146V14.3223C1.60146 15.2478 2.35403 16.0006 3.27904 16.0006H10.7207C11.6462 16.0006 12.399 15.2478 12.399 14.3223V3.59736H13.2015C13.4433 3.59736 13.639 3.40157 13.639 3.15982C13.639 2.91806 13.4433 2.72228 13.2015 2.72228H9.91821V1.79586C9.91821 0.93945 9.16541 0.242188 8.24039 0.242188ZM4.95709 1.79586C4.95709 1.42833 5.32463 1.11727 5.76007 1.11727H8.24039C8.67583 1.11727 9.04336 1.42833 9.04336 1.79586V2.72228H4.95709V1.79586ZM11.5239 14.3223C11.5239 14.765 11.1634 15.1255 10.7207 15.1255H3.27904C2.83637 15.1255 2.47654 14.765 2.47654 14.3223V3.59736H11.5239V14.3223Z"
+                                    fill="#80A4DE"></path>
+																</svg></span>
+                            Удалить товар
+                          </button>
+                        </div>
+                      </div>
+                    </li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+  @@include('html/_footer.htm',{})
+  @@include('html/_fixed.htm',{})
+  @@include('html/_popup.htm',{})
+
+</div>
+@@include('html/_confirm.htm',{})
+@@include('html/_js.htm',{})
+
+</body>
+</html>

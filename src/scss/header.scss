@@ -1,0 +1,300 @@
+.header {
+  position: fixed;
+  padding-top: 35px;
+  z-index: 999;
+  background: white;
+  width: 100%;
+  padding-bottom: 10px;
+  
+  &__container {
+  }
+  
+  &__body {
+    display: flex;
+    flex-direction: column;
+  }
+  
+}
+
+.up-header {
+  margin-bottom: 21px;
+  
+  &__body {
+    display: flex;
+    align-items: center;
+  }
+  
+  &__main {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    margin-right: 17px;
+  }
+  
+  &__catalog-btn {
+    background: #80A4DE;
+    border-radius: 8px;
+    padding: 8px 25px;
+    margin-right: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $whiteColor;
+    cursor: pointer;
+    
+    
+    img {
+      margin-right: 6px;
+    }
+    
+    span {
+      margin-bottom: 2px;
+    }
+    
+    &:active {
+      background: #3567AC;
+    }
+    &:focus {
+      background: #3567AC;
+    }
+    
+    transition: background 0.3s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        background: #3567AC;
+      }
+    }
+  
+  }
+  
+  &__man {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.search-up-header {
+  border: 1px solid #80A4DE;
+  border-radius: 8px;
+  flex: 1 1 100%;
+  margin-right: 17px;
+  
+  &__body {
+    display: flex;
+    position: relative;
+  }
+  
+  &__select {
+    flex: 0 0 143px;
+    width: 143px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 102.9%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 5px 11px;
+    margin-right: 11px;
+  }
+  
+  &__option {
+  }
+  
+  &__photo {
+    padding: 0 17px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+  }
+  
+  &__search {
+    display: flex;
+    flex: 1 1 100%;
+  }
+  
+  &__input {
+    display: flex;
+    flex: 1 1 100%;
+    outline: none !important;
+    margin-left: 5px;
+    padding: 10px 10px;
+    line-height: 17px;
+    
+    &::placeholder {
+      color: $blueColor;
+    }
+    @media (any-hover: hover) {
+      &:hover {
+        &::placeholder {
+          color: #3567AC;
+        }
+      }
+    }
+    
+  }
+  
+  &__button {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 5px 25px;
+    color: $whiteColor;
+    background: $blueColor;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    img {
+      margin-right: 6px;
+    }
+    
+    span {
+      margin-bottom: 3px;
+    }
+  
+    &:active {
+      background: #3567AC;
+    }
+    &:focus {
+      background: #3567AC;
+    }
+  
+    transition: background 0.3s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        background: #3567AC;
+      }
+    }
+  }
+}
+
+.center-header {
+  border: 1px solid $blueColor;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  
+  &__body {
+    display: flex;
+  }
+  
+  &__block {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 9px 20px;
+  }
+  
+  &__img {
+    margin-right: 6px;
+  }
+}
+
+.bottom-header {
+  
+  &__body {
+    display: flex;
+  }
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  
+  li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 8px;
+    margin-bottom: 5px;
+    
+    &:after {
+      content: '';
+      display: flex;
+      align-self: flex-end;
+      width: 22px;
+      height: 1px;
+      margin-bottom: 5px;
+      background: $blueColor;
+      margin-left: 8px;
+    }
+    
+    &._active{
+      font-weight: 500;
+      line-height: 17px;
+      color: $blueColor;
+    }
+    
+    &:last-child{
+      &:after{
+          display: none;
+      }
+      
+    }
+    
+  }
+  
+  &__link {
+    word-break: break-all;
+  }
+}
+
+//Burger
+/*
+.icon-menu {
+	display: none;
+	@media (max-width: $mobile) {
+		display: block;
+		position: relative;
+		width: 30px;
+		height: 18px;
+		cursor: pointer;
+		z-index: 5;
+		span,
+		&::before,
+		&::after {
+			content: "";
+			transition: all 0.3s ease 0s;
+			left: 0px;
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			background-color: #000;
+		}
+		&::before {
+			top: 0px;
+		}
+		&::after {
+			bottom: 0px;
+		}
+		span {
+			top: calc(50% - 1px);
+		}
+		.menu-open & {
+			span {
+				transform: scale(0);
+			}
+			&::before {
+				transform: rotate(-45deg);
+				top: calc(50% - 1px);
+			}
+			&::after {
+				transform: rotate(45deg);
+				bottom: calc(50% - 1px);
+			}
+		}
+	}
+}
+*/

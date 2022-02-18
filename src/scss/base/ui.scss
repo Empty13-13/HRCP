@@ -1,0 +1,154 @@
+._href {
+  transition: all 0.3s ease 0s;
+  @media (any-hover: hover) {
+    &:hover {
+      color: $blueColor;
+    }
+  }
+}
+
+.line {
+  height: 22px;
+  width: 1px;
+  background: $blueColor;
+  margin-top: 8px;
+}
+
+._hidden {
+  display: none !important;
+}
+
+._title {
+
+}
+
+._btnHover {
+  transition: all 0.3s ease 0s;
+  
+  @media (any-hover: hover) {
+    &:hover {
+      background: $blueColor;
+    }
+  }
+  
+  &:active, &:focus {
+    background: #3567AC;
+  }
+}
+
+#filtrBtn {
+  cursor: pointer;
+}
+
+._hhv {
+  transition: all 0.3s ease 0s;
+  
+  @media (any-hover: hover) {
+    &:hover {
+      background: #3567AC;
+    }
+  }
+  
+  &:active, &:focus {
+    background: #3567AC;
+  }
+}
+
+._whiteBtn {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  color: #3567AC;
+  border: 1px solid #80A4DE;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding: 9px 20px;
+  transition: all 0.3s ease 0s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  
+  span {
+    margin-right: 6px;
+    padding-top: 2px;
+  }
+  
+  path {
+    transition: all 0.3s ease 0s;
+  }
+  
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: $blueColor;
+      color: white;
+      
+      path {
+        fill: white;
+        stroke: white;
+      }
+    }
+  }
+  
+  &:disabled {
+    border: 1px solid #C3DAFF;
+    color: #C3DAFF;
+    @media (any-hover: hover) {
+      &:hover {
+        border: 1px solid #C3DAFF;
+        color: #C3DAFF;
+        background-color: white;
+        path {
+          fill: $blueColor;
+          stroke: $blueColor;
+        }
+      }
+    }
+  }
+}
+
+._blueBtn {
+  background: #80A4DE;
+  border-radius: 8px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  color: #FFFFFF;
+  padding: 9px 20px;
+  transition: all 0.3s ease 0s;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  
+  span {
+    margin-right: 5px;
+    padding-top: 3px;
+  }
+  
+  @media (any-hover: hover) {
+    &:hover {
+      background: #3567AC;
+    }
+  }
+  
+  &:disabled {
+    background: #C3DAFF;
+    @media (any-hover: hover) {
+      &:hover {
+        background: #C3DAFF;
+      }
+    }
+  }
+}
+
+.select__input {
+  padding: 0 !important;
+  border: none !important;
+}
+
+#fixBtnOrder {
+  cursor: pointer !important;
+}

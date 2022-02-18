@@ -1,0 +1,1288 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Каталог"
+})
+<body>
+<div class="wrapper">
+  @@include('html/_header.htm',{})
+  <main class="page">
+    <div class="catalog">
+      <div class="catalog__container">
+        <h2 class="catalog__title _title">Декор, элементы декора и украшения помещений, фасадов</h2>
+        <div class="catalog__sorting sorting-catalog">
+          <div class="sorting-catalog__block">
+            <div class="sorting-catalog__search search-sorting-catalog">
+              <div class="search-sorting-catalog__title">Найдено товаров:
+                <span>2009070</span></div>
+              <div class="search-sorting-catalog__line">
+                <input type="text" class="search-sorting-catalog__input">
+                <button class="search-sorting-catalog__btn _btnHover">
+                  <img src="img/icons/search.svg" alt="">
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="sorting-catalog__block">
+            <div class="sorting-catalog__ing ing-sorting-catalog">
+              <div class="ing-sorting-catalog__title">Сортировать
+                                                      по:
+              </div>
+              <select name="form[]" class="ing-sorting-catalog__select">
+                <option value="">Порядок по умолчанию</option>
+                <option value="2">Пункт №2</option>
+                <option value="3">Пункт №3</option>
+                <option value="4">Пункт №4</option>
+              </select>
+            </div>
+          </div>
+          <div class="sorting-catalog__block">
+            <div class="sorting-catalog__quantity quantity-sorting-catalog">
+              <div class="quantity-sorting-catalog__title">Товаров
+                                                           на странице:
+              </div>
+              <ul class="quantity-sorting-catalog__groupNumber">
+                <li class="quantity-sorting-catalog__num">
+                  <button type="button" class="quantity-sorting-catalog__btn _active">16</button>
+                </li>
+                <li class="quantity-sorting-catalog__num">
+                  <button type="button" class="quantity-sorting-catalog__btn">24</button>
+                </li>
+                <li class="quantity-sorting-catalog__num">
+                  <button type="button" class="quantity-sorting-catalog__btn">32</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="sorting-catalog__block">
+            <div class="sorting-catalog__location location-sorting-catalog">
+              <div class="location-sorting-catalog__body">
+                <ul class="location-sorting-catalog__list">
+                  <li>
+                    <button id="columnBtn" type="button" class="location-sorting-catalog__btn _active">
+                      <svg width="28" height="20" viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="0.5" y="7.5" width="5" height="5" rx="0.5" stroke="#80A4DE"/>
+                        <rect x="0.5" y="14.5" width="5" height="5" rx="0.5" stroke="#80A4DE"/>
+                        <rect x="0.5" y="0.5" width="5" height="5" rx="0.5" stroke="#80A4DE"/>
+                        <rect x="7.5" y="7.5" width="5" height="5" rx="0.5" stroke="#80A4DE"/>
+                        <rect x="7.5" y="14.5" width="5" height="5" rx="0.5" stroke="#80A4DE"/>
+                        <rect x="14.5" y="7.5" width="5" height="5" rx="0.5" stroke="#80A4DE"/>
+                        <rect x="14.5" y="14.5" width="5" height="5" rx="0.5" stroke="#80A4DE"/>
+                        <rect x="22.5" y="7.5" width="5" height="5" rx="0.5" stroke="#80A4DE"/>
+                        <rect x="22.5" y="14.5" width="5" height="5" rx="0.5" stroke="#80A4DE"/>
+                        <rect x="7.5" y="0.5" width="5" height="5" rx="0.5" stroke="#80A4DE"/>
+                        <rect x="14.5" y="0.5" width="5" height="5" rx="0.5" stroke="#80A4DE"/>
+                        <rect x="22.5" y="0.5" width="5" height="5" rx="0.5" stroke="#80A4DE"/>
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button id="lineBtn" type="button" class="location-sorting-catalog__btn">
+                      <svg width="27" height="20" viewBox="0 0 27 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="0.5" y="0.5" width="5" height="5" rx="0.5" stroke="#80A4DE"/>
+                        <rect x="0.5" y="7.5" width="5" height="5" rx="0.5" stroke="#80A4DE"/>
+                        <rect x="0.5" y="14.5" width="5" height="5" rx="0.5" stroke="#80A4DE"/>
+                        <rect x="7.5" y="0.5" width="19" height="5" rx="0.5" stroke="#80A4DE"/>
+                        <rect x="7.5" y="7.5" width="19" height="5" rx="0.5" stroke="#80A4DE"/>
+                        <rect x="7.5" y="14.5" width="19" height="5" rx="0.5" stroke="#80A4DE"/>
+                      </svg>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="catalog__body">
+          <div class="catalog__filter filter-catalog">
+            <div class="filter-catalog__body">
+              <div class="filter-catalog__up">
+                <h4 id="filtrBtn" class="filter-catalog__title"><img src="img/icons/filtr.svg" alt=""><span>Фильтр</span></h4>
+                <button type="button" class="filter-catalog__btn"><img src="img/icons/close.svg" alt=""><span>Сбросить все</span>
+                </button>
+              </div>
+              <ul data-spollers class="filter-catalog__list spollers-filter-catalog">
+                <li class="spollers-filter-catalog__item">
+                  <button type="button" class="spollers-filter-catalog__all-btn">Весь ассортимент товаров</button>
+                </li>
+                <li class="spollers-filter-catalog__item">
+                  <button type="button" data-spoller class="spollers-filter-catalog__title spollers__title _first _one">
+                    Уточнить
+                    категорию
+                  </button>
+                  <div class="spollers-filter-catalog__body spollers__body _one">
+                    <div class="subSpoller-filter-catalog__btns">
+                      <button type="button" class="subSpoller-filter-catalog__accept-btn _btnHover">Применить</button>
+                      <button type="button" class="subSpoller-filter-catalog__reset-btn"><img
+                        src="img/icons/close.svg" alt="">Сбросить
+                      </button>
+                    </div>
+                  </div>
+                </li>
+                <li class="spollers-filter-catalog__item">
+                  <button type="button" data-spoller class="spollers-filter-catalog__title spollers__title _first _one">
+                    Подкатегории
+                  </button>
+                  <div class="spollers-filter-catalog__body spollers__body _one">
+                    <div class="subSpoller-filter-catalog__btns">
+                      <button type="button" class="subSpoller-filter-catalog__accept-btn _btnHover">Применить</button>
+                      <button type="button" class="subSpoller-filter-catalog__reset-btn"><img
+                        src="img/icons/close.svg" alt="">Сбросить
+                      </button>
+                    </div>
+                  </div>
+                </li>
+                <li class="spollers-filter-catalog__item">
+                  <button type="button" data-spoller class="spollers-filter-catalog__title spollers__title _first _one">
+                    Выбрать
+                    маркетплейс/сток
+                  </button>
+                  <div class="spollers-filter-catalog__body spollers__body _one">
+                    <div class="subSpoller-filter-catalog__btns">
+                      <button type="button" class="subSpoller-filter-catalog__accept-btn _btnHover">Применить</button>
+                      <button type="button" class="subSpoller-filter-catalog__reset-btn"><img
+                        src="img/icons/close.svg" alt="">Сбросить
+                      </button>
+                    </div>
+                  </div>
+                </li>
+                <li class="spollers-filter-catalog__item">
+                  <button type="button" data-spoller class="spollers-filter-catalog__title spollers__title _first _one">
+                    Производитель, бренд,
+                    марка, серия
+                  </button>
+                  <div class="spollers-filter-catalog__body spollers__body _one">
+                    <div class="subSpoller-filter-catalog__btns">
+                      <button type="button" class="subSpoller-filter-catalog__accept-btn _btnHover">Применить</button>
+                      <button type="button" class="subSpoller-filter-catalog__reset-btn"><img
+                        src="img/icons/close.svg" alt="">Сбросить
+                      </button>
+                    </div>
+                  </div>
+                </li>
+                <li class="spollers-filter-catalog__item">
+                  <button type="button" data-spoller class="spollers-filter-catalog__title spollers__title _first">
+                    Статус
+                    продавца
+                  </button>
+                  <div class="spollers-filter-catalog__body spollers__body">
+                    <form class="subSpoller-filter-catalog">
+                      <button type="button" data-spoller class="subSpoller-filter-catalog__title spollers__title _last">
+                        Рейтинг продавцов
+                      </button>
+                      <div class="subSpoller-filter-catalog__body spollers__body">
+                        <div class="subSpoller-filter-catalog__ratings">
+                          <div class="subSpoller-filter-catalog__rating rating rating_set">
+                            <span>от</span>
+                            <div class="rating__body">
+                              <div class="rating__active"></div>
+                              <div class="rating__items">
+                                <input type="radio" class="rating__item" value="1" name="rating">
+                                <input type="radio" class="rating__item" value="2" name="rating">
+                                <input type="radio" class="rating__item" value="3" name="rating">
+                                <input type="radio" class="rating__item" value="4" name="rating">
+                                <input type="radio" class="rating__item" value="5" name="rating">
+                              </div>
+                            </div>
+                            <div id="rating1" class="rating__value">3</div>
+                          </div>
+                          <div class="subSpoller-filter-catalog__rating rating rating_set _2">
+                            <span>до</span>
+                            <div class="rating__body">
+                              <div class="rating__active"></div>
+                              <div class="rating__items">
+                                <input type="radio" class="rating__item" value="1" name="rating">
+                                <input type="radio" class="rating__item" value="2" name="rating">
+                                <input type="radio" class="rating__item" value="3" name="rating">
+                                <input type="radio" class="rating__item" value="4" name="rating">
+                                <input type="radio" class="rating__item" value="5" name="rating">
+                              </div>
+                            </div>
+                            <div id="rating2" class="rating__value">5</div>
+                          </div>
+                        </div>
+                        <div class="subSpoller-filter-catalog__btns">
+                          <button type="button" class="subSpoller-filter-catalog__accept-btn _btnHover">Применить
+                          </button>
+                          <button id="resetRating" type="button" class="subSpoller-filter-catalog__reset-btn"><img
+                            src="img/icons/close.svg" alt="">Сбросить
+                          </button>
+                        </div>
+                      </div>
+                    </form>
+                    <form class="subSpoller-filter-catalog">
+                      <button type="button" data-spoller class="subSpoller-filter-catalog__title spollers__title _last">
+                        Количество продаж
+                      </button>
+                      <div class="subSpoller-filter-catalog__body spollers__body">
+                        <div class="subSpoller-filter-catalog__inputs">
+                          <div class="subSpoller-filter-catalog__inputGroup">
+                            <span>от</span>
+                            <input id="numberInput" type="number" class="subSpoller-filter-catalog__input-q">
+                            <span>шт</span>
+                          </div>
+                          <div class="subSpoller-filter-catalog__inputGroup">
+                            <span>от</span>
+                            <input id="numberInput" type="number" class="subSpoller-filter-catalog__input-q">
+                            <span>шт</span>
+                          </div>
+                        </div>
+                        <div class="subSpoller-filter-catalog__btns">
+                          <button type="button" class="subSpoller-filter-catalog__accept-btn _btnHover">Применить
+                          </button>
+                          <button type="button" class="subSpoller-filter-catalog__reset-btn"><img
+                            src="img/icons/close.svg" alt="">Сбросить
+                          </button>
+                        </div>
+                      </div>
+                    </form>
+                    <form class="subSpoller-filter-catalog">
+                      <button type="button" data-spoller class="subSpoller-filter-catalog__title spollers__title _last">
+                        География продавца
+                      </button>
+                      <div class="subSpoller-filter-catalog__body spollers__body">
+                        <div class="subSpoller-filter-catalog__checkboxes">
+                          <div class="checkbox">
+                            <input id="c_1" data-error="Ошибка" class="checkbox__input" name="c_1" type="checkbox"
+                                   value="1">
+                            <label for="c_1" class="checkbox__label">
+                              <span class="checkbox__text">Провинция 1</span></label>
+                          </div>
+                          <div class="checkbox">
+                            <input id="c_2" data-error="Ошибка" class="checkbox__input" type="checkbox" name="c_2"
+                                   value="1" checked>
+                            <label for="c_2" class="checkbox__label">
+                              <span class="checkbox__text">Провинция 2</span></label>
+                          </div>
+                          <div class="checkbox">
+                            <input id="c_3" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+                                   name="c_3">
+                            <label for="c_3" class="checkbox__label">
+                              <span class="checkbox__text">Провинция 3</span></label>
+                          </div>
+                          <div class="checkbox">
+                            <input id="c_4" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+                                   name="c_4">
+                            <label for="c_4" class="checkbox__label">
+                              <span class="checkbox__text">Провинция 4</span></label>
+                          </div>
+                        </div>
+                        <div class="subSpoller-filter-catalog__btns">
+                          <button type="button" class="subSpoller-filter-catalog__accept-btn _btnHover">Применить
+                          </button>
+                          <button type="button" class="subSpoller-filter-catalog__reset-btn"><img
+                            src="img/icons/close.svg" alt="">Сбросить
+                          </button>
+                        </div>
+                      </div>
+                    </form>
+
+                  </div>
+                </li>
+                <li class="spollers-filter-catalog__item">
+                  <button type="button" data-spoller class="spollers-filter-catalog__title spollers__title _first">
+                    Данные
+                    товара
+                  </button>
+                  <div class="spollers-filter-catalog__body spollers__body">
+                    <form class="subSpoller-filter-catalog">
+                      <button type="button" data-spoller class="subSpoller-filter-catalog__title spollers__title _last">
+                        Наличие отзывов
+                      </button>
+                      <div class="subSpoller-filter-catalog__body spollers__body">
+                        <div class="subSpoller-filter-catalog__feedback">
+                          <div class="options">
+                            <div class="options__item">
+                              <input hidden id="r_1" class="options__input" checked type="radio" value="1"
+                                     name="r_1">
+                              <label for="r_1" class="options__label">
+                                <span class="options__text">Товары с отзывами</span>
+                              </label>
+                            </div>
+                            <div class="options__item"><input hidden id="r_2" class="options__input"
+                                                              type="radio" value="2"
+                                                              name="r_1"><label for="r_2"
+                                                                                class="options__label"><span
+                              class="options__text">Все товары</span></label>
+                            </div>
+
+                          </div>
+                        </div>
+                        <div class="subSpoller-filter-catalog__btns">
+                          <button type="button" class="subSpoller-filter-catalog__accept-btn _btnHover">Применить
+                          </button>
+                          <button type="button" class="subSpoller-filter-catalog__reset-btn"><img
+                            src="img/icons/close.svg" alt="">Сбросить
+                          </button>
+                        </div>
+                      </div>
+                    </form>
+                    <form class="subSpoller-filter-catalog">
+                      <button type="button" data-spoller class="subSpoller-filter-catalog__title spollers__title _last">
+                        Цена
+                      </button>
+                      <div class="subSpoller-filter-catalog__body spollers__body">
+                        <div class="subSpoller-filter-catalog__inputs">
+                          <div class="subSpoller-filter-catalog__inputGroup">
+                            <span>от</span>
+                            <input id="numberInput" type="number" class="subSpoller-filter-catalog__input-q">
+                            <span>$</span>
+                          </div>
+                          <div class="subSpoller-filter-catalog__inputGroup">
+                            <span>до</span>
+                            <input id="numberInput" type="number" class="subSpoller-filter-catalog__input-q">
+                            <span>$</span>
+                          </div>
+                        </div>
+                        <div class="subSpoller-filter-catalog__btns">
+                          <button type="button" class="subSpoller-filter-catalog__accept-btn _btnHover">Применить
+                          </button>
+                          <button type="button" class="subSpoller-filter-catalog__reset-btn"><img
+                            src="img/icons/close.svg" alt="">Сбросить
+                          </button>
+                        </div>
+                      </div>
+                    </form>
+                    <form class="subSpoller-filter-catalog">
+                      <button type="button" data-spoller class="subSpoller-filter-catalog__title spollers__title _last">
+                        Товары со скидкими
+                      </button>
+                      <div class="subSpoller-filter-catalog__body spollers__body">
+                        <div class="subSpoller-filter-catalog__feedback">
+                          <div class="options">
+                            <div class="options__item">
+                              <input hidden id="r_3" class="options__input" checked type="radio" value="1"
+                                     name="r_2">
+                              <label for="r_3" class="options__label">
+                                <span class="options__text">Товары с отзывами</span>
+                              </label>
+                            </div>
+                            <div class="options__item"><input hidden id="r_4" class="options__input"
+                                                              type="radio" value="2"
+                                                              name="r_2"><label for="r_4"
+                                                                                class="options__label"><span
+                              class="options__text">Все товары</span></label>
+                            </div>
+
+                          </div>
+                        </div>
+                        <div class="subSpoller-filter-catalog__btns">
+                          <button type="button" class="subSpoller-filter-catalog__accept-btn _btnHover">Применить
+                          </button>
+                          <button type="button" class="subSpoller-filter-catalog__reset-btn"><img
+                            src="img/icons/close.svg" alt="">Сбросить
+                          </button>
+                        </div>
+                      </div>
+                    </form>
+                    <form class="subSpoller-filter-catalog">
+                      <button type="button" data-spoller class="subSpoller-filter-catalog__title spollers__title _last">
+                        Товары в наличии
+                      </button>
+                      <div class="subSpoller-filter-catalog__body spollers__body">
+                        <div class="subSpoller-filter-catalog__feedback">
+                          <div class="options">
+                            <div class="options__item">
+                              <input hidden id="r_5" class="options__input" checked type="radio" value="1"
+                                     name="r_5">
+                              <label for="r_5" class="options__label">
+                                <span class="options__text">Товары в наличии</span>
+                              </label>
+                            </div>
+                            <div class="options__item"><input hidden id="r_6" class="options__input"
+                                                              type="radio" value="2"
+                                                              name="r_5"><label for="r_6"
+                                                                                class="options__label"><span
+                              class="options__text">Все товары</span></label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="subSpoller-filter-catalog__btns">
+                          <button type="button" class="subSpoller-filter-catalog__accept-btn _btnHover">Применить
+                          </button>
+                          <button type="button" class="subSpoller-filter-catalog__reset-btn"><img
+                            src="img/icons/close.svg" alt="">Сбросить
+                          </button>
+                        </div>
+                      </div>
+                    </form>
+
+                  </div>
+                </li>
+                <li class="spollers-filter-catalog__item">
+                  <button type="button" data-spoller class="spollers-filter-catalog__title spollers__title _first">
+                    Свойства и
+                    характеристики
+                    товара
+                  </button>
+                  <div class="spollers-filter-catalog__body spollers__body">
+                    <form class="subSpoller-filter-catalog">
+                      <button type="button" data-spoller class="subSpoller-filter-catalog__title spollers__title">
+                        Цвет/фон/оттенок
+                      </button>
+                      <div class="subSpoller-filter-catalog__body spollers__body _last">
+                        <div class="spollers-filter-catalog__body spollers__body">
+                          <form class="subSpoller-filter-catalog">
+                            <button type="button" data-spoller
+                                    class="subSpoller-filter-catalog__title spollers__title _last">
+                              Цвет
+                            </button>
+                            <div class="subSpoller-filter-catalog__body spollers__body">
+                              <div class="subSpoller-filter-catalog__checkboxes">
+                                <div class="checkbox">
+                                  <input id="c_5" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+                                         name="asd">
+                                  <label for="c_5" class="checkbox__label">
+                                    <span class="checkbox__text">Цвет 1</span></label>
+                                </div>
+                                <div class="checkbox">
+                                  <input id="c_6" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+                                         name="asd" checked>
+                                  <label for="c_6" class="checkbox__label">
+                                    <span class="checkbox__text">Цвет 2</span></label>
+                                </div>
+                                <div class="checkbox">
+                                  <input id="c_7" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+                                         name="asd">
+                                  <label for="c_7" class="checkbox__label">
+                                    <span class="checkbox__text">Цвет 3</span></label>
+                                </div>
+                                <div class="checkbox">
+                                  <input id="c_8" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+                                         name="asd">
+                                  <label for="c_8" class="checkbox__label">
+                                    <span class="checkbox__text">Цвет 4</span></label>
+                                </div>
+                              </div>
+                              <div class="subSpoller-filter-catalog__btns">
+                                <button type="button" class="subSpoller-filter-catalog__accept-btn _btnHover">
+                                  Применить
+                                </button>
+                                <button type="button" class="subSpoller-filter-catalog__reset-btn"><img
+                                  src="img/icons/close.svg" alt="">Сбросить
+                                </button>
+                              </div>
+                            </div>
+                          </form>
+                          <form class="subSpoller-filter-catalog">
+                            <button type="button" data-spoller
+                                    class="subSpoller-filter-catalog__title spollers__title _last">
+                              Фон
+                            </button>
+                            <div class="subSpoller-filter-catalog__body spollers__body">
+                              <div class="subSpoller-filter-catalog__btns">
+                                <button type="button" class="subSpoller-filter-catalog__accept-btn _btnHover">
+                                  Применить
+                                </button>
+                                <button type="button" class="subSpoller-filter-catalog__reset-btn"><img
+                                  src="img/icons/close.svg" alt="">Сбросить
+                                </button>
+                              </div>
+                            </div>
+                          </form>
+                          <form class="subSpoller-filter-catalog">
+                            <button type="button" data-spoller
+                                    class="subSpoller-filter-catalog__title spollers__title _last">
+                              Оттенок
+                            </button>
+                            <div class="subSpoller-filter-catalog__body spollers__body">
+                              <div class="subSpoller-filter-catalog__btns">
+                                <button type="button" class="subSpoller-filter-catalog__accept-btn _btnHover">
+                                  Применить
+                                </button>
+                                <button type="button" class="subSpoller-filter-catalog__reset-btn"><img
+                                  src="img/icons/close.svg" alt="">Сбросить
+                                </button>
+                              </div>
+                            </div>
+                          </form>
+
+                        </div>
+                      </div>
+                    </form>
+                    <div class="subSpoller-filter-catalog">
+                      <button type="button" data-spoller class="subSpoller-filter-catalog__title spollers__title">
+                        Размер одежды
+                      </button>
+                      <div class="subSpoller-filter-catalog__body spollers__body _last">
+                        <div class="spollers-filter-catalog__body spollers__body">
+                          <form class="subSpoller-filter-catalog">
+                            <button type="button" data-spoller
+                                    class="subSpoller-filter-catalog__title spollers__title _last">
+                              Европейский
+                            </button>
+                            <div class="subSpoller-filter-catalog__body spollers__body">
+                              <div class="subSpoller-filter-catalog__checkboxes">
+                                <div class="checkbox">
+                                  <input id="xs" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+                                         name="asd">
+                                  <label for="xs" class="checkbox__label">
+                                    <span class="checkbox__text">XS</span></label>
+                                </div>
+                                <div class="checkbox">
+                                  <input id="s" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+                                         name="s" checked>
+                                  <label for="s" class="checkbox__label">
+                                    <span class="checkbox__text">S</span></label>
+                                </div>
+                                <div class="checkbox">
+                                  <input id="m" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+                                         name="asd">
+                                  <label for="m" class="checkbox__label">
+                                    <span class="checkbox__text">M</span></label>
+                                </div>
+                                <div class="checkbox">
+                                  <input id="l" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+                                         name="asd">
+                                  <label for="l" class="checkbox__label">
+                                    <span class="checkbox__text">L</span></label>
+                                </div>
+                                <div class="checkbox">
+                                  <input id="xl" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+                                         name="asd">
+                                  <label for="xl" class="checkbox__label">
+                                    <span class="checkbox__text">XL</span></label>
+                                </div>
+                                <div class="checkbox">
+                                  <input id="xxl" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+                                         name="asd">
+                                  <label for="xxl" class="checkbox__label">
+                                    <span class="checkbox__text">XXL</span></label>
+                                </div>
+                              </div>
+                              <div class="subSpoller-filter-catalog__btns">
+                                <button type="button" class="subSpoller-filter-catalog__accept-btn _btnHover">
+                                  Применить
+                                </button>
+                                <button type="button" class="subSpoller-filter-catalog__reset-btn"><img
+                                  src="img/icons/close.svg" alt="">Сбросить
+                                </button>
+                              </div>
+                            </div>
+                          </form>
+                          <form class="subSpoller-filter-catalog">
+                            <button type="button" data-spoller
+                                    class="subSpoller-filter-catalog__title spollers__title _last">
+                              Российский
+                            </button>
+                            <div class="subSpoller-filter-catalog__body spollers__body">
+                              <div class="subSpoller-filter-catalog__btns">
+                                <button type="button" class="subSpoller-filter-catalog__accept-btn _btnHover">
+                                  Применить
+                                </button>
+                                <button type="button" class="subSpoller-filter-catalog__reset-btn"><img
+                                  src="img/icons/close.svg" alt="">Сбросить
+                                </button>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="subSpoller-filter-catalog">
+                      <button type="button" data-spoller class="subSpoller-filter-catalog__title spollers__title">
+                        Размер другого товара
+                      </button>
+                      <div class="subSpoller-filter-catalog__body spollers__body _last">
+                        <div class="spollers-filter-catalog__body spollers__body">
+                          <form class="subSpoller-filter-catalog">
+                            <button type="button" data-spoller
+                                    class="subSpoller-filter-catalog__title spollers__title _last">
+                              Монитор (Дюйм)
+                            </button>
+                            <div class="subSpoller-filter-catalog__body spollers__body">
+                              <div class="subSpoller-filter-catalog__checkboxes">
+                                <div class="checkbox">
+                                  <input id="dum1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+                                         name="asd">
+                                  <label for="dum1" class="checkbox__label">
+                                    <span class="checkbox__text">19</span></label>
+                                </div>
+                                <div class="checkbox">
+                                  <input id="dum2" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+                                         name="s" checked>
+                                  <label for="dum2" class="checkbox__label">
+                                    <span class="checkbox__text">22</span></label>
+                                </div>
+                                <div class="checkbox">
+                                  <input id="dum3" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+                                         name="asd">
+                                  <label for="dum3" class="checkbox__label">
+                                    <span class="checkbox__text">26</span></label>
+                                </div>
+                              </div>
+                              <div class="subSpoller-filter-catalog__btns">
+                                <button type="button" class="subSpoller-filter-catalog__accept-btn _btnHover">
+                                  Применить
+                                </button>
+                                <button type="button" class="subSpoller-filter-catalog__reset-btn"><img
+                                  src="img/icons/close.svg" alt="">Сбросить
+                                </button>
+                              </div>
+                            </div>
+                          </form>
+                          <form class="subSpoller-filter-catalog">
+                            <button type="button" data-spoller
+                                    class="subSpoller-filter-catalog__title spollers__title _last">
+                              Комплектация
+                            </button>
+                            <div class="subSpoller-filter-catalog__body spollers__body">
+                              <div class="subSpoller-filter-catalog__checkboxes">
+                                <div class="checkbox">
+                                  <input id="coml1" data-error="Ошибка" class="checkbox__input" type="checkbox"
+                                         value="1"
+                                         name="asd">
+                                  <label for="coml1" class="checkbox__label">
+                                    <span class="checkbox__text">1</span></label>
+                                </div>
+                                <div class="checkbox">
+                                  <input id="coml2" data-error="Ошибка" class="checkbox__input" type="checkbox"
+                                         value="1"
+                                         name="s" checked>
+                                  <label for="coml2" class="checkbox__label">
+                                    <span class="checkbox__text">2</span></label>
+                                </div>
+                                <div class="checkbox">
+                                  <input id="coml3" data-error="Ошибка" class="checkbox__input" type="checkbox"
+                                         value="1"
+                                         name="asd">
+                                  <label for="coml3" class="checkbox__label">
+                                    <span class="checkbox__text">3</span></label>
+                                </div>
+                              </div>
+                              <div class="subSpoller-filter-catalog__btns">
+                                <button type="button" class="subSpoller-filter-catalog__accept-btn _btnHover">
+                                  Применить
+                                </button>
+                                <button type="button" class="subSpoller-filter-catalog__reset-btn"><img
+                                  src="img/icons/close.svg" alt="">Сбросить
+                                </button>
+                              </div>
+                            </div>
+                          </form>
+                          <form class="subSpoller-filter-catalog">
+                            <button type="button" data-spoller
+                                    class="subSpoller-filter-catalog__title spollers__title _last">
+                              Упаковка
+                            </button>
+                            <div class="subSpoller-filter-catalog__body spollers__body">
+                              <div class="subSpoller-filter-catalog__checkboxes">
+                                <div class="checkbox">
+                                  <input id="up1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+                                         name="asd">
+                                  <label for="up1" class="checkbox__label">
+                                    <span class="checkbox__text">Мягкая</span></label>
+                                </div>
+                                <div class="checkbox">
+                                  <input id="up2" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+                                         name="s" checked>
+                                  <label for="up2" class="checkbox__label">
+                                    <span class="checkbox__text">Твердая</span></label>
+                                </div>
+                              </div>
+                              <div class="subSpoller-filter-catalog__btns">
+                                <button type="button" class="subSpoller-filter-catalog__accept-btn _btnHover">
+                                  Применить
+                                </button>
+                                <button type="button" class="subSpoller-filter-catalog__reset-btn"><img
+                                  src="img/icons/close.svg" alt="">Сбросить
+                                </button>
+                              </div>
+                            </div>
+                          </form>
+                          <form class="subSpoller-filter-catalog">
+                            <button type="button" data-spoller
+                                    class="subSpoller-filter-catalog__title spollers__title _last">
+                              Фасовка
+                            </button>
+                            <div class="subSpoller-filter-catalog__body spollers__body">
+                              <div class="subSpoller-filter-catalog__checkboxes">
+                                <div class="checkbox">
+                                  <input id="fas1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+                                         name="asd">
+                                  <label for="fas1" class="checkbox__label">
+                                    <span class="checkbox__text">Фасовка 1</span></label>
+                                </div>
+                                <div class="checkbox">
+                                  <input id="fas2" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+                                         name="s" checked>
+                                  <label for="fas2" class="checkbox__label">
+                                    <span class="checkbox__text">Фасовка 2</span></label>
+                                </div>
+                              </div>
+                              <div class="subSpoller-filter-catalog__btns">
+                                <button type="button" class="subSpoller-filter-catalog__accept-btn _btnHover">
+                                  Применить
+                                </button>
+                                <button type="button" class="subSpoller-filter-catalog__reset-btn"><img
+                                  src="img/icons/close.svg" alt="">Сбросить
+                                </button>
+                              </div>
+                            </div>
+                          </form>
+                          <form class="subSpoller-filter-catalog">
+                            <button type="button" data-spoller
+                                    class="subSpoller-filter-catalog__title spollers__title _last">
+                              Состояние
+                            </button>
+                            <div class="subSpoller-filter-catalog__body spollers__body">
+                              <div class="subSpoller-filter-catalog__checkboxes">
+                                <div class="checkbox">
+                                  <input id="condition1" data-error="Ошибка" class="checkbox__input" type="checkbox"
+                                         value="1"
+                                         name="asd">
+                                  <label for="condition1" class="checkbox__label">
+                                    <span class="checkbox__text">Новое</span></label>
+                                </div>
+                                <div class="checkbox">
+                                  <input id="condition2" data-error="Ошибка" class="checkbox__input" type="checkbox"
+                                         value="1"
+                                         name="s" checked>
+                                  <label for="condition2" class="checkbox__label">
+                                    <span class="checkbox__text">Б/у</span></label>
+                                </div>
+                              </div>
+                              <div class="subSpoller-filter-catalog__btns">
+                                <button type="button" class="subSpoller-filter-catalog__accept-btn _btnHover">
+                                  Применить
+                                </button>
+                                <button type="button" class="subSpoller-filter-catalog__reset-btn"><img
+                                  src="img/icons/close.svg" alt="">Сбросить
+                                </button>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="subSpoller-filter-catalog">
+                      <button type="button" data-spoller class="subSpoller-filter-catalog__title spollers__title">
+                        Особые критерии
+                      </button>
+                      <div class="subSpoller-filter-catalog__body spollers__body _last">
+                        <div class="spollers-filter-catalog__body spollers__body">
+                          <form class="subSpoller-filter-catalog">
+                            <button type="button" data-spoller
+                                    class="subSpoller-filter-catalog__title spollers__title _last">
+                              Длина рукова
+                            </button>
+                            <div class="subSpoller-filter-catalog__body spollers__body">
+                              <div class="subSpoller-filter-catalog__checkboxes">
+                                <div class="checkbox">
+                                  <input id="length1" data-error="Ошибка" class="checkbox__input" type="checkbox"
+                                         value="1"
+                                         name="asd">
+                                  <label for="length1" class="checkbox__label">
+                                    <span class="checkbox__text">Длинный</span></label>
+                                </div>
+                                <div class="checkbox">
+                                  <input id="length2" data-error="Ошибка" class="checkbox__input" type="checkbox"
+                                         value="1"
+                                         name="s" checked>
+                                  <label for="length2" class="checkbox__label">
+                                    <span class="checkbox__text">Короткий</span></label>
+                                </div>
+                              </div>
+                              <div class="subSpoller-filter-catalog__btns">
+                                <button type="button" class="subSpoller-filter-catalog__accept-btn _btnHover">
+                                  Применить
+                                </button>
+                                <button type="button" class="subSpoller-filter-catalog__reset-btn"><img
+                                  src="img/icons/close.svg" alt="">Сбросить
+                                </button>
+                              </div>
+                            </div>
+                          </form>
+                          <form class="subSpoller-filter-catalog">
+                            <button type="button" data-spoller
+                                    class="subSpoller-filter-catalog__title spollers__title _last">
+                              Мощность
+                            </button>
+                            <div class="subSpoller-filter-catalog__body spollers__body">
+                              <div class="subSpoller-filter-catalog__btns">
+                                <button type="button" class="subSpoller-filter-catalog__accept-btn _btnHover">
+                                  Применить
+                                </button>
+                                <button type="button" class="subSpoller-filter-catalog__reset-btn"><img
+                                  src="img/icons/close.svg" alt="">Сбросить
+                                </button>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <div class="filter-catalog__bottom">
+                <button type="button" class="filter-catalog__title _hover">Применить все</button>
+                <button type="button" class="filter-catalog__btn"><img src="img/icons/close.svg" alt=""><span>Сбросить все</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="catalog__products products-catalog">
+            <div class="products-catalog__body">
+              <div class="products-catalog__block block-products-catalog ">
+                <div class="block-products-catalog__body">
+                  <div class="block-products-catalog__up">
+                    <div class="block-products-catalog__img">
+                      <img src="img/catalog/aimg1.jpg" alt="">
+                      <img src="img/catalog/favorite.svg" alt="" class="block-products-catalog__favorite">
+                    </div>
+                  </div>
+                  <div class="block-products-catalog__lin">
+                    <div class="block-products-catalog__center">
+                      <h3 class="block-products-catalog__name">Водонепроницаемый Самоклеящиеся обои чистый пигмент цветная сетка красный Обои флип новый Стикер бумага спальня теплый фон украшения стены</h3>
+                    </div>
+                    <div class="block-products-catalog__bottom">
+<!--                      <div class="block-products-catalog__rating">-->
+<!--                        <span class="block-products-catalog__star _active"></span>-->
+<!--                        <span class="block-products-catalog__star _active"></span>-->
+<!--                        <span class="block-products-catalog__star _active"></span>-->
+<!--                        <span class="block-products-catalog__star _active"></span>-->
+<!--                        <span class="block-products-catalog__star"></span>-->
+<!--                      </div>-->
+                      <h4 class="block-products-catalog__price">1-1 $</h4>
+                    </div>
+                    <a href="" class="block-products-catalog__btn-trash">В корзину</a>
+                  </div>
+                </div>
+              </div>
+              <div class="products-catalog__block block-products-catalog ">
+                <div class="block-products-catalog__body">
+                  <div class="block-products-catalog__up">
+                    <div class="block-products-catalog__img">
+                      <img src="img/catalog/aimg1.jpg" alt="">
+                      <img src="img/catalog/favorite.svg" alt="" class="block-products-catalog__favorite">
+                    </div>
+                  </div>
+                  <div class="block-products-catalog__lin">
+                    <div class="block-products-catalog__center">
+                      <h3 class="block-products-catalog__name">Водонепроницаемый</h3>
+                    </div>
+                    <div class="block-products-catalog__bottom">
+                      <div class="block-products-catalog__rating">
+                        <span class="block-products-catalog__star _active"></span>
+                        <span class="block-products-catalog__star _active"></span>
+                        <span class="block-products-catalog__star _active"></span>
+                        <span class="block-products-catalog__star _active"></span>
+                        <span class="block-products-catalog__star"></span>
+                      </div>
+                      <h4 class="block-products-catalog__price">1-1 $</h4>
+                    </div>
+                    <a href="" class="block-products-catalog__btn-trash">В корзину</a>
+                  </div>
+                </div>
+              </div>
+              <div class="products-catalog__block block-products-catalog ">
+                <div class="block-products-catalog__body">
+                  <div class="block-products-catalog__up">
+                    <div class="block-products-catalog__img">
+                      <img src="img/catalog/aimg1.jpg" alt="">
+                      <img src="img/catalog/favorite.svg" alt="" class="block-products-catalog__favorite">
+                    </div>
+                  </div>
+                  <div class="block-products-catalog__lin">
+                    <div class="block-products-catalog__center">
+                      <h3 class="block-products-catalog__name">Водонепроницаемый Самоклеящиеся обои чистый пигмент цветная сетка красный Обои флип новый Стикер бумага спальня теплый фон украшения стены</h3>
+                    </div>
+                    <div class="block-products-catalog__bottom">
+                      <div class="block-products-catalog__rating">
+                        <span class="block-products-catalog__star _active"></span>
+                        <span class="block-products-catalog__star _active"></span>
+                        <span class="block-products-catalog__star _active"></span>
+                        <span class="block-products-catalog__star _active"></span>
+                        <span class="block-products-catalog__star"></span>
+                      </div>
+                      <h4 class="block-products-catalog__price">1-1 $</h4>
+                    </div>
+                    <a href="" class="block-products-catalog__btn-trash">В корзину</a>
+                  </div>
+                </div>
+              </div>
+              <div class="products-catalog__block block-products-catalog ">
+                <div class="block-products-catalog__body">
+                  <div class="block-products-catalog__up">
+                    <div class="block-products-catalog__img">
+                      <img src="img/catalog/aimg1.jpg" alt="">
+                      <img src="img/catalog/favorite.svg" alt="" class="block-products-catalog__favorite">
+                    </div>
+                  </div>
+                  <div class="block-products-catalog__lin">
+                    <div class="block-products-catalog__center">
+                      <h3 class="block-products-catalog__name">Водонепроницаемый Самоклеящиеся обои чистый пигмент цветная сетка красный Обои флип новый Стикер бумага спальня теплый фон украшения стены</h3>
+                    </div>
+                    <div class="block-products-catalog__bottom">
+                      <div class="block-products-catalog__rating">
+                        <span class="block-products-catalog__star _active"></span>
+                        <span class="block-products-catalog__star _active"></span>
+                        <span class="block-products-catalog__star _active"></span>
+                        <span class="block-products-catalog__star _active"></span>
+                        <span class="block-products-catalog__star"></span>
+                      </div>
+                      <h4 class="block-products-catalog__price">1-1 $</h4>
+                    </div>
+                    <a href="" class="block-products-catalog__btn-trash">В корзину</a>
+                  </div>
+                </div>
+              </div>
+              <div class="products-catalog__block block-products-catalog ">
+                <div class="block-products-catalog__body">
+                  <div class="block-products-catalog__up">
+                    <div class="block-products-catalog__img">
+                      <img src="img/catalog/aimg1.jpg" alt="">
+                      <img src="img/catalog/favorite.svg" alt="" class="block-products-catalog__favorite">
+                    </div>
+                  </div>
+                  <div class="block-products-catalog__lin">
+                    <div class="block-products-catalog__center">
+                      <h3 class="block-products-catalog__name">Водонепроницаемый Самоклеящиеся обои чистый пигмент цветная сетка красный Обои флип новый Стикер бумага спальня теплый фон украшения стены</h3>
+                    </div>
+                    <div class="block-products-catalog__bottom">
+                      <div class="block-products-catalog__rating">
+                        <span class="block-products-catalog__star _active"></span>
+                        <span class="block-products-catalog__star _active"></span>
+                        <span class="block-products-catalog__star _active"></span>
+                        <span class="block-products-catalog__star _active"></span>
+                        <span class="block-products-catalog__star"></span>
+                      </div>
+                      <h4 class="block-products-catalog__price">1-1 $</h4>
+                    </div>
+                    <a href="" class="block-products-catalog__btn-trash">В корзину</a>
+                  </div>
+                </div>
+              </div>
+              <div class="products-catalog__block block-products-catalog ">
+                <div class="block-products-catalog__body">
+                  <div class="block-products-catalog__up">
+                    <div class="block-products-catalog__img">
+                      <img src="img/catalog/aimg1.jpg" alt="">
+                      <img src="img/catalog/favorite.svg" alt="" class="block-products-catalog__favorite">
+                    </div>
+                  </div>
+                  <div class="block-products-catalog__lin">
+                    <div class="block-products-catalog__center">
+                      <h3 class="block-products-catalog__name">Водонепроницаемый Самоклеящиеся обои чистый пигмент цветная сетка красный Обои флип новый Стикер бумага спальня теплый фон украшения стены</h3>
+                    </div>
+                    <div class="block-products-catalog__bottom">
+                      <div class="block-products-catalog__rating">
+                        <span class="block-products-catalog__star _active"></span>
+                        <span class="block-products-catalog__star _active"></span>
+                        <span class="block-products-catalog__star _active"></span>
+                        <span class="block-products-catalog__star _active"></span>
+                        <span class="block-products-catalog__star"></span>
+                      </div>
+                      <h4 class="block-products-catalog__price">1-1 $</h4>
+                    </div>
+                    <a href="" class="block-products-catalog__btn-trash">В корзину</a>
+                  </div>
+                </div>
+              </div>
+              <div class="products-catalog__block block-products-catalog ">
+                <div class="block-products-catalog__body">
+                  <div class="block-products-catalog__up">
+                    <div class="block-products-catalog__img">
+                      <img src="img/catalog/aimg1.jpg" alt="">
+                      <img src="img/catalog/favorite.svg" alt="" class="block-products-catalog__favorite">
+                    </div>
+                  </div>
+                  <div class="block-products-catalog__lin">
+                    <div class="block-products-catalog__center">
+                      <h3 class="block-products-catalog__name">Водонепроницаемый Самоклеящиеся обои чистый пигмент цветная сетка красный Обои флип новый Стикер бумага спальня теплый фон украшения стены</h3>
+                    </div>
+                    <div class="block-products-catalog__bottom">
+                      <div class="block-products-catalog__rating">
+                        <span class="block-products-catalog__star _active"></span>
+                        <span class="block-products-catalog__star _active"></span>
+                        <span class="block-products-catalog__star _active"></span>
+                        <span class="block-products-catalog__star _active"></span>
+                        <span class="block-products-catalog__star"></span>
+                      </div>
+                      <h4 class="block-products-catalog__price">1-1 $</h4>
+                    </div>
+                    <a href="" class="block-products-catalog__btn-trash">В корзину</a>
+                  </div>
+                </div>
+              </div>
+              <div class="products-catalog__block block-products-catalog ">
+                <div class="block-products-catalog__body">
+                  <div class="block-products-catalog__up">
+                    <div class="block-products-catalog__img">
+                      <img src="img/catalog/aimg1.jpg" alt="">
+                      <img src="img/catalog/favorite.svg" alt="" class="block-products-catalog__favorite">
+                    </div>
+                  </div>
+                  <div class="block-products-catalog__lin">
+                    <div class="block-products-catalog__center">
+                      <h3 class="block-products-catalog__name">Водонепроницаемый Самоклеящиеся обои чистый пигмент цветная сетка красный Обои флип новый Стикер бумага спальня теплый фон украшения стены</h3>
+                    </div>
+                    <div class="block-products-catalog__bottom">
+                      <div class="block-products-catalog__rating">
+                        <span class="block-products-catalog__star _active"></span>
+                        <span class="block-products-catalog__star _active"></span>
+                        <span class="block-products-catalog__star _active"></span>
+                        <span class="block-products-catalog__star _active"></span>
+                        <span class="block-products-catalog__star"></span>
+                      </div>
+                      <h4 class="block-products-catalog__price">1-1 $</h4>
+                    </div>
+                    <a href="" class="block-products-catalog__btn-trash">В корзину</a>
+                  </div>
+                </div>
+              </div>
+              <div class="products-catalog__block block-products-catalog ">
+                <div class="block-products-catalog__body">
+                  <div class="block-products-catalog__up">
+                    <div class="block-products-catalog__img">
+                      <img src="img/catalog/aimg1.jpg" alt="">
+                      <img src="img/catalog/favorite.svg" alt="" class="block-products-catalog__favorite">
+                    </div>
+                  </div>
+                  <div class="block-products-catalog__lin">
+                    <div class="block-products-catalog__center">
+                      <h3 class="block-products-catalog__name">Водонепроницаемый Самоклеящиеся обои чистый пигмент цветная сетка красный Обои флип новый Стикер бумага спальня теплый фон украшения стены</h3>
+                    </div>
+                    <div class="block-products-catalog__bottom">
+                      <div class="block-products-catalog__rating">
+                        <span class="block-products-catalog__star _active"></span>
+                        <span class="block-products-catalog__star _active"></span>
+                        <span class="block-products-catalog__star _active"></span>
+                        <span class="block-products-catalog__star _active"></span>
+                        <span class="block-products-catalog__star"></span>
+                      </div>
+                      <h4 class="block-products-catalog__price">1-1 $</h4>
+                    </div>
+                    <a href="" class="block-products-catalog__btn-trash">В корзину</a>
+                  </div>
+                </div>
+              </div>
+              <div class="products-catalog__block block-products-catalog ">
+                <div class="block-products-catalog__body">
+                  <div class="block-products-catalog__up">
+                    <div class="block-products-catalog__img">
+                      <img src="img/catalog/aimg1.jpg" alt="">
+                      <img src="img/catalog/favorite.svg" alt="" class="block-products-catalog__favorite">
+                    </div>
+                  </div>
+                  <div class="block-products-catalog__lin">
+                    <div class="block-products-catalog__center">
+                      <h3 class="block-products-catalog__name">Водонепроницаемый Самоклеящиеся обои чистый пигмент цветная сетка красный Обои флип новый Стикер бумага спальня теплый фон украшения стены</h3>
+                    </div>
+                    <div class="block-products-catalog__bottom">
+                      <div class="block-products-catalog__rating">
+                        <span class="block-products-catalog__star _active"></span>
+                        <span class="block-products-catalog__star _active"></span>
+                        <span class="block-products-catalog__star _active"></span>
+                        <span class="block-products-catalog__star _active"></span>
+                        <span class="block-products-catalog__star"></span>
+                      </div>
+                      <h4 class="block-products-catalog__price">1-1 $</h4>
+                    </div>
+                    <a href="" class="block-products-catalog__btn-trash">В корзину</a>
+                  </div>
+                </div>
+              </div>
+              <div class="products-catalog__block block-products-catalog ">
+                <div class="block-products-catalog__body">
+                  <div class="block-products-catalog__up">
+                    <div class="block-products-catalog__img">
+                      <img src="img/catalog/aimg1.jpg" alt="">
+                      <img src="img/catalog/favorite.svg" alt="" class="block-products-catalog__favorite">
+                    </div>
+                  </div>
+                  <div class="block-products-catalog__lin">
+                    <div class="block-products-catalog__center">
+                      <h3 class="block-products-catalog__name">Водонепроницаемый Самоклеящиеся обои чистый пигмент цветная сетка красный Обои флип новый Стикер бумага спальня теплый фон украшения стены</h3>
+                    </div>
+                    <div class="block-products-catalog__bottom">
+                      <div class="block-products-catalog__rating">
+                        <span class="block-products-catalog__star _active"></span>
+                        <span class="block-products-catalog__star _active"></span>
+                        <span class="block-products-catalog__star _active"></span>
+                        <span class="block-products-catalog__star _active"></span>
+                        <span class="block-products-catalog__star"></span>
+                      </div>
+                      <h4 class="block-products-catalog__price">1-1 $</h4>
+                    </div>
+                    <a href="" class="block-products-catalog__btn-trash">В корзину</a>
+                  </div>
+                </div>
+              </div>
+              <div class="products-catalog__block block-products-catalog ">
+                <div class="block-products-catalog__body">
+                  <div class="block-products-catalog__up">
+                    <div class="block-products-catalog__img">
+                      <img src="img/catalog/aimg1.jpg" alt="">
+                      <img src="img/catalog/favorite.svg" alt="" class="block-products-catalog__favorite">
+                    </div>
+                  </div>
+                  <div class="block-products-catalog__lin">
+                    <div class="block-products-catalog__center">
+                      <h3 class="block-products-catalog__name">Водонепроницаемый Самоклеящиеся обои чистый пигмент цветная сетка красный Обои флип новый Стикер бумага спальня теплый фон украшения стены</h3>
+                    </div>
+                    <div class="block-products-catalog__bottom">
+                      <div class="block-products-catalog__rating">
+                        <span class="block-products-catalog__star _active"></span>
+                        <span class="block-products-catalog__star _active"></span>
+                        <span class="block-products-catalog__star _active"></span>
+                        <span class="block-products-catalog__star _active"></span>
+                        <span class="block-products-catalog__star"></span>
+                      </div>
+                      <h4 class="block-products-catalog__price">1-1 $</h4>
+                    </div>
+                    <a href="" class="block-products-catalog__btn-trash">В корзину</a>
+                  </div>
+                </div>
+              </div>
+              <div class="products-catalog__block block-products-catalog ">
+                <div class="block-products-catalog__body">
+                  <div class="block-products-catalog__up">
+                    <div class="block-products-catalog__img">
+                      <img src="img/catalog/aimg1.jpg" alt="">
+                      <img src="img/catalog/favorite.svg" alt="" class="block-products-catalog__favorite">
+                    </div>
+                  </div>
+                  <div class="block-products-catalog__lin">
+                    <div class="block-products-catalog__center">
+                      <h3 class="block-products-catalog__name">Водонепроницаемый Самоклеящиеся обои чистый пигмент цветная сетка красный Обои флип новый Стикер бумага спальня теплый фон украшения стены</h3>
+                    </div>
+                    <div class="block-products-catalog__bottom">
+                      <div class="block-products-catalog__rating">
+                        <span class="block-products-catalog__star _active"></span>
+                        <span class="block-products-catalog__star _active"></span>
+                        <span class="block-products-catalog__star _active"></span>
+                        <span class="block-products-catalog__star _active"></span>
+                        <span class="block-products-catalog__star"></span>
+                      </div>
+                      <h4 class="block-products-catalog__price">1-1 $</h4>
+                    </div>
+                    <a href="" class="block-products-catalog__btn-trash">В корзину</a>
+                  </div>
+                </div>
+              </div>
+              <div class="products-catalog__block block-products-catalog ">
+                <div class="block-products-catalog__body">
+                  <div class="block-products-catalog__up">
+                    <div class="block-products-catalog__img">
+                      <img src="img/catalog/aimg1.jpg" alt="">
+                      <img src="img/catalog/favorite.svg" alt="" class="block-products-catalog__favorite">
+                    </div>
+                  </div>
+                  <div class="block-products-catalog__lin">
+                    <div class="block-products-catalog__center">
+                      <h3 class="block-products-catalog__name">Водонепроницаемый Самоклеящиеся обои чистый пигмент цветная сетка красный Обои флип новый Стикер бумага спальня теплый фон украшения стены</h3>
+                    </div>
+                    <div class="block-products-catalog__bottom">
+                      <div class="block-products-catalog__rating">
+                        <span class="block-products-catalog__star _active"></span>
+                        <span class="block-products-catalog__star _active"></span>
+                        <span class="block-products-catalog__star _active"></span>
+                        <span class="block-products-catalog__star _active"></span>
+                        <span class="block-products-catalog__star"></span>
+                      </div>
+                      <h4 class="block-products-catalog__price">1-1 $</h4>
+                    </div>
+                    <a href="" class="block-products-catalog__btn-trash">В корзину</a>
+                  </div>
+                </div>
+              </div>
+              <div class="products-catalog__block block-products-catalog ">
+                <div class="block-products-catalog__body">
+                  <div class="block-products-catalog__up">
+                    <div class="block-products-catalog__img">
+                      <img src="img/catalog/aimg1.jpg" alt="">
+                      <img src="img/catalog/favorite.svg" alt="" class="block-products-catalog__favorite">
+                    </div>
+                  </div>
+                  <div class="block-products-catalog__lin">
+                    <div class="block-products-catalog__center">
+                      <h3 class="block-products-catalog__name">Водонепроницаемый Самоклеящиеся обои чистый пигмент цветная сетка красный Обои флип новый Стикер бумага спальня теплый фон украшения стены</h3>
+                    </div>
+                    <div class="block-products-catalog__bottom">
+                      <div class="block-products-catalog__rating">
+                        <span class="block-products-catalog__star _active"></span>
+                        <span class="block-products-catalog__star _active"></span>
+                        <span class="block-products-catalog__star _active"></span>
+                        <span class="block-products-catalog__star _active"></span>
+                        <span class="block-products-catalog__star"></span>
+                      </div>
+                      <h4 class="block-products-catalog__price">1-1 $</h4>
+                    </div>
+                    <a href="" class="block-products-catalog__btn-trash">В корзину</a>
+                  </div>
+                </div>
+              </div>
+              <div class="products-catalog__block block-products-catalog ">
+                <div class="block-products-catalog__body">
+                  <div class="block-products-catalog__up">
+                    <div class="block-products-catalog__img">
+                      <img src="img/catalog/aimg1.jpg" alt="">
+                      <img src="img/catalog/favorite.svg" alt="" class="block-products-catalog__favorite">
+                    </div>
+                  </div>
+                  <div class="block-products-catalog__lin">
+                    <div class="block-products-catalog__center">
+                      <h3 class="block-products-catalog__name">Водонепроницаемый Самоклеящиеся обои чистый пигмент цветная сетка красный Обои флип новый Стикер бумага спальня теплый фон украшения стены</h3>
+                    </div>
+                    <div class="block-products-catalog__bottom">
+                      <div class="block-products-catalog__rating">
+                        <span class="block-products-catalog__star _active"></span>
+                        <span class="block-products-catalog__star _active"></span>
+                        <span class="block-products-catalog__star _active"></span>
+                        <span class="block-products-catalog__star _active"></span>
+                        <span class="block-products-catalog__star"></span>
+                      </div>
+                      <h4 class="block-products-catalog__price">1-1 $</h4>
+                    </div>
+                    <a href="" class="block-products-catalog__btn-trash">В корзину</a>
+                  </div>
+                </div>
+              </div>
+
+
+
+
+            </div>
+            <div class="products-catalog__nav nav-products-catalog">
+              <div class="nav-products-catalog__body">
+                <ul class="nav-products-catalog__list">
+                  <li>
+                    <button type="button" class="nav-products-catalog__btn _active">1</button>
+                  </li>
+                  <li>
+                    <button type="button" class="nav-products-catalog__btn">2</button>
+                  </li>
+                  <li>
+                    <button type="button" class="nav-products-catalog__btn">3</button>
+                  </li>
+                  <li>
+                    <button type="button" class="nav-products-catalog__btn _dotts">...</button>
+                  </li>
+                  <li>
+                    <button type="button" class="nav-products-catalog__btn">248</button>
+                  </li>
+                </ul>
+                <button class="nav-products-catalog__btn-next"><span>Вперёд</span>
+                  <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M0.428185 14.208C0.232923 14.4032 0.232923 14.7198 0.428185 14.9151C0.623447 15.1103 0.940029 15.1103 1.13529 14.9151L0.428185 14.208ZM7.56308 7.78018L7.91664 8.13373L8.27019 7.78017L7.91663 7.42662L7.56308 7.78018ZM1.13529 0.645465C0.940022 0.450206 0.623439 0.45021 0.42818 0.645475C0.232921 0.84074 0.232925 1.15732 0.42819 1.35258L1.13529 0.645465ZM1.13529 14.9151L7.91664 8.13373L7.20953 7.42663L0.428185 14.208L1.13529 14.9151ZM0.42819 1.35258L7.20953 8.13374L7.91663 7.42662L1.13529 0.645465L0.42819 1.35258Z"
+                      fill="#80A4DE"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  @@include('html/_footer.htm',{})
+  @@include('html/_fixed.htm',{})
+
+</div>
+<!-- @@include('html/_popup.htm',{}) -->
+@@include('html/_js.htm',{})
+</body>
+</html>

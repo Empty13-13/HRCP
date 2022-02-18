@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Корзина"
+})
+<body>
+<div class="wrapper">
+  <header class="header">
+    <div class="header__container">
+      <div class="header__body">
+        <div class="header__up up-header">
+          <div class="up-header__body">
+            <a href="" class="up-header__main _href">Главная </a>
+            <button type="button" class="up-header__catalog-btn"><img src="img/icons/catalog.svg"
+                                                                      alt=""><span>Каталог</span></button>
+            <div class="up-header__search search-up-header">
+              <div class="search-up-header__body">
+                <select name="" id="" class="_hidden">
+                  <option value="" class="search-up-header__option">Выбрать сток/
+                                                                    маркетплейс
+                  </option>
+                  <option value="0" class="search-up-header__option">Lorem ipsum dolor</option>
+                  <option value="1" class="search-up-header__option">2</option>
+                  <option value="2" class="search-up-header__option">3</option>
+                  <option value="3" class="search-up-header__option">4</option>
+                </select>
+                <span class="line"></span>
+                <div class="search-up-header__search">
+                  <input placeholder="Введите название товара или ссылку " type="text" class="search-up-header__input">
+                  <button class="search-up-header__photo">
+                    <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M21.4717 6.66022V17.5589C21.4717 18.88 20.4617 19.9671 19.2057 19.9671H3.266C2.02294 19.9671 1 18.8937 1 17.5589V6.66022C1 5.33916 2.00999 4.25204 3.266 4.25204H6.16648L6.74916 0.770508H15.8002L16.3181 4.25204H19.2057C20.4617 4.25204 21.4717 5.3254 21.4717 6.66022Z"
+                        stroke="black" stroke-miterlimit="10" stroke-linejoin="round"/>
+                      <path
+                        d="M11 16.6937C13.2091 16.6937 15 14.7926 15 12.4474C15 10.1023 13.2091 8.20117 11 8.20117C8.79086 8.20117 7 10.1023 7 12.4474C7 14.7926 8.79086 16.6937 11 16.6937Z"
+                        stroke="black" stroke-miterlimit="10" stroke-linejoin="round"/>
+                    </svg>
+                  </button>
+                  <button class="search-up-header__button"><img src="img/icons/search.svg" alt=""><span>Найти</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <a href="" class="up-header__man _href">Пользователю</a>
+          </div>
+        </div>
+        <div class="header__center center-header">
+          <div class="center-header__body">
+            <div class="center-header__block _href"><a href="" class="center-header__btn ">
+              <img src="img/icons/header/login.svg" alt="login" class="center-header__img">Вход/Регестрация</a>
+            </div>
+            <span class="line"></span>
+            <div class="center-header__block _href"><a href="" class="center-header__btn ">
+              <img src="img/icons/header/bell.svg" alt="bells" class="center-header__img">Уведомления</a>
+            </div>
+            <span class="line"></span>
+            <div class="center-header__block _href"><a href="" class="center-header__btn ">
+              <img src="img/icons/header/eye.svg" alt="watch" class="center-header__img">Вы недавно смотрели</a>
+            </div>
+            <span class="line"></span>
+            <div class="center-header__block _href"><a href="" class="center-header__btn ">
+              <img src="img/icons/header/favorite.svg" alt="favourite" class="center-header__img">Избранное</a>
+            </div>
+            <span class="line"></span>
+            <div class="center-header__block _href"><a href="" class="center-header__btn ">
+              <img src="img/icons/header/trash.svg" alt="trash" class="center-header__img">Корзина</a>
+            </div>
+          </div>
+        </div>
+        <div class="header__bottom bottom-header">
+          <div class="bottom-header__body">
+            <ul class="bottom-header__breadcrumb breadcrumb">
+              <li><a class="breadcrumb__link _href" href="#">Главная</a></li>
+              <li class="_active"><a class="breadcrumb__link" href=""></a>Корзина</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="page">
+
+    <div class="trash">
+      <div class="trash__container">
+        <div class="trash__body">
+          <ul class="trash__nav nav-trash">
+            <li class="nav-trash__item _active"><a href="" class="nav-trash__link">Корзина</a></li>
+            <li class="nav-trash__item"><a href="" class="nav-trash__link">Оформление заказа</a></li>
+            <li class="nav-trash__item"><a href="" class="nav-trash__link">Оплата</a></li>
+            <li class="nav-trash__item"><a href="" class="nav-trash__link">Подтверждение</a></li>
+          </ul>
+          <div class="trash__filter filter-trash">
+            <div class="filter-trash__body">
+              <select name="form[]" class="large">
+                <option value="">Выбрать сток/маркетплейс</option>
+                <option value="1">Вариант 1</option>
+                <option value="2">Вариант 2</option>
+                <option value="3">Вариант 3</option>
+              </select>
+              <a href="" class="filter-trash__allListBtn">Весь список товаров</a>
+            </div>
+          </div>
+          <div class="trash__infoBlock infoBlock-trash">
+            <ul class="infoBlock-trash__list">
+              <li>
+                <div class="infoBlock-trash__text">Товаров в корзине:</div>
+                <div class="infoBlock-trash__num">2</div>
+              </li>
+              <li>
+                <div class="infoBlock-trash__text">Выведено на страницу:</div>
+                <div class="infoBlock-trash__num"> 1-2 из 2</div>
+              </li>
+              <li>
+                <div class="infoBlock-trash__text">Товаров на странице:</div>
+                <ul class="quantity-sorting-catalog__groupNumber">
+                  <li class="quantity-sorting-catalog__num">
+                    <button type="button" class="quantity-sorting-catalog__btn _active">16</button>
+                  </li>
+                  <li class="quantity-sorting-catalog__num">
+                    <button type="button" class="quantity-sorting-catalog__btn">24</button>
+                  </li>
+                  <li class="quantity-sorting-catalog__num">
+                    <button type="button" class="quantity-sorting-catalog__btn">32</button>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="trash__function function-trash">
+            <div class="function-trash__left">
+              <div class="function-trash__allEventBtn checkbox">
+                <input id="allEventBtn" class="checkbox__input" type="checkbox" name="allEventBtn">
+                <label for="allEventBtn" class="checkbox__label">
+                  <span class="checkbox__text">Выбрать все товары</span>
+                </label>
+              </div>
+            </div>
+            <div class="function-trash__right">
+              <button type="button" id="deleteBtnTrash" class="function-trash__deleteBtn function-trash__btn _whiteBtn">
+                <span>
+                <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M9.48069 13.5218C9.72245 13.5218 9.91823 13.326 9.91823 13.0843V5.64262C9.91823 5.40086 9.72245 5.20508 9.48069 5.20508C9.23894 5.20508 9.04315 5.40086 9.04315 5.64262V13.0843C9.04315 13.326 9.23894 13.5218 9.48069 13.5218Z"
+                    fill="#80A4DE"/>
+                  <path
+                    d="M6.99989 13.5218C7.24164 13.5218 7.43743 13.326 7.43743 13.0843V5.64262C7.43743 5.40086 7.24164 5.20508 6.99989 5.20508C6.75813 5.20508 6.56235 5.40086 6.56235 5.64262V13.0843C6.56235 13.326 6.75813 13.5218 6.99989 13.5218Z"
+                    fill="#80A4DE"/>
+                  <path
+                    d="M4.51957 13.5218C4.76133 13.5218 4.95711 13.326 4.95711 13.0843V5.64262C4.95711 5.40086 4.76133 5.20508 4.51957 5.20508C4.27782 5.20508 4.08203 5.40086 4.08203 5.64262V13.0843C4.08203 13.326 4.27758 13.5218 4.51957 13.5218Z"
+                    fill="#80A4DE"/>
+                  <path
+                    d="M8.24041 0.242188H5.75985C4.83483 0.242188 4.0818 0.93945 4.0818 1.79586V2.72228H0.798501C0.556746 2.72228 0.360962 2.91806 0.360962 3.15982C0.360962 3.40157 0.556746 3.59736 0.798501 3.59736H1.60147V14.3223C1.60147 15.2478 2.35404 16.0006 3.27906 16.0006H10.7207C11.6462 16.0006 12.399 15.2478 12.399 14.3223V3.59736H13.2015C13.4433 3.59736 13.6391 3.40157 13.6391 3.15982C13.6391 2.91806 13.4433 2.72228 13.2015 2.72228H9.91822V1.79586C9.91822 0.93945 9.16542 0.242188 8.24041 0.242188ZM4.95711 1.79586C4.95711 1.42833 5.32464 1.11727 5.76008 1.11727H8.24041C8.67585 1.11727 9.04338 1.42833 9.04338 1.79586V2.72228H4.95711V1.79586ZM11.5239 14.3223C11.5239 14.765 11.1634 15.1255 10.7207 15.1255H3.27906C2.83639 15.1255 2.47655 14.765 2.47655 14.3223V3.59736H11.5239V14.3223Z"
+                    fill="#80A4DE"/>
+                </svg>
+                  </span>
+                Удалить выбранные
+              </button>
+              <button type="button" id="deleteAllBtnTrash"
+                      class="function-trash__clearBtn function-trash__btn _whiteBtn">
+                <span>
+                <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1.00006 14L14.0001 0.999999" stroke="#3567AC" stroke-linecap="round"/>
+                  <path d="M14 14L0.999998 1" stroke="#3567AC" stroke-linecap="round"/>
+                </svg>
+                  </span>
+                Очистить корзину
+              </button>
+              <button type="button" id="goAllToFavouriteBtnTrash" class="function-trash__favoriteBtn _blueBtn">
+                <span>
+                <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path
+  d="M11.5 0C10.125 0 8.85 0.625 8 1.675C7.15 0.625 5.875 0 4.5 0C2.025 0 0 2.025 0 4.5C0 9.225 7.425 13.75 7.75 13.925C7.825 13.975 7.925 14 8 14C8.075 14 8.175 13.975 8.25 13.925C8.575 13.75 16 9.225 16 4.5C16 2.025 13.975 0 11.5 0ZM8 12.9C6.7 12.075 1 8.2 1 4.5C1 2.575 2.575 1 4.5 1C5.775 1 6.95 1.7 7.575 2.8C7.75 3.125 8.275 3.125 8.45 2.8C9.05 1.7 10.225 1 11.5 1C13.425 1 15 2.575 15 4.5C15 8.2 9.3 12.075 8 12.9Z"
+  fill="white"/>
+</svg>
+
+                  </span>
+                Поместить выбранные в избранное
+              </button>
+
+            </div>
+          </div>
+          <div class="trash__products products-trash">
+            <div class="products-trash__body">
+              <ol id="productListTrash" class="products-trash__list">
+                <li>
+                  <div class="item-products-trash">
+                    <div class="item-products-trash__checkbox checkbox">
+                      <input type="checkbox" id="product1" class="item-products-trash__input checkbox__input">
+                      <label for="product1" class="products-trash__item item-products-trash checkbox__label">
+                        <span class="checkbox__text"></span>
+                      </label>
+                    </div>
+                    <div class="item-products-trash__body">
+                      <div class="item-products-trash__left left-item-products-trash">
+                        <div class="left-item-products-trash__body">
+                          <div class="left-item-products-trash__img">
+                            <img src="img/product/1.jpg" alt="">
+                          </div>
+                          <div class="left-item-products-trash__rating rating">
+                            <div class="rating__body">
+                              <div class="rating__active"></div>
+                              <div class="rating__items">
+                                <input type="radio" class="rating__item" value="1" name="rating">
+                                <input type="radio" class="rating__item" value="2" name="rating">
+                                <input type="radio" class="rating__item" value="3" name="rating">
+                                <input type="radio" class="rating__item" value="4" name="rating">
+                                <input type="radio" class="rating__item" value="5" name="rating">
+                              </div>
+                            </div>
+                            <div class="rating__value">3.6</div>
+                          </div>
+                          <p class="left-item-products-trash__text">Количество товара: 152675</p>
+                          <p class="left-item-products-trash__text">Добавлено в корзину:
+                                                                    12.09.2021</p>
+                        </div>
+                      </div>
+                      <div class="item-products-trash__right right-item-products-trash">
+                        <h3 class="right-item-products-trash__title">10 м водонепроницаемый Самоклеящиеся обои чистый
+                                                                     пигмент цветная сетка красный Обои флип новый
+                                                                     Стикер бумага спальня теплый фон украшения
+                                                                     стены</h3>
+                        <div class="right-item-products-trash__description description-right-item-products-trash">
+                          <div class="description-right-item-products-trash__title">Описание товара:</div>
+                          <ul class="description-right-item-products-trash__list">
+                            <li class="description-right-item-products-trash__item">
+                              <div class="description-right-item-products-trash__value">1285152</div>
+                            </li>
+                            <li class="description-right-item-products-trash__item">
+                              <div class="description-right-item-products-trash__value">ID: 15452284</div>
+                            </li>
+                            <li class="description-right-item-products-trash__item">
+                              <div class="description-right-item-products-trash__value">ASM ANNA</div>
+                            </li>
+                            <li class="description-right-item-products-trash__item">
+                              <div class="description-right-item-products-trash__value">Название магазина</div>
+                            </li>
+                            <li class="description-right-item-products-trash__item">
+                              <div class="description-right-item-products-trash__value">Товары промышленные</div>
+                            </li>
+                            <li class="description-right-item-products-trash__item">
+                              <div class="description-right-item-products-trash__value">Декор, элементы элементы</div>
+                            </li>
+                            <li class="description-right-item-products-trash__item">
+                              <div class="description-right-item-products-trash__value">4.8</div>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="right-item-products-trash__description description-right-item-products-trash">
+                          <div class="description-right-item-products-trash__title">Характеристики (конфигурация)
+                                                                                    товара:
+                          </div>
+                          <ul class="description-right-item-products-trash__list">
+                            <li class="description-right-item-products-trash__item">
+                              <div class="description-right-item-products-trash__value">1</div>
+                            </li>
+                            <li class="description-right-item-products-trash__item">
+                              <div class="description-right-item-products-trash__value">красный</div>
+                            </li>
+                            <li class="description-right-item-products-trash__item">
+                              <div class="description-right-item-products-trash__value">европейский XS</div>
+                            </li>
+                            <li class="description-right-item-products-trash__item">
+                              <div class="description-right-item-products-trash__value">комплектация</div>
+                            </li>
+                            <li class="description-right-item-products-trash__item">
+                              <div class="description-right-item-products-trash__value">пластиковая</div>
+                            </li>
+                            <li class="description-right-item-products-trash__item">
+                              <div class="description-right-item-products-trash__value">фасовка</div>
+                            </li>
+                            <li class="description-right-item-products-trash__item">
+                              <div class="description-right-item-products-trash__value">новое</div>
+                            </li>
+                            <li class="description-right-item-products-trash__item">
+                              <div class="description-right-item-products-trash__value">короткий рукав</div>
+                            </li>
+                            <li class="description-right-item-products-trash__item">
+                              <div class="description-right-item-products-trash__value">2 кг (нетто)</div>
+                            </li>
+                            <li class="description-right-item-products-trash__item">
+                              <div class="description-right-item-products-trash__value">2 кг (брутто)</div>
+                            </li>
+                            <li class="description-right-item-products-trash__item">
+                              <div class="description-right-item-products-trash__value">0,005х0,004х0,003 м (нетто)
+                              </div>
+                            </li>
+                            <li class="description-right-item-products-trash__item">
+                              <div class="description-right-item-products-trash__value">0,005х0,004х0,003 м (брутто)
+                              </div>
+                            </li>
+                            <li class="description-right-item-products-trash__item">
+                              <div class="description-right-item-products-trash__value">1 литр (нетто)</div>
+                            </li>
+                            <li class="description-right-item-products-trash__item">
+                              <div class="description-right-item-products-trash__value">1 литр (брутто)</div>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="right-item-products-trash__btns btns-right-item-products-trash">
+                          <a href="/product.html" class="btns-right-item-products-trash__config _whiteBtn">
+                            <span>
+                            <svg width="15" height="13" viewBox="0 0 15 13" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+<path
+  d="M0.695744 2.85597H2.27248C2.54022 3.80796 3.41784 4.4922 4.4442 4.4922C5.47056 4.4922 6.34818 3.79308 6.61593 2.85597H13.5922C13.9343 2.85597 14.2021 2.57334 14.2021 2.2461C14.2021 1.91885 13.9195 1.63623 13.5922 1.63623H6.61593C6.34818 0.684242 5.47056 0 4.4442 0C3.41784 0 2.54022 0.699117 2.27248 1.63623H0.695744C0.353623 1.63623 0.0858765 1.91885 0.0858765 2.2461C0.0858765 2.57334 0.368498 2.85597 0.695744 2.85597ZM4.4442 1.20486C5.00944 1.20486 5.47056 1.66598 5.47056 2.23122C5.47056 2.79647 5.00944 3.25759 4.4442 3.25759C3.87896 3.25759 3.41784 2.79647 3.41784 2.23122C3.41784 1.66598 3.87896 1.20486 4.4442 1.20486Z"
+  fill="#80A4DE"/>
+<path
+  d="M13.6071 5.89014H12.0304C11.7626 4.93815 10.885 4.25391 9.85864 4.25391C8.83227 4.25391 7.95466 4.95302 7.68691 5.89014H0.695744C0.353623 5.89014 0.0858765 6.17276 0.0858765 6.5C0.0858765 6.82725 0.368498 7.10987 0.695744 7.10987H7.67204C7.93979 8.06186 8.8174 8.7461 9.84376 8.7461C10.8701 8.7461 11.7477 8.04699 12.0155 7.10987H13.5922C13.9343 7.10987 14.2021 6.82725 14.2021 6.5C14.2021 6.17276 13.9343 5.89014 13.6071 5.89014ZM9.85864 7.52637C9.29339 7.52637 8.83227 7.06525 8.83227 6.5C8.83227 5.93476 9.29339 5.47364 9.85864 5.47364C10.4239 5.47364 10.885 5.93476 10.885 6.5C10.885 7.06525 10.4239 7.52637 9.85864 7.52637Z"
+  fill="#80A4DE"/>
+<path
+  d="M13.6071 10.144H6.61592C6.34818 9.19205 5.47056 8.50781 4.4442 8.50781C3.41784 8.50781 2.54022 9.20693 2.27248 10.144H0.695744C0.353623 10.144 0.0858765 10.4267 0.0858765 10.7539C0.0858765 11.096 0.368498 11.3638 0.695744 11.3638H2.27248C2.54022 12.3158 3.41784 13 4.4442 13C5.47056 13 6.34818 12.3009 6.61592 11.3638H13.5922C13.9343 11.3638 14.2021 11.0812 14.2021 10.7539C14.217 10.4267 13.9343 10.144 13.6071 10.144ZM4.4442 11.7951C3.87896 11.7951 3.41784 11.334 3.41784 10.7688C3.41784 10.2035 3.87896 9.74242 4.4442 9.74242C5.00944 9.74242 5.47056 10.2035 5.47056 10.7688C5.47056 11.334 5.00944 11.7951 4.4442 11.7951Z"
+  fill="#80A4DE"/>
+</svg>
+
+                          </span>Изменить конфигурацию
+                          </a>
+                          <button id="deleteItemTrashBtn" type="button"
+                                  class="btns-right-item-products-trash__delete _whiteBtn">
+                            <span>
+                              <svg width="14" height="16" viewBox="0 0 14 16" fill="none"
+                                   xmlns="http://www.w3.org/2000/svg">
+<path
+  d="M9.48066 13.5218C9.72242 13.5218 9.9182 13.326 9.9182 13.0843V5.64262C9.9182 5.40086 9.72242 5.20508 9.48066 5.20508C9.23891 5.20508 9.04312 5.40086 9.04312 5.64262V13.0843C9.04312 13.326 9.23891 13.5218 9.48066 13.5218Z"
+  fill="#80A4DE"/>
+<path
+  d="M6.99988 13.5218C7.24163 13.5218 7.43742 13.326 7.43742 13.0843V5.64262C7.43742 5.40086 7.24163 5.20508 6.99988 5.20508C6.75812 5.20508 6.56234 5.40086 6.56234 5.64262V13.0843C6.56234 13.326 6.75812 13.5218 6.99988 13.5218Z"
+  fill="#80A4DE"/>
+<path
+  d="M4.51956 13.5218C4.76131 13.5218 4.95709 13.326 4.95709 13.0843V5.64262C4.95709 5.40086 4.76131 5.20508 4.51956 5.20508C4.2778 5.20508 4.08202 5.40086 4.08202 5.64262V13.0843C4.08202 13.326 4.27757 13.5218 4.51956 13.5218Z"
+  fill="#80A4DE"/>
+<path
+  d="M8.24039 0.242188H5.75983C4.83482 0.242188 4.08178 0.93945 4.08178 1.79586V2.72228H0.798486C0.556731 2.72228 0.360947 2.91806 0.360947 3.15982C0.360947 3.40157 0.556731 3.59736 0.798486 3.59736H1.60146V14.3223C1.60146 15.2478 2.35403 16.0006 3.27904 16.0006H10.7207C11.6462 16.0006 12.399 15.2478 12.399 14.3223V3.59736H13.2015C13.4433 3.59736 13.639 3.40157 13.639 3.15982C13.639 2.91806 13.4433 2.72228 13.2015 2.72228H9.91821V1.79586C9.91821 0.93945 9.16541 0.242188 8.24039 0.242188ZM4.95709 1.79586C4.95709 1.42833 5.32463 1.11727 5.76007 1.11727H8.24039C8.67583 1.11727 9.04336 1.42833 9.04336 1.79586V2.72228H4.95709V1.79586ZM11.5239 14.3223C11.5239 14.765 11.1634 15.1255 10.7207 15.1255H3.27904C2.83637 15.1255 2.47654 14.765 2.47654 14.3223V3.59736H11.5239V14.3223Z"
+  fill="#80A4DE"/>
+</svg></span>
+                            Удалить товар
+                          </button>
+                          <button id="goToFavouriteBtn" type="button" class="btns-right-item-products-trash__favourite _blueBtn">
+                            <span>
+                              <svg width="16" height="14" viewBox="0 0 16 14" fill="none"
+                                   xmlns="http://www.w3.org/2000/svg">
+<path
+  d="M11.5 0C10.125 0 8.85 0.625 8 1.675C7.15 0.625 5.875 0 4.5 0C2.025 0 0 2.025 0 4.5C0 9.225 7.425 13.75 7.75 13.925C7.825 13.975 7.925 14 8 14C8.075 14 8.175 13.975 8.25 13.925C8.575 13.75 16 9.225 16 4.5C16 2.025 13.975 0 11.5 0ZM8 12.9C6.7 12.075 1 8.2 1 4.5C1 2.575 2.575 1 4.5 1C5.775 1 6.95 1.7 7.575 2.8C7.75 3.125 8.275 3.125 8.45 2.8C9.05 1.7 10.225 1 11.5 1C13.425 1 15 2.575 15 4.5C15 8.2 9.3 12.075 8 12.9Z"
+  fill="white"/>
+</svg>
+                            </span>
+                            Переместить в избранное
+                          </button>
+                        </div>
+                        <div class="right-item-products-trash__price">
+                          Цена 1 шт: 3 000 000₽ <span>2 000 000 - 3 000 000₽</span>
+                        </div>
+                        <div class="right-item-products-trash__amount amount-right-item-products-trash">
+                          <p class="amount-right-item-products-trash__price">Сумма: 3 000 000 ₽</p>
+                          <p class="amount-right-item-products-trash__delivery">Стоимость доставки: 3 000 000 ₽*</p>
+                          <div
+                            class="amount-right-item-products-trash__quantity quantity-amount-right-item-products-trash quantity">
+                            <span>Количество:</span>
+                            <button type="button"
+                                    class="quantity-amount-right-item-products-trash__button quantity__button">-
+                            </button>
+                            <div class="quantity-amount-right-item-products-trash__input">
+                              <input autocomplete="off" type="text" name="form[]" value="1" readonly>
+                            </div>
+                            <button type="button"
+                                    class="quantity-amount-right-item-products-trash__button quantity__button quantity__button_plus">
+                              +
+                            </button>
+                          </div>
+                          <p class="amount-right-item-products-trash__total">Итого: 3 000 000 ₽</p>
+                        </div>
+                        <div class="right-item-products-trash__comments comments-right-item-products-trash">
+                          <div class="comments-right-item-products-trash__operator">
+                            <div class="comments-right-item-products-trash__title">Комментарий для оператора</div>
+                            <textarea maxlength="136" autocomplete="off" name="form[]"
+                                      placeholder="Введите комментарий  (136 символов)"
+                                      data-error=""
+                                      class="comments-right-item-products-trash__input input"></textarea>
+                          </div>
+                          <div class="comments-right-item-products-trash__user">
+                            <div class="comments-right-item-products-trash__title">Комментарий для пользователя</div>
+                            <textarea maxlength="136" autocomplete="off" name="form[]"
+                                      placeholder="Введите комментарий  (136 символов)"
+                                      data-error=""
+                                      class="comments-right-item-products-trash__input input"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-products-trash">
+                    <div class="item-products-trash__checkbox checkbox">
+                      <input type="checkbox" id="product2" class="item-products-trash__input checkbox__input">
+                      <label for="product2" class="products-trash__item item-products-trash checkbox__label">
+                        <span class="checkbox__text"></span>
+                      </label>
+                    </div>
+                    <div class="item-products-trash__body">
+                      <div class="item-products-trash__left left-item-products-trash">
+                        <div class="left-item-products-trash__body">
+                          <div class="left-item-products-trash__img">
+                            <img src="img/product/1.jpg" alt="">
+                          </div>
+                          <div class="left-item-products-trash__rating rating">
+                            <div class="rating__body">
+                              <div class="rating__active"></div>
+                              <div class="rating__items">
+                                <input type="radio" class="rating__item" value="1" name="rating">
+                                <input type="radio" class="rating__item" value="2" name="rating">
+                                <input type="radio" class="rating__item" value="3" name="rating">
+                                <input type="radio" class="rating__item" value="4" name="rating">
+                                <input type="radio" class="rating__item" value="5" name="rating">
+                              </div>
+                            </div>
+                            <div class="rating__value">3.6</div>
+                          </div>
+                          <p class="left-item-products-trash__text">Количество товара: 152675</p>
+                          <p class="left-item-products-trash__text">Добавлено в корзину:
+                                                                    12.09.2021</p>
+                        </div>
+                      </div>
+                      <div class="item-products-trash__right right-item-products-trash">
+                        <h3 class="right-item-products-trash__title">10 м водонепроницаемый Самоклеящиеся обои чистый
+                                                                     пигмент цветная сетка красный Обои флип новый
+                                                                     Стикер бумага спальня теплый фон украшения
+                                                                     стены</h3>
+                        <div class="right-item-products-trash__description description-right-item-products-trash">
+                          <div class="description-right-item-products-trash__title">Описание товара:</div>
+                          <ul class="description-right-item-products-trash__list">
+                            <li class="description-right-item-products-trash__item">
+                              <div class="description-right-item-products-trash__value">1285152</div>
+                            </li>
+                            <li class="description-right-item-products-trash__item">
+                              <div class="description-right-item-products-trash__value">ID: 15452284</div>
+                            </li>
+                            <li class="description-right-item-products-trash__item">
+                              <div class="description-right-item-products-trash__value">ASM ANNA</div>
+                            </li>
+                            <li class="description-right-item-products-trash__item">
+                              <div class="description-right-item-products-trash__value">Название магазина</div>
+                            </li>
+                            <li class="description-right-item-products-trash__item">
+                              <div class="description-right-item-products-trash__value">Товары промышленные</div>
+                            </li>
+                            <li class="description-right-item-products-trash__item">
+                              <div class="description-right-item-products-trash__value">Декор, элементы элементы</div>
+                            </li>
+                            <li class="description-right-item-products-trash__item">
+                              <div class="description-right-item-products-trash__value">4.8</div>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="right-item-products-trash__description description-right-item-products-trash">
+                          <div class="description-right-item-products-trash__title">Характеристики (конфигурация)
+                                                                                    товара:
+                          </div>
+                          <ul class="description-right-item-products-trash__list">
+                            <li class="description-right-item-products-trash__item">
+                              <div class="description-right-item-products-trash__value">1</div>
+                            </li>
+                            <li class="description-right-item-products-trash__item">
+                              <div class="description-right-item-products-trash__value">красный</div>
+                            </li>
+                            <li class="description-right-item-products-trash__item">
+                              <div class="description-right-item-products-trash__value">европейский XS</div>
+                            </li>
+                            <li class="description-right-item-products-trash__item">
+                              <div class="description-right-item-products-trash__value">комплектация</div>
+                            </li>
+                            <li class="description-right-item-products-trash__item">
+                              <div class="description-right-item-products-trash__value">пластиковая</div>
+                            </li>
+                            <li class="description-right-item-products-trash__item">
+                              <div class="description-right-item-products-trash__value">фасовка</div>
+                            </li>
+                            <li class="description-right-item-products-trash__item">
+                              <div class="description-right-item-products-trash__value">новое</div>
+                            </li>
+                            <li class="description-right-item-products-trash__item">
+                              <div class="description-right-item-products-trash__value">короткий рукав</div>
+                            </li>
+                            <li class="description-right-item-products-trash__item">
+                              <div class="description-right-item-products-trash__value">2 кг (нетто)</div>
+                            </li>
+                            <li class="description-right-item-products-trash__item">
+                              <div class="description-right-item-products-trash__value">2 кг (брутто)</div>
+                            </li>
+                            <li class="description-right-item-products-trash__item">
+                              <div class="description-right-item-products-trash__value">0,005х0,004х0,003 м (нетто)
+                              </div>
+                            </li>
+                            <li class="description-right-item-products-trash__item">
+                              <div class="description-right-item-products-trash__value">0,005х0,004х0,003 м (брутто)
+                              </div>
+                            </li>
+                            <li class="description-right-item-products-trash__item">
+                              <div class="description-right-item-products-trash__value">1 литр (нетто)</div>
+                            </li>
+                            <li class="description-right-item-products-trash__item">
+                              <div class="description-right-item-products-trash__value">1 литр (брутто)</div>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="right-item-products-trash__btns btns-right-item-products-trash">
+                          <a href="/product.html" class="btns-right-item-products-trash__config _whiteBtn">
+                            <span>
+                            <svg width="15" height="13" viewBox="0 0 15 13" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+<path
+  d="M0.695744 2.85597H2.27248C2.54022 3.80796 3.41784 4.4922 4.4442 4.4922C5.47056 4.4922 6.34818 3.79308 6.61593 2.85597H13.5922C13.9343 2.85597 14.2021 2.57334 14.2021 2.2461C14.2021 1.91885 13.9195 1.63623 13.5922 1.63623H6.61593C6.34818 0.684242 5.47056 0 4.4442 0C3.41784 0 2.54022 0.699117 2.27248 1.63623H0.695744C0.353623 1.63623 0.0858765 1.91885 0.0858765 2.2461C0.0858765 2.57334 0.368498 2.85597 0.695744 2.85597ZM4.4442 1.20486C5.00944 1.20486 5.47056 1.66598 5.47056 2.23122C5.47056 2.79647 5.00944 3.25759 4.4442 3.25759C3.87896 3.25759 3.41784 2.79647 3.41784 2.23122C3.41784 1.66598 3.87896 1.20486 4.4442 1.20486Z"
+  fill="#80A4DE"/>
+<path
+  d="M13.6071 5.89014H12.0304C11.7626 4.93815 10.885 4.25391 9.85864 4.25391C8.83227 4.25391 7.95466 4.95302 7.68691 5.89014H0.695744C0.353623 5.89014 0.0858765 6.17276 0.0858765 6.5C0.0858765 6.82725 0.368498 7.10987 0.695744 7.10987H7.67204C7.93979 8.06186 8.8174 8.7461 9.84376 8.7461C10.8701 8.7461 11.7477 8.04699 12.0155 7.10987H13.5922C13.9343 7.10987 14.2021 6.82725 14.2021 6.5C14.2021 6.17276 13.9343 5.89014 13.6071 5.89014ZM9.85864 7.52637C9.29339 7.52637 8.83227 7.06525 8.83227 6.5C8.83227 5.93476 9.29339 5.47364 9.85864 5.47364C10.4239 5.47364 10.885 5.93476 10.885 6.5C10.885 7.06525 10.4239 7.52637 9.85864 7.52637Z"
+  fill="#80A4DE"/>
+<path
+  d="M13.6071 10.144H6.61592C6.34818 9.19205 5.47056 8.50781 4.4442 8.50781C3.41784 8.50781 2.54022 9.20693 2.27248 10.144H0.695744C0.353623 10.144 0.0858765 10.4267 0.0858765 10.7539C0.0858765 11.096 0.368498 11.3638 0.695744 11.3638H2.27248C2.54022 12.3158 3.41784 13 4.4442 13C5.47056 13 6.34818 12.3009 6.61592 11.3638H13.5922C13.9343 11.3638 14.2021 11.0812 14.2021 10.7539C14.217 10.4267 13.9343 10.144 13.6071 10.144ZM4.4442 11.7951C3.87896 11.7951 3.41784 11.334 3.41784 10.7688C3.41784 10.2035 3.87896 9.74242 4.4442 9.74242C5.00944 9.74242 5.47056 10.2035 5.47056 10.7688C5.47056 11.334 5.00944 11.7951 4.4442 11.7951Z"
+  fill="#80A4DE"/>
+</svg>
+
+                          </span>Изменить конфигурацию
+                          </a>
+                          <button id="deleteItemTrashBtn" type="button"
+                                  class="btns-right-item-products-trash__delete _whiteBtn">
+                            <span>
+                              <svg width="14" height="16" viewBox="0 0 14 16" fill="none"
+                                   xmlns="http://www.w3.org/2000/svg">
+<path
+  d="M9.48066 13.5218C9.72242 13.5218 9.9182 13.326 9.9182 13.0843V5.64262C9.9182 5.40086 9.72242 5.20508 9.48066 5.20508C9.23891 5.20508 9.04312 5.40086 9.04312 5.64262V13.0843C9.04312 13.326 9.23891 13.5218 9.48066 13.5218Z"
+  fill="#80A4DE"/>
+<path
+  d="M6.99988 13.5218C7.24163 13.5218 7.43742 13.326 7.43742 13.0843V5.64262C7.43742 5.40086 7.24163 5.20508 6.99988 5.20508C6.75812 5.20508 6.56234 5.40086 6.56234 5.64262V13.0843C6.56234 13.326 6.75812 13.5218 6.99988 13.5218Z"
+  fill="#80A4DE"/>
+<path
+  d="M4.51956 13.5218C4.76131 13.5218 4.95709 13.326 4.95709 13.0843V5.64262C4.95709 5.40086 4.76131 5.20508 4.51956 5.20508C4.2778 5.20508 4.08202 5.40086 4.08202 5.64262V13.0843C4.08202 13.326 4.27757 13.5218 4.51956 13.5218Z"
+  fill="#80A4DE"/>
+<path
+  d="M8.24039 0.242188H5.75983C4.83482 0.242188 4.08178 0.93945 4.08178 1.79586V2.72228H0.798486C0.556731 2.72228 0.360947 2.91806 0.360947 3.15982C0.360947 3.40157 0.556731 3.59736 0.798486 3.59736H1.60146V14.3223C1.60146 15.2478 2.35403 16.0006 3.27904 16.0006H10.7207C11.6462 16.0006 12.399 15.2478 12.399 14.3223V3.59736H13.2015C13.4433 3.59736 13.639 3.40157 13.639 3.15982C13.639 2.91806 13.4433 2.72228 13.2015 2.72228H9.91821V1.79586C9.91821 0.93945 9.16541 0.242188 8.24039 0.242188ZM4.95709 1.79586C4.95709 1.42833 5.32463 1.11727 5.76007 1.11727H8.24039C8.67583 1.11727 9.04336 1.42833 9.04336 1.79586V2.72228H4.95709V1.79586ZM11.5239 14.3223C11.5239 14.765 11.1634 15.1255 10.7207 15.1255H3.27904C2.83637 15.1255 2.47654 14.765 2.47654 14.3223V3.59736H11.5239V14.3223Z"
+  fill="#80A4DE"/>
+</svg></span>
+                            Удалить товар
+                          </button>
+                          <button id="goToFavouriteBtn" type="button" class="btns-right-item-products-trash__favourite _blueBtn">
+                            <span>
+                              <svg width="16" height="14" viewBox="0 0 16 14" fill="none"
+                                   xmlns="http://www.w3.org/2000/svg">
+<path
+  d="M11.5 0C10.125 0 8.85 0.625 8 1.675C7.15 0.625 5.875 0 4.5 0C2.025 0 0 2.025 0 4.5C0 9.225 7.425 13.75 7.75 13.925C7.825 13.975 7.925 14 8 14C8.075 14 8.175 13.975 8.25 13.925C8.575 13.75 16 9.225 16 4.5C16 2.025 13.975 0 11.5 0ZM8 12.9C6.7 12.075 1 8.2 1 4.5C1 2.575 2.575 1 4.5 1C5.775 1 6.95 1.7 7.575 2.8C7.75 3.125 8.275 3.125 8.45 2.8C9.05 1.7 10.225 1 11.5 1C13.425 1 15 2.575 15 4.5C15 8.2 9.3 12.075 8 12.9Z"
+  fill="white"/>
+</svg>
+                            </span>
+                            Переместить в избранное
+                          </button>
+                        </div>
+                        <div class="right-item-products-trash__price">
+                          Цена 1 шт: 3 000 000₽ <span>2 000 000 - 3 000 000₽</span>
+                        </div>
+                        <div class="right-item-products-trash__amount amount-right-item-products-trash">
+                          <p class="amount-right-item-products-trash__price">Сумма: 3 000 000 ₽</p>
+                          <p class="amount-right-item-products-trash__delivery">Стоимость доставки: 3 000 000 ₽*</p>
+                          <div
+                            class="amount-right-item-products-trash__quantity quantity-amount-right-item-products-trash quantity">
+                            <span>Количество:</span>
+                            <button type="button"
+                                    class="quantity-amount-right-item-products-trash__button quantity__button">-
+                            </button>
+                            <div class="quantity-amount-right-item-products-trash__input">
+                              <input autocomplete="off" type="text" name="form[]" value="1" readonly>
+                            </div>
+                            <button type="button"
+                                    class="quantity-amount-right-item-products-trash__button quantity__button quantity__button_plus">
+                              +
+                            </button>
+                          </div>
+                          <p class="amount-right-item-products-trash__total">Итого: 3 000 000 ₽</p>
+                        </div>
+                        <div class="right-item-products-trash__comments comments-right-item-products-trash">
+                          <div class="comments-right-item-products-trash__operator">
+                            <div class="comments-right-item-products-trash__title">Комментарий для оператора</div>
+                            <textarea maxlength="136" autocomplete="off" name="form[]"
+                                      placeholder="Введите комментарий  (136 символов)"
+                                      data-error=""
+                                      class="comments-right-item-products-trash__input input"></textarea>
+                          </div>
+                          <div class="comments-right-item-products-trash__user">
+                            <div class="comments-right-item-products-trash__title">Комментарий для пользователя</div>
+                            <textarea maxlength="136" autocomplete="off" name="form[]"
+                                      placeholder="Введите комментарий  (136 символов)"
+                                      data-error=""
+                                      class="comments-right-item-products-trash__input input"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+
+
+
+              </ol>
+            </div>
+          </div>
+          <div class="trash__info-submit info-submit-trash">
+            <div class="info-submit-trash__body">
+              <div class="info-submit-trash__left left-info-submit-trash">
+                <p class="left-info-submit-trash__information">Вы можете оформить “дозаказ” к уже существующему у Вас
+                                                               заказу. И если этот заказ еще не оплачен и не отравлен,
+                                                               то в этом случае ваш заказ будет доставлен к уже
+                                                               имеющемуся и будет отправлен одной отгрузкой. </p>
+                <div class="left-info-submit-trash__typeRadio">
+                  <div class="options">
+                    <div class="options__item">
+                      <input hidden id="o_1" class="options__input" checked type="radio" value="1" name="option">
+                      <label
+                        for="o_1" class="options__label"><span class="options__text">Сделать новый заказ</span>
+                      </label>
+                    </div>
+
+                    <div class="options__item">
+                      <input hidden id="o_2" class="options__input" type="radio" value="2" name="option">
+                      <label for="o_2" class="options__label">
+                        <span class="options__text">Добавить в существующий заказ</span>
+                      </label>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="left-info-submit-trash__type">
+                  <p class="left-info-submit-trash__type-name">Тип доставки из-за рубежа в т.ч. по стране получателя
+                                                               (заказчика)</p>
+                  <select name="form[]" class="large">
+                    <option value="" selected>Выбрать тип доставки</option>
+                    <option value="2">Стандарт</option>
+                    <option value="3">Экспресс</option>
+                  </select>
+                </div>
+                <div class="left-info-submit-trash__type">
+                  <p class="left-info-submit-trash__type-name">Способ доставки по стране получателя (заказчика) в т.ч.
+                                                               из-за рубежа</p>
+                  <select name="form[]" class="large">
+                    <option value="" selected>Выбрать способ доставки</option>
+                    <option value="1">Почта России</option>
+                    <option value="2">EMS</option>
+                    <option value="3">Pony Express</option>
+                    <option value="3">СДЭК</option>
+                    <option value="5">ПЭК</option>
+                    <option value="6">Деловые линии</option>
+                    <option value="7">ТК Энергия</option>
+                    <option value="8">Байкал сервис</option>
+                    <option value="9">Баскурьер</option>
+                    <option value="10">China Post</option>
+                    <option value="11">DPD</option>
+                    <option value="12">Boxberry</option>
+                    <option value="13">Транс Трек-ДВ</option>
+                    <option value="14">Автотрейдинг</option>
+                    <option value="15">ЖелДорЭкспедиция</option>
+                    <option value="16">Мой город</option>
+                    <option value="17">КИТ</option>
+                    <option value="18">Карго 9118</option>
+                    <option value="19">Контейнерные перевозки</option>
+                    <option value="20">Багажные перевозки</option>
+                  </select>
+                </div>
+                <div class="left-info-submit-trash__adress adress-left-info-submit-trash">
+                  <div class="adress-left-info-submit-trash__title">Адрес доставки в стране получателя</div>
+                  <table class="adress-left-info-submit-trash__table">
+                    <tr>
+                      <th></th>
+                      <th>Индекс</th>
+                      <th>Страна</th>
+                      <th>Регион</th>
+                      <th>Район</th>
+                      <th>Населенный
+                          пункт
+                      </th>
+                      <th>Улица</th>
+                      <th>Дом</th>
+                      <th>Строение</th>
+                      <th>Корпус</th>
+                      <th>Квартира,
+                          офис, склад
+                      </th>
+                    </tr>
+                    <tr>
+                      <td valign="top">
+                        <div class="options__item">
+                          <input hidden id="225420" class="options__input" checked type="radio" value="1" name="adress">
+                          <label for="225420" class="options__label">
+                            <span class="options__text"></span>
+                          </label>
+                        </div>
+                      </td>
+                      <td valign="top">
+                        <label for="225420" class="adress-left-info-submit-trash__text">225420</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225420" class="adress-left-info-submit-trash__text">Россия</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225420" class="adress-left-info-submit-trash__text">Иркутская область</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225420" class="adress-left-info-submit-trash__text">Название
+                                                                                        района</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225420" class="adress-left-info-submit-trash__text">Название
+                                                                                        населенного пункта</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225420" class="adress-left-info-submit-trash__text">Название
+                                                                                        улицы</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225420" class="adress-left-info-submit-trash__text">325</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225420" class="adress-left-info-submit-trash__text">63</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225420" class="adress-left-info-submit-trash__text">2</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225420" class="adress-left-info-submit-trash__text">2</label>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">
+                        <div class="options__item">
+                          <input hidden id="225421" class="options__input" type="radio" value="1" name="adress">
+                          <label for="225421" class="options__label">
+                            <span class="options__text"></span>
+                          </label>
+                        </div>
+                      </td>
+                      <td valign="top">
+                        <label for="225421" class="adress-left-info-submit-trash__text">225421</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225421" class="adress-left-info-submit-trash__text">Россия</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225421" class="adress-left-info-submit-trash__text">Иркутская область</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225421" class="adress-left-info-submit-trash__text">Название
+                                                                                        района</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225421" class="adress-left-info-submit-trash__text">Название
+                                                                                        населенного пункта</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225421" class="adress-left-info-submit-trash__text">Название
+                                                                                        улицы</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225421" class="adress-left-info-submit-trash__text">325</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225421" class="adress-left-info-submit-trash__text">63</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225421" class="adress-left-info-submit-trash__text">2</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225421" class="adress-left-info-submit-trash__text">2</label>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">
+                        <div class="options__item">
+                          <input hidden id="225422" class="options__input"  type="radio" value="1" name="adress">
+                          <label for="225422" class="options__label">
+                            <span class="options__text"></span>
+                          </label>
+                        </div>
+                      </td>
+                      <td valign="top">
+                        <label for="225422" class="adress-left-info-submit-trash__text">225422</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225422" class="adress-left-info-submit-trash__text">Россия</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225422" class="adress-left-info-submit-trash__text">Иркутская область</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225422" class="adress-left-info-submit-trash__text">Название
+                                                                                        района</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225422" class="adress-left-info-submit-trash__text">Название
+                                                                                        населенного пункта</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225422" class="adress-left-info-submit-trash__text">Название
+                                                                                        улицы</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225422" class="adress-left-info-submit-trash__text">325</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225422" class="adress-left-info-submit-trash__text">63</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225422" class="adress-left-info-submit-trash__text">2</label>
+                      </td>
+                      <td valign="top">
+                        <label for="225422" class="adress-left-info-submit-trash__text">2</label>
+                      </td>
+                    </tr>
+
+                    <!--                    <tr>-->
+                    <!--                      <td valign="top">-->
+                    <!--                        <div class="options__item">-->
+                    <!--                          <input hidden id="225422" class="options__input" type="radio" value="1" name="adress">-->
+                    <!--                          <label for="225422" class="options__label">-->
+                    <!--                            <span class="options__text"></span>-->
+                    <!--                          </label>-->
+                    <!--                        </div>-->
+                    <!--                      </td>-->
+                    <!--                      <td valign="top">-->
+                    <!--                        <label for="225422" class="adress-left-info-submit-trash__text">225422</label>-->
+                    <!--                      </td>-->
+                    <!--                      <td valign="top">-->
+                    <!--                        <label for="225422" class="adress-left-info-submit-trash__text">Россия</label>-->
+                    <!--                      </td>-->
+                    <!--                      <td valign="top">-->
+                    <!--                        <label for="225422" class="adress-left-info-submit-trash__text">Иркутская область</label>-->
+                    <!--                      </td>-->
+                    <!--                      <td valign="top">-->
+                    <!--                        <label for="225422" class="adress-left-info-submit-trash__text">Название-->
+                    <!--                                                                                        района</label>-->
+                    <!--                      </td>-->
+                    <!--                      <td valign="top">-->
+                    <!--                        <label for="225422" class="adress-left-info-submit-trash__text">Название-->
+                    <!--                                                                                        населенного пункта</label>-->
+                    <!--                      </td>-->
+                    <!--                      <td valign="top">-->
+                    <!--                        <label for="225422" class="adress-left-info-submit-trash__text">Название-->
+                    <!--                                                                                        улицы</label>-->
+                    <!--                      </td>-->
+                    <!--                      <td valign="top">-->
+                    <!--                        <label for="225422" class="adress-left-info-submit-trash__text">325</label>-->
+                    <!--                      </td>-->
+                    <!--                      <td valign="top">-->
+                    <!--                        <label for="225422" class="adress-left-info-submit-trash__text">63</label>-->
+                    <!--                      </td>-->
+                    <!--                      <td valign="top">-->
+                    <!--                        <label for="225422" class="adress-left-info-submit-trash__text">2</label>-->
+                    <!--                      </td>-->
+                    <!--                      <td valign="top">-->
+                    <!--                        <label for="225422" class="adress-left-info-submit-trash__text">2</label>-->
+                    <!--                      </td>-->
+                    <!--                    </tr>-->
+                  </table>
+                  <button type="button" class="adress-left-info-submit-trash__btnSubmit _blueBtn" onclick="this.disabled=true;">Применить
+                  </button>
+                  <a href="#" data-popup="#addAddress" class="adress-left-info-submit-trash__btnSubmit _whiteBtn">Добавить
+                                                                                                                  другой
+                                                                                                                  адрес
+                  </a>
+                  <a href="#" data-popup="#editAddress" class="adress-left-info-submit-trash__btnSubmit _whiteBtn">
+                    <span>
+                    <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path
+  d="M5.18771 14.0007C5.18478 14.0038 5.18052 14.0049 5.17747 14.0079C5.15256 14.0329 5.12374 14.0533 5.09222 14.0684C5.089 14.0699 5.08627 14.0722 5.083 14.0736L5.07874 14.076L2.7518 15.0267L0.424705 15.9775C0.368964 16.0003 0.308013 16.0059 0.249221 15.9937C0.19043 15.9816 0.136317 15.9521 0.0934296 15.9089C0.0505419 15.8656 0.0207167 15.8105 0.00756073 15.7502C-0.00559616 15.6898 -0.0015192 15.6268 0.0192976 15.5688L0.909065 13.0822L1.79868 10.5958L1.80063 10.592C1.80215 10.5879 1.80472 10.5845 1.80639 10.5806C1.81947 10.5499 1.83716 10.5216 1.85881 10.4967C1.86199 10.493 1.86305 10.4881 1.86643 10.4845L11.496 0.194614C11.6174 0.0699723 11.7817 0 11.953 0C12.1244 0 12.2887 0.0699723 12.4101 0.194614L14.8171 2.76693C14.9345 2.89421 15 3.06315 15 3.23882C15 3.41449 14.9346 3.58345 14.8172 3.71076L5.18771 14.0007ZM0.842232 15.1183L2.09239 14.6075L1.32023 13.7825L0.842232 15.1183ZM1.55878 13.1153L2.7165 14.3524L4.41934 13.6568L2.20985 11.2961L1.55878 13.1153ZM14.3705 3.21149L11.9426 0.639173L2.52119 10.7067L4.96447 13.3174L14.3706 3.2662C14.3769 3.25854 14.3803 3.24884 14.3803 3.23882C14.3802 3.2288 14.3768 3.21912 14.3705 3.21149Z"
+  fill="#80A4DE"/>
+</svg>
+<path
+  d="M5.18771 14.0007C5.18478 14.0038 5.18052 14.0049 5.17747 14.0079C5.15256 14.0329 5.12374 14.0533 5.09222 14.0684C5.089 14.0699 5.08627 14.0722 5.083 14.0736L5.07874 14.076L2.7518 15.0267L0.424705 15.9775C0.368964 16.0003 0.308013 16.0059 0.249221 15.9937C0.19043 15.9816 0.136317 15.9521 0.0934296 15.9089C0.0505419 15.8656 0.0207167 15.8105 0.00756073 15.7502C-0.00559616 15.6898 -0.0015192 15.6268 0.0192976 15.5688L0.909065 13.0822L1.79868 10.5958L1.80063 10.592C1.80215 10.5879 1.80472 10.5845 1.80639 10.5806C1.81947 10.5499 1.83716 10.5216 1.85881 10.4967C1.86199 10.493 1.86305 10.4881 1.86643 10.4845L11.496 0.194614C11.6174 0.0699723 11.7817 0 11.953 0C12.1244 0 12.2887 0.0699723 12.4101 0.194614L14.8171 2.76693C14.9345 2.89421 15 3.06315 15 3.23882C15 3.41449 14.9346 3.58345 14.8172 3.71076L5.18771 14.0007ZM0.842232 15.1183L2.09239 14.6075L1.32023 13.7825L0.842232 15.1183ZM1.55878 13.1153L2.7165 14.3524L4.41934 13.6568L2.20985 11.2961L1.55878 13.1153ZM14.3705 3.21149L11.9426 0.639173L2.52119 10.7067L4.96447 13.3174L14.3706 3.2662C14.3769 3.25854 14.3803 3.24884 14.3803 3.23882C14.3802 3.2288 14.3768 3.21912 14.3705 3.21149Z"
+  fill="#80A4DE"/>
+</svg>
+                  </span>Редактировать
+                  </a>
+                </div>
+                <div class="left-info-submit-trash__add add-left-info-submit-trash">
+                  <div class="add-left-info-submit-trash__checkbox">
+                    <input id="packingSeller" data-error="Ошибка" class="checkbox__input" type="checkbox"
+                           value="1"
+                           name="form[]">
+                    <label for="packingSeller" class="checkbox__label"><span
+                      class="checkbox__text">Оставить упаковку продавца*</span></label>
+                  </div>
+                  <div class="add-left-info-submit-trash__checkbox">
+                    <input id="packingAdd" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+                           name="form[]">
+                    <label for="packingAdd" class="checkbox__label"><span
+                      class="checkbox__text">Требуется доп. упаковка (обрешетка)*</span></label>
+                  </div>
+                  <div class="add-left-info-submit-trash__checkbox">
+                    <input id="insurance" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+                           name="form[]">
+                    <label for="insurance" class="checkbox__label"><span
+                      class="checkbox__text">Застраховать доставку*</span></label>
+                  </div>
+                  <p class="add-left-info-submit-trash__description">*В случае если Вы оставляете упаковку продавца,
+                                                                     добавление дополнительной упаковки (обрешетки)
+                                                                     невозможно.
+                                                                     Если Вы хотите застраховать доставку, то Вам
+                                                                     необходимо добавить дополнительную упаковку.</p>
+                </div>
+                <div class="left-info-submit-trash__comments comments-left-info-submit-trash">
+                  <div class="comments-left-info-submit-trash__body">
+                    <div class="comments-left-info-submit-trash__title">Комментарий к заказу</div>
+                    <textarea maxlength="138" autocomplete="off" name="form[]"
+                              placeholder="Введите комментарий  (136 символов)"
+                              data-error="" class="comments-left-info-submit-trash__input input"></textarea>
+                    <p class="comments-left-info-submit-trash__alert">*Внимание, стоимость доставки указанная в
+                                                                      “Корзине” является неточной, так как рассчитана по
+                                                                      примерному весу и может отличаться. Точная
+                                                                      стоимость доставки будет известна после того, как
+                                                                      все
+                                                                      товары из заказа придут в пункт выдачи и будут
+                                                                      взвешены и обмеряны. Если вес и объем заказа
+                                                                      окажется
+                                                                      выше, Вам необходимо будет произвести доплату за
+                                                                      доставку согласно договора/оферты. Нажимая на
+                                                                      кнопку “Оформить заказ”, "Продолжить оформление",
+                                                                      Вы соглашаетесь с данным примечанием, если у Вас
+                                                                      остались вопросы напишите оператору на сайте.</p>
+                    <p class="comments-left-info-submit-trash__alert">В случае изменения курсов валют, тарифов (цен)
+                                                                      услуг, логистическими, транспортными, почтовыми,
+                                                                      таможенными, пограничными службами и другими
+                                                                      коммерческими, государственными структурами
+                                                                      причастных
+                                                                      к закупке, логистике, оформлению груза (товара,
+                                                                      заказа, услуги), а также в случае изменения
+                                                                      налогообложения, таможенных пошлин и сборов,
+                                                                      во время нахождения груза (товара, заказа) в пути,
+                                                                      будет осуществлен перерасчет доставки груза
+                                                                      (товара, заказа, услуги)
+                                                                      по факту его поступления в пункт выдачи. Нажимая
+                                                                      кнопки "Оформить заказ", "Продолжить оформление"
+                                                                      Вы
+                                                                      соглашаетесь
+                                                                      с данным примечанием.</p>
+                    <p class="comments-left-info-submit-trash__alert">Цена доставки груза (товара, заказа, услуги) по
+                                                                      стране продавца (производителя) за рубежом может
+                                                                      быть изменена
+                                                                      в зависимости от количества груза (товара, заказа,
+                                                                      услуги) и от количества продавцов
+                                                                      (производителей) поставляющих товар (заказ, груз,
+                                                                      услугу). Нажимая кнопки "Оформить заказ",
+                                                                      "Продолжить оформление" Вы соглашаетесь с данным
+                                                                      примечанием.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="info-submit-trash__right right-info-submit-trash">
+                <div id="bodyFixBlock" class="right-info-submit-trash__body">
+                  <button id="fixBtn" type="button" class="right-info-submit-trash__fix _whiteBtn">
+                    <span>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path
+  d="M15.4367 3.56473L12.4204 0.544844C12.0544 0.195104 11.5678 0 11.0618 0C10.5558 0 10.0692 0.195101 9.70308 0.544844C9.41066 0.833933 9.21993 1.21048 9.16006 1.61755C9.10008 2.02471 9.17405 2.44032 9.3707 2.80157L6.03705 5.30347L6.03716 5.30359C5.49867 4.9687 4.82979 4.92158 4.24993 5.17779C3.67008 5.43401 3.2539 5.96046 3.1382 6.58432C3.02239 7.20831 3.22177 7.84927 3.67111 8.2969L5.32844 9.95619L0.152571 15.1397C0.0560841 15.233 0.00120299 15.361 1.9554e-05 15.4953C-0.00116576 15.6295 0.0515809 15.7586 0.146408 15.8534C0.241116 15.9484 0.37008 16.0012 0.504139 16C0.638201 15.9988 0.766098 15.9438 0.859261 15.8472L6.03513 10.6652L7.69246 12.3245C8.13955 12.7738 8.7794 12.9732 9.40231 12.8573C10.0252 12.7413 10.5508 12.325 10.8067 11.7448C11.0627 11.1646 11.016 10.4953 10.6821 9.95628L13.181 6.61716H13.1812C13.7265 6.9091 14.3792 6.91942 14.9336 6.64493C15.4878 6.37043 15.8758 5.84495 15.9751 5.23378C16.0744 4.62274 15.873 4.00112 15.4342 3.56486L15.4367 3.56473ZM9.70223 11.6168C9.52917 11.7897 9.2947 11.8868 9.05031 11.8868C8.80577 11.8868 8.57132 11.7897 8.39826 11.6168L6.38864 9.60477L4.37795 7.59064C4.15688 7.35519 4.07498 7.02124 4.16174 6.71009C4.24863 6.39893 4.49162 6.15576 4.80253 6.06912C5.11332 5.98237 5.44686 6.06473 5.68191 6.28617L9.70226 10.3113C9.87496 10.4846 9.97192 10.7193 9.97192 10.9641C9.97192 11.2088 9.87496 11.4435 9.70226 11.6168L9.70223 11.6168ZM10.0021 9.19536L6.79652 5.98597L10.0103 3.5726L12.4094 5.97454L10.0021 9.19536ZM14.7298 5.57765H14.7297C14.5565 5.75032 14.3222 5.84728 14.0778 5.84728C13.8333 5.84728 13.599 5.75032 13.4258 5.57765L10.4101 2.55789C10.1822 2.32375 10.095 1.98637 10.181 1.67093C10.2668 1.35537 10.513 1.10901 10.828 1.02297C11.1431 0.937054 11.4801 1.02428 11.714 1.25237L14.7303 4.27226C14.9028 4.44552 14.9998 4.68027 14.9998 4.92495C14.9998 5.16966 14.9028 5.40451 14.7303 5.57765L14.7298 5.57765Z"
+  fill="#80A4DE"/>
+</svg>
+                  </span>Закрепить окно
+                  </button>
+                  <p class="right-info-submit-trash__order">Сумма заказа:<br>
+                                                            3 000 000 ₽</p>
+                  <table class="right-info-submit-trash__table">
+                    <tr>
+                      <td class="right-info-submit-trash__name-table">Стоимость товара:</td>
+                      <td><p class="right-info-submit-trash__text-table">3 000 000 ₽</p></td>
+                    </tr>
+                    <tr>
+                      <td class="right-info-submit-trash__name-table">Стоимость доставки:</td>
+                      <td><p class="right-info-submit-trash__text-table">50₽*</p></td>
+                    </tr>
+                    <tr>
+                      <td class="right-info-submit-trash__name-table">Общий вес:</td>
+                      <td><p class="right-info-submit-trash__text-table">2 кг</p></td>
+                    </tr>
+                    <tr>
+                      <td class="right-info-submit-trash__name-table">Количество позиций:</td>
+                      <td><p class="right-info-submit-trash__text-table">2 шт</p></td>
+                    </tr>
+                  </table>
+                  <a href="#" data-popup="#access" class="right-info-submit-trash__orderBtn _blueBtn">
+                    <span>
+                    <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.12454 10.9531L17.0769 1.00075" stroke="white" stroke-linecap="round"/>
+<path d="M7.12454 10.9531L1 4.82859" stroke="white" stroke-linecap="round"/>
+</svg>
+                  </span>Оформить заказ*
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+  @@include('html/_footer.htm',{})
+  @@include('html/_fixed.htm',{})
+  <div class="progressBar">
+    <div class="progressBar__container">
+      <div class="progressBar__body">
+        <p class="progressBar__text">Пожалуйста, подождите. Товары в корзине проходят проверку на наличие.<br>
+                                     Время проверки зависит от количества товаров в корзине. </p>
+        <div id="myProgress">
+          <div id="myBar" class="progressBar__bar">0%</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="warningTrash" class="warning">
+    <div class="warning__container">
+      <div class="warning__block">
+        <div class="warning__header header-warning">
+          <p class="header-warning__title">Внимание</p>
+          <button type="button" class="header-warning__closeBtn" id="closebtn">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.00012 11L10.7159 1.28427" stroke="#0E0E0E" stroke-linecap="round"/>
+              <path d="M10.7157 11L0.999968 1.28427" stroke="#0E0E0E" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </div>
+        <div class="warning__body body-warning">
+          <div class="body-warning__img">
+            <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="27" cy="27" r="24.5" stroke="#3567AC" stroke-width="5"/>
+              <path
+                d="M24.4157 31.794H29.6237L30.9257 12.6H23.1137L24.4157 31.794ZM27.0197 42.336C29.3717 42.336 31.0517 40.614 31.0517 38.514C31.0517 36.372 29.3717 34.776 27.0197 34.776C24.6677 34.776 22.9877 36.372 22.9877 38.514C22.9877 40.614 24.6677 42.336 27.0197 42.336Z"
+                fill="#3567AC"/>
+            </svg>
+          </div>
+          <p class="body-warning__text">В заказе были найдены замечания к товарам, посмотрите их в комментариях
+                                        для пользователя, и если Вас все устраивает, нажмите кнопку “Оформить заказ”
+                                        для продолжения. Если Вас что-то
+                                        не устраивает, то перейдите в заказ
+                                        и отредактируйте его. Если отсутствует какой-либо товар и Вы не можете его
+                                        найти,
+                                        то обратитесь к оператору сайта и он подберет данный товар у другого продавца
+                                        или подберет аналог.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  @@include('html/_popup.htm',{})
+
+</div>
+@@include('html/_confirm.htm',{})
+@@include('html/_js.htm',{})
+
+</body>
+</html>

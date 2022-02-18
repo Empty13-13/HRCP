@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Карточка товара"
+})
+<body>
+<div class="wrapper">
+  @@include('html/_header.htm',{})
+  <main class="page">
+    <div class="product">
+      <div class="product__container">
+        <div class="product__body">
+          <div class="product__main">
+            <div class="product__column info-product">
+              <div class="info-product__body">
+                <div class="info-product__slider">
+                  <div data-gallery class="info-product__swiper">
+                    <div href="img/product/1.jpg" class="info-product__slide _active"><img src="img/product/1.jpg"
+                                                                                           alt=""></div>
+                    <div href="img/product/1.jpg" class="info-product__slide"><img src="img/product/1.jpg" alt=""></div>
+                    <div href="img/product/product1.jpg" class="info-product__slide"><img src="img/product/product1.jpg"
+                                                                                          alt=""></div>
+                    <div href="img/product/1.jpg" class="info-product__slide"><img src="img/product/1.jpg" alt=""></div>
+                    <div href="img/product/1.jpg" class="info-product__slide"><img src="img/product/1.jpg" alt=""></div>
+                    <div href="img/product/1.jpg" class="info-product__slide"><img src="img/product/1.jpg" alt=""></div>
+                    <div href="img/product/1.jpg" class="info-product__slide"><img src="img/product/1.jpg" alt=""></div>
+                    <div href="img/product/1.jpg" class="info-product__slide"><img src="img/product/1.jpg" alt=""></div>
+                    <div href="img/product/1.jpg" class="info-product__slide"><img src="img/product/1.jpg" alt=""></div>
+                    <div href="img/product/1.jpg" class="info-product__slide"><img src="img/product/1.jpg" alt=""></div>
+                    <div href="img/product/1.jpg" class="info-product__slide"><img src="img/product/1.jpg" alt=""></div>
+                    <div href="img/product/1.jpg" class="info-product__slide"><img src="img/product/1.jpg" alt=""></div>
+                  </div>
+                  <ul class="info-product__thumbsSlider _margin">
+                    <li data-index="0" class="info-product__thumbsSlider-item "><img src="img/product/1.jpg" alt="">
+                    </li>
+                    <li data-index="1" class="info-product__thumbsSlider-item "><img src="img/product/1.jpg" alt="">
+                    </li>
+                    <li data-index="2" class="info-product__thumbsSlider-item "><img src="img/product/product1.jpg"
+                                                                                     alt=""></li>
+                    <li data-index="3" class="info-product__thumbsSlider-item "><img src="img/product/1.jpg" alt="">
+                    </li>
+                    <li data-index="4" class="info-product__thumbsSlider-item "><img src="img/product/1.jpg" alt="">
+                    </li>
+                  </ul>
+                </div>
+                <div class="info-product__seller seller-info-product">
+                  <h4 class="seller-info-product__title">О продавце</h4>
+                  <div class="seller-info-product__body">
+                    <div class="seller-info-product__column">
+                      <p class="seller-info-product__name-item">Имя:</p>
+                      <p class="seller-info-product__name-item">Лет на рынке:</p>
+                      <p class="seller-info-product__name-item">Лет на сайте:</p>
+                      <p class="seller-info-product__name-item">Магазин:</p>
+                      <p class="seller-info-product__name-item">Находится:</p>
+                      <p class="seller-info-product__name-item">Оценка доставки:</p>
+                      <p class="seller-info-product__name-item">Оценка товаров:</p>
+                      <p class="seller-info-product__name-item">Оценка сервиса:</p>
+                      <p class="seller-info-product__name-item">Оценка возвратов:</p>
+                      <p class="seller-info-product__name-item">Общий рейтинг:</p>
+                      <p class="seller-info-product__name-item">Оценка отзывов:</p>
+                      <p class="seller-info-product__name-item">Всего отзывов:</p>
+                      <p class="seller-info-product__name-item">Положительные отзывы:</p>
+                      <p class="seller-info-product__name-item">Рейтинг по продажам:</p>
+                    </div>
+                    <div class="seller-info-product__column">
+                      <p class="seller-info-product__value-item">ASM ANNA</p>
+                      <p class="seller-info-product__value-item">12</p>
+                      <p class="seller-info-product__value-item">10</p>
+                      <p class="seller-info-product__value-item">Название</p>
+                      <p class="seller-info-product__value-item">Китай</p>
+                      <p class="seller-info-product__value-item">4.9</p>
+                      <p class="seller-info-product__value-item">4.7</p>
+                      <p class="seller-info-product__value-item">4.4</p>
+                      <p class="seller-info-product__value-item">4.4</p>
+                      <p class="seller-info-product__value-item">4.8</p>
+                      <p class="seller-info-product__value-item">4.9</p>
+                      <p class="seller-info-product__value-item">10568</p>
+                      <p class="seller-info-product__value-item">10425</p>
+                      <p class="seller-info-product__value-item"><span></span><span></span><span></span><span></span><span></span></p>
+                    </div>
+                  </div>
+                  <a href="" class="seller-info-product__like _hhv">
+                  <span><svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path
+  d="M10.7812 0C9.49219 0 8.29688 0.580357 7.5 1.55536C6.70312 0.580357 5.50781 0 4.21875 0C1.89844 0 0 1.88036 0 4.17857C0 8.56607 6.96094 12.7679 7.26562 12.9304C7.33594 12.9768 7.42969 13 7.5 13C7.57031 13 7.66406 12.9768 7.73438 12.9304C8.03906 12.7679 15 8.56607 15 4.17857C15 1.88036 13.1016 0 10.7812 0ZM7.5 11.9786C6.28125 11.2125 0.9375 7.61429 0.9375 4.17857C0.9375 2.39107 2.41406 0.928571 4.21875 0.928571C5.41406 0.928571 6.51562 1.57857 7.10156 2.6C7.26562 2.90179 7.75781 2.90179 7.92188 2.6C8.48438 1.57857 9.58594 0.928571 10.7812 0.928571C12.5859 0.928571 14.0625 2.39107 14.0625 4.17857C14.0625 7.61429 8.71875 11.2125 7.5 11.9786Z"
+  fill="white"/>
+</svg>
+      </span>
+                    Добавить продавца в избранное
+                  </a>
+                </div>
+                <div class="info-product__other other-info-product">
+                  <div class="other-info-product__body" data-tabs>
+                    <div data-tabs-titles class="other-info-product__titles">
+                      <div class="other-info-product__tilte _tab-active">Другие товары этого
+                                                                         продавца в данной группе
+                      </div>
+                      <div class="other-info-product__tilte">Все товары
+                                                             этого продавца
+                      </div>
+                    </div>
+                    <div data-tabs-body class="other-info-product__bodies">
+                      <div class="other-info-product__body body-other-info-product _tab-active">
+                        <div class="body-other-info-product__body">
+                          <div class="body-other-info-product__wrapper">
+                            <ul class="body-other-info-product__list">
+                              <li class="body-other-info-product__item">
+                                <a href="" class="body-other-info-product__block">
+                                  <div class="body-other-info-product__img">
+                                    <img src="img/product/product1.jpg" alt="">
+                                  </div>
+                                  <p class="body-other-info-product__name">Артефакт для очистки дна и что то ещё</p>
+                                  <div class="body-other-info-product__texts">
+                                    <div class="body-main-product__rating rating _3">
+                                      <div class="rating__body">
+                                        <div class="rating__active" style="width: 80%;"></div>
+                                        <div class="rating__items">
+                                          <input type="radio" class="rating__item" value="1" name="rating">
+                                          <input type="radio" class="rating__item" value="2" name="rating">
+                                          <input type="radio" class="rating__item" value="3" name="rating">
+                                          <input type="radio" class="rating__item" value="4" name="rating">
+                                          <input type="radio" class="rating__item" value="5" name="rating">
+                                        </div>
+                                      </div>
+                                      <div class="rating__value">4</div>
+                                    </div>
+                                    <div class="body-other-info-product__price">1-1 $</div>
+                                    <div class="body-other-info-product__priceOld">2-4 $</div>
+                                  </div>
+                                </a>
+                              </li>
+                              <li class="body-other-info-product__item">
+                                <a href="" class="body-other-info-product__block">
+                                  <div class="body-other-info-product__img">
+                                    <img src="img/product/product1.jpg" alt="">
+                                  </div>
+                                  <p class="body-other-info-product__name">Артефакт для очистки дна и что то ещё</p>
+                                  <div class="body-other-info-product__texts">
+                                    <div class="body-other-info-product__price">1-1 $</div>
+                                    <div class="body-other-info-product__priceOld">2-4 $</div>
+                                  </div>
+                                </a>
+                              </li>
+                              <li class="body-other-info-product__item">
+                                <a href="" class="body-other-info-product__block">
+                                  <div class="body-other-info-product__img">
+                                    <img src="img/product/product1.jpg" alt="">
+                                  </div>
+                                  <p class="body-other-info-product__name">Артефакт для очистки дна и что то ещё</p>
+                                  <div class="body-other-info-product__texts">
+                                    <div class="body-main-product__rating rating _3">
+                                      <div class="rating__body">
+                                        <div class="rating__active" style="width: 80%;"></div>
+                                        <div class="rating__items">
+                                          <input type="radio" class="rating__item" value="1" name="rating">
+                                          <input type="radio" class="rating__item" value="2" name="rating">
+                                          <input type="radio" class="rating__item" value="3" name="rating">
+                                          <input type="radio" class="rating__item" value="4" name="rating">
+                                          <input type="radio" class="rating__item" value="5" name="rating">
+                                        </div>
+                                      </div>
+                                      <div class="rating__value">4</div>
+                                    </div>
+                                    <div class="body-other-info-product__price">1-1 $</div>
+                                    <div class="body-other-info-product__priceOld">2-4 $</div>
+                                  </div>
+                                </a>
+                              </li>
+                              <li class="body-other-info-product__item">
+                                <a href="" class="body-other-info-product__block">
+                                  <div class="body-other-info-product__img">
+                                    <img src="img/product/product1.jpg" alt="">
+                                  </div>
+                                  <p class="body-other-info-product__name">Артефакт для очистки дна и что то ещё</p>
+                                  <div class="body-other-info-product__texts">
+                                    <div class="body-other-info-product__price">1-1 $</div>
+                                  </div>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="other-info-product__body body-other-info-product">
+                        <div class="body-other-info-product__body">
+                          <div class="body-other-info-product__wrapper">
+                            <ul class="body-other-info-product__list">
+                              123
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product__column main-product">
+              <h2 class="main-product__title">10 м водонепроницаемый Самоклеящиеся обои чистый пигмент цветная сетка
+                                              красный Обои флип новый Стикер бумага спальня теплый фон украшения
+                                              стены</h2>
+              <p class="main-product__description">10M Waterproof Self-adhesive wallpaper pure pigment colored mesh red
+                                                   wallpaper flip New Sticker paper bedroom warm background wall
+                                                   decoration</p>
+              <ul class="main-product__list">
+                <li class="main-product__item">
+                  <p class="main-product__article">Серия: серия 128344</p>
+                </li>
+                <li class="main-product__item">
+                  <p class="main-product__article">Бренд (марка): brand</p>
+                </li>
+                <li class="main-product__item">
+                  <p class="main-product__article">Производитель (продавец): ASM ANNA </p>
+                </li>
+              </ul>
+              <ul class="main-product__list _last">
+                <li class="main-product__item">
+                  <p class="main-product__article">Ед. изм.: шт </p>
+                </li>
+                <li class="main-product__item">
+                  <p class="main-product__article">Артикул: 606105507746</p>
+                </li>
+                <li class="main-product__item">
+                  <p class="main-product__article">ID 606105507746</p>
+                </li>
+                <li class="main-product__item">
+                  <p class="main-product__article">Штрих код: 12345678912256</p>
+                </li>
+              </ul>
+              <div class="main-product__body body-main-product">
+                <div class="body-main-product__line">
+                  <div class="body-main-product__rating rating _3">
+                    <div class="rating__body">
+                      <div class="rating__active"></div>
+                      <div class="rating__items">
+                        <input type="radio" class="rating__item" value="1" name="rating">
+                        <input type="radio" class="rating__item" value="2" name="rating">
+                        <input type="radio" class="rating__item" value="3" name="rating">
+                        <input type="radio" class="rating__item" value="4" name="rating">
+                        <input type="radio" class="rating__item" value="5" name="rating">
+                      </div>
+                    </div>
+                    <div class="rating__value">4</div>
+                    <div class="description">Объем продаж за 30 дней: <span>17079</span></div>
+                  </div>
+                  <a target="_blank" href="http://horecaprof/?p=item&id=521253431071"
+                     class="body-main-product__original-link">Посмотреть оригинал </br> <span>horecaprof/?p=item&id=521253431071</span></a>
+                </div>
+                <div class="body-main-product__statistic statistic-body-main-product">
+                  <div class="statistic-body-main-product__line">
+                    <div class="statistic-body-main-product__price">1 000 000 - 3 000 000₽</div>
+                    <div class="statistic-body-main-product__oldPrice"> 2 000 000₽</div>
+                    <div class="statistic-body-main-product__discount">-50%</div>
+                    <ul class="statistic-body-main-product__list-wholesale">
+                      <li>
+                        <p class="statistic-body-main-product__whosale-item">3 000 000₽ <span>(2-29 ед)</span></p>
+                      </li>
+                      <li>
+                        <p class="statistic-body-main-product__whosale-item">2 000 000₽ <span>(30-99 ед)</span></p>
+                      </li>
+                      <li>
+                        <p class="statistic-body-main-product__whosale-item">1 000 000 <span>(≥100 ед)</span></p>
+                      </li>
+                      <li>
+                        <p class="statistic-body-main-product__whosale-item"><span>*</span></p>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="statistic-body-main-product__line">
+                    <p class="statistic-body-main-product__warning">*стоимость без учета доставки из-за рубежа в страну
+                                                                    получателя</p>
+                  </div>
+                </div>
+                <div class="body-main-product__filters filters-body-main-product">
+                  <div class="filters-body-main-product__line">
+                    <div class="filters-body-main-product__title">Вариант:</div>
+                    <div class="filters-body-main-product__item-line">
+                      <ul class="info-product__thumbsSlider _second">
+                        <li data-index="5" class="info-product__thumbsSlider-item _second _active"><img
+                          src="img/product/1.jpg" alt=""></li>
+                        <li data-index="6" class="info-product__thumbsSlider-item _second"><img src="img/product/1.jpg"
+                                                                                                alt=""></li>
+                        <li data-index="7" class="info-product__thumbsSlider-item _second"><img src="img/product/1.jpg"
+                                                                                                alt=""></li>
+                        <li data-index="8" class="info-product__thumbsSlider-item _second"><img src="img/product/1.jpg"
+                                                                                                alt=""></li>
+                        <li data-index="9" class="info-product__thumbsSlider-item _second"><img src="img/product/1.jpg"
+                                                                                                alt=""></li>
+                        <li data-index="10" class="info-product__thumbsSlider-item _second"><img src="img/product/1.jpg"
+                                                                                                 alt=""></li>
+                        <li data-index="11" class="info-product__thumbsSlider-item _second"><img src="img/product/1.jpg"
+                                                                                                 alt=""></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="filters-body-main-product__line">
+                    <div class="filters-body-main-product__title">Цвет/фон/
+                                                                  оттенок:
+                    </div>
+                    <div class="filters-body-main-product__item-line">
+
+                      <ul data-more class="filters-body-main-product__list">
+                        <li>
+                          <select name="form[]" class="ing-sorting-catalog__select">
+                            <option value="1">Цвет</option>
+                            <option value="2">Фон</option>
+                            <option value="3">Оттенок</option>
+                          </select>
+                        </li>
+
+                        <ul id="additionalTypeList" class="filters-body-main-product__list">
+                          <li>
+                            <button type="button" class="filters-body-main-product__item _active">Красный</button>
+                          </li>
+                          <li>
+                            <button type="button" class="filters-body-main-product__item">Синий</button>
+                          </li>
+                          <li>
+                            <button type="button" class="filters-body-main-product__item">Зеленый</button>
+                          </li>
+                          <li>
+                            <button type="button" class="filters-body-main-product__item">Фиолетовый</button>
+                          </li>
+                          <li>
+                            <button type="button" class="filters-body-main-product__item">Черный</button>
+                          </li>
+                          <li>
+                            <button type="button" class="filters-body-main-product__item">Желтый</button>
+                          </li>
+                        </ul>
+                        <ul id="additionalTypeList" class="filters-body-main-product__list _hidden">
+                          <li>
+                            <button type="button" class="filters-body-main-product__item _active">1</button>
+                          </li>
+                          <li>
+                            <button type="button" class="filters-body-main-product__item">2</button>
+                          </li>
+                          <li>
+                            <button type="button" class="filters-body-main-product__item">3</button>
+                          </li>
+                        </ul>
+                        <ul id="additionalTypeList" class="filters-body-main-product__list _hidden">
+                          <li>
+                            <button type="button" class="filters-body-main-product__item _active">19</button>
+                          </li>
+                          <li>
+                            <button type="button" class="filters-body-main-product__item">22</button>
+                          </li>
+                          <li>
+                            <button type="button" class="filters-body-main-product__item">26</button>
+                          </li>
+                        </ul>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="filters-body-main-product__line">
+                    <div class="filters-body-main-product__title">Размер одежды:</div>
+                    <div class="filters-body-main-product__item-line">
+
+                      <ul data-more class="filters-body-main-product__list">
+                        <li>
+                          <select name="form[]" class="ing-sorting-catalog__select">
+                            <option value="">Выбрать тип размера</option>
+                            <option value="1">Европейский</option>
+                            <option value="2">Русский</option>
+                            <option value="3">Пункт №3</option>
+                            <option value="4">Пункт №4</option>
+                          </select>
+                        </li>
+                        <ul id="additionalTypeList" class="filters-body-main-product__list _hidden">
+                          <li>
+                            <button type="button" class="filters-body-main-product__item _active">XS</button>
+                          </li>
+                          <li>
+                            <button type="button" class="filters-body-main-product__item">S</button>
+
+                          </li>
+                          <li>
+                            <button type="button" class="filters-body-main-product__item">M</button>
+
+                          </li>
+                          <li>
+                            <button type="button" class="filters-body-main-product__item">L</button>
+
+                          </li>
+                          <li>
+                            <button type="button" class="filters-body-main-product__item">XL</button>
+
+                          </li>
+                          <li>
+                            <button type="button" class="filters-body-main-product__item">XXL</button>
+
+                          </li>
+                        </ul>
+                        <ul id="additionalTypeList" class="filters-body-main-product__list _hidden">
+                          <li>
+                            <button type="button" class="filters-body-main-product__item _active">40</button>
+                          </li>
+                          <li>
+                            <button type="button" class="filters-body-main-product__item">42</button>
+
+                          </li>
+                          <li>
+                            <button type="button" class="filters-body-main-product__item">46</button>
+
+                          </li>
+                          <li>
+                            <button type="button" class="filters-body-main-product__item">48</button>
+
+                          </li>
+                          <li>
+                            <button type="button" class="filters-body-main-product__item">52</button>
+
+                          </li>
+                          <li>
+                            <button type="button" class="filters-body-main-product__item">56</button>
+                          </li>
+                        </ul>
+                        <ul id="additionalTypeList" class="filters-body-main-product__list _hidden">
+                          <li>
+                            <button type="button" class="filters-body-main-product__item _active">1</button>
+                          </li>
+                          <li>
+                            <button type="button" class="filters-body-main-product__item">2</button>
+
+                          </li>
+                          <li>
+                            <button type="button" class="filters-body-main-product__item">3</button>
+
+                          </li>
+                          <li>
+                            <button type="button" class="filters-body-main-product__item">4</button>
+
+                          </li>
+                          <li>
+                            <button type="button" class="filters-body-main-product__item">5</button>
+                          </li>
+                          <li>
+                            <button type="button" class="filters-body-main-product__item">6</button>
+                          </li>
+                        </ul>
+                        <ul id="additionalTypeList" class="filters-body-main-product__list _hidden">
+                          <li>
+                            <button type="button" class="filters-body-main-product__item _active">40</button>
+                          </li>
+                          <li>
+                            <button type="button" class="filters-body-main-product__item">42</button>
+
+                          </li>
+                          <li>
+                            <button type="button" class="filters-body-main-product__item">46</button>
+
+                          </li>
+                          <li>
+                            <button type="button" class="filters-body-main-product__item">48</button>
+
+                          </li>
+                          <li>
+                            <button type="button" class="filters-body-main-product__item">52</button>
+
+                          </li>
+                          <li>
+                            <button type="button" class="filters-body-main-product__item">56</button>
+                          </li>
+                        </ul>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="filters-body-main-product__line">
+                    <div class="filters-body-main-product__title">Размер другого
+                                                                  товара:
+                    </div>
+                    <div class="filters-body-main-product__item-line">
+
+                      <ul data-more class="filters-body-main-product__list">
+                        <li>
+                          <select name="form[]" class="ing-sorting-catalog__select">
+                            <option value="">Выбрать вид товара</option>
+                            <option value="1">Монитор (дюйм)</option>
+                            <option value="2">Автопокрышка</option>
+                            <option value="3">Пункт №3</option>
+                          </select>
+                        </li>
+                        <ul id="additionalTypeList" class="filters-body-main-product__list _hidden">
+                          <li>
+                            <button type="button" class="filters-body-main-product__item _active">19</button>
+                          </li>
+                          <li>
+                            <button type="button" class="filters-body-main-product__item">22</button>
+                          </li>
+                          <li>
+                            <button type="button" class="filters-body-main-product__item">26</button>
+                          </li>
+                        </ul>
+                        <ul id="additionalTypeList" class="filters-body-main-product__list _hidden">
+                          <li>
+                            <button type="button" class="filters-body-main-product__item _active">1</button>
+                          </li>
+                          <li>
+                            <button type="button" class="filters-body-main-product__item">2</button>
+                          </li>
+                          <li>
+                            <button type="button" class="filters-body-main-product__item">3</button>
+                          </li>
+                        </ul>
+                        <ul id="additionalTypeList" class="filters-body-main-product__list _hidden">
+                          <li>
+                            <button type="button" class="filters-body-main-product__item _active">19</button>
+                          </li>
+                          <li>
+                            <button type="button" class="filters-body-main-product__item">22</button>
+                          </li>
+                          <li>
+                            <button type="button" class="filters-body-main-product__item">26</button>
+                          </li>
+                        </ul>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="filters-body-main-product__line">
+                    <div class="filters-body-main-product__title">Комплектация:</div>
+                    <div class="filters-body-main-product__item-line">
+                      <select name="form[]" class="ing-sorting-catalog__select">
+                        <option value="">Выбрать комплектацию</option>
+                        <option value="2">Пункт №2</option>
+                        <option value="3">Пункт №3</option>
+                        <option value="4">Пункт №4</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="filters-body-main-product__line">
+                    <div class="filters-body-main-product__title">Упаковка:</div>
+                    <div class="filters-body-main-product__item-line">
+                      <select name="form[]" class="ing-sorting-catalog__select">
+                        <option value="">Выбрать упаковку</option>
+                        <option value="2">Пункт №2</option>
+                        <option value="3">Пункт №3</option>
+                        <option value="4">Пункт №4</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="filters-body-main-product__line">
+                    <div class="filters-body-main-product__title">Фасовка:</div>
+                    <div class="filters-body-main-product__item-line">
+                      <select name="form[]" class="ing-sorting-catalog__select">
+                        <option value="">Выбрать фасовку</option>
+                        <option value="2">Пункт №2</option>
+                        <option value="3">Пункт №3</option>
+                        <option value="4">Пункт №4</option>
+                      </select>
+                    </div>
+
+                  </div>
+                  <div class="filters-body-main-product__line">
+                    <div class="filters-body-main-product__title">Состояние:</div>
+                    <div class="filters-body-main-product__item-line">
+                      <select name="form[]" class="ing-sorting-catalog__select">
+                        <option value="">Выбрать состояние</option>
+                        <option value="2">Пункт №2</option>
+                        <option value="3">Пункт №3</option>
+                        <option value="4">Пункт №4</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="filters-body-main-product__line">
+                    <div class="filters-body-main-product__title">Особые
+                                                                  критерии:
+                    </div>
+                    <div class="filters-body-main-product__item-line">
+
+                      <ul data-more class="filters-body-main-product__list">
+                        <li>
+                          <select name="form[]" class="ing-sorting-catalog__select">
+                            <option value="">Выбрать критерий</option>
+                            <option value="1">Длина рукава</option>
+                            <option value="2">Пункт №2</option>
+                            <option value="3">Пункт №3</option>
+                          </select>
+                        </li>
+                        <ul id="additionalTypeList" class="filters-body-main-product__list _hidden">
+                          <li>
+                            <button type="button" class="filters-body-main-product__item _active">Длинный</button>
+                          </li>
+                          <li>
+                            <button type="button" class="filters-body-main-product__item">Короткий</button>
+                          </li>
+                        </ul>
+                        <ul id="additionalTypeList" class="filters-body-main-product__list _hidden">
+                          <li>
+                            <button type="button" class="filters-body-main-product__item _active">Вариант 1</button>
+                          </li>
+                          <li>
+                            <button type="button" class="filters-body-main-product__item">Вариант 2</button>
+                          </li>
+                          <li>
+                            <button type="button" class="filters-body-main-product__item">Вариант 3</button>
+                          </li>
+                        </ul>
+                        <ul id="additionalTypeList" class="filters-body-main-product__list _hidden">
+                          <li>
+                            <button type="button" class="filters-body-main-product__item _active">19</button>
+                          </li>
+                          <li>
+                            <button type="button" class="filters-body-main-product__item">22</button>
+                          </li>
+                          <li>
+                            <button type="button" class="filters-body-main-product__item">26</button>
+                          </li>
+                        </ul>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="body-main-product__netto net-body-main-product">
+                  <ul class="net-body-main-product__list">
+                    <li>
+                      <div class="net-body-main-product__title">Нетто:</div>
+                    </li>
+                    <li>
+                      <div class="net-body-main-product__item">2 кг</div>
+                    </li>
+                    <li>
+                      <div class="net-body-main-product__item">0,005х0,004х0,003 м</div>
+                    </li>
+                    <li>
+                      <div class="net-body-main-product__item">1 м.куб</div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="body-main-product__netto net-body-main-product _margin">
+                  <ul class="net-body-main-product__list">
+                    <li>
+                      <div class="net-body-main-product__title">Брутто:</div>
+                    </li>
+                    <li>
+                      <div class="net-body-main-product__item">2,5 кг</div>
+                    </li>
+                    <li>
+                      <div class="net-body-main-product__item">0,006х0,005х0,004 м</div>
+                    </li>
+                    <li>
+                      <div class="net-body-main-product__item">2 м.куб</div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="body-main-product__netto net-body-main-product _margin">
+                  <ul class="net-body-main-product__list">
+                    <li class="_nope">
+                      <div class="net-body-main-product__title _big">Вариант:</div>
+                    </li>
+                    <li>
+                      <div class="net-body-main-product__item">1</div>
+                    </li>
+                    <li>
+                      <div class="net-body-main-product__item">красный</div>
+                    </li>
+                    <li>
+                      <div class="net-body-main-product__item">европейский XS</div>
+                    </li>
+                    <li>
+                      <div class="net-body-main-product__item">комплектация</div>
+                    </li>
+                    <li>
+                      <div class="net-body-main-product__item">пластиковая</div>
+                    </li>
+                    <li>
+                      <div class="net-body-main-product__item">фасовка</div>
+                    </li>
+                    <li>
+                      <div class="net-body-main-product__item">новое</div>
+                    </li>
+                    <li>
+                      <div class="net-body-main-product__item">короткий рукав</div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="body-main-product__quantity quantity-body-main-product">
+                  <div class="quantity-body-main-product__title">Количество:</div>
+                  <div class="quantity-body-main-product__quantity quantity">
+                    <button type="button" class="quantity-body-main-product__btn quantity__button">
+                      <svg width="17" height="2" viewBox="0 0 17 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16 1L0.999999 1" stroke="#80A4DE" stroke-linecap="round"/>
+                      </svg>
+                    </button>
+                    <input type="text" name="" class="quantity-body-main-product__value" value="1" readonly>
+                    <button type="button"
+                            class="quantity-body-main-product__btn quantity__button quantity__button_plus">
+                      <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.56104 16.1221V1.0003" stroke="#80A4DE" stroke-linecap="round"/>
+                        <path d="M16.1216 8.56055L0.999815 8.56055" stroke="#80A4DE" stroke-linecap="round"/>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="quantity-body-main-product__description">
+                    <span>5982: </span>Количество в наличии выбранного вида товара,
+                                       но требуется уточнение
+                  </div>
+                </div>
+                <div class="body-main-product__warning">
+                  К сожалению, товара с выбранной конфигурацией нет в наличии,
+                  за поиском обратитесь сотруднику сайта
+                </div>
+                <form action="#" class="body-main-product__btns btns-body-main-product">
+                  <button type="button" class="btns-body-main-product__quick btns-body-main-product__btn _active">
+                  <span class="btns-body-main-product__img"><svg width="16" height="15" viewBox="0 0 16 15" fill="none"
+                                                                 xmlns="http://www.w3.org/2000/svg">
+<path
+  d="M7.62619 9.02144C7.62619 9.17291 7.56602 9.31818 7.45891 9.42529C7.35181 9.53239 7.20654 9.59256 7.05507 9.59256H0.571122C0.419651 9.59256 0.274384 9.53239 0.167278 9.42529C0.0601716 9.31818 0 9.17291 0 9.02144C0 8.86997 0.0601716 8.72471 0.167278 8.6176C0.274384 8.51049 0.419651 8.45032 0.571122 8.45032H7.05507C7.20654 8.45032 7.35181 8.51049 7.45891 8.6176C7.56602 8.72471 7.62619 8.86997 7.62619 9.02144ZM7.05507 10.7348H2.28449C2.13302 10.7348 1.98775 10.795 1.88064 10.9021C1.77354 11.0092 1.71337 11.1545 1.71337 11.3059C1.71337 11.4574 1.77354 11.6027 1.88064 11.7098C1.98775 11.8169 2.13302 11.8771 2.28449 11.8771H7.05507C7.20654 11.8771 7.35181 11.8169 7.45891 11.7098C7.56602 11.6027 7.62619 11.4574 7.62619 11.3059C7.62619 11.1545 7.56602 11.0092 7.45891 10.9021C7.35181 10.795 7.20654 10.7348 7.05507 10.7348ZM7.05507 13.0193H3.99785C3.84638 13.0193 3.70112 13.0795 3.59401 13.1866C3.4869 13.2937 3.42673 13.4389 3.42673 13.5904C3.42673 13.7419 3.4869 13.8872 3.59401 13.9943C3.70112 14.1014 3.84638 14.1615 3.99785 14.1615H7.05507C7.20654 14.1615 7.35181 14.1014 7.45891 13.9943C7.56602 13.8872 7.62619 13.7419 7.62619 13.5904C7.62619 13.4389 7.56602 13.2937 7.45891 13.1866C7.35181 13.0795 7.20654 13.0193 7.05507 13.0193ZM10.082 8.86952L12.3791 6.57533C12.4831 6.46761 12.5407 6.32335 12.5394 6.1736C12.5381 6.02385 12.478 5.88061 12.3721 5.77472C12.2662 5.66883 12.123 5.60876 11.9732 5.60746C11.8235 5.60616 11.6792 5.66373 11.5715 5.76776L9.27559 8.06025C9.22104 8.11293 9.17754 8.17595 9.1476 8.24563C9.11767 8.31531 9.10192 8.39025 9.10126 8.46608C9.1006 8.54192 9.11505 8.61712 9.14377 8.68731C9.17248 8.7575 9.21489 8.82127 9.26851 8.87489C9.32214 8.92851 9.3859 8.97092 9.45609 8.99964C9.52628 9.02836 9.60149 9.04281 9.67732 9.04215C9.75315 9.04149 9.8281 9.02573 9.89777 8.9958C9.96745 8.96587 10.0305 8.92236 10.0832 8.86781L10.082 8.86952ZM10.2494 2.20796V1.14224H10.7896C10.9411 1.14224 11.0864 1.08207 11.1935 0.974966C11.3006 0.86786 11.3608 0.722593 11.3608 0.571122C11.3608 0.419651 11.3006 0.274384 11.1935 0.167278C11.0864 0.0601717 10.9411 0 10.7896 0H8.56797C8.4165 0 8.27123 0.0601717 8.16413 0.167278C8.05702 0.274384 7.99685 0.419651 7.99685 0.571122C7.99685 0.722593 8.05702 0.86786 8.16413 0.974966C8.27123 1.08207 8.4165 1.14224 8.56797 1.14224H9.10825V2.20682C7.78486 2.32377 6.53297 2.85861 5.5336 3.734L4.78315 2.98354C4.67606 2.8763 4.53075 2.81599 4.3792 2.81588C4.22764 2.81578 4.08225 2.87588 3.97501 2.98297C3.86777 3.09006 3.80746 3.23537 3.80735 3.38692C3.80725 3.53848 3.86735 3.68387 3.97444 3.79111L4.74888 4.56498C4.277 5.1616 3.91727 5.83887 3.68716 6.56391C3.64668 6.70689 3.66353 6.86003 3.73413 6.9908C3.80473 7.12157 3.92352 7.21967 4.06528 7.26427C4.20704 7.30887 4.3606 7.29646 4.49335 7.22967C4.62611 7.16289 4.72761 7.04699 4.77629 6.90658C5.10359 5.86451 5.75548 4.95438 6.63677 4.30911C7.51805 3.66385 8.58255 3.31725 9.67481 3.31993H9.67938H9.68395C11.0479 3.32039 12.3559 3.86267 13.3201 4.82748C14.2842 5.79229 14.8256 7.1006 14.8252 8.4646C14.8247 9.8286 14.2824 11.1365 13.3176 12.1007C12.3528 13.0649 11.0445 13.6063 9.68052 13.6058C9.58114 13.6058 9.4812 13.6007 9.36583 13.595C9.21576 13.5897 9.06965 13.6437 8.95912 13.7454C8.8486 13.847 8.78255 13.9881 8.77529 14.1381C8.76971 14.2903 8.8244 14.4385 8.92749 14.5506C9.03058 14.6627 9.17374 14.7295 9.32585 14.7367C9.44407 14.7424 9.56287 14.7481 9.68052 14.7481C11.3036 14.7577 12.8674 14.1387 14.0443 13.0209C15.2211 11.903 15.9197 10.3731 15.9935 8.75164C16.0673 7.13019 15.5107 5.5431 14.4404 4.32292C13.37 3.10275 11.8689 2.34421 10.2516 2.20624L10.2494 2.20796Z"
+  fill="#80A4DE"/>
+</svg>
+</span>Быстрый заказ
+                  </button>
+                  <button type="button" class="btns-body-main-product__trash btns-body-main-product__btn">
+                  <span class="btns-body-main-product__img">
+<svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path
+  d="M0.554352 0C0.248183 0 0 0.251841 0 0.5625C0 0.873159 0.248183 1.125 0.554352 1.125H2.766C3.68349 3.43078 4.58721 5.74078 5.49733 8.05078L4.66003 10.0957C4.58989 10.2662 4.60962 10.4718 4.71087 10.6253C4.81213 10.7789 4.99189 10.8758 5.17395 10.875H14.4132C14.706 10.8791 14.9754 10.6097 14.9754 10.3125C14.9754 10.0153 14.706 9.7458 14.4132 9.75H6.00548L6.48477 8.58984L15.3833 7.86915C15.6162 7.85059 15.827 7.66646 15.8799 7.43556L16.9886 2.56055C17.0611 2.23219 16.7774 1.8739 16.4458 1.875H4.2558L3.65525 0.351562C3.57302 0.145346 3.36056 5.625e-06 3.14133 0H0.554352ZM4.70044 3H15.7471L14.8867 6.78516L6.46168 7.46484L4.70044 3ZM7.02179 11.25C6.00783 11.25 5.17395 12.0961 5.17395 13.125C5.17395 14.1539 6.00783 15 7.02179 15C8.03576 15 8.86963 14.1539 8.86963 13.125C8.86963 12.0961 8.03576 11.25 7.02179 11.25ZM12.5653 11.25C11.5513 11.25 10.7175 12.0961 10.7175 13.125C10.7175 14.1539 11.5513 15 12.5653 15C13.5793 15 14.4132 14.1539 14.4132 13.125C14.4132 12.0961 13.5793 11.25 12.5653 11.25ZM7.02179 12.375C7.43658 12.375 7.76093 12.7041 7.76093 13.125C7.76093 13.5459 7.43658 13.875 7.02179 13.875C6.60705 13.875 6.28266 13.5459 6.28266 13.125C6.28266 12.7041 6.60705 12.375 7.02179 12.375ZM12.5653 12.375C12.9801 12.375 13.3045 12.7041 13.3045 13.125C13.3045 13.5459 12.9801 13.875 12.5653 13.875C12.1505 13.875 11.8262 13.5459 11.8262 13.125C11.8262 12.7041 12.1505 12.375 12.5653 12.375Z"
+  fill="#80A4DE"/>
+</svg>
+                  </span>
+                    Добавить в корзину
+                  </button>
+                  <button type="button" class="btns-body-main-product__favorite btns-body-main-product__btn">
+                  <span class="btns-body-main-product__img">
+<svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path
+  d="M10.7812 0C9.49219 0 8.29688 0.580357 7.5 1.55536C6.70312 0.580357 5.50781 0 4.21875 0C1.89844 0 0 1.88036 0 4.17857C0 8.56607 6.96094 12.7679 7.26562 12.9304C7.33594 12.9768 7.42969 13 7.5 13C7.57031 13 7.66406 12.9768 7.73438 12.9304C8.03906 12.7679 15 8.56607 15 4.17857C15 1.88036 13.1016 0 10.7812 0ZM7.5 11.9786C6.28125 11.2125 0.9375 7.61429 0.9375 4.17857C0.9375 2.39107 2.41406 0.928571 4.21875 0.928571C5.41406 0.928571 6.51562 1.57857 7.10156 2.6C7.26562 2.90179 7.75781 2.90179 7.92188 2.6C8.48438 1.57857 9.58594 0.928571 10.7812 0.928571C12.5859 0.928571 14.0625 2.39107 14.0625 4.17857C14.0625 7.61429 8.71875 11.2125 7.5 11.9786Z"
+  fill="#80A4DE"/>
+</svg>
+                  </span>
+                    В избранное
+                  </button>
+                </form>
+                <div data-tabs class="body-main-product__descriptions descriptions-body-main-product">
+                  <div data-tabs-titles class="descriptions-body-main-product__titles">
+                    <div class="descriptions-body-main-product__title _tab-active">Описание/
+                                                                                   фото
+                    </div>
+                    <div class="descriptions-body-main-product__title">Характеристики/
+                                                                       свойства
+                    </div>
+                    <div class="descriptions-body-main-product__title">Отзывы наших
+                                                                       покупателей
+                    </div>
+                    <div class="descriptions-body-main-product__title">Отзывы зарубежных
+                                                                       покупателей
+                    </div>
+                  </div>
+                  <div data-tabs-body class="descriptions-body-main-product__bodies">
+                    <div class="descriptions-body-main-product__body _tab-active">
+                      <a href="" class="descriptions-body-main-product__originalBtn">Оригинальный перевод</a>
+                      <div data-gallery class="descriptions-body-main-product__gallery">
+                        <div href="img/product/product1.jpg" class="descriptions-body-main-product__img"><img
+                          src="img/product/product1.jpg" alt="">
+                        </div>
+                        <div href="img/product/product1.jpg" class="descriptions-body-main-product__img"><img
+                          src="img/product/product1.jpg" alt="">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="descriptions-body-main-product__body">
+                      <a href="" class="descriptions-body-main-product__originalBtn">Оригинальный перевод</a>
+                      <div class="descriptions-body-main-product__features features-descriptions-body-main-product">
+                        <div class="features-descriptions-body-main-product__body">
+                          <ul class="features-descriptions-body-main-product__title-list">
+                            <li>
+                              <div class="features-descriptions-body-main-product__title-value">Вариант:</div>
+                            </li>
+                            <li>
+                              <div class="features-descriptions-body-main-product__title-value">Цвет/фон/оттенок:</div>
+                            </li>
+                            <li>
+                              <div class="features-descriptions-body-main-product__title-value">Размер одежды:</div>
+                            </li>
+                            <li>
+                              <div class="features-descriptions-body-main-product__title-value">Размер другого товара:
+                              </div>
+                            </li>
+                            <li>
+                              <div class="features-descriptions-body-main-product__title-value">Комплектация:</div>
+                            </li>
+                            <li>
+                              <div class="features-descriptions-body-main-product__title-value">Упаковка:</div>
+                            </li>
+                            <li>
+                              <div class="features-descriptions-body-main-product__title-value">Фасовка:</div>
+                            </li>
+                            <li>
+                              <div class="features-descriptions-body-main-product__title-value">Состояние:</div>
+                            </li>
+                            <li>
+                              <div class="features-descriptions-body-main-product__title-value">Особые критерии:</div>
+                            </li>
+                            <li>
+                              <div class="features-descriptions-body-main-product__title-value">Нетто:</div>
+                            </li>
+                            <li>
+                              <div class="features-descriptions-body-main-product__title-value">Брутто:</div>
+                            </li>
+                          </ul>
+                          <ul class="features-descriptions-body-main-product__value-list">
+                            <li>
+                              <div class="features-descriptions-body-main-product__value-value">Вариант</div>
+                            </li>
+                            <li>
+                              <div class="features-descriptions-body-main-product__value-value">Цвет/фон/оттенок</div>
+                            </li>
+                            <li>
+                              <div class="features-descriptions-body-main-product__value-value">Размер одежды</div>
+                            </li>
+                            <li>
+                              <div class="features-descriptions-body-main-product__value-value">Размер другого товара
+                              </div>
+                            </li>
+                            <li>
+                              <div class="features-descriptions-body-main-product__value-value">Комплектация</div>
+                            </li>
+                            <li>
+                              <div class="features-descriptions-body-main-product__value-value">Упаковка</div>
+                            </li>
+                            <li>
+                              <div class="features-descriptions-body-main-product__value-value">Фасовка</div>
+                            </li>
+                            <li>
+                              <div class="features-descriptions-body-main-product__value-value">Состояние</div>
+                            </li>
+                            <li>
+                              <div class="features-descriptions-body-main-product__value-value">Особые критерии</div>
+                            </li>
+                            <li>
+                              <div class="features-descriptions-body-main-product__value-value">Нетто</div>
+                            </li>
+                            <li>
+                              <div class="features-descriptions-body-main-product__value-value">Брутто</div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="descriptions-body-main-product__body">
+                      <div class="descriptions-body-main-product__feedback feedback-descriptions-body-main-product">
+                        <div class="feedback-descriptions-body-main-product__block">
+                          <div class="feedback-descriptions-body-main-product__body">
+                            <div class="feedback-descriptions-body-main-product__name">Имя Фамилия</div>
+                            <div class="feedback-descriptions-body-main-product__rating rating _2">
+                              <div class="rating__body">
+                                <div class="rating__active"></div>
+                                <div class="rating__items">
+                                  <input type="radio" class="rating__item" value="1" name="rating">
+                                  <input type="radio" class="rating__item" value="2" name="rating">
+                                  <input type="radio" class="rating__item" value="3" name="rating">
+                                  <input type="radio" class="rating__item" value="4" name="rating">
+                                  <input type="radio" class="rating__item" value="5" name="rating">
+                                </div>
+                              </div>
+                              <div class="rating__value">4</div>
+                            </div>
+                            <p class="feedback-descriptions-body-main-product__text">Отличный товар!</p>
+                          </div>
+                        </div>
+                        <div class="feedback-descriptions-body-main-product__block">
+                          <div class="feedback-descriptions-body-main-product__body">
+                            <div class="feedback-descriptions-body-main-product__name">Имя Фамилия</div>
+                            <div class="feedback-descriptions-body-main-product__rating rating _2">
+                              <div class="rating__body">
+                                <div class="rating__active"></div>
+                                <div class="rating__items">
+                                  <input type="radio" class="rating__item" value="1" name="rating">
+                                  <input type="radio" class="rating__item" value="2" name="rating">
+                                  <input type="radio" class="rating__item" value="3" name="rating">
+                                  <input type="radio" class="rating__item" value="4" name="rating">
+                                  <input type="radio" class="rating__item" value="5" name="rating">
+                                </div>
+                              </div>
+                              <div class="rating__value">4</div>
+                            </div>
+                            <p class="feedback-descriptions-body-main-product__text">Отличный товар!</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="descriptions-body-main-product__body">
+                      <a href="" class="descriptions-body-main-product__originalBtn">Оригинальный перевод</a>
+                      <div class="descriptions-body-main-product__feedback feedback-descriptions-body-main-product">
+                        <div class="feedback-descriptions-body-main-product__block">
+                          <div class="feedback-descriptions-body-main-product__body">
+                            <div class="feedback-descriptions-body-main-product__name">Имя Фамилия</div>
+                            <div class="feedback-descriptions-body-main-product__rating rating _2">
+                              <div class="rating__body">
+                                <div class="rating__active"></div>
+                                <div class="rating__items">
+                                  <input type="radio" class="rating__item" value="1" name="rating">
+                                  <input type="radio" class="rating__item" value="2" name="rating">
+                                  <input type="radio" class="rating__item" value="3" name="rating">
+                                  <input type="radio" class="rating__item" value="4" name="rating">
+                                  <input type="radio" class="rating__item" value="5" name="rating">
+                                </div>
+                              </div>
+                              <div class="rating__value">4</div>
+                            </div>
+                            <p class="feedback-descriptions-body-main-product__text">Отличный товар!</p>
+                          </div>
+                        </div>
+                        <div class="feedback-descriptions-body-main-product__block">
+                          <div class="feedback-descriptions-body-main-product__body">
+                            <div class="feedback-descriptions-body-main-product__name">Имя Фамилия</div>
+                            <div class="feedback-descriptions-body-main-product__rating rating _2">
+                              <div class="rating__body">
+                                <div class="rating__active"></div>
+                                <div class="rating__items">
+                                  <input type="radio" class="rating__item" value="1" name="rating">
+                                  <input type="radio" class="rating__item" value="2" name="rating">
+                                  <input type="radio" class="rating__item" value="3" name="rating">
+                                  <input type="radio" class="rating__item" value="4" name="rating">
+                                  <input type="radio" class="rating__item" value="5" name="rating">
+                                </div>
+                              </div>
+                              <div class="rating__value">4</div>
+                            </div>
+                            <p class="feedback-descriptions-body-main-product__text">Отличный товар!</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product__bottom">
+            <div class="product__also also-product">
+              <div class="also-product__title title-also-product">
+                <p class="title-also-product__title">С этим товаром покупают</p>
+                <a href="" class="title-also-product__more-btn">Показать еще <span class="title-also-product__img">
+                  <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.47852 11.957L10.9566 6.47899" stroke="#80A4DE" stroke-linecap="round"/>
+<path d="M5.47852 1L10.9566 6.47804" stroke="#80A4DE" stroke-linecap="round"/>
+</svg>
+
+                </span></a>
+              </div>
+              <div class="also-product__btns btns-also-product">
+                <ul class="btns-also-product__list">
+                  <li><a href="" class="btns-also-product__btn">Свет, подсветка декоративная</a></li>
+                  <li><a href="" class="btns-also-product__btn">Шнур светодиодный (Led-шнур)</a></li>
+                  <li><a href="" class="btns-also-product__btn">Инвентарь, инструмент ручной, ножи и аксессуары </a>
+                  </li>
+                </ul>
+              </div>
+              <ul class="also-product__list">
+                <li>
+                  <div class="products-catalog__block block-also-product-block ">
+                    <div class="block-also-product-block__body">
+                      <div class="block-also-product-block__up">
+                        <div class="block-also-product-block__img">
+                          <img src="img/catalog/aimg1.jpg" alt="">
+                          <img src="img/catalog/favorite.svg" alt="" class="block-also-product-block__favorite">
+                        </div>
+                      </div>
+                      <div class="block-also-product-block__lin">
+                        <div class="block-also-product-block__center">
+                          <h3 class="block-also-product-block__name">Водонепроницаемый Самоклеящиеся обои чистый пигмент
+                                                                     цветная сетка красный Обои флип новый Стикер бумага
+                                                                     спальня теплый фон украшения стены</h3>
+                        </div>
+                        <div class="block-also-product-block__rating">
+                          <span class="block-also-product-block__star _active"></span>
+                          <span class="block-also-product-block__star _active"></span>
+                          <span class="block-also-product-block__star _active"></span>
+                          <span class="block-also-product-block__star _active"></span>
+                          <span class="block-also-product-block__star"></span>
+                        </div>
+                        <div class="block-also-product-block__bottom">
+                          <h4 class="block-also-product-block__price">1-1 $</h4>
+                          <h4 class="block-also-product-block__priceOld">2-3 $</h4>
+                        </div>
+                        <a href="" class="block-also-product-block__btn-trash">В корзину</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="products-catalog__block block-also-product-block ">
+                    <div class="block-also-product-block__body">
+                      <div class="block-also-product-block__up">
+                        <div class="block-also-product-block__img">
+                          <img src="img/catalog/aimg1.jpg" alt="">
+                          <img src="img/catalog/favorite.svg" alt="" class="block-also-product-block__favorite">
+                        </div>
+                      </div>
+                      <div class="block-also-product-block__lin">
+                        <div class="block-also-product-block__center">
+                          <h3 class="block-also-product-block__name">Водонепроницаемый Самоклеящиеся обои чистый пигмент
+                                                                     цветная сетка красный Обои флип новый Стикер бумага
+                                                                     спальня теплый фон украшения стены</h3>
+                        </div>
+                        <div class="block-also-product-block__rating">
+                          <span class="block-also-product-block__star _active"></span>
+                          <span class="block-also-product-block__star _active"></span>
+                          <span class="block-also-product-block__star _active"></span>
+                          <span class="block-also-product-block__star _active"></span>
+                          <span class="block-also-product-block__star"></span>
+                        </div>
+                        <div class="block-also-product-block__bottom">
+                          <h4 class="block-also-product-block__price">1-1 $</h4>
+                        </div>
+                        <a href="" class="block-also-product-block__btn-trash">В корзину</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="products-catalog__block block-also-product-block ">
+                    <div class="block-also-product-block__body">
+                      <div class="block-also-product-block__up">
+                        <div class="block-also-product-block__img">
+                          <img src="img/catalog/aimg1.jpg" alt="">
+                          <img src="img/catalog/favorite.svg" alt="" class="block-also-product-block__favorite">
+                        </div>
+                      </div>
+                      <div class="block-also-product-block__lin">
+                        <div class="block-also-product-block__center">
+                          <h3 class="block-also-product-block__name">Водонепроницаемый Самоклеящиеся обои чистый пигмент
+                                                                     цветная сетка красный Обои флип новый Стикер бумага
+                                                                     спальня теплый фон украшения стены</h3>
+                        </div>
+                        <div class="block-also-product-block__rating">
+                          <span class="block-also-product-block__star _active"></span>
+                          <span class="block-also-product-block__star _active"></span>
+                          <span class="block-also-product-block__star _active"></span>
+                          <span class="block-also-product-block__star _active"></span>
+                          <span class="block-also-product-block__star"></span>
+                        </div>
+                        <div class="block-also-product-block__bottom">
+                          <h4 class="block-also-product-block__price">1-1 $</h4>
+                        </div>
+                        <a href="" class="block-also-product-block__btn-trash">В корзину</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="products-catalog__block block-also-product-block ">
+                    <div class="block-also-product-block__body">
+                      <div class="block-also-product-block__up">
+                        <div class="block-also-product-block__img">
+                          <img src="img/catalog/aimg1.jpg" alt="">
+                          <img src="img/catalog/favorite.svg" alt="" class="block-also-product-block__favorite">
+                        </div>
+                      </div>
+                      <div class="block-also-product-block__lin">
+                        <div class="block-also-product-block__center">
+                          <h3 class="block-also-product-block__name">Водонепроницаемый Самоклеящиеся обои чистый пигмент
+                                                                     цветная сетка красный Обои флип новый Стикер бумага
+                                                                     спальня теплый фон украшения стены</h3>
+                        </div>
+                        <div class="block-also-product-block__rating">
+                          <span class="block-also-product-block__star _active"></span>
+                          <span class="block-also-product-block__star _active"></span>
+                          <span class="block-also-product-block__star _active"></span>
+                          <span class="block-also-product-block__star _active"></span>
+                          <span class="block-also-product-block__star"></span>
+                        </div>
+                        <div class="block-also-product-block__bottom">
+                          <h4 class="block-also-product-block__price">1-1 $</h4>
+                          <h4 class="block-also-product-block__priceOld">2-3 $</h4>
+                        </div>
+                        <a href="" class="block-also-product-block__btn-trash">В корзину</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="products-catalog__block block-also-product-block ">
+                    <div class="block-also-product-block__body">
+                      <div class="block-also-product-block__up">
+                        <div class="block-also-product-block__img">
+                          <img src="img/catalog/aimg1.jpg" alt="">
+                          <img src="img/catalog/favorite.svg" alt="" class="block-also-product-block__favorite">
+                        </div>
+                      </div>
+                      <div class="block-also-product-block__lin">
+                        <div class="block-also-product-block__center">
+                          <h3 class="block-also-product-block__name">Водонепроницаемый Самоклеящиеся обои чистый пигмент
+                                                                     цветная сетка красный Обои флип новый Стикер бумага
+                                                                     спальня теплый фон украшения стены</h3>
+                        </div>
+                        <div class="block-also-product-block__rating">
+                          <span class="block-also-product-block__star _active"></span>
+                          <span class="block-also-product-block__star _active"></span>
+                          <span class="block-also-product-block__star _active"></span>
+                          <span class="block-also-product-block__star _active"></span>
+                          <span class="block-also-product-block__star"></span>
+                        </div>
+                        <div class="block-also-product-block__bottom">
+                          <h4 class="block-also-product-block__price">1-1 $</h4>
+                          <h4 class="block-also-product-block__priceOld">2-3 $</h4>
+                        </div>
+                        <a href="" class="block-also-product-block__btn-trash">В корзину</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="products-catalog__block block-also-product-block ">
+                    <div class="block-also-product-block__body">
+                      <div class="block-also-product-block__up">
+                        <div class="block-also-product-block__img">
+                          <img src="img/catalog/aimg1.jpg" alt="">
+                          <img src="img/catalog/favorite.svg" alt="" class="block-also-product-block__favorite">
+                        </div>
+                      </div>
+                      <div class="block-also-product-block__lin">
+                        <div class="block-also-product-block__center">
+                          <h3 class="block-also-product-block__name">Водонепроницаемый Самоклеящиеся обои чистый пигмент
+                                                                     цветная сетка красный Обои флип новый Стикер бумага
+                                                                     спальня теплый фон украшения стены</h3>
+                        </div>
+                        <div class="block-also-product-block__rating">
+                          <span class="block-also-product-block__star _active"></span>
+                          <span class="block-also-product-block__star _active"></span>
+                          <span class="block-also-product-block__star _active"></span>
+                          <span class="block-also-product-block__star _active"></span>
+                          <span class="block-also-product-block__star"></span>
+                        </div>
+                        <div class="block-also-product-block__bottom">
+                          <h4 class="block-also-product-block__price">1-1 $</h4>
+                          <h4 class="block-also-product-block__priceOld">2-3 $</h4>
+                        </div>
+                        <a href="" class="block-also-product-block__btn-trash">В корзину</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  @@include('html/_footer.htm',{})
+  @@include('html/_fixed.htm',{})
+
+</div>
+<!-- @@include('html/_popup.htm',{}) -->
+@@include('html/_js.htm',{})
+</body>
+</html>

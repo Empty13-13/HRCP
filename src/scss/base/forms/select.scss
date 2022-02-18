@@ -1,0 +1,236 @@
+// <SELECT>
+// Снипет (HTML): sel
+.select {
+	position: relative;
+	outline: none !important;
+	
+	&__content {
+		transition: all 0.3s ease 0s;
+	}
+	// .select__body
+	&__body {
+		position: relative;
+		display: flex;
+		height: 100%;
+		align-items: center;
+		
+		@media (any-hover: hover){
+			&:hover{
+				.select__content {
+					color: #3567AC;
+				}
+			}
+		}
+	}
+	// .select__title
+	&__title {
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 102.9%;
+		display: flex;
+		align-items: center;
+		text-align: center;
+		outline: none !important;
+		height: 100%;
+		position: relative;
+		z-index: 2;
+	}
+	// .select__value
+	&__value {
+		display: flex;
+		align-items: center;
+		padding: 0px 15px;
+		justify-content: space-between;
+		flex-direction: row-reverse;
+		width: 160px;
+		height: 100%;
+		
+		&:before {
+			content: "";
+			background: url('../img/icons/arrow.svg') 0 0  no-repeat;
+			min-width: 17px;
+			height: 8px;
+			display: flex;
+			justify-content:center;
+			align-items: center;
+			flex: 0 0 11px;
+			transition: all 0.3s ease 0s;
+			margin-left: 7px;
+			
+			._select-open & {
+				transform: rotate(-180deg);
+			}
+		}
+	}
+	// .select__text
+	&__text {
+		flex: 1 1 auto;
+	}
+	&__input {
+		width: 100%;
+		background-color: transparent;
+		height: 100%;
+	}
+	// .select__options
+	&__options {
+		color: #000;
+		position: absolute;
+		top: calc(100% - 5px);
+		min-width: 101%;
+		left: -0.5%;
+		background-color: #fff;
+		border: 1px solid $blueColor;
+		border-radius: 0 0 8px 8px;
+		border-top: none;
+		padding: 10px 0px 5px 0px;
+		z-index: -1;
+	}
+	// .select__scroll
+	&__scroll {
+		overflow-y: auto;
+		overflow-x: hidden;
+		// Максимальная высота
+		max-height: 200px;
+		// Стили скроллбара
+		.simplebar-scrollbar {
+			&::before {
+				//opacity: 1;
+			}
+		}
+	}
+	// .select__option
+	&__option {
+		width: 100%;
+		text-align: left;
+		cursor: pointer;
+		padding: 5px 15px;
+		color: inherit;
+		&._select-selected {
+			background-color: #eee;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				background: #d9d9d9;
+			}
+		}
+	}
+
+	// Конструкция дополнительных данных
+	&__row {
+		display: inline-flex;
+		align-items: center;
+	}
+	&__asset {
+	}
+	&__text {
+	}
+
+	// Состояния селекта
+	&._select-open {
+		z-index: 5;
+		
+		.select__body {
+			border-bottom: none;
+		}
+		.select__content {
+			color: #3567AC;
+		}
+	}
+	&._select-disabled {
+	}
+	&._select-active {
+	}
+	&._select-focus {
+	}
+	&._select-multiple {
+	}
+	&._select-checkbox {
+	}
+}
+
+.select_ing-sorting-catalog__select,.select_large {
+	.select__body {
+		border: 1px solid #80A4DE;
+		border-radius: 8px;
+		transition: border-color 0.3s ease 0s;
+		
+		@media (any-hover: hover){
+		  &:hover{
+		    border-color: #3567AC;
+		  }
+		}
+	}
+	&._select-open {
+		z-index: 5;
+		
+		.select__body {
+			border-bottom: none;
+			border-radius: 8px 8px 0 0;
+			border-color: #3567AC;
+		}
+	}
+	.select__value {
+		padding: 11px 12px;
+		padding-right: 10px;
+		width: 225px;
+	}
+	.select__content {
+		color: $blueColor;
+	}
+	.select__options {
+		padding-top: 0;
+		border-color: #3567AC;
+		max-height: 200px;
+		overflow: auto;
+	}
+	.select__option {
+		padding-left: 12px;
+	}
+}
+
+.select_large {
+	.select__body {
+		border: 1px solid #80A4DE;
+		border-radius: 8px;
+		transition: border-color 0.3s ease 0s;
+		
+		@media (any-hover: hover){
+			&:hover{
+				border-color: #3567AC;
+			}
+		}
+	}
+	&._select-open {
+		z-index: 5;
+		
+		.select__body {
+			border-bottom: none;
+			border-radius: 8px 8px 0 0;
+			border-color: #3567AC;
+		}
+	}
+	.select__title {
+		width: 100%;
+	}
+	.select__value {
+		padding: 11px 12px;
+		padding-right: 10px;
+		width: 100%;
+	}
+	.select__content {
+		color: $blueColor;
+	}
+	.select__options {
+		padding-top: 0;
+		border-color: #3567AC;
+		left: -0.3%;
+		min-width: 100.5%;
+	}
+	.select__option {
+		padding-left: 12px;
+	}
+}
+// Тег
+._select-tag {
+	cursor: pointer;
+}

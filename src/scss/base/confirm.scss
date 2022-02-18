@@ -1,0 +1,125 @@
+.confirm {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(4px);
+  transition: all 0.3s ease 0s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  
+  &._active {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  &__block {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 11px rgba(128, 164, 222, 0.37);
+    border-radius: 8px;
+    overflow: hidden;
+    flex: 0 1 474px;
+    position: relative;
+    z-index: 2;
+  }
+  
+  &__wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.header-confirm {
+  background: #FFE585;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  
+  &__title {
+    padding: 10px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 155.69%;
+    color: #0E0E0E;
+  }
+  
+  &__closeBtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    
+    path {
+      transition: stroke 0.3s ease 0s;
+    }
+    
+    @media (any-hover: hover) {
+      &:hover {
+        path {
+          stroke: $blueColor;
+        }
+      }
+    }
+  }
+}
+
+.body-confirm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 190px;
+  
+  &__question {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000000;
+    margin-bottom: 20px;
+  }
+  
+  &__btns {
+    display: flex;
+  }
+  
+  &__btn {
+    background: #80A4DE;
+    border-radius: 8px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    width: 60px;
+    height: 38px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    transition: all 0.3s ease 0s;
+    
+    &:first-child{
+      margin-right: 20px;
+    }
+  }
+  
+  &__leftBtn {
+  }
+  
+  &__rightBtn {
+  }
+}

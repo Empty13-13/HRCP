@@ -1,0 +1,346 @@
+<div id="access" aria-hidden="true" class="popup">
+  <div class="popup__wrapper">
+    <div class="popup__content _access">
+      <div class="popup__body access-body">
+        <div class="access-body__title">Ваш заказ принят!</div>
+        <div class="access-body__num">Номер вашего заказа №15656212
+                                      от 03.12.2021
+        </div>
+        <a href="" class="access-body__payBtn _blueBtn">Перейти в “Оплата”</a>
+        <p class="access-body__alert">Вам было отправлено на указанную Вами почту письмо уведомление
+                                      (проверьте спам, если Вы его не видите во входящих) </p>
+
+        <p class="access-body__text">
+          По всем вопросам звоните по номеру:<br>
+          <a href="tel:+79025573616">+7 902 557 36 16</a><br>
+          пишите на почту:<br>
+          <a href="mailto:office@horecaprof.ru">office@horecaprof.ru</a><br>
+          или пишите в чат на сайте
+        </p>
+        <a href="#" class="access-body__chatBtn _blueBtn">Написать в чат</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="addAddress" aria-hidden="true" class="popup">
+  <div class="popup__wrapper">
+    <div class="popup__content addAddress__content">
+      <div class="addAddress__header header-popup">
+        <div class="header-popup__title">Добавить адрес доставки</div>
+        <button data-close type="button" class="header-popup__closeBtn">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.00012 11L10.7159 1.28427" stroke="#0E0E0E" stroke-linecap="round"/>
+            <path d="M10.7157 11L0.999968 1.28427" stroke="#0E0E0E" stroke-linecap="round"/>
+          </svg>
+        </button>
+
+      </div>
+      <form class="addAddress__body body-addAddress">
+        <!-- Имеется форма, которая перехватывается JS. Если в input установлен data-required,
+        то при отправке формы JS будет смотреть, написано ли что-то в этом input. В случае, если там пусто,
+        тогда input присваивается class "_error" и форма Не отправляется-->
+        <table class="body-addAddress__table">
+          <tr>
+            <td>
+              <div class="body-addAddress__name">Индекс</div>
+            </td>
+            <td>
+              <div class="body-addAddress__input">
+                <input data-required autocomplete="off" type="text" name="form[]" placeholder="Введите индекс"
+                       class="input">
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="body-addAddress__name">Страна</div>
+            </td>
+            <td>
+              <div class="body-addAddress__input">
+                <input data-required autocomplete="off" type="text" name="form[]" placeholder="Введите название страны"
+                       class="input">
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="body-addAddress__name">Регион</div>
+            </td>
+            <td>
+              <div class="body-addAddress__input">
+                <input data-required autocomplete="off" type="text" name="form[]" placeholder="Введите название региона"
+                       class="input">
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="body-addAddress__name">Район</div>
+            </td>
+            <td>
+              <div class="body-addAddress__input">
+                <input data-required autocomplete="off" type="text" name="form[]" placeholder="Введите название района"
+                       class="input">
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="body-addAddress__name">Населенный
+                                                 пункт
+              </div>
+            </td>
+            <td>
+              <div class="body-addAddress__input">
+                <input data-required autocomplete="off" type="text" name="form[]"
+                       placeholder="Введите название населенного пункта"
+                       class="input">
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="body-addAddress__name">Улица</div>
+            </td>
+            <td>
+              <div class="body-addAddress__input">
+                <input data-required autocomplete="off" type="text" name="form[]" placeholder="Введите название улицы"
+                       class="input">
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="body-addAddress__name">Дом</div>
+            </td>
+            <td>
+              <div class="body-addAddress__input">
+                <input data-required autocomplete="off" type="text" name="form[]" placeholder="Введите номер дома"
+                       class="input">
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="body-addAddress__name">Строение</div>
+            </td>
+            <td>
+              <div class="body-addAddress__input">
+                <input data-required autocomplete="off" type="text" name="form[]" placeholder="Введите номер строения"
+                       class="input">
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="body-addAddress__name">Корпус</div>
+            </td>
+            <td>
+              <div class="body-addAddress__input">
+                <input data-required autocomplete="off" type="text" name="form[]" placeholder="Введите номер корпуса"
+                       class="input">
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="body-addAddress__name">Квартира,
+                                                 офис, склад
+              </div>
+            </td>
+            <td>
+              <div class="body-addAddress__input">
+                <input data-required autocomplete="off" type="text" name="form[]"
+                       placeholder="Введите номер квартиры, офиса, склада"
+                       class="input">
+              </div>
+            </td>
+          </tr>
+        </table>
+        <button type="submit" class="body-addAddress__btn _blueBtn">Применить</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div id="editAddress" aria-hidden="true" class="popup">
+  <div class="popup__wrapper">
+    <div class="popup__content editAddress__content">
+      <div class="editAddress__header header-popup">
+        <div class="header-popup__title">Адрес доставки</div>
+        <button data-close type="button" class="header-popup__closeBtn">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.00012 11L10.7159 1.28427" stroke="#0E0E0E" stroke-linecap="round"/>
+            <path d="M10.7157 11L0.999968 1.28427" stroke="#0E0E0E" stroke-linecap="round"/>
+          </svg>
+        </button>
+
+      </div>
+      <form class="editAddress__body body-editAddress">
+        <p class="body-editAddress__text">Выбрать адрес доставки (адрес склада, грузового терминала, двора, ТК,
+                                          почтового отделения и т.п.)</p>
+        <table id="popupTable" class="adress-left-info-submit-trash__table body-editAddress__table">
+          <tr>
+            <th></th>
+            <th>Индекс</th>
+            <th>Страна</th>
+            <th>Регион</th>
+            <th>Район</th>
+            <th>Населенный
+                пункт
+            </th>
+            <th>Улица</th>
+            <th>Дом</th>
+            <th>Строение</th>
+            <th>Корпус</th>
+            <th>Квартира,
+                офис, склад
+            </th>
+          </tr>
+          <tr>
+            <td valign="top">
+              <div class="options__item">
+                <input hidden id="325420" class="options__input" checked type="radio" value="1" name="adress">
+                <label for="325420" class="options__label">
+                  <span class="options__text"></span>
+                </label>
+              </div>
+            </td>
+            <td valign="top">
+              <label for="325420" class="adress-left-info-submit-trash__text">325420
+
+              </label>
+            </td>
+            <td valign="top">
+              <label for="325420" class="adress-left-info-submit-trash__text">Россия</label>
+              
+            </td>
+            <td valign="top">
+              <label for="325420" class="adress-left-info-submit-trash__text">Иркутская область</label>
+              
+            </td>
+            <td valign="top">
+              <label for="325420" class="adress-left-info-submit-trash__text">Название
+                                                                              района</label>
+              
+            </td>
+            <td valign="top">
+              <label for="325420" class="adress-left-info-submit-trash__text">Название
+                                                                              населенного пункта</label>
+              
+            </td>
+            <td valign="top">
+              <label for="325420" class="adress-left-info-submit-trash__text">Название
+                                                                              улицы</label>
+              
+            </td>
+            <td valign="top">
+              <label for="325420" class="adress-left-info-submit-trash__text">325</label>
+              
+            </td>
+            <td valign="top">
+              <label for="325420" class="adress-left-info-submit-trash__text">63</label>
+              
+            </td>
+            <td valign="top">
+              <label for="325420" class="adress-left-info-submit-trash__text">2</label>
+              
+            </td>
+            <td valign="top">
+              <label for="325420" class="adress-left-info-submit-trash__text">2</label>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+              <div class="options__item">
+                <input hidden id="325421" class="options__input" type="radio" value="1" name="adress">
+                <label for="325421" class="options__label">
+                  <span class="options__text"></span>
+                </label>
+              </div>
+            </td>
+            <td valign="top">
+              <label for="325421" class="adress-left-info-submit-trash__text">325421</label>
+            </td>
+            <td valign="top">
+              <label for="325421" class="adress-left-info-submit-trash__text">Россия</label>
+            </td>
+            <td valign="top">
+              <label for="325421" class="adress-left-info-submit-trash__text">Иркутская область</label>
+            </td>
+            <td valign="top">
+              <label for="325421" class="adress-left-info-submit-trash__text">Название
+                                                                              района</label>
+            </td>
+            <td valign="top">
+              <label for="325421" class="adress-left-info-submit-trash__text">Название
+                                                                              населенного пункта</label>
+            </td>
+            <td valign="top">
+              <label for="325421" class="adress-left-info-submit-trash__text">Название
+                                                                              улицы</label>
+            </td>
+            <td valign="top">
+              <label for="325421" class="adress-left-info-submit-trash__text">325</label>
+            </td>
+            <td valign="top">
+              <label for="325421" class="adress-left-info-submit-trash__text">63</label>
+            </td>
+            <td valign="top">
+              <label for="325421" class="adress-left-info-submit-trash__text">2</label>
+            </td>
+            <td valign="top">
+              <label for="325421" class="adress-left-info-submit-trash__text">2</label>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+              <div class="options__item">
+                <input hidden id="325422" class="options__input" type="radio" value="1" name="adress">
+                <label for="325422" class="options__label">
+                  <span class="options__text"></span>
+                </label>
+              </div>
+            </td>
+            <td valign="top">
+              <label for="325422" class="adress-left-info-submit-trash__text">325422</label>
+            </td>
+            <td valign="top">
+              <label for="325422" class="adress-left-info-submit-trash__text">Россия</label>
+            </td>
+            <td valign="top">
+              <label for="325422" class="adress-left-info-submit-trash__text">Иркутская область</label>
+            </td>
+            <td valign="top">
+              <label for="325422" class="adress-left-info-submit-trash__text">Название
+                                                                              района</label>
+            </td>
+            <td valign="top">
+              <label for="325422" class="adress-left-info-submit-trash__text">Название
+                                                                              населенного пункта</label>
+            </td>
+            <td valign="top">
+              <label for="325422" class="adress-left-info-submit-trash__text">Название
+                                                                              улицы</label>
+            </td>
+            <td valign="top">
+              <label for="325422" class="adress-left-info-submit-trash__text">325</label>
+            </td>
+            <td valign="top">
+              <label for="325422" class="adress-left-info-submit-trash__text">63</label>
+            </td>
+            <td valign="top">
+              <label for="325422" class="adress-left-info-submit-trash__text">2</label>
+            </td>
+            <td valign="top">
+              <label for="325422" class="adress-left-info-submit-trash__text">2</label>
+            </td>
+          </tr>
+        </table>
+        <button id="closeEditAdressBtn" data-close type="button" class="body-editAddress__access _blueBtn">Применить</button>
+        <a href="#" data-popup="#addAddress" class="body-editAddress__addAdress _whiteBtn">Добавить другой адрес</a>
+      </form>
+    </div>
+  </div>
+</div>

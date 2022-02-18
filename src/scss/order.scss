@@ -1,0 +1,577 @@
+.order {
+  
+  &__container {
+  }
+  
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  &__info {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
+    background: #FFE585;
+    border-radius: 8px;
+    padding: 8px 20px;
+    display: inline-block;
+    margin-bottom: 25px;
+  }
+  
+  &__block {
+    display: flex;
+    position: relative;
+  }
+  
+  &__column {
+  }
+}
+
+.left-order {
+  flex: 0 1 855px;
+  padding-right: 50px;
+  
+  &__body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  &__input-block {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+    flex: 0 0 100%;
+    
+    label {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 22px;
+      margin-bottom: 10px;
+    }
+    
+    input {
+      border: 1px solid $blueColor;
+      border-radius: 8px;
+      padding: 10px 17px;
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 17px;
+      
+      &::placeholder {
+        color: $blueColor;
+      }
+    }
+    
+    p {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 15px;
+      color: $blueColor;
+      margin-top: 5px;
+    }
+  }
+  
+  &__input-block50 {
+    @extend .left-order__input-block;
+    flex: 0 0 48%;
+  }
+  
+  &__checkboxes {
+  }
+  
+  &__sure {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    color: $blackBlueColor;
+    margin-bottom: 20px;
+  }
+  
+  &__warning {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    color: $blackBlueColor;
+    margin-bottom: 15px;
+  }
+}
+
+.details-left-order {
+  flex: 0 0 100%;
+  
+  &__title {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
+    margin-bottom: 10px;
+  }
+  
+  &__body {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  &__input-block {
+    @extend .left-order__input-block;
+    flex: 0 1 256px;
+    margin-right: 20px;
+    
+    label {
+      font-size: 12px;
+      line-height: 15px;
+      margin-bottom: 5px;
+    }
+  }
+}
+
+.input-block-details-left-order {
+  @extend .left-order__input-block;
+  flex: 0 1 256px;
+  justify-content: space-between;
+  margin-right: 10px;
+  
+  label {
+    font-size: 12px;
+    line-height: 15px;
+    margin-bottom: 5px;
+    margin-top: auto;
+  }
+  
+  input {
+    padding: 11px 10px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+  }
+  
+  &__series {
+    max-width: 93px;
+  }
+  
+  &__number {
+    max-width: 155px;
+  }
+  
+  &__date {
+    max-width: 95px;
+  }
+  
+  &__authority {
+    min-width: 405px;
+    max-width: 405px;
+  }
+  
+  &__male {
+    max-width: 80px;
+    
+    .options {
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
+    label {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 500 !important;
+      font-size: 18px !important;
+      line-height: 22px !important;
+    }
+  }
+  
+  &__birthday {
+    max-width: 95px;
+    label {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 500 !important;
+      font-size: 18px !important;
+      line-height: 22px !important;
+    }
+  }
+  
+  &__tel {
+    max-width: 185px;
+    label {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 500 !important;
+      font-size: 18px !important;
+      line-height: 22px !important;
+    }
+  }
+  
+  &__email {
+    max-width: 385px;
+    min-width: 385px;
+    label {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 500 !important;
+      font-size: 18px !important;
+      line-height: 22px !important;
+    }
+  }
+}
+
+.adress-left-order {
+  margin-bottom: 25px;
+  
+  &__title {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
+    margin-bottom: 10px;
+  }
+}
+
+.adress-left-info-submit-trash {
+  
+  &__table {
+    transition: all 0.3s ease 0s;
+    border: 0px solid #80A4DE;
+  }
+  
+  &__text {
+  }
+  
+  &__btnSubmit {
+  }
+}
+
+.checkboxes-left-order {
+  
+  &__checkbox {
+    margin-bottom: 15px;
+    
+    span {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 22px;
+      
+      color: #000000;
+    }
+  }
+}
+
+.navigation-left-order {
+  margin-bottom: 15px;
+  display: flex;
+  
+  &__btn {
+    margin-right: 20px;
+  }
+}
+
+.right-order {
+  flex: 0 0 300px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  
+  &__body {
+    display: flex;
+    flex-direction: column;
+    
+    & > #bodyFixBlock {
+      margin-bottom: 20px;
+    }
+  }
+  
+  #bodyFixBlock {
+    &._fixed {
+      position: fixed;
+      top: 220px;
+    }
+    
+  }
+}
+
+.products-right-order {
+  max-width: 300px;
+  border: 2px solid #FFE585;
+  border-radius: 8px;
+  padding: 20px;
+  max-height: 1000px;
+  overflow-y: auto;
+  
+  button {
+    width: 100%;
+  }
+  
+  & ._blueBtn {
+    padding: 12px 10px 9px 10px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+  
+  & ._whiteBtn {
+    padding: 10px 10px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+  
+  &__checkbox {
+    margin-bottom: 10px;
+    
+    span {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 20px;
+      color: #000000;
+      transition: color 0.3s ease 0s;
+      @media (any-hover: hover) {
+        &:hover {
+          color: $blueColor;
+        }
+      }
+    }
+  }
+  
+  &__deleteBtn {
+    margin-bottom: 10px;
+  }
+  
+  &__favoriteBtn {
+    margin-bottom: 15px;
+  }
+  
+  &__list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    counter-reset: orderedlist;
+  }
+  
+  &__item {
+    position: relative;
+    margin-bottom: 25px;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+    
+    &:before {
+      counter-increment: orderedlist;
+      content: counter(orderedlist);
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+      color: #80A4DE;
+    }
+    
+  }
+}
+
+.product-products-right-order {
+  
+  &__body {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  &__title {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    color: $blackBlueColor;
+    margin-bottom: 5px;
+  }
+  
+  &__price {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    margin-bottom: 5px;
+  }
+  
+  &__disconut {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    color: $blueColor;
+    text-decoration: line-through;
+    margin-bottom: 6px;
+    
+  }
+  
+  .quantity {
+    display: flex;
+    margin-bottom: 10px;
+    
+    span {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+      color: #000000;
+    }
+    
+    &__button {
+      display: inline-flex;
+      width: 10px;
+      justify-content: center;
+      align-items: center;
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+      color: #000000;
+      transition: color 0.3s ease 0s;
+      @media (any-hover: hover) {
+        &:hover {
+          color: $blueColor;
+        }
+      }
+      
+      &_minus {
+      }
+      
+      &_plus {
+      }
+    }
+    
+    &__input {
+      input {
+        width: 35px;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        color: #000000;
+        border: 1px solid #80A4DE;
+        border-radius: 8px;
+        text-align: center;
+      }
+    }
+  }
+  
+  
+  &__config {
+    width: 235px;
+    margin-bottom: 10px;
+  }
+  
+  &__delete {
+  }
+  
+  
+}
+
+.up-product-products-right-order {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  &__checkbox {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    z-index: 2;
+    transform: translateY(-50%);
+  }
+  
+  &__img {
+    border: 1px solid #80A4DE;
+    border-radius: 8px;
+    padding: 4px;
+    width: 174px;
+    height: 174px;
+    position: relative;
+    margin-bottom: 7px;
+    
+    img {
+      max-width: 100%;
+    }
+    
+    &_main {
+      position: relative;
+      
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    
+    &_favourite-full {
+      position: absolute;
+      width: 20px;
+      height: 18px;
+      right: 12px;
+      top: 12px;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease 0s;
+      
+      &._active {
+        visibility: visible;
+        opacity: 1;
+      }
+      
+    }
+    
+    &_favourite {
+      position: absolute;
+      width: 20px;
+      height: 18px;
+      right: 12px;
+      top: 12px;
+      cursor: pointer;
+      transition: all 0.3s ease 0s;
+      
+      @media (any-hover: hover) {
+        &:hover {
+          background: url('../img/catalog/favorite-ful.svg') 0 0 no-repeat;
+        }
+      }
+    }
+  }
+}
+
+
