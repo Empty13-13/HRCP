@@ -36,6 +36,12 @@
   flex: 0 1 855px;
   padding-right: 50px;
   
+  input {
+    &._error{
+      border: 1px solid rgba(224, 99, 99, 0.98)
+    }
+  }
+  
   &__body {
     display: flex;
     flex-wrap: wrap;
@@ -145,7 +151,7 @@
 
 .input-block-details-left-order {
   @extend .left-order__input-block;
-  flex: 0 1 256px;
+  flex: 0 1 250px;
   justify-content: space-between;
   margin-right: 10px;
   
@@ -178,8 +184,8 @@
   }
   
   &__authority {
-    min-width: 405px;
-    max-width: 405px;
+    min-width: 402px;
+    max-width: 402px;
   }
   
   &__male {
@@ -302,15 +308,14 @@
     & > #bodyFixBlock {
       margin-bottom: 20px;
     }
-  }
   
-  #bodyFixBlock {
     &._fixed {
       position: fixed;
-      top: 220px;
+      top: 210px;
     }
-    
   }
+  
+  
 }
 
 .products-right-order {
