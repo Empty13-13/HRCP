@@ -37,7 +37,7 @@
   padding-right: 50px;
   
   input {
-    &._error{
+    &._error {
       border: 1px solid rgba(224, 99, 99, 0.98)
     }
   }
@@ -133,7 +133,6 @@
   
   &__body {
     display: flex;
-    flex-wrap: wrap;
   }
   
   &__input-block {
@@ -184,8 +183,7 @@
   }
   
   &__authority {
-    min-width: 402px;
-    max-width: 402px;
+    flex: 0 1 450px;
   }
   
   &__male {
@@ -197,6 +195,13 @@
       margin-bottom: 10px;
       margin-top: 10px;
     }
+    
+    .options__item {
+      &:first-child{
+        margin-right: 6px;
+      }
+    }
+    
     label {
       font-family: Montserrat;
       font-style: normal;
@@ -208,6 +213,7 @@
   
   &__birthday {
     max-width: 95px;
+    
     label {
       font-family: Montserrat;
       font-style: normal;
@@ -219,6 +225,7 @@
   
   &__tel {
     max-width: 185px;
+    
     label {
       font-family: Montserrat;
       font-style: normal;
@@ -231,6 +238,7 @@
   &__email {
     max-width: 385px;
     min-width: 385px;
+    
     label {
       font-family: Montserrat;
       font-style: normal;
@@ -308,7 +316,7 @@
     & > #bodyFixBlock {
       margin-bottom: 20px;
     }
-  
+    
     &._fixed {
       position: fixed;
       top: 210px;
