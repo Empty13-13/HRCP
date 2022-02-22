@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Оформление заказа"
+})
+<body>
+<div class="wrapper">
+  <header class="header">
+    <div class="header__container">
+      <div class="header__body">
+        <div class="header__up up-header">
+          <div class="up-header__body">
+            <a href="" class="up-header__main _href">Главная </a>
+            <button type="button" class="up-header__catalog-btn"><img src="img/icons/catalog.svg"
+                                                                      alt=""><span>Каталог</span></button>
+            <div class="up-header__search search-up-header">
+              <div class="search-up-header__body">
+                <select name="" id="" class="_hidden">
+                  <option value="" class="search-up-header__option">Выбрать сток/
+                                                                    маркетплейс
+                  </option>
+                  <option value="0" class="search-up-header__option">Lorem ipsum dolor</option>
+                  <option value="1" class="search-up-header__option">2</option>
+                  <option value="2" class="search-up-header__option">3</option>
+                  <option value="3" class="search-up-header__option">4</option>
+                </select>
+                <span class="line"></span>
+                <div class="search-up-header__search">
+                  <input placeholder="Введите название товара или ссылку " type="text" class="search-up-header__input">
+                  <button class="search-up-header__photo">
+                    <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M21.4717 6.66022V17.5589C21.4717 18.88 20.4617 19.9671 19.2057 19.9671H3.266C2.02294 19.9671 1 18.8937 1 17.5589V6.66022C1 5.33916 2.00999 4.25204 3.266 4.25204H6.16648L6.74916 0.770508H15.8002L16.3181 4.25204H19.2057C20.4617 4.25204 21.4717 5.3254 21.4717 6.66022Z"
+                        stroke="black" stroke-miterlimit="10" stroke-linejoin="round"/>
+                      <path
+                        d="M11 16.6937C13.2091 16.6937 15 14.7926 15 12.4474C15 10.1023 13.2091 8.20117 11 8.20117C8.79086 8.20117 7 10.1023 7 12.4474C7 14.7926 8.79086 16.6937 11 16.6937Z"
+                        stroke="black" stroke-miterlimit="10" stroke-linejoin="round"/>
+                    </svg>
+                  </button>
+                  <button class="search-up-header__button"><img src="img/icons/search.svg" alt=""><span>Найти</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <a href="" class="up-header__man _href">Пользователю</a>
+          </div>
+        </div>
+        <div class="header__center center-header">
+          <div class="center-header__body">
+            <div class="center-header__block _href"><a href="" class="center-header__btn ">
+              <img src="img/icons/header/login.svg" alt="login" class="center-header__img">Вход/Регестрация</a>
+            </div>
+            <span class="line"></span>
+            <div class="center-header__block _href"><a href="" class="center-header__btn ">
+              <img src="img/icons/header/bell.svg" alt="bells" class="center-header__img">Уведомления</a>
+            </div>
+            <span class="line"></span>
+            <div class="center-header__block _href"><a href="" class="center-header__btn ">
+              <img src="img/icons/header/eye.svg" alt="watch" class="center-header__img">Вы недавно смотрели</a>
+            </div>
+            <span class="line"></span>
+            <div class="center-header__block _href"><a href="" class="center-header__btn ">
+              <img src="img/icons/header/favorite.svg" alt="favourite" class="center-header__img">Избранное</a>
+            </div>
+            <span class="line"></span>
+            <div class="center-header__block _href"><a href="" class="center-header__btn ">
+              <img src="img/icons/header/trash.svg" alt="trash" class="center-header__img">Корзина</a>
+            </div>
+          </div>
+        </div>
+        <div class="header__bottom bottom-header">
+          <div class="bottom-header__body">
+            <ul class="bottom-header__breadcrumb breadcrumb">
+              <li><a class="breadcrumb__link _href" href="#">Главная</a></li>
+              <li class=""><a class="breadcrumb__link" href=""></a>Корзина</li>
+              <li class=""><a class="breadcrumb__link" href=""></a>Оформление заказа</li>
+              <li class=""><a class="breadcrumb__link" href=""></a>Оплата</li>
+              <li class="_active"><a class="breadcrumb__link" href=""></a>Подтверждение</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="page">
+
+    <div class="confirmPage">
+      <div class="confirmPage__container">
+        <ul class="trash__nav nav-trash">
+          <li class="nav-trash__item"><a href="/trash.html" class="nav-trash__link">Корзина</a></li>
+          <li class="nav-trash__item"><a href="/order.html" class="nav-trash__link">Оформление заказа</a></li>
+          <li class="nav-trash__item"><a href="/paymant.html" class="nav-trash__link">Оплата</a></li>
+          <li class="nav-trash__item _active"><a href="/agree.html" class="nav-trash__link">Подтверждение</a></li>
+        </ul>
+        <div class="confirmPage__body">
+          <div class="left-confirmPage">
+            <div class="confirmPage__info">Заказ №15656212 от 03.12.2021</div>
+            <div class="left-confirmPage__state state-left-confirmPage">
+              <div class="state-left-confirmPage__name">Состояние заказа:</div>
+              <div class="state-left-confirmPage__value">Оплачено</div>
+            </div>
+            <div class="left-confirmPage__state state-left-confirmPage">
+              <div class="state-left-confirmPage__name">Состояние товара:</div>
+              <div class="state-left-confirmPage__value">Оплачено</div>
+            </div>
+            <p class="left-confirmPage__sum">Сумма заказа: 3 200 000 ₽</p>
+            <div class="left-confirmPage__pay pay-left-confirmPage">
+              <div class="pay-left-confirmPage__name">Уже оплачено:</div>
+              <div class="pay-left-confirmPage__value">0 ₽ (на Вашем счете)</div>
+            </div>
+            <div class="left-confirmPage__pay pay-left-confirmPage">
+              <div class="pay-left-confirmPage__name">К оплате:</div>
+              <div class="pay-left-confirmPage__value">0 ₽ (пополните Ваш счет)</div>
+            </div>
+          </div>
+          <div class="right-confirmPage">
+            <div class="right-confirmPage__message">Оплата успешно произведена</div>
+          </div>
+
+        </div>
+        <div class="confirmPage__message message-confirmPage">
+          <div class="message-confirmPage__title">Поле сообщения для пользователя</div>
+          <textarea autocomplete="off" name="form[]" placeholder="Текст сообщения оператора (136 символов)"
+                    maxlength="136" class="message-confirmPage__textare input"></textarea>
+        </div>
+        <div class="confirmPage__message message-confirmPage">
+          <div class="message-confirmPage__title">Поля сообщения для оператора сайта</div>
+          <textarea autocomplete="off" name="form[]" placeholder="Текст сообщения пользователя (136 символов)"
+                    maxlength="136" class="message-confirmPage__textare input"></textarea>
+        </div>
+        <div class="confirmPage__nav nav-confirmPage">
+          <a href="payment.html" class="nav-confirmPage__btn _whiteBtn">Пополнить/оплатить</a>
+          <a href="" class="nav-confirmPage__btn _whiteBtn">Финансы</a>
+          <a href="" class="nav-confirmPage__btn _whiteBtn">Заказы</a>
+          <a href="" class="nav-confirmPage__btn _whiteBtn">Личный кабинет</a>
+          <a href="index.html" class="nav-confirmPage__btn _whiteBtn">Каталог</a>
+          <a href="" class="nav-confirmPage__btn _whiteBtn">Избранное</a>
+        </div>
+      </div>
+    </div>
+
+
+  </main>
+  @@include('html/_footer.htm',{})
+  @@include('html/_fixed.htm',{})
+
+</div>
+@@include('html/_js.htm',{})
+
+</body>
+</html>

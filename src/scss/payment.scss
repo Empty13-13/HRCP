@@ -1,0 +1,276 @@
+.payment {
+  
+  &__container {
+  }
+  
+  &__body {
+    display: flex;
+  }
+}
+
+.left-payment {
+  flex: 0 1 855px;
+  padding-right: 50px;
+  
+  &__info {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 10px;
+  }
+  
+  &__sum {
+    margin-top: 10px;
+    background: #FFE585;
+    border-radius: 8px;
+    padding: 8px 20px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    display: inline-block;
+    margin-bottom: 15px;
+  }
+}
+
+.state-left-payment {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  
+  &__name {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: $blueColor;
+  }
+  
+  &__value {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+.pay-left-payment {
+  display: grid;
+  grid-template-columns: 145px 1fr;
+  margin-bottom: 9px;
+  
+  &__name {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: $blueColor;
+  }
+  
+  &__value {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+.user-left-payment {
+  margin-top: 27px;
+  margin-bottom: 80px;
+  
+  &__body {
+    border: 1px solid $blueColor;
+    border-radius: 8px;
+    padding: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    margin-bottom: 20px;
+  }
+  
+  &__block {
+    margin-bottom: 14px;
+  }
+  
+  &__title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: $blueColor;
+  }
+  
+  &__value {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    
+    &._contacts{
+      max-width: 225px;
+    }
+  }
+  
+  &__edit {
+  }
+}
+
+.method-left-payment {
+  
+  &__title {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    color: $blackBlueColor;
+    margin-bottom: 25px;
+  }
+  
+  .options {
+    
+    &__item {
+      margin-bottom: 20px;
+    }
+    
+    &__input {
+    }
+    
+    &__label {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 22px;
+      
+      span {
+        display: flex;
+        
+      }
+    }
+    
+    &__text {
+    }
+    
+    .select_large {
+      margin-top: 5px;
+      max-width: 442px;
+    }
+  }
+  
+  .radio-list {
+    margin-top: 5px;
+    margin-left: 40px;
+    
+    &__item {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 22px;
+      color: $blackBlueColor;
+    }
+  }
+  
+  .choice {
+    margin-top: 5px;
+    margin-left: 20px;
+    
+    &__btn {
+      margin-right: 20px;
+      
+      &._active {
+        background-color: $blackBlueColor;
+        color: white;
+      }
+      
+    }
+  }
+  
+  .description-option {
+    margin-top: 2px;
+    margin-left: 20px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: $blackBlueColor;
+  }
+  
+  &__body {
+  }
+}
+
+.message-method-left-payment {
+  margin-bottom: 50px;
+  
+  &__title {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 5px;
+  }
+  
+  &__textarea {
+    border: 0.5px solid #80A4DE;
+    border-radius: 8px;
+    width: 100%;
+    resize: vertical;
+    padding: 5px 10px;
+    font-size: 14px;
+    line-height: 17px;
+    
+    &::placeholder {
+      font-size: 14px;
+      line-height: 17px;
+      color: $blueColor;
+    }
+  }
+}
+
+.account-method-left-payment {
+  border: 1px solid #80A4DE;
+  border-radius: 8px;
+  margin-bottom: 80px;
+  
+  &__body {
+    padding: 25px;
+  }
+  
+  &__title {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    color: $blackBlueColor;
+    margin-bottom: 32px;
+  }
+  
+  &__sum {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 25px;
+  }
+  
+  input {
+    border: 1px solid $blueColor;
+    border-radius: 8px;
+    max-width: 95px;
+    padding: 5px 10px;
+    font-size: 16px;
+    line-height: 20px;
+    
+    &._error{
+     border: 0.5px solid rgba(224, 99, 99, 0.98);
+    }
+    
+  }
+  
+  &__btns {
+  }
+  
+  &__payBtn {
+    margin-right: 20px;
+  }
+  
+  &__backBtn {
+  }
+}
+

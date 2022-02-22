@@ -518,16 +518,6 @@ let orderMain = document.querySelector('.order')
 if (orderMain) {
   //Основной код, если страница ордера
 
-  // region Favourite btns
-  let favouriteBtns = document.querySelectorAll('[data-favourite]')
-  if (favouriteBtns.length) {
-    favouriteBtns.forEach(item => {
-      item.addEventListener("click", function (e) {
-        item.closest('li').remove()
-      });
-    })
-  }
-  // endregion
 
   let submitBnt = document.querySelector('#submitBtn');
   let tables = document.querySelectorAll('[data-requiredTable]');
@@ -552,7 +542,7 @@ if (orderMain) {
       let acceptBtn = table.parentNode.querySelector('[data-acceptbtn]')
       let dataTable = {isOpen: true, height: table.offsetHeight}
 
-      function getSumHeightInputs(){
+      function getSumHeightInputs() {
         let result = 0
         inputs.forEach(input => {
           result = result + input.offsetHeight
@@ -636,32 +626,6 @@ if (orderMain) {
   }
 
 
-  // region fixBlock
-  let fixBtnOrder = document.querySelector('#fixBtnOrder')
-  if (fixBtnOrder) {
-    let isFixed = false;
-
-    fixBtnOrder.addEventListener("click", function (e) {
-      let products = document.querySelector('.products-right-order')
-      let bodyFixBlock = document.querySelector('#bodyFixBlock');
-      let header = document.querySelector('header')
-
-      isFixed = !isFixed
-      if (isFixed) {
-        console.log(window.screen.height)
-        fixBtnOrder.parentNode.parentNode.classList.add('_fixed')
-        products.style.maxHeight = window.screen.height - bodyFixBlock.offsetHeight - header.offsetHeight - 120 + "px"
-        fixBtnOrder.innerHTML = fixBtnOrder.innerHTML.replace('Закрепить окно', 'Открепить окно')
-        return true
-      }
-      fixBtnOrder.parentNode.parentNode.classList.remove('_fixed')
-      fixBtnOrder.innerHTML = fixBtnOrder.innerHTML.replace('Открепить окно', 'Закрепить окно')
-      products.style.maxHeight = "1000px"
-      return true
-    });
-  }
-  // endregion
-
   // region Add adress Popup
   let addAddressPopup = document.querySelector('#addAddressPopup');
   if (addAddressPopup) {
@@ -684,41 +648,41 @@ if (orderMain) {
           tr.innerHTML = `
 <td valign="top">
 <div class="options__item">
-<input hidden="" id="${inputs[0].value+num}" class="options__input" type="radio" value="1" name="${name}">
-<label for="${inputs[0].value+num}" class="options__label">
+<input hidden="" id="${inputs[0].value + num}" class="options__input" type="radio" value="1" name="${name}">
+<label for="${inputs[0].value + num}" class="options__label">
 <span class="options__text"></span>
 </label>
 </div>
 </td>
 <td valign="top">
-<label for="${inputs[0].value+num}" class="adress-left-info-submit-trash__text">${inputs[0].value}</label>
+<label for="${inputs[0].value + num}" class="adress-left-info-submit-trash__text">${inputs[0].value}</label>
 </td>
 <td valign="top">
-<label for="${inputs[0].value+num}" class="adress-left-info-submit-trash__text">${inputs[1].value}</label>
+<label for="${inputs[0].value + num}" class="adress-left-info-submit-trash__text">${inputs[1].value}</label>
 </td>
 <td valign="top">
-<label for="${inputs[0].value+num}" class="adress-left-info-submit-trash__text">${inputs[2].value}</label>
+<label for="${inputs[0].value + num}" class="adress-left-info-submit-trash__text">${inputs[2].value}</label>
 </td>
 <td valign="top">
-<label for="${inputs[0].value+num}" class="adress-left-info-submit-trash__text">${inputs[3].value}</label>
+<label for="${inputs[0].value + num}" class="adress-left-info-submit-trash__text">${inputs[3].value}</label>
 </td>
 <td valign="top">
-<label for="${inputs[0].value+num}" class="adress-left-info-submit-trash__text">${inputs[4].value}</label>
+<label for="${inputs[0].value + num}" class="adress-left-info-submit-trash__text">${inputs[4].value}</label>
 </td>
 <td valign="top">
-<label for="${inputs[0].value+num}" class="adress-left-info-submit-trash__text">${inputs[5].value}</label>
+<label for="${inputs[0].value + num}" class="adress-left-info-submit-trash__text">${inputs[5].value}</label>
 </td>
 <td valign="top">
-<label for="${inputs[0].value+num}" class="adress-left-info-submit-trash__text">${inputs[6].value}</label>
+<label for="${inputs[0].value + num}" class="adress-left-info-submit-trash__text">${inputs[6].value}</label>
 </td>
 <td valign="top">
-<label for="${inputs[0].value+num}" class="adress-left-info-submit-trash__text">${inputs[7].value}</label>
+<label for="${inputs[0].value + num}" class="adress-left-info-submit-trash__text">${inputs[7].value}</label>
 </td>
 <td valign="top">
-<label for="${inputs[0].value+num}" class="adress-left-info-submit-trash__text">${inputs[8].value}</label>
+<label for="${inputs[0].value + num}" class="adress-left-info-submit-trash__text">${inputs[8].value}</label>
 </td>
 <td valign="top">
-<label for="${inputs[0].value+num}" class="adress-left-info-submit-trash__text">${inputs[9].value}</label>
+<label for="${inputs[0].value + num}" class="adress-left-info-submit-trash__text">${inputs[9].value}</label>
 </td>
         `
           num++
@@ -733,3 +697,53 @@ if (orderMain) {
 }
 // endregion
 
+// region fixBlock
+let fixBtnOrder = document.querySelector('#fixBtnOrder')
+if (fixBtnOrder) {
+  let isFixed = false;
+
+  fixBtnOrder.addEventListener("click", function (e) {
+    let products = document.querySelector('.products-right-order')
+    let bodyFixBlock = document.querySelector('#bodyFixBlock');
+    let header = document.querySelector('header')
+
+    isFixed = !isFixed
+    if (isFixed) {
+      console.log(window.screen.height)
+      fixBtnOrder.parentNode.parentNode.classList.add('_fixed')
+      products.style.maxHeight = window.screen.height - bodyFixBlock.offsetHeight - header.offsetHeight - 120 + "px"
+      fixBtnOrder.innerHTML = fixBtnOrder.innerHTML.replace('Закрепить окно', 'Открепить окно')
+      return true
+    }
+    fixBtnOrder.parentNode.parentNode.classList.remove('_fixed')
+    fixBtnOrder.innerHTML = fixBtnOrder.innerHTML.replace('Открепить окно', 'Закрепить окно')
+    products.style.maxHeight = "1000px"
+    return true
+  });
+}
+// endregion
+
+// region Favourite btns
+let favouriteBtns = document.querySelectorAll('[data-favourite]')
+if (favouriteBtns.length) {
+  favouriteBtns.forEach(item => {
+    item.addEventListener("click", function (e) {
+      item.closest('li').remove()
+    });
+  })
+}
+// endregion
+
+// region Payment
+let choices = document.querySelectorAll('[data-choice]');
+if (choices.length) {
+  choices.forEach(item => {
+    item.addEventListener("click", function (e) {
+      choices.forEach(choise => {
+        choise.classList.remove('_active')
+      })
+      item.classList.add('_active')
+    });
+  })
+}
+// endregion
