@@ -68,12 +68,20 @@
     line-height: 17px;
     display: flex;
     align-items: center;
-    color: $blueColor;
     padding: 9px 17px;
     padding-right: 2px;
+    color: $blueColor;
     border-radius: 8px;
     outline: none !important;
     width: 100%;
+    
+    &::placeholder {
+      color: $blueColor;
+    }
+    
+    &._focus {
+      color: black;
+    }
   }
   
   &__btn {
@@ -589,7 +597,7 @@
       .block-products-catalog__name {
         color: #3567AC;
       }
-  
+      
       .block-products-catalog__up {
         padding: 3px;
       }
@@ -866,7 +874,7 @@
     border-radius: 8px;
     
     span {
-      transform: translateY(-2.5px);
+      transform: translateY(-1.5px);
     }
     
     svg {

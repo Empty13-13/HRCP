@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Избранные продавцы"
+})
+<body>
+<div class="wrapper">
+  <header class="header">
+    <div class="header__container">
+      <div class="header__body">
+        <div class="header__up up-header">
+          <div class="up-header__body">
+            <a href="" class="up-header__main _href">Главная </a>
+            <button type="button" class="up-header__catalog-btn"><img src="img/icons/catalog.svg"
+                                                                      alt=""><span>Каталог</span></button>
+            <div class="up-header__search search-up-header">
+              <div class="search-up-header__body">
+                <select name="" id="" class="_hidden">
+                  <option value="" class="search-up-header__option">Выбрать сток/
+                                                                    маркетплейс
+                  </option>
+                  <option value="0" class="search-up-header__option">Lorem ipsum dolor</option>
+                  <option value="1" class="search-up-header__option">2</option>
+                  <option value="2" class="search-up-header__option">3</option>
+                  <option value="3" class="search-up-header__option">4</option>
+                </select>
+                <span class="line"></span>
+                <div class="search-up-header__search">
+                  <input placeholder="Введите название товара или ссылку " type="text" class="search-up-header__input">
+                  <button class="search-up-header__photo">
+                    <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M21.4717 6.66022V17.5589C21.4717 18.88 20.4617 19.9671 19.2057 19.9671H3.266C2.02294 19.9671 1 18.8937 1 17.5589V6.66022C1 5.33916 2.00999 4.25204 3.266 4.25204H6.16648L6.74916 0.770508H15.8002L16.3181 4.25204H19.2057C20.4617 4.25204 21.4717 5.3254 21.4717 6.66022Z"
+                        stroke="black" stroke-miterlimit="10" stroke-linejoin="round"/>
+                      <path
+                        d="M11 16.6937C13.2091 16.6937 15 14.7926 15 12.4474C15 10.1023 13.2091 8.20117 11 8.20117C8.79086 8.20117 7 10.1023 7 12.4474C7 14.7926 8.79086 16.6937 11 16.6937Z"
+                        stroke="black" stroke-miterlimit="10" stroke-linejoin="round"/>
+                    </svg>
+                  </button>
+                  <button class="search-up-header__button"><img src="img/icons/search.svg" alt=""><span>Найти</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <a href="" class="up-header__man _href">Пользователю</a>
+          </div>
+        </div>
+        <div class="header__center center-header">
+          <div class="center-header__body">
+            <div class="center-header__block _href"><a href="" class="center-header__btn ">
+              <img src="img/icons/header/login.svg" alt="login" class="center-header__img">Вход/Регестрация</a>
+            </div>
+            <span class="line"></span>
+            <div class="center-header__block _href"><a href="" class="center-header__btn ">
+              <img src="img/icons/header/bell.svg" alt="bells" class="center-header__img">Уведомления</a>
+            </div>
+            <span class="line"></span>
+            <div class="center-header__block _href"><a href="" class="center-header__btn ">
+              <img src="img/icons/header/eye.svg" alt="watch" class="center-header__img">Вы недавно смотрели</a>
+            </div>
+            <span class="line"></span>
+            <div class="center-header__block _href"><a href="" class="center-header__btn ">
+              <img src="img/icons/header/favorite.svg" alt="favourite" class="center-header__img">Избранное</a>
+            </div>
+            <span class="line"></span>
+            <div class="center-header__block _href"><a href="" class="center-header__btn ">
+              <img src="img/icons/header/trash.svg" alt="trash" class="center-header__img">Корзина</a>
+            </div>
+          </div>
+        </div>
+        <div class="header__bottom bottom-header">
+          <div class="bottom-header__body">
+            <ul class="bottom-header__breadcrumb breadcrumb">
+              <li><a class="breadcrumb__link _href" href="#">Главная</a></li>
+              <li class=""><a class="breadcrumb__link" href=""></a>Избранное</li>
+              <li class="_active"><a class="breadcrumb__link" href=""></a>Избранные продавцы</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="page">
+
+    <div class="favourites">
+      <div class="favourites__container">
+        <h2 class="favourites__title">Избранное</h2>
+        <div class="favourites__filter filter-favourites">
+          <div class="filter-favourites__body">
+            <select name="form[]" class="large">
+              <option value="">Выбрать сток/маркетплейс</option>
+              <option value="1">Вариант 1</option>
+              <option value="2">Вариант 2</option>
+              <option value="3">Вариант 3</option>
+            </select>
+            <div class="filter-favourites__nav">
+              <a href="favourites.html" class="filter-favourites__nav-item ">Избранные товары</a>
+              <a href="favouritesSeller.html" class="filter-favourites__nav-item _active">Избранные продавцы</a>
+            </div>
+          </div>
+        </div>
+        <div class="favourites__infoBlock infoBlock-favourites">
+          <ul class="infoBlock-favourites__list">
+            <li>
+              <div class="infoBlock-favourites__text">Продавцов в избранном:</div>
+              <div class="infoBlock-favourites__num">6</div>
+            </li>
+            <li>
+              <div class="infoBlock-favourites__text">Выведено на страницу:</div>
+              <div class="infoBlock-favourites__num"> 1-6 из 6</div>
+            </li>
+            <li>
+              <div class="infoBlock-favourites__text">Продавцов на странице:</div>
+              <ul class="quantity-sorting-catalog__groupNumber">
+                <li class="quantity-sorting-catalog__num">
+                  <button type="button" class="quantity-sorting-catalog__btn _active">16</button>
+                </li>
+                <li class="quantity-sorting-catalog__num">
+                  <button type="button" class="quantity-sorting-catalog__btn">24</button>
+                </li>
+                <li class="quantity-sorting-catalog__num">
+                  <button type="button" class="quantity-sorting-catalog__btn">32</button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="favourites__function function-favourites">
+          <div class="function-favourites__left">
+            <div class="function-favourites__allEventBtn checkbox">
+              <input id="allEventBtn" class="checkbox__input" type="checkbox" name="allEventBtn">
+              <label for="allEventBtn" class="checkbox__label">
+                <span class="checkbox__text">Выбрать всех продавцов</span>
+              </label>
+            </div>
+          </div>
+          <div class="function-favourites__right">
+            <button type="button" data-deleteCheckSeller
+                    class="function-favourites__deleteBtn function-favourites__btn _whiteBtn">
+                <span>
+                <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M9.48069 13.5218C9.72245 13.5218 9.91823 13.326 9.91823 13.0843V5.64262C9.91823 5.40086 9.72245 5.20508 9.48069 5.20508C9.23894 5.20508 9.04315 5.40086 9.04315 5.64262V13.0843C9.04315 13.326 9.23894 13.5218 9.48069 13.5218Z"
+                    fill="#80A4DE"/>
+                  <path
+                    d="M6.99989 13.5218C7.24164 13.5218 7.43743 13.326 7.43743 13.0843V5.64262C7.43743 5.40086 7.24164 5.20508 6.99989 5.20508C6.75813 5.20508 6.56235 5.40086 6.56235 5.64262V13.0843C6.56235 13.326 6.75813 13.5218 6.99989 13.5218Z"
+                    fill="#80A4DE"/>
+                  <path
+                    d="M4.51957 13.5218C4.76133 13.5218 4.95711 13.326 4.95711 13.0843V5.64262C4.95711 5.40086 4.76133 5.20508 4.51957 5.20508C4.27782 5.20508 4.08203 5.40086 4.08203 5.64262V13.0843C4.08203 13.326 4.27758 13.5218 4.51957 13.5218Z"
+                    fill="#80A4DE"/>
+                  <path
+                    d="M8.24041 0.242188H5.75985C4.83483 0.242188 4.0818 0.93945 4.0818 1.79586V2.72228H0.798501C0.556746 2.72228 0.360962 2.91806 0.360962 3.15982C0.360962 3.40157 0.556746 3.59736 0.798501 3.59736H1.60147V14.3223C1.60147 15.2478 2.35404 16.0006 3.27906 16.0006H10.7207C11.6462 16.0006 12.399 15.2478 12.399 14.3223V3.59736H13.2015C13.4433 3.59736 13.6391 3.40157 13.6391 3.15982C13.6391 2.91806 13.4433 2.72228 13.2015 2.72228H9.91822V1.79586C9.91822 0.93945 9.16542 0.242188 8.24041 0.242188ZM4.95711 1.79586C4.95711 1.42833 5.32464 1.11727 5.76008 1.11727H8.24041C8.67585 1.11727 9.04338 1.42833 9.04338 1.79586V2.72228H4.95711V1.79586ZM11.5239 14.3223C11.5239 14.765 11.1634 15.1255 10.7207 15.1255H3.27906C2.83639 15.1255 2.47655 14.765 2.47655 14.3223V3.59736H11.5239V14.3223Z"
+                    fill="#80A4DE"/>
+                </svg>
+                  </span>
+              Удалить выбранные
+            </button>
+            <button type="button" data-deleteAllSeller
+                    class="function-favourites__clearBtn function-favourites__btn _whiteBtn">
+                <span>
+                <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1.00006 14L14.0001 0.999999" stroke="#3567AC" stroke-linecap="round"/>
+                  <path d="M14 14L0.999998 1" stroke="#3567AC" stroke-linecap="round"/>
+                </svg>
+                  </span>
+              Очистить избранное
+            </button>
+          </div>
+        </div>
+        <div class="favourites__seller seller-favourites">
+          <div class="seller-favourites__body">
+            <ol data-list-product id="productListTrash" class="seller-favourites__list">
+              <li>
+                <div class="seller-favourites__block block-seller-favourites">
+                  <div class="block-seller-favourites__body">
+                    <div class="block-seller-favourites__up up-block-seller-favourites">
+                      <div class="up-block-seller-favourites__body">
+                        <div class="up-block-seller-favourites__img"><img src="img/trash/1.jpg" alt=""></div>
+                      </div>
+                      <div class="up-block-seller-favourites__checkbox">
+                        <input id="c_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+                               name="form[]">
+                        <label for="c_1" class="checkbox__label"><span class="checkbox__text"></span></label>
+                      </div>
+                    </div>
+                    <div class="center-block-seller-favourites">
+                      <div class="center-block-seller-favourites__body">
+                        <table class="center-block-seller-favourites__table">
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Имя:</td>
+                            <td class="center-block-seller-favourites__value">ASM ANNA</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Лет на рынке:</td>
+                            <td class="center-block-seller-favourites__value">12</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Лет на сайте:</td>
+                            <td class="center-block-seller-favourites__value">10</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Магазин:</td>
+                            <td class="center-block-seller-favourites__value">Название</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Находится:</td>
+                            <td class="center-block-seller-favourites__value">Китай</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Оценка доставки:</td>
+                            <td class="center-block-seller-favourites__value">4.9</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Оценка товаров:</td>
+                            <td class="center-block-seller-favourites__value">4.7</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Оценка сервиса:</td>
+                            <td class="center-block-seller-favourites__value">4.4</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Оценка возвратов:</td>
+                            <td class="center-block-seller-favourites__value">4.4</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Общий рейтинг:</td>
+                            <td class="center-block-seller-favourites__value">4.8</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Оценка отзывов:</td>
+                            <td class="center-block-seller-favourites__value">10568</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Всего отзывов:</td>
+                            <td class="center-block-seller-favourites__value">10568</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Положительные
+                                                                             отзывы:
+                            </td>
+                            <td class="center-block-seller-favourites__value">10425</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Рейтинг
+                                                                             по продажам:
+                            </td>
+                            <td data-ratingFavourite class="center-block-seller-favourites__value">5</td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="bottom-block-seller-favourites">
+                      <div class="bottom-block-seller-favourites__body">
+                        <button type="button" data-deleteSeller class="bottom-block-seller-favourites__btn _whiteBtn">
+                          <span>
+<svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.11967 13.5218C9.36142 13.5218 9.55721 13.326 9.55721 13.0843V5.64262C9.55721 5.40086 9.36142 5.20508 9.11967 5.20508C8.87791 5.20508 8.68213 5.40086 8.68213 5.64262V13.0843C8.68213 13.326 8.87791 13.5218 9.11967 13.5218Z" fill="#80A4DE"/>
+<path d="M6.63896 13.5218C6.88071 13.5218 7.07649 13.326 7.07649 13.0843V5.64262C7.07649 5.40086 6.88071 5.20508 6.63896 5.20508C6.3972 5.20508 6.20142 5.40086 6.20142 5.64262V13.0843C6.20142 13.326 6.3972 13.5218 6.63896 13.5218Z" fill="#80A4DE"/>
+<path d="M4.15849 13.5218C4.40024 13.5218 4.59603 13.326 4.59603 13.0843V5.64262C4.59603 5.40086 4.40024 5.20508 4.15849 5.20508C3.91673 5.20508 3.72095 5.40086 3.72095 5.64262V13.0843C3.72095 13.326 3.9165 13.5218 4.15849 13.5218Z" fill="#80A4DE"/>
+<path d="M7.87944 0.242188H5.39889C4.47387 0.242188 3.72084 0.93945 3.72084 1.79586V2.72228H0.437539C0.195784 2.72228 0 2.91806 0 3.15982C0 3.40157 0.195784 3.59736 0.437539 3.59736H1.24051V14.3223C1.24051 15.2478 1.99308 16.0006 2.9181 16.0006H10.3598C11.2853 16.0006 12.0381 15.2478 12.0381 14.3223V3.59736H12.8406C13.0823 3.59736 13.2781 3.40157 13.2781 3.15982C13.2781 2.91806 13.0823 2.72228 12.8406 2.72228H9.55726V1.79586C9.55726 0.93945 8.80446 0.242188 7.87944 0.242188ZM4.59615 1.79586C4.59615 1.42833 4.96368 1.11727 5.39912 1.11727H7.87944C8.31488 1.11727 8.68242 1.42833 8.68242 1.79586V2.72228H4.59615V1.79586ZM11.163 14.3223C11.163 14.765 10.8024 15.1255 10.3598 15.1255H2.9181C2.47542 15.1255 2.11559 14.765 2.11559 14.3223V3.59736H11.163V14.3223Z" fill="#80A4DE"/>
+</svg>
+
+
+                          </span>
+                          Удалить продавца
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="seller-favourites__block block-seller-favourites">
+                  <div class="block-seller-favourites__body">
+                    <div class="block-seller-favourites__up up-block-seller-favourites">
+                      <div class="up-block-seller-favourites__body">
+                        <div class="up-block-seller-favourites__img"><img src="img/trash/1.jpg" alt=""></div>
+                      </div>
+                      <div class="up-block-seller-favourites__checkbox">
+                        <input id="c_3" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+                               name="form[]">
+                        <label for="c_3" class="checkbox__label"><span class="checkbox__text"></span></label>
+                      </div>
+                    </div>
+                    <div class="center-block-seller-favourites">
+                      <div class="center-block-seller-favourites__body">
+                        <table class="center-block-seller-favourites__table">
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Имя:</td>
+                            <td class="center-block-seller-favourites__value">ASM ANNA</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Лет на рынке:</td>
+                            <td class="center-block-seller-favourites__value">12</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Лет на сайте:</td>
+                            <td class="center-block-seller-favourites__value">10</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Магазин:</td>
+                            <td class="center-block-seller-favourites__value">Название</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Находится:</td>
+                            <td class="center-block-seller-favourites__value">Китай</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Оценка доставки:</td>
+                            <td class="center-block-seller-favourites__value">4.9</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Оценка товаров:</td>
+                            <td class="center-block-seller-favourites__value">4.7</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Оценка сервиса:</td>
+                            <td class="center-block-seller-favourites__value">4.4</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Оценка возвратов:</td>
+                            <td class="center-block-seller-favourites__value">4.4</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Общий рейтинг:</td>
+                            <td class="center-block-seller-favourites__value">4.8</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Оценка отзывов:</td>
+                            <td class="center-block-seller-favourites__value">10568</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Всего отзывов:</td>
+                            <td class="center-block-seller-favourites__value">10568</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Положительные
+                                                                             отзывы:
+                            </td>
+                            <td class="center-block-seller-favourites__value">10425</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Рейтинг
+                                                                             по продажам:
+                            </td>
+                            <td data-ratingFavourite class="center-block-seller-favourites__value">4</td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="bottom-block-seller-favourites">
+                      <div class="bottom-block-seller-favourites__body">
+                        <button type="button" data-deleteSeller class="bottom-block-seller-favourites__btn _whiteBtn">
+                          <span>
+<svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.11967 13.5218C9.36142 13.5218 9.55721 13.326 9.55721 13.0843V5.64262C9.55721 5.40086 9.36142 5.20508 9.11967 5.20508C8.87791 5.20508 8.68213 5.40086 8.68213 5.64262V13.0843C8.68213 13.326 8.87791 13.5218 9.11967 13.5218Z" fill="#80A4DE"/>
+<path d="M6.63896 13.5218C6.88071 13.5218 7.07649 13.326 7.07649 13.0843V5.64262C7.07649 5.40086 6.88071 5.20508 6.63896 5.20508C6.3972 5.20508 6.20142 5.40086 6.20142 5.64262V13.0843C6.20142 13.326 6.3972 13.5218 6.63896 13.5218Z" fill="#80A4DE"/>
+<path d="M4.15849 13.5218C4.40024 13.5218 4.59603 13.326 4.59603 13.0843V5.64262C4.59603 5.40086 4.40024 5.20508 4.15849 5.20508C3.91673 5.20508 3.72095 5.40086 3.72095 5.64262V13.0843C3.72095 13.326 3.9165 13.5218 4.15849 13.5218Z" fill="#80A4DE"/>
+<path d="M7.87944 0.242188H5.39889C4.47387 0.242188 3.72084 0.93945 3.72084 1.79586V2.72228H0.437539C0.195784 2.72228 0 2.91806 0 3.15982C0 3.40157 0.195784 3.59736 0.437539 3.59736H1.24051V14.3223C1.24051 15.2478 1.99308 16.0006 2.9181 16.0006H10.3598C11.2853 16.0006 12.0381 15.2478 12.0381 14.3223V3.59736H12.8406C13.0823 3.59736 13.2781 3.40157 13.2781 3.15982C13.2781 2.91806 13.0823 2.72228 12.8406 2.72228H9.55726V1.79586C9.55726 0.93945 8.80446 0.242188 7.87944 0.242188ZM4.59615 1.79586C4.59615 1.42833 4.96368 1.11727 5.39912 1.11727H7.87944C8.31488 1.11727 8.68242 1.42833 8.68242 1.79586V2.72228H4.59615V1.79586ZM11.163 14.3223C11.163 14.765 10.8024 15.1255 10.3598 15.1255H2.9181C2.47542 15.1255 2.11559 14.765 2.11559 14.3223V3.59736H11.163V14.3223Z" fill="#80A4DE"/>
+</svg>
+
+
+                          </span>
+                          Удалить продавца
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="seller-favourites__block block-seller-favourites">
+                  <div class="block-seller-favourites__body">
+                    <div class="block-seller-favourites__up up-block-seller-favourites">
+                      <div class="up-block-seller-favourites__body">
+                        <div class="up-block-seller-favourites__img"><img src="img/trash/1.jpg" alt=""></div>
+                      </div>
+                      <div class="up-block-seller-favourites__checkbox">
+                        <input id="c_4" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+                               name="form[]">
+                        <label for="c_4" class="checkbox__label"><span class="checkbox__text"></span></label>
+                      </div>
+                    </div>
+                    <div class="center-block-seller-favourites">
+                      <div class="center-block-seller-favourites__body">
+                        <table class="center-block-seller-favourites__table">
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Имя:</td>
+                            <td class="center-block-seller-favourites__value">ASM ANNA</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Лет на рынке:</td>
+                            <td class="center-block-seller-favourites__value">12</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Лет на сайте:</td>
+                            <td class="center-block-seller-favourites__value">10</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Магазин:</td>
+                            <td class="center-block-seller-favourites__value">Название</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Находится:</td>
+                            <td class="center-block-seller-favourites__value">Китай</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Оценка доставки:</td>
+                            <td class="center-block-seller-favourites__value">4.9</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Оценка товаров:</td>
+                            <td class="center-block-seller-favourites__value">4.7</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Оценка сервиса:</td>
+                            <td class="center-block-seller-favourites__value">4.4</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Оценка возвратов:</td>
+                            <td class="center-block-seller-favourites__value">4.4</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Общий рейтинг:</td>
+                            <td class="center-block-seller-favourites__value">4.8</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Оценка отзывов:</td>
+                            <td class="center-block-seller-favourites__value">10568</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Всего отзывов:</td>
+                            <td class="center-block-seller-favourites__value">10568</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Положительные
+                                                                             отзывы:
+                            </td>
+                            <td class="center-block-seller-favourites__value">10425</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Рейтинг
+                                                                             по продажам:
+                            </td>
+                            <td data-ratingFavourite class="center-block-seller-favourites__value">3</td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="bottom-block-seller-favourites">
+                      <div class="bottom-block-seller-favourites__body">
+                        <button type="button" data-deleteSeller class="bottom-block-seller-favourites__btn _whiteBtn">
+                          <span>
+<svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.11967 13.5218C9.36142 13.5218 9.55721 13.326 9.55721 13.0843V5.64262C9.55721 5.40086 9.36142 5.20508 9.11967 5.20508C8.87791 5.20508 8.68213 5.40086 8.68213 5.64262V13.0843C8.68213 13.326 8.87791 13.5218 9.11967 13.5218Z" fill="#80A4DE"/>
+<path d="M6.63896 13.5218C6.88071 13.5218 7.07649 13.326 7.07649 13.0843V5.64262C7.07649 5.40086 6.88071 5.20508 6.63896 5.20508C6.3972 5.20508 6.20142 5.40086 6.20142 5.64262V13.0843C6.20142 13.326 6.3972 13.5218 6.63896 13.5218Z" fill="#80A4DE"/>
+<path d="M4.15849 13.5218C4.40024 13.5218 4.59603 13.326 4.59603 13.0843V5.64262C4.59603 5.40086 4.40024 5.20508 4.15849 5.20508C3.91673 5.20508 3.72095 5.40086 3.72095 5.64262V13.0843C3.72095 13.326 3.9165 13.5218 4.15849 13.5218Z" fill="#80A4DE"/>
+<path d="M7.87944 0.242188H5.39889C4.47387 0.242188 3.72084 0.93945 3.72084 1.79586V2.72228H0.437539C0.195784 2.72228 0 2.91806 0 3.15982C0 3.40157 0.195784 3.59736 0.437539 3.59736H1.24051V14.3223C1.24051 15.2478 1.99308 16.0006 2.9181 16.0006H10.3598C11.2853 16.0006 12.0381 15.2478 12.0381 14.3223V3.59736H12.8406C13.0823 3.59736 13.2781 3.40157 13.2781 3.15982C13.2781 2.91806 13.0823 2.72228 12.8406 2.72228H9.55726V1.79586C9.55726 0.93945 8.80446 0.242188 7.87944 0.242188ZM4.59615 1.79586C4.59615 1.42833 4.96368 1.11727 5.39912 1.11727H7.87944C8.31488 1.11727 8.68242 1.42833 8.68242 1.79586V2.72228H4.59615V1.79586ZM11.163 14.3223C11.163 14.765 10.8024 15.1255 10.3598 15.1255H2.9181C2.47542 15.1255 2.11559 14.765 2.11559 14.3223V3.59736H11.163V14.3223Z" fill="#80A4DE"/>
+</svg>
+
+
+                          </span>
+                          Удалить продавца
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="seller-favourites__block block-seller-favourites">
+                  <div class="block-seller-favourites__body">
+                    <div class="block-seller-favourites__up up-block-seller-favourites">
+                      <div class="up-block-seller-favourites__body">
+                        <div class="up-block-seller-favourites__img"><img src="img/trash/1.jpg" alt=""></div>
+                      </div>
+                      <div class="up-block-seller-favourites__checkbox">
+                        <input id="c_2" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+                               name="form[]">
+                        <label for="c_2" class="checkbox__label"><span class="checkbox__text"></span></label>
+                      </div>
+                    </div>
+                    <div class="center-block-seller-favourites">
+                      <div class="center-block-seller-favourites__body">
+                        <table class="center-block-seller-favourites__table">
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Имя:</td>
+                            <td class="center-block-seller-favourites__value">ASM ANNA</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Лет на рынке:</td>
+                            <td class="center-block-seller-favourites__value">12</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Лет на сайте:</td>
+                            <td class="center-block-seller-favourites__value">10</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Магазин:</td>
+                            <td class="center-block-seller-favourites__value">Название</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Находится:</td>
+                            <td class="center-block-seller-favourites__value">Китай</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Оценка доставки:</td>
+                            <td class="center-block-seller-favourites__value">4.9</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Оценка товаров:</td>
+                            <td class="center-block-seller-favourites__value">4.7</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Оценка сервиса:</td>
+                            <td class="center-block-seller-favourites__value">4.4</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Оценка возвратов:</td>
+                            <td class="center-block-seller-favourites__value">4.4</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Общий рейтинг:</td>
+                            <td class="center-block-seller-favourites__value">4.8</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Оценка отзывов:</td>
+                            <td class="center-block-seller-favourites__value">10568</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Всего отзывов:</td>
+                            <td class="center-block-seller-favourites__value">10568</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Положительные
+                                                                             отзывы:
+                            </td>
+                            <td class="center-block-seller-favourites__value">10425</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Рейтинг
+                                                                             по продажам:
+                            </td>
+                            <td data-ratingFavourite class="center-block-seller-favourites__value _diamond">4</td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="bottom-block-seller-favourites">
+                      <div class="bottom-block-seller-favourites__body">
+                        <button type="button" data-deleteSeller class="bottom-block-seller-favourites__btn _whiteBtn">
+                          <span>
+<svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.11967 13.5218C9.36142 13.5218 9.55721 13.326 9.55721 13.0843V5.64262C9.55721 5.40086 9.36142 5.20508 9.11967 5.20508C8.87791 5.20508 8.68213 5.40086 8.68213 5.64262V13.0843C8.68213 13.326 8.87791 13.5218 9.11967 13.5218Z" fill="#80A4DE"/>
+<path d="M6.63896 13.5218C6.88071 13.5218 7.07649 13.326 7.07649 13.0843V5.64262C7.07649 5.40086 6.88071 5.20508 6.63896 5.20508C6.3972 5.20508 6.20142 5.40086 6.20142 5.64262V13.0843C6.20142 13.326 6.3972 13.5218 6.63896 13.5218Z" fill="#80A4DE"/>
+<path d="M4.15849 13.5218C4.40024 13.5218 4.59603 13.326 4.59603 13.0843V5.64262C4.59603 5.40086 4.40024 5.20508 4.15849 5.20508C3.91673 5.20508 3.72095 5.40086 3.72095 5.64262V13.0843C3.72095 13.326 3.9165 13.5218 4.15849 13.5218Z" fill="#80A4DE"/>
+<path d="M7.87944 0.242188H5.39889C4.47387 0.242188 3.72084 0.93945 3.72084 1.79586V2.72228H0.437539C0.195784 2.72228 0 2.91806 0 3.15982C0 3.40157 0.195784 3.59736 0.437539 3.59736H1.24051V14.3223C1.24051 15.2478 1.99308 16.0006 2.9181 16.0006H10.3598C11.2853 16.0006 12.0381 15.2478 12.0381 14.3223V3.59736H12.8406C13.0823 3.59736 13.2781 3.40157 13.2781 3.15982C13.2781 2.91806 13.0823 2.72228 12.8406 2.72228H9.55726V1.79586C9.55726 0.93945 8.80446 0.242188 7.87944 0.242188ZM4.59615 1.79586C4.59615 1.42833 4.96368 1.11727 5.39912 1.11727H7.87944C8.31488 1.11727 8.68242 1.42833 8.68242 1.79586V2.72228H4.59615V1.79586ZM11.163 14.3223C11.163 14.765 10.8024 15.1255 10.3598 15.1255H2.9181C2.47542 15.1255 2.11559 14.765 2.11559 14.3223V3.59736H11.163V14.3223Z" fill="#80A4DE"/>
+</svg>
+
+
+                          </span>
+                          Удалить продавца
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="seller-favourites__block block-seller-favourites">
+                  <div class="block-seller-favourites__body">
+                    <div class="block-seller-favourites__up up-block-seller-favourites">
+                      <div class="up-block-seller-favourites__body">
+                        <div class="up-block-seller-favourites__img"><img src="img/trash/1.jpg" alt=""></div>
+                      </div>
+                      <div class="up-block-seller-favourites__checkbox">
+                        <input id="c_5" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+                               name="form[]">
+                        <label for="c_5" class="checkbox__label"><span class="checkbox__text"></span></label>
+                      </div>
+                    </div>
+                    <div class="center-block-seller-favourites">
+                      <div class="center-block-seller-favourites__body">
+                        <table class="center-block-seller-favourites__table">
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Имя:</td>
+                            <td class="center-block-seller-favourites__value">ASM ANNA</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Лет на рынке:</td>
+                            <td class="center-block-seller-favourites__value">12</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Лет на сайте:</td>
+                            <td class="center-block-seller-favourites__value">10</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Магазин:</td>
+                            <td class="center-block-seller-favourites__value">Название</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Находится:</td>
+                            <td class="center-block-seller-favourites__value">Китай</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Оценка доставки:</td>
+                            <td class="center-block-seller-favourites__value">4.9</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Оценка товаров:</td>
+                            <td class="center-block-seller-favourites__value">4.7</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Оценка сервиса:</td>
+                            <td class="center-block-seller-favourites__value">4.4</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Оценка возвратов:</td>
+                            <td class="center-block-seller-favourites__value">4.4</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Общий рейтинг:</td>
+                            <td class="center-block-seller-favourites__value">4.8</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Оценка отзывов:</td>
+                            <td class="center-block-seller-favourites__value">10568</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Всего отзывов:</td>
+                            <td class="center-block-seller-favourites__value">10568</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Положительные
+                                                                             отзывы:
+                            </td>
+                            <td class="center-block-seller-favourites__value">10425</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Рейтинг
+                                                                             по продажам:
+                            </td>
+                            <td data-ratingFavourite class="center-block-seller-favourites__value">5</td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="bottom-block-seller-favourites">
+                      <div class="bottom-block-seller-favourites__body">
+                        <button type="button" data-deleteSeller class="bottom-block-seller-favourites__btn _whiteBtn">
+                          <span>
+<svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.11967 13.5218C9.36142 13.5218 9.55721 13.326 9.55721 13.0843V5.64262C9.55721 5.40086 9.36142 5.20508 9.11967 5.20508C8.87791 5.20508 8.68213 5.40086 8.68213 5.64262V13.0843C8.68213 13.326 8.87791 13.5218 9.11967 13.5218Z" fill="#80A4DE"/>
+<path d="M6.63896 13.5218C6.88071 13.5218 7.07649 13.326 7.07649 13.0843V5.64262C7.07649 5.40086 6.88071 5.20508 6.63896 5.20508C6.3972 5.20508 6.20142 5.40086 6.20142 5.64262V13.0843C6.20142 13.326 6.3972 13.5218 6.63896 13.5218Z" fill="#80A4DE"/>
+<path d="M4.15849 13.5218C4.40024 13.5218 4.59603 13.326 4.59603 13.0843V5.64262C4.59603 5.40086 4.40024 5.20508 4.15849 5.20508C3.91673 5.20508 3.72095 5.40086 3.72095 5.64262V13.0843C3.72095 13.326 3.9165 13.5218 4.15849 13.5218Z" fill="#80A4DE"/>
+<path d="M7.87944 0.242188H5.39889C4.47387 0.242188 3.72084 0.93945 3.72084 1.79586V2.72228H0.437539C0.195784 2.72228 0 2.91806 0 3.15982C0 3.40157 0.195784 3.59736 0.437539 3.59736H1.24051V14.3223C1.24051 15.2478 1.99308 16.0006 2.9181 16.0006H10.3598C11.2853 16.0006 12.0381 15.2478 12.0381 14.3223V3.59736H12.8406C13.0823 3.59736 13.2781 3.40157 13.2781 3.15982C13.2781 2.91806 13.0823 2.72228 12.8406 2.72228H9.55726V1.79586C9.55726 0.93945 8.80446 0.242188 7.87944 0.242188ZM4.59615 1.79586C4.59615 1.42833 4.96368 1.11727 5.39912 1.11727H7.87944C8.31488 1.11727 8.68242 1.42833 8.68242 1.79586V2.72228H4.59615V1.79586ZM11.163 14.3223C11.163 14.765 10.8024 15.1255 10.3598 15.1255H2.9181C2.47542 15.1255 2.11559 14.765 2.11559 14.3223V3.59736H11.163V14.3223Z" fill="#80A4DE"/>
+</svg>
+
+
+                          </span>
+                          Удалить продавца
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="seller-favourites__block block-seller-favourites">
+                  <div class="block-seller-favourites__body">
+                    <div class="block-seller-favourites__up up-block-seller-favourites">
+                      <div class="up-block-seller-favourites__body">
+                        <div class="up-block-seller-favourites__img"><img src="img/trash/1.jpg" alt=""></div>
+                      </div>
+                      <div class="up-block-seller-favourites__checkbox">
+                        <input id="c_7" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+                               name="form[]">
+                        <label for="c_7" class="checkbox__label"><span class="checkbox__text"></span></label>
+                      </div>
+                    </div>
+                    <div class="center-block-seller-favourites">
+                      <div class="center-block-seller-favourites__body">
+                        <table class="center-block-seller-favourites__table">
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Имя:</td>
+                            <td class="center-block-seller-favourites__value">ASM ANNA</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Лет на рынке:</td>
+                            <td class="center-block-seller-favourites__value">12</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Лет на сайте:</td>
+                            <td class="center-block-seller-favourites__value">10</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Магазин:</td>
+                            <td class="center-block-seller-favourites__value">Название</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Находится:</td>
+                            <td class="center-block-seller-favourites__value">Китай</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Оценка доставки:</td>
+                            <td class="center-block-seller-favourites__value">4.9</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Оценка товаров:</td>
+                            <td class="center-block-seller-favourites__value">4.7</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Оценка сервиса:</td>
+                            <td class="center-block-seller-favourites__value">4.4</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Оценка возвратов:</td>
+                            <td class="center-block-seller-favourites__value">4.4</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Общий рейтинг:</td>
+                            <td class="center-block-seller-favourites__value">4.8</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Оценка отзывов:</td>
+                            <td class="center-block-seller-favourites__value">10568</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Всего отзывов:</td>
+                            <td class="center-block-seller-favourites__value">10568</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Положительные
+                                                                             отзывы:
+                            </td>
+                            <td class="center-block-seller-favourites__value">10425</td>
+                          </tr>
+                          <tr>
+                            <td class="center-block-seller-favourites__name">Рейтинг
+                                                                             по продажам:
+                            </td>
+                            <td data-ratingFavourite class="center-block-seller-favourites__value">4</td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="bottom-block-seller-favourites">
+                      <div class="bottom-block-seller-favourites__body">
+                        <button type="button" data-deleteSeller class="bottom-block-seller-favourites__btn _whiteBtn">
+                          <span>
+<svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.11967 13.5218C9.36142 13.5218 9.55721 13.326 9.55721 13.0843V5.64262C9.55721 5.40086 9.36142 5.20508 9.11967 5.20508C8.87791 5.20508 8.68213 5.40086 8.68213 5.64262V13.0843C8.68213 13.326 8.87791 13.5218 9.11967 13.5218Z" fill="#80A4DE"/>
+<path d="M6.63896 13.5218C6.88071 13.5218 7.07649 13.326 7.07649 13.0843V5.64262C7.07649 5.40086 6.88071 5.20508 6.63896 5.20508C6.3972 5.20508 6.20142 5.40086 6.20142 5.64262V13.0843C6.20142 13.326 6.3972 13.5218 6.63896 13.5218Z" fill="#80A4DE"/>
+<path d="M4.15849 13.5218C4.40024 13.5218 4.59603 13.326 4.59603 13.0843V5.64262C4.59603 5.40086 4.40024 5.20508 4.15849 5.20508C3.91673 5.20508 3.72095 5.40086 3.72095 5.64262V13.0843C3.72095 13.326 3.9165 13.5218 4.15849 13.5218Z" fill="#80A4DE"/>
+<path d="M7.87944 0.242188H5.39889C4.47387 0.242188 3.72084 0.93945 3.72084 1.79586V2.72228H0.437539C0.195784 2.72228 0 2.91806 0 3.15982C0 3.40157 0.195784 3.59736 0.437539 3.59736H1.24051V14.3223C1.24051 15.2478 1.99308 16.0006 2.9181 16.0006H10.3598C11.2853 16.0006 12.0381 15.2478 12.0381 14.3223V3.59736H12.8406C13.0823 3.59736 13.2781 3.40157 13.2781 3.15982C13.2781 2.91806 13.0823 2.72228 12.8406 2.72228H9.55726V1.79586C9.55726 0.93945 8.80446 0.242188 7.87944 0.242188ZM4.59615 1.79586C4.59615 1.42833 4.96368 1.11727 5.39912 1.11727H7.87944C8.31488 1.11727 8.68242 1.42833 8.68242 1.79586V2.72228H4.59615V1.79586ZM11.163 14.3223C11.163 14.765 10.8024 15.1255 10.3598 15.1255H2.9181C2.47542 15.1255 2.11559 14.765 2.11559 14.3223V3.59736H11.163V14.3223Z" fill="#80A4DE"/>
+</svg>
+
+
+                          </span>
+                          Удалить продавца
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+  @@include('html/_footer.htm',{})
+  @@include('html/_fixed.htm',{})
+</div>
+@@include('html/_confirm.htm',{})
+@@include('html/_js.htm',{})
+
+</body>
+</html>

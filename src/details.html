@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 @@include('html/_head.htm',{
-"title":"Оформление заказа"
+"title":"Реквизиты"
 })
 <body>
 <div class="wrapper">
@@ -48,7 +48,7 @@
         <div class="header__center center-header">
           <div class="center-header__body">
             <div class="center-header__block _href"><a href="" class="center-header__btn ">
-              <img src="img/icons/header/login.svg" alt="login" class="center-header__img">Вход/Регистрация</a>
+              <img src="img/icons/header/login.svg" alt="login" class="center-header__img">Вход/Регестрация</a>
             </div>
             <span class="line"></span>
             <div class="center-header__block _href"><a href="" class="center-header__btn ">
@@ -72,10 +72,10 @@
           <div class="bottom-header__body">
             <ul class="bottom-header__breadcrumb breadcrumb">
               <li><a class="breadcrumb__link _href" href="#">Главная</a></li>
-              <li class=""><a class="breadcrumb__link" href=""></a>Корзина</li>
-              <li class=""><a class="breadcrumb__link" href=""></a>Оформление заказа</li>
-              <li class=""><a class="breadcrumb__link" href=""></a>Оплата</li>
-              <li class="_active"><a class="breadcrumb__link" href=""></a>Подтверждение</li>
+              <li class=""><a class="breadcrumb__link" href="">Пользователю</a></li>
+              <li class=""><a class="breadcrumb__link" href="">Помощь, поддержка</a></li>
+              <li class=""><a class="breadcrumb__link" href="">Служба поддержки</a></li>
+              <li class="_active"><a class="breadcrumb__link" href=""></a>Реквизиты ООО «Общепитсервис»</li>
             </ul>
           </div>
         </div>
@@ -84,61 +84,37 @@
   </header>
   <main class="page">
 
-    <div class="confirmPage">
-      <div class="confirmPage__container">
-        <ul class="trash__nav nav-trash">
-          <li class="nav-trash__item"><a href="/trash.html" class="nav-trash__link">Корзина</a></li>
-          <li class="nav-trash__item"><a href="/order.html" class="nav-trash__link">Оформление заказа</a></li>
-          <li class="nav-trash__item"><a href="/paymant.html" class="nav-trash__link">Оплата</a></li>
-          <li class="nav-trash__item _active"><a href="/agree.html" class="nav-trash__link">Подтверждение</a></li>
-        </ul>
-        <div class="confirmPage__body">
-          <div class="left-confirmPage">
-            <div class="confirmPage__info">Заказ №15656212 от 03.12.2021</div>
-            <div class="left-confirmPage__state state-left-confirmPage">
-              <div class="state-left-confirmPage__name">Состояние заказа:</div>
-              <div class="state-left-confirmPage__value">Оплачено</div>
-            </div>
-            <div class="left-confirmPage__state state-left-confirmPage">
-              <div class="state-left-confirmPage__name">Состояние товара:</div>
-              <div class="state-left-confirmPage__value">Оплачено</div>
-            </div>
-            <p class="left-confirmPage__sum">Сумма заказа: 3 200 000 ₽</p>
-            <div class="left-confirmPage__pay pay-left-confirmPage">
-              <div class="pay-left-confirmPage__name">Уже оплачено:</div>
-              <div class="pay-left-confirmPage__value">0 ₽ (на Вашем счете)</div>
-            </div>
-            <div class="left-confirmPage__pay pay-left-confirmPage">
-              <div class="pay-left-confirmPage__name">К оплате:</div>
-              <div class="pay-left-confirmPage__value">0 ₽ (пополните Ваш счет)</div>
-            </div>
+    <div class="aboutCompany">
+      <div class="aboutCompany__container">
+        <h3 class="aboutCompany__title">Реквизиты ООО «Общепитсервис»</h3>
+        <div class="aboutCompany__body">
+          <div class="aboutCompany__text"> Название: Общество с ограниченной ответственностью «Общепитсервис»</div>
+          <div class="aboutCompany__text"> Юридический адрес: 690074, Приморский край, г. Владивосток, ул. Карьерная,
+                                           дом 20А, офис 3
           </div>
-          <div class="right-confirmPage">
-            <div class="right-confirmPage__message">Оплата успешно произведена</div>
+          <div class="aboutCompany__text"> Почтовый адрес: 690048, Приморский край, г. Владивосток, ул. Карбышева, дом
+                                           4, офис 201
           </div>
-
+          <div class="aboutCompany__text"> ОГРН 1092538007286</div>
+          <div class="aboutCompany__text"> ИНН 2538132618</div>
+          <div class="aboutCompany__text"> КПП 253801001</div>
+          <div class="aboutCompany__text"> ОКПО 62320488</div>
+          <div class="aboutCompany__text"> ОКАТО 05401369000</div>
+          <div class="aboutCompany__text"> ОКТМО 05701000</div>
+          <div class="aboutCompany__text"> ОКОГУ 49013</div>
+          <div class="aboutCompany__text"> ОКФС 16</div>
+          <div class="aboutCompany__text"> ОКОПФ 65</div>
+          <div class="aboutCompany__text"> ОКВЭД 51.4</div>
+          <div class="aboutCompany__text"> Р/Сч 40702810500090000462</div>
+          <div class="aboutCompany__text"> В ПАО «Дальневосточный банк» г. Владивосток</div>
+          <div class="aboutCompany__text"> Кор/Сч 30101810900000000705</div>
+          <div class="aboutCompany__text"> В ГРКЦ ГУ Банка России по Приморскому краю г.Владивосток;</div>
+          <div class="aboutCompany__text"> БИК 040507705</div>
         </div>
-        <div class="confirmPage__message message-confirmPage">
-          <div class="message-confirmPage__title">Поле сообщения для пользователя</div>
-          <textarea autocomplete="off" name="form[]" placeholder="Текст сообщения оператора (136 символов)"
-                    maxlength="136" class="message-confirmPage__textare input"></textarea>
-        </div>
-        <div class="confirmPage__message message-confirmPage">
-          <div class="message-confirmPage__title">Поля сообщения для оператора сайта</div>
-          <textarea autocomplete="off" name="form[]" placeholder="Текст сообщения пользователя (136 символов)"
-                    maxlength="136" class="message-confirmPage__textare input"></textarea>
-        </div>
-        <div class="confirmPage__nav nav-confirmPage">
-          <a href="payment.html" class="nav-confirmPage__btn _whiteBtn">Пополнить/оплатить</a>
-          <a href="" class="nav-confirmPage__btn _whiteBtn">Финансы</a>
-          <a href="" class="nav-confirmPage__btn _whiteBtn">Заказы</a>
-          <a href="" class="nav-confirmPage__btn _whiteBtn">Личный кабинет</a>
-          <a href="index.html" class="nav-confirmPage__btn _whiteBtn">Каталог</a>
-          <a href="" class="nav-confirmPage__btn _whiteBtn">Избранное</a>
-        </div>
+        @@include('html/_printBlock.htm',{})
       </div>
-    </div>
 
+    </div>
 
   </main>
   @@include('html/_footer.htm',{})
@@ -146,6 +122,5 @@
 
 </div>
 @@include('html/_js.htm',{})
-
 </body>
 </html>

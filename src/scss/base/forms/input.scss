@@ -19,6 +19,7 @@ textarea {
 	&._focus {
 	}
 	&._error {
+		border: 1px solid rgba(224, 99, 99, 0.98);
 	}
 }
 textarea.input {

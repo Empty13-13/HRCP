@@ -1,0 +1,96 @@
+.contactsPage {
+  margin-top: 30px;
+  min-height: calc(100vh - 198px - 163px);
+  
+  
+  &__container {
+  }
+  
+  &__title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    color: #3567AC;
+    margin-bottom: 35px;
+  }
+  
+  &__body {
+  }
+  
+  &__logo {
+    margin-bottom: 15px;
+  }
+  
+  &__name {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #3567AC;
+    margin-bottom: 25px;
+    
+    span {
+      color: black;
+      font-weight: 500;
+    }
+  }
+}
+
+.line-contactsPage {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1.4fr;
+  gap: 60px;
+  margin-bottom: 25px;
+  
+  &__column {
+  }
+  
+  &__link {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #3567AC;
+    @media (any-hover: hover) {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.item-line-contactsPage {
+  display: grid;
+  grid-template-columns: 25px auto;
+  
+  &__img {
+    margin-right: 10px;
+    margin-top: 3px;
+  }
+  
+  &__text {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
+  }
+  
+  &__mapBtn {
+    margin-top: 10px;
+  }
+  
+  &__list {
+    
+    li {
+      a {
+        @media (any-hover: hover) {
+          &:hover {
+            .item-line-contactsPage__text {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+}

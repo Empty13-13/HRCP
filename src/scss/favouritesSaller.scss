@@ -1,0 +1,133 @@
+.seller-favourites {
+  margin-top: 35px;
+  margin-bottom: 80px;
+  
+  &__body {
+  }
+  
+  &__list {
+    counter-reset: myCounter;
+    display: grid;
+    grid-template: repeat(2,1fr) / repeat(4,1fr);
+    justify-items: stretch;
+    gap: 25px;
+    list-style: none;
+    
+    li {
+      counter-increment: myCounter;
+    }
+  }
+  
+}
+
+.block-seller-favourites {
+  border: 2px solid #FFE585;
+  border-radius: 8px;
+  
+  &__body {
+    padding: 20px 15px;
+  }
+}
+
+.up-block-seller-favourites {
+  position: relative;
+  margin-bottom: 20px;
+  
+  &:before {
+    content: counter(myCounter) ".";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: $blueColor;
+  }
+  
+  &__body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  &__img {
+    border: 1px solid $blueColor;
+    border-radius: 8px;
+    position: relative;
+    width: 174px;
+    height: 174px;
+    overflow: hidden;
+    
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: calc(100% - 5px);
+      height: calc(100% - 5px);
+      margin: 5px;
+    }
+  }
+  
+  &__checkbox {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.center-block-seller-favourites {
+  margin-bottom: 15px;
+  
+  &__body {
+  }
+  
+  &__table {
+    border-spacing: 0 5px;
+  }
+  
+  &__name {
+    display: flex;
+    max-width: 140px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: $blueColor;
+  }
+  
+  &__value {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    
+    span {
+      background: url('../img/trash/heart.png') 0 0 no-repeat;
+      width: 14px;
+      height: 12px;
+      display: inline-flex;
+      margin-right: 4px;
+      
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    
+    &._diamond {
+      span {
+        background: url('../img/trash/diamond.png') 0 0 no-repeat;
+        
+      }
+    }
+    
+  }
+}
+
+.bottom-block-seller-favourites {
+  
+  &__body {
+  }
+  
+  &__btn {
+    width: 100%;
+  }
+}

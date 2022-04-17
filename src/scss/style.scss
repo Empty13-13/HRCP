@@ -71,7 +71,7 @@ body  {
 // Ограничивающий контейнер ===========================================================================================================
 
 /*
-(i) Стили будут применяться ко 
+(i) Стили будут применяться ко
 всем классам содержащим *__container
 Например header__container, main__container и т.д.
 Снипет (HTML): cnt
@@ -133,6 +133,7 @@ body  {
 @import "base/trash";
 @import "base/confirm";
 @import "base/popup";
+@import "base/printBtn";
 
 // Подключение стилей отдельных страниц
 @import "home";
@@ -140,6 +141,15 @@ body  {
 @import "order";
 @import "payment";
 @import "confirm";
+@import "favourites";
+@import "favouritesSaller";
+@import "recently";
+@import "notices";
+@import "aboutCompany";
+@import "details";
+@import "contacts";
+@import "delivery";
+@import "calculator";
 
 // Основной блок страницы ====================================================================================================
 .page {

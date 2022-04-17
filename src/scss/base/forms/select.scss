@@ -146,6 +146,13 @@
 	}
 	&._select-checkbox {
 	}
+	
+	&._error {
+		
+		.select__body {
+			border-color: #dd4b39;
+		}
+	}
 }
 
 .select_ing-sorting-catalog__select,.select_large {

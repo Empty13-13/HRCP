@@ -1,0 +1,39 @@
+.aboutCompany {
+  margin-bottom: 80px;
+  
+  &__content {
+  }
+  
+  &__title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    color: #3567AC;
+    margin-bottom: 35px;
+    margin-top: 30px;
+  }
+  
+  &__body {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: justify;
+    color: #000000;
+  }
+  
+  &__text {
+    margin-bottom: 20px;
+    span {
+      color: #3567AC;
+      font-weight: 700;
+    }
+  }
+  
+  &__list {
+    margin-bottom: 20px;
+  }
+}
