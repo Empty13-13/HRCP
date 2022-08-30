@@ -159,13 +159,33 @@ export const selectModule = {
             const targetTag = targetElement.closest(selectModule.getSelectClass(selectModule.selectClasses.classSelectTag));
             const optionItem = document.querySelector(`.${selectModule.selectClasses.classSelect}[data-id="${targetTag.dataset.selectId}"] .select__option[data-value="${targetTag.dataset.value}"]`);
             selectModule.optionAction(selectItem, originalSelect, optionItem);
-          } else if (targetElement.closest(selectModule.getSelectClass(selectModule.selectClasses.classSelectTitle))) {
+          }
+          else if (targetElement.closest(selectModule.getSelectClass(selectModule.selectClasses.classSelectTitle))) {
             // Обработка клика на заголовок селекта
             selectModule.selectAction(selectItem);
           } else if (targetElement.closest(selectModule.getSelectClass(selectModule.selectClasses.classSelectOption))) {
             // Обработка клика на элемент селекта
             const optionItem = targetElement.closest(selectModule.getSelectClass(selectModule.selectClasses.classSelectOption));
             selectModule.optionAction(selectItem, originalSelect, optionItem);
+
+            let target = targetElement.closest(selectModule.getSelectClass(selectModule.selectClasses.classSelectOption))
+            if(originalSelect.id === "clientCountry") {
+              let sellerCountrySelect = document.querySelector('#sellerCountry');
+              const optionItem1 = selectItems[2].parentNode.querySelector(`[data-value="${target.dataset.value}"]`);
+              const selectItem1 = selectItems[2].parentNode
+              selectModule.optionAction(selectItem1, selectItems[2], optionItem1, false);
+              sellerCountrySelect.value = originalSelect.value
+            }
+            if(originalSelect.id === "sellerCountry") {
+              let sellerCountrySelect = document.querySelector('#sellerCountry');
+              const optionItem1 = selectItems[4].parentNode.querySelector(`[data-value="${target.dataset.value}"]`);
+              const selectItem1 = selectItems[4].parentNode
+              selectModule.optionAction(selectItem1, selectItems[4], optionItem1, false);
+              sellerCountrySelect.value = originalSelect.value
+              const optionItem2 = selectItems[6].parentNode.querySelector(`[data-value="${target.dataset.value}"]`);
+              const selectItem2 = selectItems[6].parentNode
+              selectModule.optionAction(selectItem2, selectItems[6], optionItem2, false);
+            }
           }
         }
       } else if (targetType === 'focusin' || targetType === 'focusout') {
@@ -178,7 +198,9 @@ export const selectModule = {
     } else {
       selectModule.selectsСlose();
     }
-  },
+
+
+    },
   // Функция закрытия всех селектов
   selectsСlose() {
     const selectActiveItems = document.querySelectorAll(`${selectModule.getSelectClass(selectModule.selectClasses.classSelect)}${selectModule.getSelectClass(selectModule.selectClasses.classSelectOpen)}`);
@@ -189,11 +211,11 @@ export const selectModule = {
     }
   },
   // Функция открытия/закрытия конкретного селекта
-  selectAction(selectItem) {
+  selectAction(selectItem, open = true) {
     selectItem.classList.remove('_error')
     const originalSelect = selectModule.getSelectElement(selectItem).originalSelect;
     const selectOptions = selectModule.getSelectElement(selectItem, selectModule.selectClasses.classSelectOptions).selectElement;
-    if (!selectOptions.classList.contains('_slide')) {
+    if (!selectOptions.classList.contains('_slide') && open) {
       selectItem.classList.toggle(selectModule.selectClasses.classSelectOpen);
       _slideToggle(selectOptions, originalSelect.dataset.speed);
     }
@@ -329,8 +351,9 @@ export const selectModule = {
     selectItemOptions.innerHTML = selectModule.getOptions(originalSelect);
   },
   // Обработчик клика на элемент списка
-  optionAction(selectItem, originalSelect, optionItem) {
-    if (originalSelect.multiple) { // Если мультивыбор
+  optionAction(selectItem, originalSelect, optionItem, open = true) {
+    if (originalSelect.multiple) {
+      // Если мультивыбор
       // Выделяем классом элемент
       optionItem.classList.toggle(selectModule.selectClasses.classSelectOptionSelected);
       // Очищаем выбранные элементы
@@ -343,7 +366,8 @@ export const selectModule = {
       selectSelectedItems.forEach(selectSelectedItems => {
         originalSelect.querySelector(`option[value="${selectSelectedItems.dataset.value}"]`).setAttribute('selected', 'selected');
       });
-    } else { // Если единичный выбор
+    } else {
+      // Если единичный выбор
       // Если не указана настройка data-show-selected, скрываем выбранный элемент
       if (!originalSelect.hasAttribute('data-show-selected')) {
         // Сначала все показать
@@ -359,7 +383,7 @@ export const selectModule = {
         }
       }
       originalSelect.value = optionItem.hasAttribute('data-value') ? optionItem.dataset.value : optionItem.textContent;
-      selectModule.selectAction(selectItem);
+      selectModule.selectAction(selectItem,open);
     }
     // Обновляем заголовок селекта
     selectModule.setSelectTitleValue(selectItem, originalSelect);

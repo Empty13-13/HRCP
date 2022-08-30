@@ -505,12 +505,13 @@ if (packingSellerCheck && packingAddCheck && insuranceCheck) {
       packingSellerCheck.disabled = true;
     } else {
       packingSellerCheck.disabled = false;
+      insuranceCheck.checked = false;
     }
   });
 
   insuranceCheck.addEventListener("click", function (e) {
-    if (!packingAddCheck.checked) {
-      insuranceCheck.checked = false
+    if (!packingSellerCheck.checked) {
+      packingAddCheck.checked = true
     }
   });
 }
@@ -1220,11 +1221,126 @@ if (notices) {
 
 // region Print block
 let printBtn = document.querySelectorAll('[data-printBtn]')
-if(printBtn.length){
+if (printBtn.length) {
   printBtn.forEach(item => {
-    item.addEventListener("click",function(e) {
+    item.addEventListener("click", function (e) {
       window.print()
     });
   })
 }
+// endregion
+
+// region Calculator
+document.addEventListener("DOMContentLoaded", function (event) {
+  if (document.querySelector('.calculatorPage')) {
+    let form = document.querySelector('form');
+    let selects = form.querySelectorAll('select')
+    // select[1] Страна доставки Заказчику*
+    // select[2] Валюта расчета стоимости страны Заказчика*
+    // select[3] Страна продавца товара*
+    // select[4] Валюта цены товара и доставки в стране продавца*
+    // select[5] Валюта цены доставки в стране продавца*
+    let productPrice = document.querySelector('#productPrice');                   //Цена товара (стоимость одной позиции)
+    let productQuantity = document.querySelector('#productQuantity');             //Количество единиц товара
+    let productWeight = document.querySelector('#productWeight');                 //Вес, кг (вес одной позиции)*
+    let productPriceCountry = document.querySelector('#productPriceCountry');     //Цена доставки товара (груза) в стране продавца
+    let currencyPriceSeller = document.querySelector('#currencyPriceSeller');
+    let inputs = [productPrice, productQuantity, productWeight, productPriceCountry]
+    let packingAdd = document.querySelector('#packingAdd')
+    let currencyData =
+      [[1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.43, 1.75, 1.75, 1.75],
+        [1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.43, 1.75, 1.75, 23],
+        [1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.43, 1.75, 1.75, 23],
+        [1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.43, 1.75, 1.75, 23],
+        [1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.43, 1.75, 1.75, 23],
+        [1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.43, 1.75, 1.75, 23],
+        [1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.43, 1.75, 1.75, 23],
+        [1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.43, 1.75, 1.75, 23],
+        [1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.43, 1.75, 1.75, 23],
+        [1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.43, 1.75, 1.75, 23]]
+
+    console.log(currencyData[+selects[2].value - 1][+selects[4].value - 1],selects);
+
+    //Ставим только цифры для инпутов
+    inputs.forEach(item => {
+      item.onkeypress = (evt) => {
+        let theEvent = evt || window.event;
+        let key = theEvent.keyCode || theEvent.which;
+        key = String.fromCharCode(key);
+        let regex = /[0-9]|\./;
+        if (!regex.test(key)) {
+          theEvent.returnValue = false;
+          if (theEvent.preventDefault) theEvent.preventDefault();
+        }
+      }
+    })
+
+    //Перехват submit
+    form.addEventListener('submit', (e) => {
+      e.preventDefault()
+
+      //Проверка на пустые поля
+      let required = false
+      inputs.forEach(item => {
+        if (!item.value) {
+          required = true
+        }
+      })
+      if (required) {
+        return false
+      }
+
+      //Стоимость всего товара в заказе
+      let activeCurrency = currencyData[+selects[1].value - 1][+selects[3].value-1]
+      let num1 = activeCurrency * +productPrice.value * +productQuantity.value //Умножение курса (Валюта цены товара и доставки в стране продавца*) на цену товара и на количество товара
+
+      //Расчет всей доставки по стране продавца
+      activeCurrency = currencyData[+selects[1].value - 1][+selects[5].value-1]
+      let allWeight = +productQuantity.value * +productWeight.value //Общий вес всего количества единиц товара
+      let deliveryPriceSeller = +productPriceCountry.value * currencyData[+selects[1].value - 1][+selects[5].value-1] //Стоимость доставки по стране продавца
+      let num2 = allWeight * deliveryPriceSeller // Стоимость доставки по стране продавца всего количества единиц товара
+
+      //Расчет стоимости товара с учетом его закупа и доставки по стране продавца (Общая цена за покупку товара с учетом доставки)
+      let num3 = num1 + num2
+
+      //Вывод стоимости в таблице «Таблица расчета стоимости» с учетом доставки
+      //из-за рубежа, таможенной очистки, оформления в страну пользователя/заказчика.
+      if (packingAdd.checked) {
+        num3 *= 1.1
+      }
+      if (selects[4].value === 'express') {
+        num3 *= 1.5
+      }
+      console.log(num3)
+      let resultNum1 = num3 * 2 * 1.3
+      console.log(resultNum1)
+      let resultNum2 = resultNum1 - num1
+
+
+      //Составление данных для таблицы
+      let factor = [1.8, 1, 2.1, 2.2, 2, 1.9]
+      let tableData = []
+      factor.forEach(c => {
+        tableData.push({
+          num2: ((resultNum1 * c).toFixed(2)),
+          num1: ((resultNum2 * c).toFixed(2))
+        })
+      })
+
+      //Запись в таблицу
+      let table = document.querySelector('table')
+      let trs = table.querySelectorAll('tr')
+      trs.forEach((item, index) => {
+        if (index > 0) {
+          let tds = item.querySelectorAll('td')
+
+          for (let j = 1; j < 3; j++) {
+            tds[1].innerHTML = tableData[index - 1].num1
+            tds[2].innerHTML = tableData[index - 1].num2
+          }
+        }
+      })
+    })
+  }
+})
 // endregion

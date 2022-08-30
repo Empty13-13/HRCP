@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 @@include('html/_head.htm',{
-"title":"Реквизиты"
+"title":"Калькулятор"
 })
 <body>
 <div class="wrapper">
@@ -90,15 +90,215 @@
           <form class="calculatorPage__form form-calculatorPage">
             <div class="form-calculatorPage__body">
               <div class="form-calculatorPage__inputGroup inputGroup-form-calculatorPage">
-                <p class="inputGroup-form-calculatorPage__title"></p>
+                <label for="clientCountry" class="inputGroup-form-calculatorPage__title"><span>Страна доставки
+                                                                                         Заказчику*</span></label>
                 <div class="inputGroup-form-calculatorPage__input">
+                  <select id="clientCountry" name="form[]" class="large">
+                    <option value="1" selected>Беларусь</option>
+                    <option value="2">Казахстан</option>
+                    <option value="3">Китай</option>
+                    <option value="4">Киргизия</option>
+                    <option value="5">Монголия</option>
+                    <option value="6">Россия</option>
+                    <option value="7">США</option>
+                    <option value="8">Украина</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-calculatorPage__inputGroup inputGroup-form-calculatorPage">
+                <label for="clientCurrency" class="inputGroup-form-calculatorPage__title"><span>Валюта расчета стоимости
+                                                                                          страны Заказчика*</span></label>
+                <div class="inputGroup-form-calculatorPage__input">
+                  <select id="clientCurrency" name="form[]" class="large">
+                    <option value="1" selected>Br (Беларусь/Рубль)</option>
+                    <option value="2">T (Казахстан/Тенге)</option>
+                    <option value="3">¥ (元) (Китай/Юань)</option>
+                    <option value="4">C (Киргизия/Сом)</option>
+                    <option value="5">₮ (Монголия/Тугрик)</option>
+                    <option value="6">₽ (Россия/Рубль)</option>
+                    <option value="7">$ (США/Доллар)</option>
+                    <option value="8">₴ (Украина/Гривна)</option>
+                    <option value="9">¥ (円) (Япония/Иена)</option>
+                    <option value="10">₩ (Ю. Корея/Вона)</option>
+                  </select>
 
                 </div>
               </div>
+              <div class="form-calculatorPage__inputGroup inputGroup-form-calculatorPage">
+                <label for="sellerCountry"
+                       class="inputGroup-form-calculatorPage__title"><span>Страна продавца товара*</span></label>
+                <div class="inputGroup-form-calculatorPage__input">
+                  <select id="sellerCountry" name="form[]" class="large">
+                    <option value="1" selected>Беларусь</option>
+                    <option value="2">Казахстан</option>
+                    <option value="3">Китай</option>
+                    <option value="4">Киргизия</option>
+                    <option value="5">Монголия</option>
+                    <option value="6">Россия</option>
+                    <option value="7">США</option>
+                    <option value="8">Украина</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-calculatorPage__inputGroup inputGroup-form-calculatorPage">
+                <label for="sellerCurrency" class="inputGroup-form-calculatorPage__title"><span>Валюта цены товара в стране продавца*</span></label>
+                <div class="inputGroup-form-calculatorPage__input">
+                  <select id="sellerCurrency" name="form[]" class="large">
+                    <option value="1" selected>Br (Беларусь/Рубль)</option>
+                    <option value="2">T (Казахстан/Тенге)</option>
+                    <option value="3">¥ (元) (Китай/Юань)</option>
+                    <option value="4">C (Киргизия/Сом)</option>
+                    <option value="5">₮ (Монголия/Тугрик)</option>
+                    <option value="6">₽ (Россия/Рубль)</option>
+                    <option value="7">$ (США/Доллар)</option>
+                    <option value="8">₴ (Украина/Гривна)</option>
+                    <option value="9">¥ (円) (Япония/Иена)</option>
+                    <option value="10">₩ (Ю. Корея/Вона)</option>
+                  </select>
+
+                </div>
+
+              </div>
+              <div class="form-calculatorPage__inputGroup inputGroup-form-calculatorPage">
+                <label for="productPrice" class="inputGroup-form-calculatorPage__title"><span>Цена товара (стоимость одной
+                                                                                        позиции)</span>
+                  <a href=".." class="inputGroup-form-calculatorPage__btn _whiteBtn">Узнать</a>
+                </label>
+                <div class="inputGroup-form-calculatorPage__input">
+                  <input data-required="" type="text" class="input" placeholder="0.00" name="productPrice"
+                         id="productPrice">
+                </div>
+              </div>
+              <div class="form-calculatorPage__inputGroup inputGroup-form-calculatorPage">
+                <label for="productQuantity" class="inputGroup-form-calculatorPage__title"><span>Количество единиц товара</span>
+                </label>
+                <div class="inputGroup-form-calculatorPage__input">
+                  <input data-required="" class="input" type="number" min="0" placeholder="0" name="productQuantity"
+                         id="productQuantity">
+                </div>
+              </div>
+              <div class="form-calculatorPage__inputGroup inputGroup-form-calculatorPage">
+                <label for="productPriceCountry" class="inputGroup-form-calculatorPage__title"><span>Цена доставки товара
+                                                                                               (груза) в стране
+                                                                                               продавца</span>
+                  <a href=".." class="inputGroup-form-calculatorPage__btn _whiteBtn">Узнать</a>
+                </label>
+                <div class="inputGroup-form-calculatorPage__input">
+                  <input data-required="" type="text" class="input" placeholder="0.000" name="productPriceCountry"
+                         id="productPriceCountry">
+                </div>
+              </div>
+              <div class="form-calculatorPage__inputGroup inputGroup-form-calculatorPage">
+                <label for="productWeight" class="inputGroup-form-calculatorPage__title"><span>Вес, кг (вес одной позиции)*</span>
+                  <a href=".." class="inputGroup-form-calculatorPage__btn _whiteBtn">Узнать</a>
+                </label>
+                <div class="inputGroup-form-calculatorPage__input">
+                  <input data-required="" type="text" class="input" placeholder="0.000" name="productWeight"
+                         id="productWeight">
+                </div>
+              </div>
+              <div class="form-calculatorPage__inputGroup inputGroup-form-calculatorPage">
+                <label for="deliveryType" class="inputGroup-form-calculatorPage__title"><span>Тип доставки из-за
+                                                                                        рубежа</span></label>
+                <div class="inputGroup-form-calculatorPage__input">
+                  <select id="deliveryType" name="form[]" class="large">
+                    <option value="standard" selected>Стандарт</option>
+                    <option value="express">Экспресс</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-calculatorPage__inputGroup inputGroup-form-calculatorPage">
+                <label for="currencyPriceSeller" class="inputGroup-form-calculatorPage__title"><span>Валюта цены доставки в стране продавца*</span></label>
+                <div class="inputGroup-form-calculatorPage__input">
+                  <select id="currencyPriceSeller" name="form[]" class="large">
+                    <option value="1" selected>Br (Беларусь/Рубль)</option>
+                    <option value="2">T (Казахстан/Тенге)</option>
+                    <option value="3">¥ (元) (Китай/Юань)</option>
+                    <option value="4">C (Киргизия/Сом)</option>
+                    <option value="5">₮ (Монголия/Тугрик)</option>
+                    <option value="6">₽ (Россия/Рубль)</option>
+                    <option value="7">$ (США/Доллар)</option>
+                    <option value="8">₴ (Украина/Гривна)</option>
+                    <option value="9">¥ (円) (Япония/Иена)</option>
+                    <option value="10">₩ (Ю. Корея/Вона)</option>
+                  </select>
+
+                </div>
+
+              </div>
+
+
             </div>
+            <div class="form-calculatorPage__checks checks-form-calculatorPage">
+              <div class="checks-form-calculatorPage__body">
+                <div class="checkbox">
+                  <input id="packingSeller" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+                         name="form[]">
+                  <label for="packingSeller" class="checkbox__label">
+                    <span class="checkbox__text">Оставить упаковку продавца*</span>
+                  </label>
+                </div>
+                <div class="checkbox">
+                  <input id="packingAdd" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+                         name="form[]">
+                  <label for="packingAdd" class="checkbox__label">
+                    <span class="checkbox__text">Требуется доп. упаковка (обрешетка)*</span>
+                  </label>
+                </div>
+                <div class="checkbox">
+                  <input id="insurance" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+                         name="form[]">
+                  <label for="insurance" class="checkbox__label">
+                    <span class="checkbox__text">Застраховать доставку*</span>
+                  </label>
+                </div>
+              </div>
+              <p class="checks-form-calculatorPage__text">*В случае если Вы оставляете упаковку продавца, добавление
+                                                          дополнительной упаковки (обрешетки) невозможно</p>
+              <p class="checks-form-calculatorPage__text">*Если Вы хотите застраховать доставку, то Вам необходимо
+                                                          добавить дополнительную упаковку</p>
+            </div>
+            <button type="submit" class="form-calculatorPage__btn _blueBtn">Рассчитать*</button>
           </form>
           <div class="calculatorPage__table table-calculatorPage">
-
+            <div class="table-calculatorPage__title">Таблица расчета стоимости</div>
+            <table>
+              <tr>
+                <th>Доставка (способ доставки из-за рубежа компаниями, службами)</th>
+                <th>Стоимость доставки*</th>
+                <th>Общая стоимость*</th>
+              </tr>
+              <tr>
+                <td>EMS</td>
+                <td>0,00</td>
+                <td>0,00</td>
+              </tr>
+              <tr>
+                <td>Карго 9118</td>
+                <td>0,00</td>
+                <td>0,00</td>
+              </tr>
+              <tr>
+                <td>China Post</td>
+                <td>0,00</td>
+                <td>0,00</td>
+              </tr>
+              <tr>
+                <td>Pony Express</td>
+                <td>0,00</td>
+                <td>0,00</td>
+              </tr>
+              <tr>
+                <td>СдЭК</td>
+                <td>0,00</td>
+                <td>0,00</td>
+              </tr>
+              <tr>
+                <td>ПЭК</td>
+                <td>0,00</td>
+                <td>0,00</td>
+              </tr>
+            </table>
           </div>
           <ul class="calculatorPage__list">
             <li>

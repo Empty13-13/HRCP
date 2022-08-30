@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 @@include('html/_head.htm',{
-"title":"Реквизиты"
+"title":"Доверенность к договору"
 })
 <body>
 <div class="wrapper">
@@ -73,9 +73,9 @@
             <ul class="bottom-header__breadcrumb breadcrumb">
               <li><a class="breadcrumb__link _href" href="#">Главная</a></li>
               <li class=""><a class="breadcrumb__link" href="">Пользователю</a></li>
-              <li class=""><a class="breadcrumb__link" href="">Помощь, поддержка</a></li>
-              <li class=""><a class="breadcrumb__link" href="">Служба поддержки</a></li>
-              <li class="_active"><a class="breadcrumb__link" href=""></a>Реквизиты ООО «Общепитсервис»</li>
+              <li class=""><a class="breadcrumb__link" href="">Правила, соглашения</a></li>
+              <li class="_active"><a class="breadcrumb__link" href=""></a>Доверенность к договору
+              </li>
             </ul>
           </div>
         </div>
@@ -84,41 +84,80 @@
   </header>
   <main class="page">
 
-    <div class="aboutCompany">
-      <div class="aboutCompany__container">
-        <h3 class="aboutCompany__title">Реквизиты исполнителя/владельца сайта ООО Общепитсервис</h3>
-        <div class="aboutCompany__body">
-          <div class="aboutCompany__text"> Название: Общество с ограниченной ответственностью «Общепитсервис»</div>
-          <div class="aboutCompany__text"> Юридический адрес: 690074, Приморский край, г. Владивосток, ул. Карьерная,
-                                           дом 20А, офис 3
+    <div class="serviceAgree">
+      <div class="serviceAgree__container">
+        <div class="serviceAgree__wrapper">
+          <h1 class="serviceAgree__title _title">Доверенность к договору</h1>
+          <div class="serviceAgree__body">
+            <div class="annex">
+              <div class="annex__body">
+                <div class="annex__table">
+                  <table>
+                    <tr>
+                      <th>П/
+                          №
+                      </th>
+                      <th>Фамилия Имя Отчество, уполномоченного лица</th>
+                      <th>Паспортные данные (№, серия, кем
+                          и когда выдан, место регистрации)
+                      </th>
+                      <th>Образец подписи,
+                          уполномоченного
+                          лица
+                      </th>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+                  </table>
+                </div>
+                <p class="annex__text">
+                  Подписи уполномоченных лиц принимать Услуги Товар (ТМЦ) от лица Заказчика заверяю:<br>
+                  _______________________________________ / _______________________________ /<br>
+                  <br>
+                  <small>(подпись, расшифровка подписи Заказчика)</small>
+                </p>
+                <p class="annex__text">
+                  В случае изменения данных (включение/исключении материально-ответственных лиц) указанных в
+                  Доверенности, Заказчик обязан сообщить об этом в письменной форме Исполнителю.
+                </p>
+                <p class="annex__text">
+                  ЗАКАЗЧИК:<br>
+                  _______________________________________ / _______________________________ /<br>
+                  <br>
+                  <small>(подпись, расшифровка подписи Заказчика)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;МП</small>
+                </p>
+              </div>
+            </div>
+            <div class="printPage">
+              <button data-printBtn class="printPage__btn _whiteBtn">Сохранить/распечатать данный документ
+              </button>
+            </div>
           </div>
-          <div class="aboutCompany__text"> Почтовый адрес: 690048, Приморский край, г. Владивосток, ул. Карбышева, дом
-                                           4, офис 201
-          </div>
-          <div class="aboutCompany__text"> ОГРН 1092538007286</div>
-          <div class="aboutCompany__text"> ИНН 2538132618</div>
-          <div class="aboutCompany__text"> КПП 253801001</div>
-          <div class="aboutCompany__text"> ОКПО 62320488</div>
-          <div class="aboutCompany__text"> ОКАТО 05401369000</div>
-          <div class="aboutCompany__text"> ОКТМО 05701000</div>
-          <div class="aboutCompany__text"> ОКОГУ 49013</div>
-          <div class="aboutCompany__text"> ОКФС 16</div>
-          <div class="aboutCompany__text"> ОКОПФ 65</div>
-          <div class="aboutCompany__text"> ОКВЭД 51.4</div>
-          <div class="aboutCompany__text"> Р/Сч 40702810500090000462</div>
-          <div class="aboutCompany__text"> В ПАО «Дальневосточный банк» г. Владивосток</div>
-          <div class="aboutCompany__text"> Кор/Сч 30101810900000000705</div>
-          <div class="aboutCompany__text"> В ГРКЦ ГУ Банка России по Приморскому краю г.Владивосток;</div>
-          <div class="aboutCompany__text"> БИК 040507705</div>
         </div>
-        @@include('html/_printBlock.htm',{})
       </div>
-
     </div>
+</div>
 
-  </main>
-  @@include('html/_footer.htm',{})
-  @@include('html/_fixed.htm',{})
+</main>
+@@include('html/_footer.htm',{})
+@@include('html/_fixed.htm',{})
 
 </div>
 @@include('html/_js.htm',{})
