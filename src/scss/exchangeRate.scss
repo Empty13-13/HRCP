@@ -1,0 +1,111 @@
+.exchangeRate {
+  margin-bottom: 150px;
+  
+  &__container {
+  }
+  
+  &__body {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  &__title {
+  }
+  
+  &__line {
+    margin-bottom: 20px;
+    display: flex;
+    width: 100%;
+    
+    &:nth-child(4) {
+      margin-bottom: 50px;
+    }
+  }
+  
+  &__column {
+    display: flex;
+    align-items: center;
+    
+    &:first-child, &:last-child {
+      flex: 0 1 530px;
+    }
+    
+    .select, .input {
+      width: 100%;
+    }
+    
+    input {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 1.2;
+      padding: 11px 15px;
+    }
+  }
+  
+  &__flipBtn {
+    width: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    @media (any-hover: hover) {
+      &:hover {
+        path {
+          stroke: black;
+        }
+        
+        svg {
+          transform: scale(1.2);
+        }
+      }
+    }
+    
+    svg {
+      transition: all 0.3s ease 0s;
+    }
+    path {
+      transition: all 0.3s ease 0s;
+    }
+  }
+  
+  &__center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  &__btn {
+  }
+  
+  &__text {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.2;
+    color: #3567AC;
+    margin-bottom: 15px;
+  }
+}
+
+.group-exchangeRate {
+  width: 90px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  &__name {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.2;
+    color: #80A4DE;
+    margin-bottom: 5px;
+  }
+  
+  &__number {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.2;
+  }
+}

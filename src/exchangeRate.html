@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Курс валют"
+})
+<body>
+<div class="wrapper">
+  <header class="header">
+    <div class="header__container">
+      <div class="header__body">
+        <div class="header__up up-header">
+          <div class="up-header__body">
+            <a href="" class="up-header__main _href">Главная </a>
+            <button type="button" class="up-header__catalog-btn"><img src="img/icons/catalog.svg"
+                                                                      alt=""><span>Каталог</span></button>
+            <div class="up-header__search search-up-header">
+              <div class="search-up-header__body">
+                <select name="" id="" class="_hidden">
+                  <option value="" class="search-up-header__option">Выбрать сток/
+                                                                    маркетплейс
+                  </option>
+                  <option value="0" class="search-up-header__option">Lorem ipsum dolor</option>
+                  <option value="1" class="search-up-header__option">2</option>
+                  <option value="2" class="search-up-header__option">3</option>
+                  <option value="3" class="search-up-header__option">4</option>
+                </select>
+                <span class="line"></span>
+                <div class="search-up-header__search">
+                  <input placeholder="Введите название товара или ссылку " type="text" class="search-up-header__input">
+                  <button class="search-up-header__photo">
+                    <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M21.4717 6.66022V17.5589C21.4717 18.88 20.4617 19.9671 19.2057 19.9671H3.266C2.02294 19.9671 1 18.8937 1 17.5589V6.66022C1 5.33916 2.00999 4.25204 3.266 4.25204H6.16648L6.74916 0.770508H15.8002L16.3181 4.25204H19.2057C20.4617 4.25204 21.4717 5.3254 21.4717 6.66022Z"
+                        stroke="black" stroke-miterlimit="10" stroke-linejoin="round"/>
+                      <path
+                        d="M11 16.6937C13.2091 16.6937 15 14.7926 15 12.4474C15 10.1023 13.2091 8.20117 11 8.20117C8.79086 8.20117 7 10.1023 7 12.4474C7 14.7926 8.79086 16.6937 11 16.6937Z"
+                        stroke="black" stroke-miterlimit="10" stroke-linejoin="round"/>
+                    </svg>
+                  </button>
+                  <button class="search-up-header__button"><img src="img/icons/search.svg" alt=""><span>Найти</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <a href="" class="up-header__man _href">Пользователю</a>
+          </div>
+        </div>
+        <div class="header__center center-header">
+          <div class="center-header__body">
+            <div class="center-header__block _href"><a href="" class="center-header__btn ">
+              <img src="img/icons/header/login.svg" alt="login" class="center-header__img">Вход/Регестрация</a>
+            </div>
+            <span class="line"></span>
+            <div class="center-header__block _href"><a href="" class="center-header__btn ">
+              <img src="img/icons/header/bell.svg" alt="bells" class="center-header__img">Уведомления</a>
+            </div>
+            <span class="line"></span>
+            <div class="center-header__block _href"><a href="" class="center-header__btn ">
+              <img src="img/icons/header/eye.svg" alt="watch" class="center-header__img">Вы недавно смотрели</a>
+            </div>
+            <span class="line"></span>
+            <div class="center-header__block _href"><a href="" class="center-header__btn ">
+              <img src="img/icons/header/favorite.svg" alt="favourite" class="center-header__img">Избранное</a>
+            </div>
+            <span class="line"></span>
+            <div class="center-header__block _href"><a href="" class="center-header__btn ">
+              <img src="img/icons/header/trash.svg" alt="trash" class="center-header__img">Корзина</a>
+            </div>
+          </div>
+        </div>
+        <div class="header__bottom bottom-header">
+          <div class="bottom-header__body">
+            <ul class="bottom-header__breadcrumb breadcrumb">
+              <li><a class="breadcrumb__link _href" href="#">Главная</a></li>
+              <li class=""><a class="breadcrumb__link" href="">Пользователю</a></li>
+              <li class=""><a class="breadcrumb__link" href="">Выбор, покупка</a></li>
+              <li class="_active"><a class="breadcrumb__link" href=""></a>Курс валют</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="page">
+
+    <div class="exchangeRate">
+      <div class="exchangeRate__container">
+        <div class="exchangeRate__body">
+          <div class="exchangeRate__title _title">Курс валют</div>
+          <div class="exchangeRate__line">
+            <div class="exchangeRate__column">
+              <select id="first" name="form[]" class="large">
+                <option value="1" selected>Br (Беларусь/Рубль)</option>
+                <option value="2">T (Казахстан/Тенге)</option>
+                <option value="3">¥ (元) (Китай/Юань)</option>
+                <option value="4">C (Киргизия/Сом)</option>
+                <option value="5">₮ (Монголия/Тугрик)</option>
+                <option value="6">₽ (Россия/Рубль)</option>
+                <option value="7">$ (США/Доллар)</option>
+                <option value="8">₴ (Украина/Гривна)</option>
+                <option value="9">¥ (円) (Япония/Иена)</option>
+                <option value="10">₩ (Ю. Корея/Вона)</option>
+              </select>
+            </div>
+            <div class="exchangeRate__column">
+              <button id="flipBtn" class="exchangeRate__flipBtn">
+                <svg width="27" height="25" viewBox="0 0 27 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20.4789 1.00391L25.957 6.48195" stroke="#3567AC" stroke-linecap="round"/>
+                  <path d="M20.4779 11.957L25.9559 6.47899" stroke="#3567AC" stroke-linecap="round"/>
+                  <path d="M1 6.5H25.5" stroke="#3567AC" stroke-linecap="round"/>
+                  <path d="M6.47804 13L0.999999 18.478" stroke="#3567AC" stroke-linecap="round"/>
+                  <path d="M6.47911 23.9531L1.00107 18.4751" stroke="#3567AC" stroke-linecap="round"/>
+                  <path d="M25.957 18.4961H1.45697" stroke="#3567AC" stroke-linecap="round"/>
+                </svg>
+              </button>
+            </div>
+            <div class="exchangeRate__column">
+              <select id="second" name="form[]" class="large">
+                <option value="1" selected>Br (Беларусь/Рубль)</option>
+                <option value="2">T (Казахстан/Тенге)</option>
+                <option value="3">¥ (元) (Китай/Юань)</option>
+                <option value="4">C (Киргизия/Сом)</option>
+                <option value="5">₮ (Монголия/Тугрик)</option>
+                <option value="6">₽ (Россия/Рубль)</option>
+                <option value="7">$ (США/Доллар)</option>
+                <option value="8">₴ (Украина/Гривна)</option>
+                <option value="9">¥ (円) (Япония/Иена)</option>
+                <option value="10">₩ (Ю. Корея/Вона)</option>
+              </select>
+            </div>
+          </div>
+          <div class="exchangeRate__line">
+            <div class="exchangeRate__column">
+              <input id="input1" data-required="" type="text" class="input" placeholder="0.00">
+            </div>
+            <div class="exchangeRate__column">
+              <div class="exchangeRate__group group-exchangeRate">
+                <div class="group-exchangeRate__name">Курс:</div>
+                <div class="group-exchangeRate__number">1 Br</div>
+              </div>
+            </div>
+            <div class="exchangeRate__column">
+              <input id="input2" data-required="" type="text" class="input" placeholder="0.00">
+            </div>
+          </div>
+          <div class="exchangeRate__line">
+            <div class="exchangeRate__center">
+              <button id="convertBtn" class="exchangeRate__btn _blueBtn">
+                Конвертировать валюту
+              </button>
+            </div>
+          </div>
+          <p class="exchangeRate__text">
+            Из чего складывается курс валют на нашем сайте и почему он отличается от курса ЦБ РФ и на бирже?
+          </p>
+          <p class="exchangeRate__text">
+            Мы берем курс фактического перевода (снятия, оплаты) валюты за рубежом в том числе в Китае на каждое утро.
+            Этот курс устанавливается на весь день и публикуется на нашем сайте. Пользователю (заказчику, клиенту)
+            считается курс на день поступления денег.
+          </p>
+          <p class="exchangeRate__text">
+            ЦБ РФ не работает с физическими лицами, как и биржа. Вы не можете купить у него валюту, также как и на бирже.
+            На бирже приобретается валюта через агента с учетом
+            его комиссии, а ЦБ РФ продает банкам валюту, насчитывая свои проценты, а те повышают еще, и уже продают по
+            более высокому курсу - вот это и есть фактический курс оплаты (перевода, снятия) в банках. Более того, он
+            всегда чуть выше, чем продажа за наличный расчет в самом банке, так как перерасчет идет на следующий день и
+            банки, подстраховываясь, ставят курс еще выше.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </main>
+  @@include('html/_footer.htm',{})
+  @@include('html/_fixed.htm',{})
+
+</div>
+@@include('html/_js.htm',{})
+</body>
+</html>

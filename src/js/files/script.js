@@ -1259,8 +1259,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
         [1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.43, 1.75, 1.75, 23],
         [1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.43, 1.75, 1.75, 23]]
 
-    console.log(currencyData[+selects[2].value - 1][+selects[4].value - 1],selects);
-
     //Ставим только цифры для инпутов
     inputs.forEach(item => {
       item.onkeypress = (evt) => {
@@ -1291,13 +1289,13 @@ document.addEventListener("DOMContentLoaded", function (event) {
       }
 
       //Стоимость всего товара в заказе
-      let activeCurrency = currencyData[+selects[1].value - 1][+selects[3].value-1]
+      let activeCurrency = currencyData[+selects[1].value - 1][+selects[3].value - 1]
       let num1 = activeCurrency * +productPrice.value * +productQuantity.value //Умножение курса (Валюта цены товара и доставки в стране продавца*) на цену товара и на количество товара
 
       //Расчет всей доставки по стране продавца
-      activeCurrency = currencyData[+selects[1].value - 1][+selects[5].value-1]
+      activeCurrency = currencyData[+selects[1].value - 1][+selects[5].value - 1]
       let allWeight = +productQuantity.value * +productWeight.value //Общий вес всего количества единиц товара
-      let deliveryPriceSeller = +productPriceCountry.value * currencyData[+selects[1].value - 1][+selects[5].value-1] //Стоимость доставки по стране продавца
+      let deliveryPriceSeller = +productPriceCountry.value * currencyData[+selects[1].value - 1][+selects[5].value - 1] //Стоимость доставки по стране продавца
       let num2 = allWeight * deliveryPriceSeller // Стоимость доставки по стране продавца всего количества единиц товара
 
       //Расчет стоимости товара с учетом его закупа и доставки по стране продавца (Общая цена за покупку товара с учетом доставки)
@@ -1311,9 +1309,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
       if (selects[4].value === 'express') {
         num3 *= 1.5
       }
-      console.log(num3)
       let resultNum1 = num3 * 2 * 1.3
-      console.log(resultNum1)
       let resultNum2 = resultNum1 - num1
 
 
@@ -1341,6 +1337,77 @@ document.addEventListener("DOMContentLoaded", function (event) {
         }
       })
     })
+  }
+})
+// endregion
+
+// region exchangeRate
+document.addEventListener("DOMContentLoaded", function (event) {
+  let exchangeBody = document.querySelector('.exchangeRate__body')
+  if (exchangeBody) {
+    let rateValues = [
+      [1, 11, 12, 13, 14, 15, 15, 15, 15, 15],
+      [11, 1, 12, 13, 14, 15, 15, 15, 15, 15],
+      [12, 13, 1, 13, 14, 15, 15, 15, 15, 15],
+      [13, 14, 12, 1, 14, 15, 15, 15, 15, 15],
+      [14, 15, 12, 13, 1, 15, 15, 15, 15, 15],
+      [15, 16, 12, 13, 14, 1, 15, 15, 15, 15],
+      [16, 17, 12, 13, 14, 15, 1, 15, 15, 15],
+      [17, 18, 12, 13, 14, 15, 15, 1, 15, 15],
+      [18, 19, 12, 13, 14, 15, 15, 15, 1, 15],
+      [19, 10, 12, 13, 14, 15, 15, 15, 1, 1],
+    ]
+    let rateIcons = ['Br', 'T', '¥', 'C', '₮', '₽', '$', '₴', '¥', '₩']
+    let body1 = exchangeBody.querySelector('#first').parentNode.querySelector('.select__body')
+    let body2 = exchangeBody.querySelector('#second').parentNode.querySelector('.select__body')
+    let input1 = exchangeBody.querySelector('#input1')
+    let input2 = exchangeBody.querySelector('#input2')
+    let index1 = 0
+    let index2 = 0
+    let rateDiv = exchangeBody.querySelector('.group-exchangeRate__number')
+    let convertBtn = exchangeBody.querySelector('#convertBtn')
+    let flipBtn = exchangeBody.querySelector('#flipBtn')
+
+    body1.addEventListener('DOMSubtreeModified', () => {
+      let list1 = body1.querySelectorAll('.select__option')
+      list1.forEach(item => {
+        if (item.hidden) {
+          index1 = +item.dataset.value - 1
+        }
+      })
+      updateRate()
+    })
+    body2.addEventListener('DOMSubtreeModified', () => {
+      let list2 = body2.querySelectorAll('.select__option')
+      list2.forEach(item => {
+        if (item.hidden) {
+          index2 = +item.dataset.value - 1
+        }
+      })
+      updateRate()
+    })
+
+    convertBtn.addEventListener("click", function (e) {
+      updateRate()
+    });
+    flipBtn.addEventListener("click", function (e) {
+      let all1 = body1.children
+      let all2 = body2.children
+      let i1 = input1.value
+      let i2 = input2.value
+      body2.append(all1[0], all1[1])
+      body1.append(all2[0], all2[1])
+      input1.value = i2
+      input2.value = i1
+      // updateRate()
+    });
+
+    function updateRate() {
+      rateDiv.innerHTML = rateValues[index1][index2] + " " + rateIcons[index2]
+      if (input1.value) {
+        input2.value = rateValues[index1][index2] * +input1.value
+      }
+    }
   }
 })
 // endregion
