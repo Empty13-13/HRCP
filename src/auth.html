@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Авторизация"
+})
+<body>
+<div class="wrapper">
+  <header class="header">
+    <div class="header__container">
+      <div class="header__body">
+        <div class="header__up up-header">
+          <div class="up-header__body">
+            <a href="" class="up-header__main _href">Главная </a>
+            <button type="button" class="up-header__catalog-btn"><img src="img/icons/catalog.svg"
+                                                                      alt=""><span>Каталог</span></button>
+            <div class="up-header__search search-up-header">
+              <div class="search-up-header__body">
+                <select name="" id="" class="_hidden">
+                  <option value="" class="search-up-header__option">Выбрать сток/
+                                                                    маркетплейс
+                  </option>
+                  <option value="0" class="search-up-header__option">Lorem ipsum dolor</option>
+                  <option value="1" class="search-up-header__option">2</option>
+                  <option value="2" class="search-up-header__option">3</option>
+                  <option value="3" class="search-up-header__option">4</option>
+                </select>
+                <span class="line"></span>
+                <div class="search-up-header__search">
+                  <input placeholder="Введите название товара или ссылку " type="text" class="search-up-header__input">
+                  <button class="search-up-header__photo">
+                    <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M21.4717 6.66022V17.5589C21.4717 18.88 20.4617 19.9671 19.2057 19.9671H3.266C2.02294 19.9671 1 18.8937 1 17.5589V6.66022C1 5.33916 2.00999 4.25204 3.266 4.25204H6.16648L6.74916 0.770508H15.8002L16.3181 4.25204H19.2057C20.4617 4.25204 21.4717 5.3254 21.4717 6.66022Z"
+                        stroke="black" stroke-miterlimit="10" stroke-linejoin="round"/>
+                      <path
+                        d="M11 16.6937C13.2091 16.6937 15 14.7926 15 12.4474C15 10.1023 13.2091 8.20117 11 8.20117C8.79086 8.20117 7 10.1023 7 12.4474C7 14.7926 8.79086 16.6937 11 16.6937Z"
+                        stroke="black" stroke-miterlimit="10" stroke-linejoin="round"/>
+                    </svg>
+                  </button>
+                  <button class="search-up-header__button"><img src="img/icons/search.svg" alt=""><span>Найти</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <a href="" class="up-header__man _href">Пользователю</a>
+          </div>
+        </div>
+        <div class="header__center center-header">
+          <div class="center-header__body">
+            <div class="center-header__block _href"><a href="" class="center-header__btn ">
+              <img src="img/icons/header/login.svg" alt="login" class="center-header__img">Вход/Регестрация</a>
+            </div>
+            <span class="line"></span>
+            <div class="center-header__block _href"><a href="" class="center-header__btn ">
+              <img src="img/icons/header/bell.svg" alt="bells" class="center-header__img">Уведомления</a>
+            </div>
+            <span class="line"></span>
+            <div class="center-header__block _href"><a href="" class="center-header__btn ">
+              <img src="img/icons/header/eye.svg" alt="watch" class="center-header__img">Вы недавно смотрели</a>
+            </div>
+            <span class="line"></span>
+            <div class="center-header__block _href"><a href="" class="center-header__btn ">
+              <img src="img/icons/header/favorite.svg" alt="favourite" class="center-header__img">Избранное</a>
+            </div>
+            <span class="line"></span>
+            <div class="center-header__block _href"><a href="" class="center-header__btn ">
+              <img src="img/icons/header/trash.svg" alt="trash" class="center-header__img">Корзина</a>
+            </div>
+          </div>
+        </div>
+        <div class="header__bottom bottom-header">
+          <div class="bottom-header__body">
+            <ul class="bottom-header__breadcrumb breadcrumb">
+              <li><a class="breadcrumb__link _href" href="#">Главная</a></li>
+              <li class=""><a class="breadcrumb__link" href="">Вход/Регистрация</a></li>
+              <li class=""><a class="breadcrumb__link" href="">Личный кабинет</a></li>
+              <li class="_active"><a class="breadcrumb__link" href=""></a>Авторизация</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="page">
+
+    <div class="auth">
+      <div class="auth__container">
+        <div class="auth__body">
+          <h1 class="auth__title _title">Авторизация</h1>
+          <div class="navigation-auth">
+            <div class="navigation-auth__body">
+              <div class="navigation-auth__column _active">
+                <div class="navigation-auth__title">Вход в личный кабинет</div>
+              </div>
+              <div class="navigation-auth__column">
+                <div class="navigation-auth__title">Регистрация</div>
+              </div>
+              <div class="navigation-auth__column">
+                <div class="navigation-auth__title">Восстановление пароля</div>
+              </div>
+            </div>
+          </div>
+          <form action="" class="auth__form">
+            <div class="auth__line">
+              <div class="auth__column">
+                <label for="email" class="auth__name">Email*</label>
+              </div>
+              <div class="auth__column">
+                <div class="auth__input">
+                  <input id="email" data-required="email" data-validate autocomplete="on" type="text" name="form[]" placeholder=""
+                         class="input">
+                </div>
+                <div class="auth__descriptionInput">
+                  *Необходимо вести вашу электронную почту, которую
+                  Вы указали при регистрации на данном сайте
+                </div>
+              </div>
+            </div>
+            <div class="auth__line">
+              <div class="auth__column">
+                <label for="password" class="auth__name">Пароль</label>
+              </div>
+              <div class="auth__column">
+                <div class="auth__input">
+                  <input id="password" data-required="" autocomplete="on" type="password" name="form[]" class="input">
+                  <button class="auth__viewpass">
+                    <div>
+                      <svg width="22" height="7" viewBox="0 0 22 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.5 0.5C1.33333 2.5 4.7 6.5 11.5 6.5C18.3 6.5 21 2.5 21.5 0.5" stroke="#80A4DE"
+                              stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </div>
+                    <span>
+                      <svg width="24" height="14" viewBox="0 0 24 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path
+  d="M23.0568 6.66975C22.9439 6.49631 22.8313 6.33329 22.7073 6.16545C20.3383 2.93002 16.212 0.856717 11.6039 1.01751C7.38975 1.16456 3.71114 3.14501 1.46772 6.08228C1.34381 6.24833 1.22552 6.41419 1.10741 6.58526C0.951873 6.81503 0.950372 7.10202 1.09901 7.33161C1.21194 7.50505 1.33032 7.67308 1.44852 7.83591C3.81749 11.0713 7.94386 13.1446 12.5463 12.984C16.7604 12.837 20.4447 10.8564 22.6825 7.91928C22.8064 7.75322 22.9303 7.58717 23.0428 7.41629C23.2041 7.19154 23.2055 6.89934 23.0568 6.66975ZM21.8554 7.45251C19.7837 10.1386 16.398 11.9523 12.5158 12.0878C8.27908 12.2356 4.48542 10.3385 2.2892 7.37877C2.10609 7.12952 2.11198 6.80585 2.30075 6.55927C4.37245 3.8732 7.76382 2.05929 11.6404 1.92402C15.8771 1.77618 19.6764 3.67308 21.8726 6.63282C22.0499 6.87705 22.0442 7.20593 21.8554 7.45251Z"
+  fill="#80A4DE"/>
+<path
+  d="M11.5204 3.86395C9.99597 4.09982 8.8024 5.28432 8.65915 6.7035C8.44277 8.78796 10.399 10.4782 12.6297 10.1342C14.1544 9.90356 15.3477 8.71386 15.491 7.29468C15.713 5.21002 13.7567 3.51973 11.5204 3.86395ZM11.7519 9.17339C10.7675 9.05642 9.95486 8.35423 9.76079 7.45301C9.43975 5.96655 10.7805 4.63602 12.4095 4.8244C13.3938 4.94136 14.2065 5.64356 14.4006 6.54478C14.7162 8.03665 13.3755 9.36718 11.7519 9.17339Z"
+  fill="#80A4DE"/>
+</svg>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="auth__line">
+              <div class="auth__column"></div>
+              <div class="auth__column">
+                <div class="checkbox">
+                  <input id="member" class="checkbox__input" type="checkbox" name="allEventBtn">
+                  <label for="member" class="checkbox__label">
+                    <span class="checkbox__text">Запомнить</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="auth__line">
+              <div class="auth__column"></div>
+              <div class="auth__column">
+                <button type="submit" class="auth__btn _blueBtn">Войти</button>
+              </div>
+            </div>
+          </form>
+          <div class="auth__socials socials-auth">
+            <div class="socials-auth__title">Войти через:</div>
+            <ul class="socials-auth__list">
+              <li>
+                <div class="socials-auth__img">
+                  <img src="img/socials/vk.png" alt="">
+                </div>
+              </li>
+              <li>
+                <div class="socials-auth__img">
+                  <img src="img/socials/facebook.png" alt="">
+                </div>
+              </li>
+              <li>
+                <div class="socials-auth__img">
+                  <img src="img/socials/ok.png" alt="">
+                </div>
+              </li>
+              <li>
+                <div class="socials-auth__img">
+                  <img src="img/socials/google.png" alt="">
+                </div>
+              </li>
+              <li>
+                <div class="socials-auth__img">
+                  <img src="img/socials/tumblr.png" alt="">
+                </div>
+              </li>
+              <li>
+                <div class="socials-auth__img">
+                  <img src="img/socials/apple.png" alt="">
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="auth__line">
+            <div class="auth__column _margin">
+              <div class="auth__text">Забыли пароль?</div>
+              <a href="" class="auth__btn _blueBtn">Восстановить пароль</a>
+            </div>
+            <div class="auth__column">
+              <div class="auth__text">Еще нет аккаунта?</div>
+              <a href="" class="auth__btn _blueBtn">Зарегистрироваться</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+  @@include('html/_footer.htm',{})
+  @@include('html/_fixed.htm',{})
+
+</div>
+@@include('html/_js.htm',{})
+</body>
+</html>

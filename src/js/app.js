@@ -66,7 +66,7 @@ flsForms.formSubmit(true);
 flsForms.formQuantity();
 
 /* Модуль формы "показать пароль" */
-//flsForms.formViewpass();
+flsForms.formViewpass();
 
 /* Модуль звездного рейтинга */
 flsForms.formRating();
@@ -120,7 +120,7 @@ import './libs/popup.js'
 Изменение дизайна сролбара
 Документация по работе в шаблоне: В HTML добавляем к блоку атрибут data-simplebar
 Документация плагина: https://github.com/Grsmto/simplebar/tree/master/packages/simplebar
-Сниппет(HTML): 
+Сниппет(HTML):
 */
 //import './files/scroll/simplebar.js';
 
