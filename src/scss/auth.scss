@@ -96,6 +96,7 @@
     right: 15px;
     top: 50%;
     transform: translateY(-50%);
+    cursor: pointer;
     
     div {
       display: block;
@@ -249,4 +250,29 @@
   &__btn {
     display: inline-block;
   }
+}
+
+.code-auth {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  
+  &__print {
+    padding: 20px 50px;
+    border: 1px solid #80A4DE;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 27px;
+    line-height: 1.2;
+    color: #000000;
+    margin-right: 25px;
+  }
+  
+  &__btn {
+    cursor: pointer;
+  }
+}
+
+#codeInput {
+  max-width: 160px;
 }

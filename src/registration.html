@@ -100,20 +100,20 @@
               </div>
             </div>
           </div>
-          <form action="" class="auth__form">
+          <form id="registrationForm" action="" class="auth__form">
             <div class="auth__line">
               <div class="auth__column">
-                <label for="email" class="auth__name">Email*</label>
+                <label for="email" class="auth__name">Ваш Email*</label>
               </div>
               <div class="auth__column">
                 <div class="auth__input">
-                  <input id="email" data-required="email" data-validate autocomplete="on" type="text" name="form[]" placeholder=""
+                  <input id="email" data-required="email" data-validate autocomplete="on" type="text" name="form[]"
+                         placeholder=""
                          class="input">
                 </div>
-                <!--                <div class="auth__descriptionInput">-->
-                <!--                  *Необходимо вести вашу электронную почту, которую-->
-                <!--                  Вы указали при регистрации на данном сайте-->
-                <!--                </div>-->
+                <div class="auth__descriptionInput">
+                  *Необходимо вести вашу электронную почту, которую Вам надо внести при регистрации на данном сайте
+                </div>
               </div>
             </div>
             <div class="auth__line">
@@ -123,7 +123,7 @@
               <div class="auth__column">
                 <div class="auth__input">
                   <input id="password" data-required="" autocomplete="on" type="password" name="form[]" class="input">
-                  <button class="auth__viewpass">
+                  <div class="auth__viewpass">
                     <div>
                       <svg width="22" height="7" viewBox="0 0 22 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M0.5 0.5C1.33333 2.5 4.7 6.5 11.5 6.5C18.3 6.5 21 2.5 21.5 0.5" stroke="#80A4DE"
@@ -140,7 +140,7 @@
   fill="#80A4DE"/>
 </svg>
                     </span>
-                  </button>
+                  </div>
                 </div>
                 <div class="auth__descriptionInput">
                   Длина пароля не менее 6 знаков
@@ -160,6 +160,30 @@
                   Впишите электронную почту друга, под которой
                   он зарегистрирован на данном сайте, и который пригласил
                   Вас зарегистрироваться на нашем сайте (необязательно)
+                </div>
+              </div>
+            </div>
+            <div class="auth__line">
+              <div class="auth__column">
+                <label for="codeInput" class="auth__name">Введите код*</label>
+              </div>
+              <div class="auth__column">
+                <div class="code-auth">
+                  <div class="code-auth__print"></div>
+                  <div class="code-auth__btn">
+                    <svg width="38" height="29" viewBox="0 0 38 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M26.7693 27.7139C24.71 28.5719 22.565 29.0009 20.3343 29.0009C13.1271 29.0009 6.8638 24.2819 4.71898 17.5036H0L5.83449 7.37891L11.669 17.5036H8.58024C10.5537 22.2225 15.1869 25.3973 20.3348 25.3973C22.1365 25.3973 23.7668 25.0541 25.3112 24.3678L26.7697 27.7141L26.7693 27.7139Z"
+                        fill="#3567AC"/>
+                      <path
+                        d="M10.8957 1.287C12.8692 0.429018 15.1 0 17.2452 0C24.4523 0 30.8018 4.71898 32.8605 11.4973H37.6652L31.8307 21.622L25.9962 11.4973H28.9993C27.1118 6.77835 22.4787 3.60358 17.2447 3.60358C15.5287 3.60358 13.8985 3.94682 12.2683 4.6331L10.8955 1.28684L10.8957 1.287Z"
+                        fill="#3567AC"/>
+                    </svg>
+                  </div>
+                </div>
+                <div class="auth__input">
+                  <input id="codeInput" autocomplete="off" type="text" name="form[]"
+                         class="input">
                 </div>
               </div>
             </div>
@@ -213,6 +237,11 @@
               <li>
                 <div class="socials-auth__img">
                   <img src="img/socials/apple.png" alt="">
+                </div>
+              </li>
+              <li>
+                <div class="socials-auth__img">
+                  <img src="img/socials/telegram.png" alt="">
                 </div>
               </li>
             </ul>

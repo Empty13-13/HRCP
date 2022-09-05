@@ -1346,18 +1346,19 @@ document.addEventListener("DOMContentLoaded", function (event) {
   let exchangeBody = document.querySelector('.exchangeRate__body')
   if (exchangeBody) {
     let rateValues = [
-      [1, 11, 12, 13, 14, 15, 15, 15, 15, 15],
-      [11, 1, 12, 13, 14, 15, 15, 15, 15, 15],
-      [12, 13, 1, 13, 14, 15, 15, 15, 15, 15],
-      [13, 14, 12, 1, 14, 15, 15, 15, 15, 15],
-      [14, 15, 12, 13, 1, 15, 15, 15, 15, 15],
-      [15, 16, 12, 13, 14, 1, 15, 15, 15, 15],
-      [16, 17, 12, 13, 14, 15, 1, 15, 15, 15],
-      [17, 18, 12, 13, 14, 15, 15, 1, 15, 15],
-      [18, 19, 12, 13, 14, 15, 15, 15, 1, 15],
-      [19, 10, 12, 13, 14, 15, 15, 15, 1, 1],
+      [1, 11, 12, 13, 14, 15, 15, 15, 15, 15, 22.33],
+      [11, 1, 12, 13, 14, 15, 15, 15, 15, 15, 22.33],
+      [12, 13, 1, 13, 14, 15, 15, 15, 15, 15, 22.33],
+      [13, 14, 12, 1, 14, 15, 15, 15, 15, 15, 22.33],
+      [14, 15, 12, 13, 1, 15, 15, 15, 15, 15, 22.33],
+      [15, 16, 12, 13, 14, 1, 15, 15, 15, 15, 22.33],
+      [16, 17, 12, 13, 14, 15, 1, 15, 15, 15, 22.33],
+      [17, 18, 12, 13, 14, 15, 15, 1, 15, 15, 22.33],
+      [18, 19, 12, 13, 14, 15, 15, 15, 1, 15, 22.33],
+      [19, 10, 12, 13, 14, 15, 15, 15, 1, 1, 22.33],
+      [22.33, 22.33, 22.33, 22.33, 22.33, 22.33, 22.33, 22.33, 22.33, 22.33, 22.33],
     ]
-    let rateIcons = ['Br', 'T', '¥', 'C', '₮', '₽', '$', '₴', '¥', '₩']
+    let rateIcons = ['Br', 'T', '¥', 'C', '₮', '₽', '$', '₴', '¥', '₩','€']
     let body1 = exchangeBody.querySelector('#first').parentNode.querySelector('.select__body')
     let body2 = exchangeBody.querySelector('#second').parentNode.querySelector('.select__body')
     let input1 = exchangeBody.querySelector('#input1')
@@ -1410,4 +1411,45 @@ document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 })
+// endregion
+
+// region Code
+let codePrint = document.querySelector('.code-auth__print')
+let codeInput = document.querySelector('#codeInput')
+
+if (codePrint && codeInput) {
+  let updateBtn = document.querySelector('.code-auth__btn')
+  let form = document.querySelector('#registrationForm')
+  let code = 0
+  updateCode()
+
+  updateBtn.addEventListener("click", function (e) {
+    updateCode()
+  });
+  codeInput.addEventListener('input', (e) => {
+    codeInput.classList.remove('_error')
+
+    if (codeInput.value.length >= 7 && code !== +codeInput.value) {
+      codeInput.classList.add('_error')
+    }
+  })
+  form.addEventListener('submit', (e) => {
+    if (code !== +codeInput.value) {
+      e.preventDefault()
+      codeInput.classList.add('_error')
+    }
+  })
+
+  //====================================================================================================
+  function updateCode() {
+    code = generateCode(1000000, 9999999)
+    codePrint.innerHTML = code
+    codeInput.value = ''
+  }
+
+  function generateCode(min, max) {
+    let rand = min - 0.5 + Math.random() * (max - min + 1);
+    return Math.round(rand);
+  }
+}
 // endregion
