@@ -133,7 +133,7 @@
   }
   
   &__num {
-    
+  
   }
   
   &__btn {
@@ -212,6 +212,10 @@
   flex: 0 0 273px;
   margin-right: 54px;
   overflow: hidden;
+  
+  a {
+    font-size: 14px;
+  }
   
   &__body {
   }

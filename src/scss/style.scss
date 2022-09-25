@@ -51,6 +51,7 @@ $whiteColor: white;
 
 body  {
 	color: $mainColor;
+	padding-right: 0 !important;
 	// Скролл заблокирован
 	&.lock {
 		overflow: hidden;
@@ -153,6 +154,7 @@ body  {
 @import "serviceAgreement";
 @import "exchangeRate";
 @import "auth";
+@import "information";
 
 // Основной блок страницы ====================================================================================================
 .page {

@@ -3,117 +3,145 @@
 
 // Блок со спойлерами
 .spollers {
-	display: grid;
-	gap: 15px;
+  display: grid;
+  gap: 15px;
 }
+
 // Спойлер
 .spollers__item {
-	font-size: rem(20);
-	&:not(:last-child) {
-		margin-bottom: em(30, 20);
-	}
-	&:before {
-		content: '';
-		position: absolute;
-		width: 150%;
-		height: 0.5px;
-		background: $blueColor;
-		left: -15%;
-		top: 0;
-	}
+  font-size: rem(20);
+  
+  &:not(:last-child) {
+    margin-bottom: em(30, 20);
+  }
+  
+  &:before {
+    content: '';
+    position: absolute;
+    width: 150%;
+    height: 0.5px;
+    background: $blueColor;
+    left: -15%;
+    top: 0;
+  }
 }
+
 // Заголовок спойлера
 .spollers__title {
-	width: 100%;
-	cursor: default;
-	text-align: left;
-	outline: none !important;
-	padding: rem(10) rem(10);
-	padding-right: rem(30);
-	border-radius: rem(5);
-	position: relative;
-	
-	font-weight: 500;
-	font-size: 14px;
-	line-height: 17px;
-	display: flex;
-	align-items: center;
-	
-	color: #000000;
-	._spoller-init & {
-		cursor: pointer;
-		&::before,
-		&::after {
-			content: "";
-			position: absolute;
-			right: 10px;
-			top: 50%;
-			background-color: #80A4DE;
-			height: 2px;
-			width: 7px;
-			transition: transform 0.5s ease 0s;
-		}
-		&::before {
-			transform: translate(-75%, -50%) rotate(40deg);
-		}
-		&::after {
-			transform: translate(0, -50%) rotate(-40deg);
-		}
-		&._spoller-active {
-			&::before {
-				transform: translateX(-75%) rotate(-40deg);
-			}
-			&::after {
-				transform: rotate(40deg);
-			}
-			
-			&._first{
-				background: #E9F1FF;
-			}
-		}
-		
-		
-		&._last,&._one{
-			&::before,
-			&::after {
-				content: "";
-				position: absolute;
-				right: 10px;
-				top: 50%;
-				background-color: #80A4DE;
-				height: 1px;
-				width: 10px;
-				transition: transform,opacity 0.5s ease 0s;
-			}
-			&::before {
-				transform: translate(0, -50%) rotate(0deg);
-			}
-			&::after {
-				transform: translate(0, -50%) rotate(-90deg);
-			}
-			&._spoller-active {
-				&::before {
-					transform: translate(0, -50%) rotate(0deg);
-				}
-				&::after {
-					transform: rotate(0deg);
-					opacity: 0;
-				}
-				&._first{
-					background: #E9F1FF;
-				}
-			}
-		}
-		
-	}
+  width: 100%;
+  cursor: default;
+  text-align: left;
+  outline: none !important;
+  padding: rem(10) rem(10);
+  padding-right: rem(30);
+  border-radius: rem(5);
+  position: relative;
+  
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+  
+  color: #000000;
+  
+  ._spoller-init & {
+    cursor: pointer;
+    
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      background-color: #80A4DE;
+      height: 2px;
+      width: 7px;
+      transition: transform 0.5s ease 0s;
+    }
+    
+    &::before {
+      transform: translate(-75%, -50%) rotate(40deg);
+    }
+    
+    &::after {
+      transform: translate(0, -50%) rotate(-40deg);
+    }
+    
+    &._spoller-active {
+      &::before {
+        transform: translateX(-75%) rotate(-40deg);
+      }
+      
+      &::after {
+        transform: rotate(40deg);
+      }
+      
+      background: #E9F1FF;
+      
+    }
+    
+    
+    &._last, &._one {
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        background-color: #80A4DE;
+        height: 1px;
+        width: 10px;
+        transition: transform, opacity 0.5s ease 0s;
+      }
+      
+      &::before {
+        transform: translate(0, -50%) rotate(0deg);
+      }
+      
+      &::after {
+        transform: translate(0, -50%) rotate(-90deg);
+      }
+      
+      &._spoller-active {
+        &::before {
+          transform: translate(0, -50%) rotate(0deg);
+        }
+        
+        &::after {
+          transform: rotate(0deg);
+          opacity: 0;
+        }
+        
+        &._first {
+          background: #E9F1FF;
+        }
+      }
+    }
+    
+  }
+  
+  &._none {
+    &:before, &:after {
+      content: '';
+      background: none;
+    }
+    
+  }
+  
+  &._pad {
+    padding-left: 0;
+  }
+  
 }
+
 // Контент спойлера
 .spollers__body {
-	border-radius: rem(5);
-	//border: 1px solid #eee;
-	
-	&._one{
-		padding: rem(10) rem(10);
-	}
-	
+  border-radius: rem(5);
+  //border: 1px solid #eee;
+  
+  &._one {
+    padding: rem(10) rem(10);
+  }
+  
 }
