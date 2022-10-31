@@ -1,0 +1,27 @@
+.addressesBlock {
+  
+  &__body {
+  }
+  
+  &__bottom {
+  }
+  
+  &__line {
+    margin-bottom: 35px;
+  }
+  
+  &__saveBtn {
+    margin-right: 20px;
+  }
+}
+.profile-addressesBlock {
+  margin-bottom: 25px;
+  
+  &__title {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    display: inline-block;
+  }
+}

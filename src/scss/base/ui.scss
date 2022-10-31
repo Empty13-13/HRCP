@@ -16,6 +16,10 @@
 
 ._hidden {
   display: none !important;
+  opacity: 0 !important;
+  height: 0 !important;
+  width: 0 !important;
+  pointer-events: none;
 }
 
 ._title {
@@ -157,6 +161,20 @@
 .select__input {
   padding: 0 !important;
   border: none !important;
+  color: $blackBlueColor;
+  font-size: 14px;
+  line-height: 17px;
+  
+  &::placeholder {
+    border-radius: 8px;
+    padding: 10px 17px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: $blackBlueColor;
+  }
 }
 
 #fixBtnOrder {

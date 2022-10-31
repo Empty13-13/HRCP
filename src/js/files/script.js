@@ -1,4 +1,5 @@
 // Импорт функционала ==============================================================================================================================================================================================================================================================================================================================
+
 import {_slideDown, _slideUp} from "./functions.js";
 import {gotoBlock} from "./scroll/gotoblock.js";
 import {initConfirm} from './myConfirm.js'
@@ -582,10 +583,14 @@ if (orderMain) {
     set(target, key, value) {
       target[key] = value
       if (target.isAllChecked && target.isAllTableAccept) {
-        submitBnt.disabled = false
+        if (submitBnt) {
+          submitBnt.disabled = false
+        }
         return true
       }
-      submitBnt.disabled = true
+      if (submitBnt) {
+        submitBnt.disabled = true
+      }
       return true
     },
   })
@@ -596,13 +601,13 @@ if (orderMain) {
       let acceptBtn = table.parentNode.querySelector('[data-acceptbtn]')
       let dataTable = {isOpen: true, height: table.offsetHeight}
 
-      function getSumHeightInputs() {
-        let result = 0
-        inputs.forEach(input => {
-          result = result + input.offsetHeight
-        })
-        return result
-      }
+      // function getSumHeightInputs() {
+      //   let result = 0
+      //   inputs.forEach(input => {
+      //     result = result + input.offsetHeight
+      //   })
+      //   return result
+      // }
 
       let proxyDataTable = new Proxy(dataTable, {
         get(target, key) {
@@ -613,7 +618,9 @@ if (orderMain) {
             target[key] = value
             if (value) {
               table.style.height = "auto"
-              acceptBtn.disabled = false
+              if (acceptBtn) {
+                acceptBtn.disabled = false
+              }
               proxyOrderData.isAllTableAccept = false
               return true
             }
@@ -642,27 +649,33 @@ if (orderMain) {
         inputs.forEach(input => {
           if (input.checked) {
             proxyDataTable.isOpen = false
-            acceptBtn.disabled = true;
+            if (acceptBtn) {
+              acceptBtn.disabled = true;
+            }
           }
         })
       }
 
-      acceptBtn.addEventListener("click", function (e) {
-        inputs = table.querySelectorAll('input[type=radio]')
-        let item = Array.from(inputs).find(item => item.checked)
-        if (item) {
-          let activeIndex = Array.from(inputs).indexOf(item)
-          let trs = table.querySelectorAll('tr')
-          trs[0].parentNode.insertBefore(trs[activeIndex + 1], trs[1]);
-          proxyDataTable.isOpen = false
-          e.target.disabled = true
-        }
-      });
+      if (acceptBtn) {
+        acceptBtn.addEventListener("click", function (e) {
+          inputs = table.querySelectorAll('input[type=radio]')
+          let item = Array.from(inputs).find(item => item.checked)
+          if (item) {
+            let activeIndex = Array.from(inputs).indexOf(item)
+            let trs = table.querySelectorAll('tr')
+            trs[0].parentNode.insertBefore(trs[activeIndex + 1], trs[1]);
+            proxyDataTable.isOpen = false
+            e.target.disabled = true
+          }
+        });
+      }
 
       table.isOpen = () => {
         return proxyDataTable.isOpen
       }
     })
+  } else {
+    proxyOrderData.isAllTableAccept = true
   }
 
   if (checkboxBlock) {
@@ -675,6 +688,8 @@ if (orderMain) {
         });
       })
     }
+  } else {
+    proxyOrderData.isAllChecked = true
   }
 
 
@@ -1358,7 +1373,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
       [19, 10, 12, 13, 14, 15, 15, 15, 1, 1, 22.33],
       [22.33, 22.33, 22.33, 22.33, 22.33, 22.33, 22.33, 22.33, 22.33, 22.33, 22.33],
     ]
-    let rateIcons = ['Br', 'T', '¥', 'C', '₮', '₽', '$', '₴', '¥', '₩','€']
+    let rateIcons = ['Br', 'T', '¥', 'C', '₮', '₽', '$', '₴', '¥', '₩', '€']
     let body1 = exchangeBody.querySelector('#first').parentNode.querySelector('.select__body')
     let body2 = exchangeBody.querySelector('#second').parentNode.querySelector('.select__body')
     let input1 = exchangeBody.querySelector('#input1')
@@ -1451,5 +1466,214 @@ if (codePrint && codeInput) {
     let rand = min - 0.5 + Math.random() * (max - min + 1);
     return Math.round(rand);
   }
+}
+// endregion
+
+// region userAccount
+let deleteAccountBtn = document.querySelector('#deleteAccountBtn')
+if (deleteAccountBtn) {
+  let form = deleteAccountBtn.closest('form')
+
+  deleteAccountBtn.addEventListener("click", function (e) {
+    let currentPass = document.querySelector('#currentPass')
+
+    //Проверка ошибок
+    if (!currentPass
+      || currentPass.classList.contains("_error")
+      || !currentPass.value.length > 0) {
+      alert('Сначала введите пароль')
+      return
+    }
+
+    //Если всё нормально
+    form.addEventListener('submit', (e) => {
+      e.preventDefault()
+    })
+    initConfirm(() => {
+      alert('Запись успешно удалена')
+    }, "Удалить учетную запись?")
+
+  });
+}
+
+// endregion
+
+// region data
+let deleteAllDataBtn = document.querySelector('#deleteAllDataBtn')
+if (deleteAllDataBtn) {
+  deleteAllDataBtn.addEventListener("click", function (e) {
+    initConfirm(() => {
+      alert('Все данные успешно удалены')
+    }, "Удалить данные личные/организации?")
+  });
+}
+
+let dataForm = document.querySelector('#dataForm')
+if (dataForm) {
+  dataForm.addEventListener('submit', (e) => {
+    let inputs = dataForm.querySelectorAll('input[type=text]')
+    let error = 0
+    inputs.forEach(item => {
+      if (!item.value.length > 0 && !item.classList.contains('select__input')) {
+        error++
+      }
+    })
+    if (error > 0) {
+      e.preventDefault()
+      return
+    }
+
+    initConfirm(() => {
+      alert('Данные успешно изменены/сохранены')
+    }, "Изменить/сохранить данные?")
+    e.preventDefault()
+  })
+}
+// endregion
+
+// region Adresses
+let deleteAllAdressesBtn = document.querySelector('#deleteAllAdressesBtn')
+if (deleteAllAdressesBtn) {
+  deleteAllAdressesBtn.addEventListener("click", function (e) {
+    initConfirm(() => {
+      let tds = document.querySelector('[data-requiredtable]')?.querySelectorAll('td')
+      if (tds.length) {
+        tds.forEach(item => {
+          item.remove()
+        })
+      }
+      alert('Все данные успешно удалены')
+    }, "Удалить все данные?")
+  });
+}
+
+let addressesForm = document.querySelector('#addressesForm')
+if (addressesForm) {
+  addressesForm.addEventListener("submit", function (e) {
+    e.preventDefault()
+    initConfirm(() => {
+      alert('Адреса успешно изменены/сохранены')
+    }, "Изменить/сохранить адреса?")
+  });
+}
+// endregion
+
+// region profileContacts
+let profileContactsForm = document.querySelector('#profileContacts')
+if (profileContactsForm) {
+
+  //Вводить телефон можно только цифрами
+  let phone = profileContactsForm.querySelector('input[type="tel"]')
+  if (phone) {
+    phone.addEventListener('keydown', function (event) {
+      // Разрешаем: backspace, delete, tab, + и escape
+      if (event.keyCode === 46 || event.keyCode === 8 || event.keyCode === 9 || event.keyCode === 27 || event.keyCode === 187 ||
+        // Разрешаем: Ctrl+A
+        (event.keyCode === 65 && event.ctrlKey === true) ||
+        // Разрешаем: home, end, влево, вправо
+        (event.keyCode >= 35 && event.keyCode <= 39)) {
+
+        // Ничего не делаем
+        return;
+      } else {
+        // Запрещаем все, кроме цифр на основной клавиатуре, а так же Num-клавиатуре
+        if ((event.keyCode < 48 || event.keyCode > 57) && (event.keyCode < 96 || event.keyCode > 105)) {
+          event.preventDefault();
+        }
+      }
+    });
+  }
+
+  profileContactsForm.addEventListener('submit', (e) => {
+    e.preventDefault()
+    let error = 0
+
+    //Проверка на одинаковые email-ы
+    let email = profileContactsForm.querySelector('#email')
+    let email2 = profileContactsForm.querySelector('#email2')
+    if (email && email2) {
+      let split1 = email.value.trim().split('@')
+      let split2 = email2.value.trim().split('@')
+      if (split1.length > 1 && split2.length > 1) {
+        if (split1[1] === split2[1]) {
+          error++
+          email2.classList.add('_error')
+        }
+      }
+    }
+
+    //Проверка на пустые инпуты
+    let inputs = profileContactsForm.querySelectorAll('[data-required]')
+    inputs.forEach(item => {
+      if (!item.value.length > 0) {
+        error++
+      }
+    })
+
+    //Есть ли ошибки
+    if (error) {
+      return false
+    }
+
+    //Вызов окна
+    initConfirm(() => {
+      alert('Контакты успешно изменены/сохранены')
+    }, "Изменить/сохранить контакты?")
+  })
+
+  //Вывод сообщения при удалении
+  let deleteBtn = profileContactsForm.querySelector('#deleteAllProfileDataBtn')
+  if (deleteBtn) {
+    deleteBtn.addEventListener("click", function (e) {
+      initConfirm(() => {
+        profileContactsForm.querySelectorAll('input').forEach(item => {
+          item.value = ""
+          item.classList.remove('_error')
+        })
+        alert('Данные успешно удалены')
+      }, "Удалить все данные?")
+    });
+  }
+}
+// endregion
+
+// region profileDetails
+let deletePorfileDetailsDataBtn = document.querySelector('#deletePorfileDetailsDataBtn')
+if (deletePorfileDetailsDataBtn) {
+  deletePorfileDetailsDataBtn.addEventListener("click", function (e) {
+    initConfirm(() => {
+      document.querySelectorAll('input').forEach(item => {
+        item.value = ""
+        item.classList.remove('_error')
+      })
+      alert('Данные успешно удалены')
+    }, "Удалить все данные?")
+  });
+}
+
+let profileDetailsForm = document.querySelector('#profileDetailsForm')
+if (profileDetailsForm) {
+  profileDetailsForm.addEventListener('submit', (e) => {
+    e.preventDefault()
+    let error = 0
+
+    //Проверка на пустые инпуты
+    let inputs = profileDetailsForm.querySelectorAll('[data-required]')
+    inputs.forEach(item => {
+      if (!item.value.length > 0) {
+        error++
+      }
+    })
+
+    //Есть ли ошибки
+    if (error) {
+      return false
+    }
+
+    //Вызов окна
+    initConfirm(() => {
+      alert('Реквизиты успешно изменены/сохранены')
+    }, "Изменить/сохранить реквизиты?")
+  })
 }
 // endregion

@@ -213,6 +213,12 @@
   margin-right: 54px;
   overflow: hidden;
   
+  &._min {
+    flex: 0 0 265px;
+    max-width: 265px;
+    margin-right: 45px;
+  }
+  
   a {
     font-size: 14px;
   }

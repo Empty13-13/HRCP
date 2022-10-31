@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Адреса доставки"
+})
+<body>
+<div class="wrapper">
+  <header class="header">
+    <div class="header__container">
+      <div class="header__body">
+        <div class="header__up up-header">
+          <div class="up-header__body">
+            <a href="" class="up-header__main _href">Главная </a>
+            <button type="button" class="up-header__catalog-btn"><img src="img/icons/catalog.svg"
+                                                                      alt=""><span>Каталог</span></button>
+            <div class="up-header__search search-up-header">
+              <div class="search-up-header__body">
+                <select name="" id="" class="_hidden">
+                  <option value="" class="search-up-header__option">Выбрать сток/
+                                                                    маркетплейс
+                  </option>
+                  <option value="0" class="search-up-header__option">Lorem ipsum dolor</option>
+                  <option value="1" class="search-up-header__option">2</option>
+                  <option value="2" class="search-up-header__option">3</option>
+                  <option value="3" class="search-up-header__option">4</option>
+                </select>
+                <span class="line"></span>
+                <div class="search-up-header__search">
+                  <input placeholder="Введите название товара или ссылку " type="text" class="search-up-header__input">
+                  <button class="search-up-header__photo">
+                    <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M21.4717 6.66022V17.5589C21.4717 18.88 20.4617 19.9671 19.2057 19.9671H3.266C2.02294 19.9671 1 18.8937 1 17.5589V6.66022C1 5.33916 2.00999 4.25204 3.266 4.25204H6.16648L6.74916 0.770508H15.8002L16.3181 4.25204H19.2057C20.4617 4.25204 21.4717 5.3254 21.4717 6.66022Z"
+                        stroke="black" stroke-miterlimit="10" stroke-linejoin="round"/>
+                      <path
+                        d="M11 16.6937C13.2091 16.6937 15 14.7926 15 12.4474C15 10.1023 13.2091 8.20117 11 8.20117C8.79086 8.20117 7 10.1023 7 12.4474C7 14.7926 8.79086 16.6937 11 16.6937Z"
+                        stroke="black" stroke-miterlimit="10" stroke-linejoin="round"/>
+                    </svg>
+                  </button>
+                  <button class="search-up-header__button"><img src="img/icons/search.svg" alt=""><span>Найти</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <a href="" class="up-header__man _href">Пользователю</a>
+          </div>
+        </div>
+        <div class="header__center center-header">
+          <div class="center-header__body">
+            <div class="center-header__block _href"><a href="" class="center-header__btn ">
+              <img src="img/icons/header/login.svg" alt="login" class="center-header__img">Вход/Регестрация</a>
+            </div>
+            <span class="line"></span>
+            <div class="center-header__block _href"><a href="" class="center-header__btn ">
+              <img src="img/icons/header/bell.svg" alt="bells" class="center-header__img">Уведомления</a>
+            </div>
+            <span class="line"></span>
+            <div class="center-header__block _href"><a href="" class="center-header__btn ">
+              <img src="img/icons/header/eye.svg" alt="watch" class="center-header__img">Вы недавно смотрели</a>
+            </div>
+            <span class="line"></span>
+            <div class="center-header__block _href"><a href="" class="center-header__btn ">
+              <img src="img/icons/header/favorite.svg" alt="favourite" class="center-header__img">Избранное</a>
+            </div>
+            <span class="line"></span>
+            <div class="center-header__block _href"><a href="" class="center-header__btn ">
+              <img src="img/icons/header/trash.svg" alt="trash" class="center-header__img">Корзина</a>
+            </div>
+          </div>
+        </div>
+        <div class="header__bottom bottom-header">
+          <div class="bottom-header__body">
+            <ul class="bottom-header__breadcrumb breadcrumb">
+              <li><a class="breadcrumb__link _href" href="#">Главная</a></li>
+              <li class=""><a class="breadcrumb__link" href="">Личный кабинет</a></li>
+              <li class=""><a class="breadcrumb__link" href="">Профиль</a></li>
+              <li class="_active"><a class="breadcrumb__link" href=""></a>Адреса доставки</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="page">
+
+    <div class="information">
+      <div class="information__container">
+        <div class="information__body">
+          <div class="information__column">
+
+            <div class="catalog__filter filter-catalog _min">
+              <div class="filter-catalog__body">
+                <div class="filter-catalog__up">
+                  <h4 id="filtrBtn" class="filter-catalog__title">Общая информация</h4>
+                </div>
+                <ul data-spollers class="filter-catalog__list spollers-filter-catalog">
+                  <li class="spollers-filter-catalog__item">
+                    <button type="button" data-spoller class="spollers-filter-catalog__title spollers__title _first">
+                      Профиль
+                    </button>
+                    <div class="spollers-filter-catalog__body spollers__body">
+                      <a href="" class="spollers__title _none">
+                        Наличие отзывов
+                      </a>
+                      <a href="" class="spollers__title _none">
+                        Данные личные/организации
+                      </a>
+                      <a href="" class="spollers__title _none">
+                        Адреса доставки
+                      </a>
+                      <a href="" class="spollers__title _none">
+                        Контакты
+                      </a>
+                      <a href="" class="spollers__title _none">
+                        Реквизиты
+                      </a>
+                    </div>
+                  </li>
+                  <li class="spollers-filter-catalog__item">
+                    <button type="button" data-spoller class="spollers-filter-catalog__title spollers__title _first">
+                      Выбор/покупки
+                    </button>
+                    <div class="spollers-filter-catalog__body spollers__body">
+                      <a href="" class="spollers__title _none">
+                        Вы смотрели
+                      </a>
+                      <div class="subSpoller-filter-catalog">
+                        <button type="button" data-spoller
+                                class="subSpoller-filter-catalog__title spollers__title _last">
+                          Избранное
+                        </button>
+                        <div class="subSpoller-filter-catalog__body spollers__body">
+                          <a href="" class="spollers__title _none _pad">
+                            Товары (избранные)
+                          </a>
+                          <a href="" class="spollers__title _none _pad">
+                            Продавцы (избранные)
+                          </a>
+                          <a href="" class="spollers__title _none _pad">
+                            Корзина
+                          </a>
+                          <a href="" class="spollers__title _none _pad">
+                            Заказы
+                          </a>
+                          <a href="" class="spollers__title _none _pad">
+                            Ваши товары на продажу
+                          </a>
+                          <a href="" class="spollers__title _none _pad">
+                            Обзоры/отзывы
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="spollers-filter-catalog__item">
+                    <button type="button" data-spoller class="spollers-filter-catalog__title spollers__title _first">
+                      Финансы
+                    </button>
+                    <div class="spollers-filter-catalog__body spollers__body">
+                      <a href="" class="spollers__title _none">
+                        Счет
+                      </a>
+                      <a href="" class="spollers__title _none">
+                        Вывести средства
+                      </a>
+                      <a href="" class="spollers__title _none">
+                        Скидки
+                      </a>
+                    </div>
+                  </li>
+                  <li class="spollers-filter-catalog__item">
+                    <button type="button" data-spoller class="spollers-filter-catalog__title spollers__title _first">
+                      Служба поддержки
+                    </button>
+                    <div class="spollers-filter-catalog__body spollers__body">
+                      <a href="" class="spollers__title _none">
+                        Сообщения/уведомления
+                      </a>
+                      <a href="" class="spollers__title _none">
+                        Сообщения об ошибке
+                      </a>
+                      <a href="" class="spollers__title _none">
+                        Чат
+                      </a>
+                      <a href="" class="spollers__title _none">
+                        Электронная почта
+                      </a>
+                      <a href="" class="spollers__title _none">
+                        Звонок
+                      </a>
+                      <a href="" class="spollers__title _none">
+                        Форум
+                      </a>
+                      <div class="subSpoller-filter-catalog">
+                        <button type="button" data-spoller
+                                class="subSpoller-filter-catalog__title spollers__title _last">
+                          Настройка уведомлений
+                        </button>
+                        <div class="subSpoller-filter-catalog__body spollers__body">
+                          <a href="" class="spollers__title _none _pad">
+                            Email-уведомления
+                          </a>
+                          <a href="" class="spollers__title _none _pad">
+                            SMS-уведомления
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="spollers-filter-catalog__item">
+                    <button type="button" data-spoller class="spollers-filter-catalog__title spollers__title _first">
+                      Реферальная система
+                    </button>
+                    <div class="spollers-filter-catalog__body spollers__body">
+                      <a href="" class="spollers__title _none">
+                        Бонусы
+                      </a>
+                      <a href="" class="spollers__title _none">
+                        Баллы
+                      </a>
+                    </div>
+                  </li>
+
+                </ul>
+                <div class="filter-catalog__bottom">
+                  <button type="button" class="_blueBtn">
+                                          <span>
+                                            <svg width="16" height="19" viewBox="0 0 16 19" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M15.3328 0.788429H3.90412C3.72917 0.788429 3.56129 0.857885 3.43754 0.981651C3.31378 1.10542 3.24415 1.2733 3.24415 1.44841V4.14331C3.24415 4.379 3.37006 4.59692 3.57414 4.71472C3.77839 4.83273 4.02986 4.83273 4.23412 4.71472C4.43821 4.59688 4.56411 4.37897 4.56411 4.14331V2.1046H14.6766V17.1682H4.57127V14.9782V14.9784C4.57127 14.7425 4.44553 14.5246 4.24145 14.4068C4.0372 14.2889 3.78573 14.2889 3.58147 14.4068C3.3772 14.5246 3.25148 14.7425 3.25148 14.9784V17.8282C3.25247 18.0025 3.32241 18.1693 3.44602 18.2925C3.56978 18.4154 3.737 18.4844 3.91147 18.4844H15.3402C15.5151 18.4844 15.683 18.4149 15.8068 18.2912C15.9305 18.1674 16 17.9995 16 17.8244V1.44456C15.9992 1.26895 15.9281 1.10091 15.8028 0.977804C15.6776 0.85453 15.5084 0.786392 15.3328 0.788368L15.3328 0.788429ZM6.71696 5.88701L10.0129 9.18299L10.0462 9.21986H10.046C10.1351 9.32355 10.1892 9.45242 10.2009 9.58853C10.2048 9.63017 10.2048 9.67214 10.2009 9.71378C10.191 9.87211 10.1244 10.0214 10.0129 10.1341L6.7502 13.3969C6.62808 13.5275 6.45807 13.6031 6.27915 13.6061C6.10025 13.609 5.92793 13.5394 5.80136 13.4128C5.67496 13.2864 5.60517 13.1139 5.60814 12.935C5.61126 12.7563 5.68681 12.5863 5.81749 12.4642L7.95577 10.3259H0.659921C0.424234 10.3259 0.206311 10.2001 0.0885057 9.99588C-0.0295019 9.79163 -0.0295019 9.54017 0.0885057 9.33591C0.206349 9.13182 0.424259 9.00608 0.659921 9.00608H7.96335L5.78458 6.81973C5.6539 6.69761 5.57836 6.52775 5.5754 6.34884C5.57244 6.16994 5.64205 5.99746 5.76862 5.87105C5.89502 5.74448 6.06751 5.67487 6.24641 5.67783C6.42515 5.68079 6.59517 5.75633 6.7173 5.88701H6.71696Z"
+                      fill="white"/>
+                    </svg>
+                                          </span>
+                    Выход
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="information__column">
+            <div class="information__textBlock textBlock-information">
+              <div class="textBlock-information__title">
+                Последнее посещение пользователем личного кабинета: 09.02.2022 в 17 ч 02 м 36 с
+              </div>
+              <div class="textBlock-information__body">
+                <h1 class="textBlock-information__bodyTitle">
+                  Адреса доставки*
+                </h1>
+                <form id="addressesForm" class="addressesBlock">
+                  <div class="addressesBlock__body">
+                    <div class="addressesBlock__profile profile-addressesBlock">
+                      <label class="profile-addressesBlock__title">Профиль пользователя/заказчика</label>
+                      <select data-required id="orderLegalForm" name="form[]" class="large">
+                        <option value="" selected>Добавить другой профиль</option>
+                        <option value="2">Профиль 1</option>
+                        <option value="3">Профиль 2</option>
+                        <option value="4">Профиль 3</option>
+                        <option value="5">Профиль 4</option>
+                        <option value="6">Профиль 5</option>
+                      </select>
+                    </div>
+                    <div class="order">
+                      <div class="order__body">
+                        <div class="order__block">
+                          <form class="order__column order__left">
+                            <div class="left-order__body">
+                              <div class="left-order__adress adress-left-order">
+                                <table data-requiredTable class="adress-left-info-submit-trash__table">
+                                  <tr>
+                                    <th></th>
+                                    <th>Индекс</th>
+                                    <th>Страна</th>
+                                    <th>Регион</th>
+                                    <th>Район</th>
+                                    <th>Населенный
+                                        пункт
+                                    </th>
+                                    <th>Улица</th>
+                                    <th>Дом</th>
+                                    <th>Строение</th>
+                                    <th>Корпус</th>
+                                    <th>Квартира,
+                                        офис, склад
+                                    </th>
+                                  </tr>
+                                  <tr>
+                                    <td valign="top">
+                                      <div class="options__item">
+                                        <input hidden id="225440" class="options__input" checked type="radio" value="1"
+                                               name="adress3">
+                                        <label for="225440" class="options__label">
+                                          <span class="options__text"></span>
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td valign="top">
+                                      <label for="225440" class="adress-left-info-submit-trash__text">225440</label>
+                                    </td>
+                                    <td valign="top">
+                                      <label for="225440" class="adress-left-info-submit-trash__text">Россия</label>
+                                    </td>
+                                    <td valign="top">
+                                      <label for="225440" class="adress-left-info-submit-trash__text">Иркутская
+                                                                                                      область</label>
+                                    </td>
+                                    <td valign="top">
+                                      <label for="225440" class="adress-left-info-submit-trash__text">Название
+                                                                                                      района</label>
+                                    </td>
+                                    <td valign="top">
+                                      <label for="225440" class="adress-left-info-submit-trash__text">Название
+                                                                                                      населенного
+                                                                                                      пункта</label>
+                                    </td>
+                                    <td valign="top">
+                                      <label for="225440" class="adress-left-info-submit-trash__text">Название
+                                                                                                      улицы</label>
+                                    </td>
+                                    <td valign="top">
+                                      <label for="225440" class="adress-left-info-submit-trash__text">325</label>
+                                    </td>
+                                    <td valign="top">
+                                      <label for="225440" class="adress-left-info-submit-trash__text">63</label>
+                                    </td>
+                                    <td valign="top">
+                                      <label for="225440" class="adress-left-info-submit-trash__text">2</label>
+                                    </td>
+                                    <td valign="top">
+                                      <label for="225440" class="adress-left-info-submit-trash__text">2</label>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td valign="top">
+                                      <div class="options__item">
+                                        <input hidden id="225441" class="options__input" type="radio" value="1"
+                                               name="adress3">
+                                        <label for="225441" class="options__label">
+                                          <span class="options__text"></span>
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td valign="top">
+                                      <label for="225441" class="adress-left-info-submit-trash__text">225441</label>
+                                    </td>
+                                    <td valign="top">
+                                      <label for="225441" class="adress-left-info-submit-trash__text">Россия</label>
+                                    </td>
+                                    <td valign="top">
+                                      <label for="225441" class="adress-left-info-submit-trash__text">Иркутская
+                                                                                                      область</label>
+                                    </td>
+                                    <td valign="top">
+                                      <label for="225441" class="adress-left-info-submit-trash__text">Название
+                                                                                                      района</label>
+                                    </td>
+                                    <td valign="top">
+                                      <label for="225441" class="adress-left-info-submit-trash__text">Название
+                                                                                                      населенного
+                                                                                                      пункта</label>
+                                    </td>
+                                    <td valign="top">
+                                      <label for="225441" class="adress-left-info-submit-trash__text">Название
+                                                                                                      улицы</label>
+                                    </td>
+                                    <td valign="top">
+                                      <label for="225441" class="adress-left-info-submit-trash__text">325</label>
+                                    </td>
+                                    <td valign="top">
+                                      <label for="225441" class="adress-left-info-submit-trash__text">63</label>
+                                    </td>
+                                    <td valign="top">
+                                      <label for="225441" class="adress-left-info-submit-trash__text">2</label>
+                                    </td>
+                                    <td valign="top">
+                                      <label for="225441" class="adress-left-info-submit-trash__text">2</label>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td valign="top">
+                                      <div class="options__item">
+                                        <input hidden id="225442" class="options__input" type="radio" value="1"
+                                               name="adress3">
+                                        <label for="225442" class="options__label">
+                                          <span class="options__text"></span>
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td valign="top">
+                                      <label for="225442" class="adress-left-info-submit-trash__text">225442</label>
+                                    </td>
+                                    <td valign="top">
+                                      <label for="225442" class="adress-left-info-submit-trash__text">Россия</label>
+                                    </td>
+                                    <td valign="top">
+                                      <label for="225442" class="adress-left-info-submit-trash__text">Иркутская
+                                                                                                      область</label>
+                                    </td>
+                                    <td valign="top">
+                                      <label for="225442" class="adress-left-info-submit-trash__text">Название
+                                                                                                      района</label>
+                                    </td>
+                                    <td valign="top">
+                                      <label for="225442" class="adress-left-info-submit-trash__text">Название
+                                                                                                      населенного
+                                                                                                      пункта</label>
+                                    </td>
+                                    <td valign="top">
+                                      <label for="225442" class="adress-left-info-submit-trash__text">Название
+                                                                                                      улицы</label>
+                                    </td>
+                                    <td valign="top">
+                                      <label for="225442" class="adress-left-info-submit-trash__text">325</label>
+                                    </td>
+                                    <td valign="top">
+                                      <label for="225442" class="adress-left-info-submit-trash__text">63</label>
+                                    </td>
+                                    <td valign="top">
+                                      <label for="225442" class="adress-left-info-submit-trash__text">2</label>
+                                    </td>
+                                    <td valign="top">
+                                      <label for="225442" class="adress-left-info-submit-trash__text">2</label>
+                                    </td>
+                                  </tr>
+                                </table>
+                                <table data-requiredTable class="adress-left-info-submit-trash__table _hidden">
+                                  <tr>
+                                    <th></th>
+                                    <th>Индекс</th>
+                                    <th>Страна</th>
+                                    <th>Регион</th>
+                                    <th>Район</th>
+                                    <th>Населенный
+                                        пункт
+                                    </th>
+                                    <th>Улица</th>
+                                    <th>Дом</th>
+                                    <th>Строение</th>
+                                    <th>Корпус</th>
+                                    <th>Квартира,
+                                        офис, склад
+                                    </th>
+                                  </tr>
+                                  <tr>
+                                    <td valign="top">
+                                      <div class="options__item">
+                                        <input hidden id="225440" class="options__input" checked type="radio" value="1"
+                                               name="adress3">
+                                        <label for="225440" class="options__label">
+                                          <span class="options__text"></span>
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td valign="top">
+                                      <label for="225440" class="adress-left-info-submit-trash__text">225440</label>
+                                    </td>
+                                    <td valign="top">
+                                      <label for="225440" class="adress-left-info-submit-trash__text">Россия</label>
+                                    </td>
+                                    <td valign="top">
+                                      <label for="225440" class="adress-left-info-submit-trash__text">Иркутская
+                                                                                                      область</label>
+                                    </td>
+                                    <td valign="top">
+                                      <label for="225440" class="adress-left-info-submit-trash__text">Название
+                                                                                                      района</label>
+                                    </td>
+                                    <td valign="top">
+                                      <label for="225440" class="adress-left-info-submit-trash__text">Название
+                                                                                                      населенного
+                                                                                                      пункта</label>
+                                    </td>
+                                    <td valign="top">
+                                      <label for="225440" class="adress-left-info-submit-trash__text">Название
+                                                                                                      улицы</label>
+                                    </td>
+                                    <td valign="top">
+                                      <label for="225440" class="adress-left-info-submit-trash__text">325</label>
+                                    </td>
+                                    <td valign="top">
+                                      <label for="225440" class="adress-left-info-submit-trash__text">63</label>
+                                    </td>
+                                    <td valign="top">
+                                      <label for="225440" class="adress-left-info-submit-trash__text">2</label>
+                                    </td>
+                                    <td valign="top">
+                                      <label for="225440" class="adress-left-info-submit-trash__text">2</label>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td valign="top">
+                                      <div class="options__item">
+                                        <input hidden id="225441" class="options__input" type="radio" value="1"
+                                               name="adress3">
+                                        <label for="225441" class="options__label">
+                                          <span class="options__text"></span>
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td valign="top">
+                                      <label for="225441" class="adress-left-info-submit-trash__text">225441</label>
+                                    </td>
+                                    <td valign="top">
+                                      <label for="225441" class="adress-left-info-submit-trash__text">Россия</label>
+                                    </td>
+                                    <td valign="top">
+                                      <label for="225441" class="adress-left-info-submit-trash__text">Иркутская
+                                                                                                      область</label>
+                                    </td>
+                                    <td valign="top">
+                                      <label for="225441" class="adress-left-info-submit-trash__text">Название
+                                                                                                      района</label>
+                                    </td>
+                                    <td valign="top">
+                                      <label for="225441" class="adress-left-info-submit-trash__text">Название
+                                                                                                      населенного
+                                                                                                      пункта</label>
+                                    </td>
+                                    <td valign="top">
+                                      <label for="225441" class="adress-left-info-submit-trash__text">Название
+                                                                                                      улицы</label>
+                                    </td>
+                                    <td valign="top">
+                                      <label for="225441" class="adress-left-info-submit-trash__text">325</label>
+                                    </td>
+                                    <td valign="top">
+                                      <label for="225441" class="adress-left-info-submit-trash__text">63</label>
+                                    </td>
+                                    <td valign="top">
+                                      <label for="225441" class="adress-left-info-submit-trash__text">2</label>
+                                    </td>
+                                    <td valign="top">
+                                      <label for="225441" class="adress-left-info-submit-trash__text">2</label>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td valign="top">
+                                      <div class="options__item">
+                                        <input hidden id="225442" class="options__input" type="radio" value="1"
+                                               name="adress3">
+                                        <label for="225442" class="options__label">
+                                          <span class="options__text"></span>
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td valign="top">
+                                      <label for="225442" class="adress-left-info-submit-trash__text">225442</label>
+                                    </td>
+                                    <td valign="top">
+                                      <label for="225442" class="adress-left-info-submit-trash__text">Россия</label>
+                                    </td>
+                                    <td valign="top">
+                                      <label for="225442" class="adress-left-info-submit-trash__text">Иркутская
+                                                                                                      область</label>
+                                    </td>
+                                    <td valign="top">
+                                      <label for="225442" class="adress-left-info-submit-trash__text">Название
+                                                                                                      района</label>
+                                    </td>
+                                    <td valign="top">
+                                      <label for="225442" class="adress-left-info-submit-trash__text">Название
+                                                                                                      населенного
+                                                                                                      пункта</label>
+                                    </td>
+                                    <td valign="top">
+                                      <label for="225442" class="adress-left-info-submit-trash__text">Название
+                                                                                                      улицы</label>
+                                    </td>
+                                    <td valign="top">
+                                      <label for="225442" class="adress-left-info-submit-trash__text">325</label>
+                                    </td>
+                                    <td valign="top">
+                                      <label for="225442" class="adress-left-info-submit-trash__text">63</label>
+                                    </td>
+                                    <td valign="top">
+                                      <label for="225442" class="adress-left-info-submit-trash__text">2</label>
+                                    </td>
+                                    <td valign="top">
+                                      <label for="225442" class="adress-left-info-submit-trash__text">2</label>
+                                    </td>
+                                  </tr>
+                                </table>
+                                <!--                            <button type="button" data-acceptbtn-->
+                                <!--                                    class="adress-left-info-submit-trash__btnSubmit _blueBtn"-->
+                                <!--                                    onclick="">Применить-->
+                                <!--                            </button>-->
+                                <a href="#" data-popup="#addAddress"
+                                   class="adress-left-info-submit-trash__btnSubmit _whiteBtn">Добавить
+                                                                                              другой
+                                                                                              адрес
+                                </a>
+                                <a href="#" data-popup="#editAddress"
+                                   class="adress-left-info-submit-trash__btnSubmit _whiteBtn">
+                    <span>
+                    <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path
+  d="M5.18771 14.0007C5.18478 14.0038 5.18052 14.0049 5.17747 14.0079C5.15256 14.0329 5.12374 14.0533 5.09222 14.0684C5.089 14.0699 5.08627 14.0722 5.083 14.0736L5.07874 14.076L2.7518 15.0267L0.424705 15.9775C0.368964 16.0003 0.308013 16.0059 0.249221 15.9937C0.19043 15.9816 0.136317 15.9521 0.0934296 15.9089C0.0505419 15.8656 0.0207167 15.8105 0.00756073 15.7502C-0.00559616 15.6898 -0.0015192 15.6268 0.0192976 15.5688L0.909065 13.0822L1.79868 10.5958L1.80063 10.592C1.80215 10.5879 1.80472 10.5845 1.80639 10.5806C1.81947 10.5499 1.83716 10.5216 1.85881 10.4967C1.86199 10.493 1.86305 10.4881 1.86643 10.4845L11.496 0.194614C11.6174 0.0699723 11.7817 0 11.953 0C12.1244 0 12.2887 0.0699723 12.4101 0.194614L14.8171 2.76693C14.9345 2.89421 15 3.06315 15 3.23882C15 3.41449 14.9346 3.58345 14.8172 3.71076L5.18771 14.0007ZM0.842232 15.1183L2.09239 14.6075L1.32023 13.7825L0.842232 15.1183ZM1.55878 13.1153L2.7165 14.3524L4.41934 13.6568L2.20985 11.2961L1.55878 13.1153ZM14.3705 3.21149L11.9426 0.639173L2.52119 10.7067L4.96447 13.3174L14.3706 3.2662C14.3769 3.25854 14.3803 3.24884 14.3803 3.23882C14.3802 3.2288 14.3768 3.21912 14.3705 3.21149Z"
+  fill="#80A4DE"/>
+</svg>
+<path
+  d="M5.18771 14.0007C5.18478 14.0038 5.18052 14.0049 5.17747 14.0079C5.15256 14.0329 5.12374 14.0533 5.09222 14.0684C5.089 14.0699 5.08627 14.0722 5.083 14.0736L5.07874 14.076L2.7518 15.0267L0.424705 15.9775C0.368964 16.0003 0.308013 16.0059 0.249221 15.9937C0.19043 15.9816 0.136317 15.9521 0.0934296 15.9089C0.0505419 15.8656 0.0207167 15.8105 0.00756073 15.7502C-0.00559616 15.6898 -0.0015192 15.6268 0.0192976 15.5688L0.909065 13.0822L1.79868 10.5958L1.80063 10.592C1.80215 10.5879 1.80472 10.5845 1.80639 10.5806C1.81947 10.5499 1.83716 10.5216 1.85881 10.4967C1.86199 10.493 1.86305 10.4881 1.86643 10.4845L11.496 0.194614C11.6174 0.0699723 11.7817 0 11.953 0C12.1244 0 12.2887 0.0699723 12.4101 0.194614L14.8171 2.76693C14.9345 2.89421 15 3.06315 15 3.23882C15 3.41449 14.9346 3.58345 14.8172 3.71076L5.18771 14.0007ZM0.842232 15.1183L2.09239 14.6075L1.32023 13.7825L0.842232 15.1183ZM1.55878 13.1153L2.7165 14.3524L4.41934 13.6568L2.20985 11.2961L1.55878 13.1153ZM14.3705 3.21149L11.9426 0.639173L2.52119 10.7067L4.96447 13.3174L14.3706 3.2662C14.3769 3.25854 14.3803 3.24884 14.3803 3.23882C14.3802 3.2288 14.3768 3.21912 14.3705 3.21149Z"
+  fill="#80A4DE"/>
+                      </svg>
+                  </span>Редактировать
+                                </a>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="addressesBlock__bottom">
+                      <div class="addressesBlock__line">
+                        <button id='saveAdressesBtn' class="addressesBlock__saveBtn _blueBtn">Изменить/сохранить</button>
+                        <div id="deleteAllAdressesBtn" class="addressesBlock__deleteBtn _whiteBtn">Удалить все данные</div>
+                      </div>
+
+                      <p class="left-order__warning">
+                        Удаление данных пользователя/заказчика из базы сайта возможна только после исполнения сторонами
+                        (пользователь/заказчик и администрация сайта/исполнитель) всех условий договора/оферты, согласно
+                        политики обработки персональных данных (политики конфиденциальности) на данном сайте.
+                      </p>
+                      <p class="left-order__warning">
+                        Не внесения необходимой информации в предназначенные для этого окна (поля) на сайте, а также
+                        внесения ее с ошибками, может повлечь за собой, что исполнитель не сможет осуществить свои
+                        обязательства в полной мере перед пользователем/заказчиком, а пользователь/заказчик не сможет в
+                        полной мере осуществлять свою деятельность на сайте исполнителя и воспользоваться его услугами,
+                        согласно установленных правил и порядка на данном сайте.
+                      </p>
+                      <p class="left-order__warning">
+                        * Выбор из списка подходящего адреса при оформлении заказа в "Корзине" осуществляется путем
+                        проставления курсором отметки в перовые ячейки строки выбранного адреса
+                      </p>
+
+                    </div>
+                  </div>
+                </form>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+  @@include('html/_footer.htm',{})
+  @@include('html/_confirm.htm',{})
+  @@include('html/_fixed.htm',{})
+
+  <!--  region Popup-->
+  <div id="access" aria-hidden="true" class="popup">
+    <div class="popup__wrapper">
+      <div class="popup__content _access">
+        <div class="popup__body access-body">
+          <div class="access-body__title">Ваш заказ принят!</div>
+          <div class="access-body__num">Номер вашего заказа №15656212
+                                        от 03.12.2021
+          </div>
+          <a href="" class="access-body__payBtn _blueBtn">Перейти в “Оплата”</a>
+          <p class="access-body__alert">Вам было отправлено на указанную Вами почту письмо уведомление
+                                        (проверьте спам, если Вы его не видите во входящих) </p>
+
+          <p class="access-body__text">
+            По всем вопросам звоните по номеру:<br>
+            <a href="tel:+79025573616">+7 902 557 36 16</a><br>
+            пишите на почту:<br>
+            <a href="mailto:office@horecaprof.ru">office@horecaprof.ru</a><br>
+            или пишите в чат на сайте
+          </p>
+          <a href="#" class="access-body__chatBtn _blueBtn">Написать в чат</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="addAddress" aria-hidden="true" class="popup">
+    <div class="popup__wrapper">
+      <div class="popup__content addAddress__content">
+        <div class="addAddress__header header-popup">
+          <div class="header-popup__title">Добавить адрес</div>
+          <button data-close type="button" class="header-popup__closeBtn">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.00012 11L10.7159 1.28427" stroke="#0E0E0E" stroke-linecap="round"/>
+              <path d="M10.7157 11L0.999968 1.28427" stroke="#0E0E0E" stroke-linecap="round"/>
+            </svg>
+          </button>
+
+        </div>
+        <form class="addAddress__body body-addAddress">
+          <!-- Имеется форма, которая перехватывается JS. Если в input установлен data-required,
+          то при отправке формы JS будет смотреть, написано ли что-то в этом input. В случае, если там пусто,
+          тогда input присваивается class "_error" и форма Не отправляется-->
+          <table class="body-addAddress__table">
+            <tr>
+              <td>
+                <div class="body-addAddress__name">Индекс</div>
+              </td>
+              <td>
+                <div class="body-addAddress__input">
+                  <input data-required autocomplete="off" type="text" name="form[]" placeholder="Введите индекс"
+                         class="input">
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="body-addAddress__name">Страна</div>
+              </td>
+              <td>
+                <div class="body-addAddress__input">
+                  <input data-required autocomplete="off" type="text" name="form[]"
+                         placeholder="Введите название страны"
+                         class="input">
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="body-addAddress__name">Регион</div>
+              </td>
+              <td>
+                <div class="body-addAddress__input">
+                  <input data-required autocomplete="off" type="text" name="form[]"
+                         placeholder="Введите название региона"
+                         class="input">
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="body-addAddress__name">Район</div>
+              </td>
+              <td>
+                <div class="body-addAddress__input">
+                  <input data-required autocomplete="off" type="text" name="form[]"
+                         placeholder="Введите название района"
+                         class="input">
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="body-addAddress__name">Населенный
+                                                   пункт
+                </div>
+              </td>
+              <td>
+                <div class="body-addAddress__input">
+                  <input data-required autocomplete="off" type="text" name="form[]"
+                         placeholder="Введите название населенного пункта"
+                         class="input">
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="body-addAddress__name">Улица</div>
+              </td>
+              <td>
+                <div class="body-addAddress__input">
+                  <input data-required autocomplete="off" type="text" name="form[]" placeholder="Введите название улицы"
+                         class="input">
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="body-addAddress__name">Дом</div>
+              </td>
+              <td>
+                <div class="body-addAddress__input">
+                  <input data-required autocomplete="off" type="text" name="form[]" placeholder="Введите номер дома"
+                         class="input">
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="body-addAddress__name">Строение</div>
+              </td>
+              <td>
+                <div class="body-addAddress__input">
+                  <input data-required autocomplete="off" type="text" name="form[]" placeholder="Введите номер строения"
+                         class="input">
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="body-addAddress__name">Корпус</div>
+              </td>
+              <td>
+                <div class="body-addAddress__input">
+                  <input data-required autocomplete="off" type="text" name="form[]" placeholder="Введите номер корпуса"
+                         class="input">
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="body-addAddress__name">Квартира,
+                                                   офис, склад
+                </div>
+              </td>
+              <td>
+                <div class="body-addAddress__input">
+                  <input data-required autocomplete="off" type="text" name="form[]"
+                         placeholder="Введите номер квартиры, офиса, склада"
+                         class="input">
+                </div>
+              </td>
+            </tr>
+          </table>
+          <button id="addAddressPopup" class="body-addAddress__btn _blueBtn">Применить</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div id="editAddress" aria-hidden="true" class="popup">
+    <div class="popup__wrapper">
+      <div class="popup__content editAddress__content">
+        <div class="editAddress__header header-popup">
+          <div class="header-popup__title">Адрес</div>
+          <button data-close type="button" class="header-popup__closeBtn">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.00012 11L10.7159 1.28427" stroke="#0E0E0E" stroke-linecap="round"/>
+              <path d="M10.7157 11L0.999968 1.28427" stroke="#0E0E0E" stroke-linecap="round"/>
+            </svg>
+          </button>
+
+        </div>
+        <form class="editAddress__body body-editAddress">
+          <p class="body-editAddress__text">Выбрать адрес доставки (адрес склада, грузового терминала, двора, ТК,
+                                            почтового отделения и т.п.)</p>
+          <table id="popupTable" class="adress-left-info-submit-trash__table body-editAddress__table">
+            <tr>
+              <th></th>
+              <th>Индекс</th>
+              <th>Страна</th>
+              <th>Регион</th>
+              <th>Район</th>
+              <th>Населенный
+                  пункт
+              </th>
+              <th>Улица</th>
+              <th>Дом</th>
+              <th>Строение</th>
+              <th>Корпус</th>
+              <th>Квартира,
+                  офис, склад
+              </th>
+            </tr>
+            <tr>
+              <td valign="top">
+                <div class="options__item">
+                  <input hidden id="325420" class="options__input" checked type="radio" value="1" name="adress1">
+                  <label for="325420" class="options__label">
+                    <span class="options__text"></span>
+                  </label>
+                </div>
+              </td>
+              <td valign="top">
+                <label for="325420" class="adress-left-info-submit-trash__text">325420
+
+                </label>
+              </td>
+              <td valign="top">
+                <label for="325420" class="adress-left-info-submit-trash__text">Россия</label>
+
+              </td>
+              <td valign="top">
+                <label for="325420" class="adress-left-info-submit-trash__text">Иркутская область</label>
+
+              </td>
+              <td valign="top">
+                <label for="325420" class="adress-left-info-submit-trash__text">Название
+                                                                                района</label>
+
+              </td>
+              <td valign="top">
+                <label for="325420" class="adress-left-info-submit-trash__text">Название
+                                                                                населенного пункта</label>
+
+              </td>
+              <td valign="top">
+                <label for="325420" class="adress-left-info-submit-trash__text">Название
+                                                                                улицы</label>
+
+              </td>
+              <td valign="top">
+                <label for="325420" class="adress-left-info-submit-trash__text">325</label>
+
+              </td>
+              <td valign="top">
+                <label for="325420" class="adress-left-info-submit-trash__text">63</label>
+
+              </td>
+              <td valign="top">
+                <label for="325420" class="adress-left-info-submit-trash__text">2</label>
+
+              </td>
+              <td valign="top">
+                <label for="325420" class="adress-left-info-submit-trash__text">2</label>
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                <div class="options__item">
+                  <input hidden id="325421" class="options__input" type="radio" value="1" name="adress1">
+                  <label for="325421" class="options__label">
+                    <span class="options__text"></span>
+                  </label>
+                </div>
+              </td>
+              <td valign="top">
+                <label for="325421" class="adress-left-info-submit-trash__text">325421</label>
+              </td>
+              <td valign="top">
+                <label for="325421" class="adress-left-info-submit-trash__text">Россия</label>
+              </td>
+              <td valign="top">
+                <label for="325421" class="adress-left-info-submit-trash__text">Иркутская область</label>
+              </td>
+              <td valign="top">
+                <label for="325421" class="adress-left-info-submit-trash__text">Название
+                                                                                района</label>
+              </td>
+              <td valign="top">
+                <label for="325421" class="adress-left-info-submit-trash__text">Название
+                                                                                населенного пункта</label>
+              </td>
+              <td valign="top">
+                <label for="325421" class="adress-left-info-submit-trash__text">Название
+                                                                                улицы</label>
+              </td>
+              <td valign="top">
+                <label for="325421" class="adress-left-info-submit-trash__text">325</label>
+              </td>
+              <td valign="top">
+                <label for="325421" class="adress-left-info-submit-trash__text">63</label>
+              </td>
+              <td valign="top">
+                <label for="325421" class="adress-left-info-submit-trash__text">2</label>
+              </td>
+              <td valign="top">
+                <label for="325421" class="adress-left-info-submit-trash__text">2</label>
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                <div class="options__item">
+                  <input hidden id="325422" class="options__input" type="radio" value="1" name="adress1">
+                  <label for="325422" class="options__label">
+                    <span class="options__text"></span>
+                  </label>
+                </div>
+              </td>
+              <td valign="top">
+                <label for="325422" class="adress-left-info-submit-trash__text">325422</label>
+              </td>
+              <td valign="top">
+                <label for="325422" class="adress-left-info-submit-trash__text">Россия</label>
+              </td>
+              <td valign="top">
+                <label for="325422" class="adress-left-info-submit-trash__text">Иркутская область</label>
+              </td>
+              <td valign="top">
+                <label for="325422" class="adress-left-info-submit-trash__text">Название
+                                                                                района</label>
+              </td>
+              <td valign="top">
+                <label for="325422" class="adress-left-info-submit-trash__text">Название
+                                                                                населенного пункта</label>
+              </td>
+              <td valign="top">
+                <label for="325422" class="adress-left-info-submit-trash__text">Название
+                                                                                улицы</label>
+              </td>
+              <td valign="top">
+                <label for="325422" class="adress-left-info-submit-trash__text">325</label>
+              </td>
+              <td valign="top">
+                <label for="325422" class="adress-left-info-submit-trash__text">63</label>
+              </td>
+              <td valign="top">
+                <label for="325422" class="adress-left-info-submit-trash__text">2</label>
+              </td>
+              <td valign="top">
+                <label for="325422" class="adress-left-info-submit-trash__text">2</label>
+              </td>
+            </tr>
+          </table>
+          <button id="closeEditAdressBtn" data-close type="button" class="body-editAddress__access _blueBtn">Применить
+          </button>
+          <a href="#" data-popup="#addAddress" class="body-editAddress__addAdress _whiteBtn">Добавить другой адрес</a>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!--endregion-->
+
+</div>
+@@include('html/_js.htm',{})
+</body>
+</html>
