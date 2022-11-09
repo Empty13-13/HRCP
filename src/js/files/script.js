@@ -1,6 +1,6 @@
 // Импорт функционала ==============================================================================================================================================================================================================================================================================================================================
 
-import {_slideDown, _slideUp} from "./functions.js";
+import {_slideDown, _slideUp, _slideToggle} from "./functions.js";
 import {gotoBlock} from "./scroll/gotoblock.js";
 import {initConfirm} from './myConfirm.js'
 import {formRating} from './forms/forms.js'
@@ -1675,5 +1675,160 @@ if (profileDetailsForm) {
       alert('Реквизиты успешно изменены/сохранены')
     }, "Изменить/сохранить реквизиты?")
   })
+}
+// endregion
+
+// region Orders
+
+//Блок пополнения счёта
+let cashInForm = document.querySelector('#cashInForm')
+let cashInBtn = document.querySelector('#cashInBtn')
+if (cashInForm && cashInBtn) {
+  cashInBtn.addEventListener("click", function (e) {
+    _slideToggle(cashInForm, 500)
+  });
+}
+
+//Работа с табами
+let ordersBlock = document.querySelector('#ordersBlock')
+if (ordersBlock) {
+
+  //Фильтрация
+  let tabsBody = ordersBlock.querySelector('[data-tabs-body ]')
+  if (tabsBody) {
+    //Поиск табов
+    let tabs = tabsBody.querySelectorAll('.ordersBlock-tabs__body')
+
+    //Назначение листенеров каждого таба
+    tabs.forEach(tab => {
+      let firstDateInp = tab.querySelector('#firstDate')
+      let secondDateInp = tab.querySelector('#secondDate')
+      let filterSelect = tab.querySelector('#filterSelect')
+      let filterBtn = tab.querySelector('#filterBtn')
+      let lines = tab.querySelectorAll('[data-date]')
+
+      if (filterBtn) {
+        filterBtn.addEventListener("click", function (e) {
+          let firstDate = null
+          let secondDate = null
+          let filterStatus = null
+
+          //Очистка ошибок
+          firstDateInp.classList.remove('_error')
+          secondDateInp.classList.remove('_error')
+
+          //Проверка существования фильтров
+          if (firstDateInp) {
+            firstDate = firstDateInp.value && new Date(firstDateInp.value)
+            if (firstDate) {
+              firstDate.setHours(0, 0, 0, 0);
+            }
+          }
+          if (secondDateInp) {
+            secondDate = secondDateInp.value && new Date(secondDateInp.value)
+            if (secondDate) {
+              secondDate.setHours(23, 59, 59, 999);
+            }
+          }
+          if (filterSelect) {
+            filterStatus = +filterSelect.value
+          }
+
+          //Проверка на правильность дат
+          if (firstDate && secondDate && (firstDate > secondDate)) {
+            firstDateInp.classList.add('_error')
+            secondDateInp.classList.add('_error')
+            return
+          }
+
+
+          lines.forEach(line => {
+            //Если даты существуют и их выбрали
+            if ((firstDate || secondDate) &&
+              line.dataset.date) {
+              let lineDate = new Date(line.dataset.date)
+
+              if ((firstDate && lineDate < firstDate) ||
+                (secondDate && lineDate > new Date(secondDate))) {
+                line.classList.add('_hidden')
+              } else {
+                line.classList.remove('_hidden')
+              }
+            } else {
+              line.classList.remove('_hidden')
+            }
+
+            //Проверка на статус заказа
+            // 1 - любой
+            // 2 - не обработан
+            // 3 - Ожидает подтверждение
+            // 4 - Ожидает оплаты
+            // 5 - Оплачен
+            // 6 - Готов к отправке
+            // 7 - Заказан
+            // 8 - Получен на склад
+            // 9 - Отменен
+            // 10 - Ожидает доплаты
+            // 11 - Выдан
+
+            if (!line.classList.contains('_hidden')) {
+              if (filterStatus && line.dataset.status) {
+                let lineStatus = +line.dataset.status
+                if (filterStatus < 2) {
+                  line.classList.remove("_hidden")
+                  return
+                }
+
+                if (lineStatus !== filterStatus) {
+                  line.classList.add("_hidden")
+                } else {
+                  line.classList.remove("_hidden")
+                }
+              }
+            }
+          })
+
+
+        });
+      }
+    })
+  }
+
+  //Кнопки Оплатить и Отменить
+  let payOrderBtn = ordersBlock.querySelectorAll('#payOrderBtn')
+  if (payOrderBtn.length) {
+    payOrderBtn.forEach(btn => {
+      btn.addEventListener("click", function (e) {
+        initConfirm(() => {
+          alert('Заказ успешно оплачен')
+        }, "Оплатить выбранный заказ?")
+      });
+    })
+  }
+  let cancelOrderBtn = ordersBlock.querySelectorAll('#cancelOrderBtn')
+  if (cancelOrderBtn.length) {
+    cancelOrderBtn.forEach(btn => {
+      btn.addEventListener("click", function (e) {
+        initConfirm(() => {
+          alert('Заказ успешно отменен')
+        }, "Отменить выбранный заказ?")
+      });
+    })
+  }
+
+
+}
+
+
+// endregion
+
+// region orderNumber
+let checkoutOrderBtn = document.querySelector('#checkoutOrderBtn')
+if (checkoutOrderBtn) {
+  checkoutOrderBtn.addEventListener("click",function(e) {
+    initConfirm(() => {
+      alert('Заказ успешно оформлен')
+    }, "Оформить заказ?")
+  });
 }
 // endregion

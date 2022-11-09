@@ -1,0 +1,227 @@
+.ordersBlock {
+  
+  &__line {
+    display: flex;
+    margin-bottom: 25px;
+  }
+  
+  &__btn {
+    margin-left: auto;
+  }
+  
+  &__warning {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.2;
+    color: $blackBlueColor;
+    margin-top: 35px;
+  }
+}
+
+.infoBlock-ordersBlock {
+  margin-right: 50px;
+  
+  &__title {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.2;
+  }
+  
+  &__text {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #80A4DE;
+  }
+}
+
+.ordersBlock-tabs {
+  
+  &__navigation {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  &__title {
+    padding: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    border-bottom: 0.5px solid #C4C4C4;
+    transition: all 0.2s ease 0s;
+    
+    &._tab-active {
+      color: #80A4DE;
+      border-bottom: 1px solid #80A4DE;
+      
+    }
+  }
+  
+  &__content {
+  }
+  
+  &__body {
+  }
+  
+  &__filterBlocks {
+    display: flex;
+    gap: 20px;
+  }
+}
+
+.filterBlock-ordersBlock-tabs {
+  flex: 0 0 48%;
+  margin-bottom: 25px;
+  
+  &:first-child {
+    margin-right: 1%;
+  }
+  
+  &:last-child {
+    margin-left: 1%;
+  }
+  
+  &__body {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.2;
+  }
+  
+  &__title {
+    margin-bottom: 20px;
+  }
+  
+  &__line {
+    display: flex;
+    gap: 20px;
+  }
+  
+  &__inputBlock {
+    display: flex;
+    flex: 1 1 auto;
+  }
+  
+  &__textInput {
+    align-self: center;
+    display: flex;
+    margin-right: 5px;
+  }
+  
+  &__input {
+    position: relative;
+    
+    &:after {
+      content: '';
+      position: absolute;
+      left: 1px;
+      top: 25%;
+      width: 3px;
+      height: 50%;
+      background: white;
+      border-radius: 12px;
+      pointer-events: none;
+    }
+    
+    & > span {
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100%;
+      width: 34px;
+      pointer-events: none;
+      cursor: pointer;
+      
+      svg {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+      }
+    }
+    
+    
+    input[type=date] {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 20px;
+      color: #80A4DE;
+      padding: 5px 0px;
+      max-width: 166px;
+      
+      &::-webkit-calendar-picker-indicator {
+        background: url('../img/icons/calendar.svg') 0 0 / 100% 100% no-repeat;
+        cursor: pointer;
+        outline: none;
+      }
+    }
+    
+    & > .select {
+      width: 260px;
+    }
+  }
+  
+  &__btn {
+    margin-left: auto;
+  }
+}
+
+.table-ordersBlock-tabs {
+  
+  &__body {
+  }
+  
+  &__line {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    
+    &._head {
+      background: #E9F1FF;
+      
+      .table-ordersBlock-tabs__column {
+        height: 58px;
+        border-top: 0.5px solid #80A4DE;
+      }
+    }
+  }
+  
+  &__column {
+    border: 0.5px solid #80A4DE;
+    border-left: none;
+    border-top: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    word-break: break-word;
+    text-align: center;
+    padding: 5px 5px;
+    
+    &:first-child {
+      border-left: 0.5px solid #80A4DE;
+    }
+  }
+  
+  &__text {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.2;
+    
+    a, button {
+      color: $blackBlueColor;
+      cursor: pointer;
+      transition: color 0.2s ease 0s;
+      
+      @media (any-hover: hover) {
+        &:hover {
+          color: $blackBlueColor;
+        }
+      }
+      &:disabled {
+        color: #C3DAFF;
+        @media (any-hover: hover){
+          &:hover{
+            color: #C3DAFF;
+          }
+        }
+      }
+    }
+  }
+}

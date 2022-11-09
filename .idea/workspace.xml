@@ -1,28 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4586aba3-eec5-4675-b038-8de1450240a0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/adresses.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/orders.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/profileContacts.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/profileDetails.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scss/adresses.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scss/profileContacts.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scss/profileDetails.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scss/userAccount.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/userAccount.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/information.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/information.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/files/forms/forms.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/files/forms/forms.js" afterDir="false" />
+    <list default="true" id="4586aba3-eec5-4675-b038-8de1450240a0" name="Changes" comment="Закончил страницы:&#10;Учетная запись - userAccount.html&#10;Данные личные/организации  - data.html&#10;Адреса доставки - adresses.html&#10;Контакты - profileContacts.html&#10;Реквизиты - profileDetails.html">
+      <change afterPath="$PROJECT_DIR$/src/img/icons/calendar.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/orderNumber.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/productForSale.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scss/orders.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/files/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/files/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/base/ui.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/base/ui.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/orders.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/orders.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scss/home.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/home.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/information.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/information.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/order.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/order.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scss/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/style.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test" beforeDir="false" afterPath="$PROJECT_DIR$/test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/trash.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/trash.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trash.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/trash.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,8 +104,21 @@
       <workItem from="1666962096870" duration="323000" />
       <workItem from="1667041179893" duration="1164000" />
       <workItem from="1667154036669" duration="673000" />
-      <workItem from="1667224427573" duration="1202000" />
+      <workItem from="1667224427573" duration="3194000" />
+      <workItem from="1667227705142" duration="10181000" />
+      <workItem from="1667316796835" duration="8117000" />
+      <workItem from="1667742038163" duration="834000" />
+      <workItem from="1667906697380" duration="1362000" />
+      <workItem from="1668030236341" duration="1496000" />
     </task>
+    <task id="LOCAL-00001" summary="Закончил страницы:&#10;Учетная запись - userAccount.html&#10;Данные личные/организации  - data.html&#10;Адреса доставки - adresses.html&#10;Контакты - profileContacts.html&#10;Реквизиты - profileDetails.html">
+      <created>1667225822154</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1667225822154</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,5 +137,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Закончил страницы:&#10;Учетная запись - userAccount.html&#10;Данные личные/организации  - data.html&#10;Адреса доставки - adresses.html&#10;Контакты - profileContacts.html&#10;Реквизиты - profileDetails.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Закончил страницы:&#10;Учетная запись - userAccount.html&#10;Данные личные/организации  - data.html&#10;Адреса доставки - adresses.html&#10;Контакты - profileContacts.html&#10;Реквизиты - profileDetails.html" />
   </component>
 </project>
