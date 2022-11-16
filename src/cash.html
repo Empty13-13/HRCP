@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Счет"
+})
+<body>
+
+
+<div class="wrapper">
+  <header class="header">
+    <div class="header__container">
+      <div class="header__body">
+        <div class="header__up up-header">
+          <div class="up-header__body">
+            <a href="" class="up-header__main _href">Главная </a>
+            <button type="button" class="up-header__catalog-btn"><img src="img/icons/catalog.svg"
+                                                                      alt=""><span>Каталог</span></button>
+            <div class="up-header__search search-up-header">
+              <div class="search-up-header__body">
+                <select name="" id="" class="_hidden">
+                  <option value="" class="search-up-header__option">Выбрать сток/
+                                                                    маркетплейс
+                  </option>
+                  <option value="0" class="search-up-header__option">Lorem ipsum dolor</option>
+                  <option value="1" class="search-up-header__option">2</option>
+                  <option value="2" class="search-up-header__option">3</option>
+                  <option value="3" class="search-up-header__option">4</option>
+                </select>
+                <span class="line"></span>
+                <div class="search-up-header__search">
+                  <input placeholder="Введите название товара или ссылку " type="text" class="search-up-header__input">
+                  <button class="search-up-header__photo">
+                    <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M21.4717 6.66022V17.5589C21.4717 18.88 20.4617 19.9671 19.2057 19.9671H3.266C2.02294 19.9671 1 18.8937 1 17.5589V6.66022C1 5.33916 2.00999 4.25204 3.266 4.25204H6.16648L6.74916 0.770508H15.8002L16.3181 4.25204H19.2057C20.4617 4.25204 21.4717 5.3254 21.4717 6.66022Z"
+                        stroke="black" stroke-miterlimit="10" stroke-linejoin="round"/>
+                      <path
+                        d="M11 16.6937C13.2091 16.6937 15 14.7926 15 12.4474C15 10.1023 13.2091 8.20117 11 8.20117C8.79086 8.20117 7 10.1023 7 12.4474C7 14.7926 8.79086 16.6937 11 16.6937Z"
+                        stroke="black" stroke-miterlimit="10" stroke-linejoin="round"/>
+                    </svg>
+                  </button>
+                  <button class="search-up-header__button"><img src="img/icons/search.svg" alt=""><span>Найти</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <a href="" class="up-header__man _href">Пользователю</a>
+          </div>
+        </div>
+        <div class="header__center center-header">
+          <div class="center-header__body">
+            <div class="center-header__block _href"><a href="" class="center-header__btn ">
+              <img src="img/icons/header/login.svg" alt="login" class="center-header__img">Вход/Регестрация</a>
+            </div>
+            <span class="line"></span>
+            <div class="center-header__block _href"><a href="" class="center-header__btn ">
+              <img src="img/icons/header/bell.svg" alt="bells" class="center-header__img">Уведомления</a>
+            </div>
+            <span class="line"></span>
+            <div class="center-header__block _href"><a href="" class="center-header__btn ">
+              <img src="img/icons/header/eye.svg" alt="watch" class="center-header__img">Вы недавно смотрели</a>
+            </div>
+            <span class="line"></span>
+            <div class="center-header__block _href"><a href="" class="center-header__btn ">
+              <img src="img/icons/header/favorite.svg" alt="favourite" class="center-header__img">Избранное</a>
+            </div>
+            <span class="line"></span>
+            <div class="center-header__block _href"><a href="" class="center-header__btn ">
+              <img src="img/icons/header/trash.svg" alt="trash" class="center-header__img">Корзина</a>
+            </div>
+          </div>
+        </div>
+        <div class="header__bottom bottom-header">
+          <div class="bottom-header__body">
+            <ul class="bottom-header__breadcrumb breadcrumb">
+              <li><a class="breadcrumb__link _href" href="#">Главная</a></li>
+              <li class=""><a class="breadcrumb__link" href="">Личный кабинет</a></li>
+              <li class=""><a class="breadcrumb__link" href="">Финансы</a></li>
+              <li class="_active"><a class="breadcrumb__link" href="">Счет</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="page">
+
+    <div class="information">
+      <div class="information__container">
+        <div class="information__body">
+          <div class="information__column">
+
+            <div class="catalog__filter filter-catalog _min">
+              <div class="filter-catalog__body">
+                <div class="filter-catalog__up">
+                  <h4 id="filtrBtn" class="filter-catalog__title">Общая информация</h4>
+                </div>
+                <ul data-spollers class="filter-catalog__list spollers-filter-catalog">
+                  <li class="spollers-filter-catalog__item">
+                    <button type="button" data-spoller class="spollers-filter-catalog__title spollers__title _first">
+                      Профиль
+                    </button>
+                    <div class="spollers-filter-catalog__body spollers__body">
+                      <a href="" class="spollers__title _none">
+                        Наличие отзывов
+                      </a>
+                      <a href="" class="spollers__title _none">
+                        Данные личные/организации
+                      </a>
+                      <a href="" class="spollers__title _none">
+                        Адреса доставки
+                      </a>
+                      <a href="" class="spollers__title _none">
+                        Контакты
+                      </a>
+                      <a href="" class="spollers__title _none">
+                        Реквизиты
+                      </a>
+                    </div>
+                  </li>
+                  <li class="spollers-filter-catalog__item">
+                    <button type="button" data-spoller class="spollers-filter-catalog__title spollers__title _first">
+                      Выбор/покупки
+                    </button>
+                    <div class="spollers-filter-catalog__body spollers__body">
+                      <a href="" class="spollers__title _none">
+                        Вы смотрели
+                      </a>
+                      <div class="subSpoller-filter-catalog">
+                        <button type="button" data-spoller
+                                class="subSpoller-filter-catalog__title spollers__title _last">
+                          Избранное
+                        </button>
+                        <div class="subSpoller-filter-catalog__body spollers__body">
+                          <a href="" class="spollers__title _none _pad">
+                            Товары (избранные)
+                          </a>
+                          <a href="" class="spollers__title _none _pad">
+                            Продавцы (избранные)
+                          </a>
+                          <a href="" class="spollers__title _none _pad">
+                            Корзина
+                          </a>
+                          <a href="" class="spollers__title _none _pad">
+                            Заказы
+                          </a>
+                          <a href="" class="spollers__title _none _pad">
+                            Ваши товары на продажу
+                          </a>
+                          <a href="" class="spollers__title _none _pad">
+                            Обзоры/отзывы
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="spollers-filter-catalog__item">
+                    <button type="button" data-spoller class="spollers-filter-catalog__title spollers__title _first">
+                      Финансы
+                    </button>
+                    <div class="spollers-filter-catalog__body spollers__body">
+                      <a href="" class="spollers__title _none">
+                        Счет
+                      </a>
+                      <a href="" class="spollers__title _none">
+                        Вывести средства
+                      </a>
+                      <a href="" class="spollers__title _none">
+                        Скидки
+                      </a>
+                    </div>
+                  </li>
+                  <li class="spollers-filter-catalog__item">
+                    <button type="button" data-spoller class="spollers-filter-catalog__title spollers__title _first">
+                      Служба поддержки
+                    </button>
+                    <div class="spollers-filter-catalog__body spollers__body">
+                      <a href="" class="spollers__title _none">
+                        Сообщения/уведомления
+                      </a>
+                      <a href="" class="spollers__title _none">
+                        Сообщения об ошибке
+                      </a>
+                      <a href="" class="spollers__title _none">
+                        Чат
+                      </a>
+                      <a href="" class="spollers__title _none">
+                        Электронная почта
+                      </a>
+                      <a href="" class="spollers__title _none">
+                        Звонок
+                      </a>
+                      <a href="" class="spollers__title _none">
+                        Форум
+                      </a>
+                      <div class="subSpoller-filter-catalog">
+                        <button type="button" data-spoller
+                                class="subSpoller-filter-catalog__title spollers__title _last">
+                          Настройка уведомлений
+                        </button>
+                        <div class="subSpoller-filter-catalog__body spollers__body">
+                          <a href="" class="spollers__title _none _pad">
+                            Email-уведомления
+                          </a>
+                          <a href="" class="spollers__title _none _pad">
+                            SMS-уведомления
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="spollers-filter-catalog__item">
+                    <button type="button" data-spoller class="spollers-filter-catalog__title spollers__title _first">
+                      Реферальная система
+                    </button>
+                    <div class="spollers-filter-catalog__body spollers__body">
+                      <a href="" class="spollers__title _none">
+                        Бонусы
+                      </a>
+                      <a href="" class="spollers__title _none">
+                        Баллы
+                      </a>
+                    </div>
+                  </li>
+
+                </ul>
+                <div class="filter-catalog__bottom">
+                  <button type="button" class="_blueBtn">
+                                          <span>
+                                            <svg width="16" height="19" viewBox="0 0 16 19" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M15.3328 0.788429H3.90412C3.72917 0.788429 3.56129 0.857885 3.43754 0.981651C3.31378 1.10542 3.24415 1.2733 3.24415 1.44841V4.14331C3.24415 4.379 3.37006 4.59692 3.57414 4.71472C3.77839 4.83273 4.02986 4.83273 4.23412 4.71472C4.43821 4.59688 4.56411 4.37897 4.56411 4.14331V2.1046H14.6766V17.1682H4.57127V14.9782V14.9784C4.57127 14.7425 4.44553 14.5246 4.24145 14.4068C4.0372 14.2889 3.78573 14.2889 3.58147 14.4068C3.3772 14.5246 3.25148 14.7425 3.25148 14.9784V17.8282C3.25247 18.0025 3.32241 18.1693 3.44602 18.2925C3.56978 18.4154 3.737 18.4844 3.91147 18.4844H15.3402C15.5151 18.4844 15.683 18.4149 15.8068 18.2912C15.9305 18.1674 16 17.9995 16 17.8244V1.44456C15.9992 1.26895 15.9281 1.10091 15.8028 0.977804C15.6776 0.85453 15.5084 0.786392 15.3328 0.788368L15.3328 0.788429ZM6.71696 5.88701L10.0129 9.18299L10.0462 9.21986H10.046C10.1351 9.32355 10.1892 9.45242 10.2009 9.58853C10.2048 9.63017 10.2048 9.67214 10.2009 9.71378C10.191 9.87211 10.1244 10.0214 10.0129 10.1341L6.7502 13.3969C6.62808 13.5275 6.45807 13.6031 6.27915 13.6061C6.10025 13.609 5.92793 13.5394 5.80136 13.4128C5.67496 13.2864 5.60517 13.1139 5.60814 12.935C5.61126 12.7563 5.68681 12.5863 5.81749 12.4642L7.95577 10.3259H0.659921C0.424234 10.3259 0.206311 10.2001 0.0885057 9.99588C-0.0295019 9.79163 -0.0295019 9.54017 0.0885057 9.33591C0.206349 9.13182 0.424259 9.00608 0.659921 9.00608H7.96335L5.78458 6.81973C5.6539 6.69761 5.57836 6.52775 5.5754 6.34884C5.57244 6.16994 5.64205 5.99746 5.76862 5.87105C5.89502 5.74448 6.06751 5.67487 6.24641 5.67783C6.42515 5.68079 6.59517 5.75633 6.7173 5.88701H6.71696Z"
+                      fill="white"/>
+                    </svg>
+                                          </span>
+                    Выход
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="information__column">
+            <div class="information__textBlock textBlock-information">
+              <div class="textBlock-information__title">
+                Последнее посещение пользователем личного кабинета: 09.02.2022 в 17 ч 02 м 36 с
+              </div>
+              <div class="textBlock-information__body">
+                <h1 class="textBlock-information__bodyTitle">
+                  Счет
+                </h1>
+                <div class="cashBlock">
+                  <div class="cashBlock__list list-cashBlock">
+                    <div class="list-cashBlock__body">
+                      <div class="list-cashBlock__line _head">
+                        <div class="list-cashBlock__row">Название/ФИО</div>
+                        <div class="list-cashBlock__row">Номер счета</div>
+                        <div class="list-cashBlock__row">На Вашем счету</div>
+                        <div class="list-cashBlock__row">Ожидает оплаты</div>
+                      </div>
+                      <div class="list-cashBlock__line">
+                        <div class="list-cashBlock__row">Иванов Иван Иванович</div>
+                        <div class="list-cashBlock__row">0000000001</div>
+                        <div class="list-cashBlock__row">3 000 000 ₽</div>
+                        <div class="list-cashBlock__row">3 000 000 ₽</div>
+                      </div>
+                    </div>
+                    <button id="cashInBtn" class="list-cashBlock__btn _blueBtn">Пополнить счет</button>
+                  </div>
+                  <form id="cashInForm" hidden action="confirm.html" class="account-method-left-payment">
+                    <div class="account-method-left-payment__body">
+                      <div class="account-method-left-payment__title">Пополнить счет</div>
+                      <div class="account-method-left-payment__sum">
+                        Введите сумму пополнения счета <input data-required autocomplete="off" type="text" name="form[]"
+                                                              class="input"> ₽
+                      </div>
+                      <div class="account-method-left-payment__btns">
+                        <button type="submit" class="account-method-left-payment__payBtn _blueBtn">Пополнить/оплатить
+                        </button>
+                        <!--                        <a href="order.html" class="account-method-left-payment__backBtn _whiteBtn">Отмена/назад</a>-->
+                      </div>
+                    </div>
+                  </form>
+                  <div class="cashBlock__title _title">История платежей</div>
+                  <div class="ordersBlock-tabs__filterBlocks _big">
+                    <div class="filterBlock-ordersBlock-tabs">
+                      <div class="filterBlock-ordersBlock-tabs__body">
+                        <div class="filterBlock-ordersBlock-tabs__line">
+                          <div class="filterBlock-ordersBlock-tabs__inputBlock">
+                            <label for="firstDate" class="filterBlock-ordersBlock-tabs__textInput">Период с</label>
+                            <div class="filterBlock-ordersBlock-tabs__input">
+                              <input id="firstDate" min="2000-1-1" type="date" name="form[]"
+                                     placeholder="дд/мм/гггг"
+                                     class="input">
+                              <span>
+                                    <svg width="38" height="38" viewBox="0 0 38 38" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+<rect width="38" height="38" rx="8" fill="#80A4DE"/>
+<path
+  d="M24.928 28.5199H12.0721C10.9309 28.5199 10.002 27.5907 10.002 26.4496V13.5937C10.002 12.4525 10.9309 11.5234 12.0721 11.5234H24.928C26.0709 11.5234 26.9982 12.4526 26.9982 13.5937V26.4496C26.9998 27.5924 26.0708 28.5199 24.928 28.5199ZM12.0721 12.3695C11.3972 12.3695 10.8477 12.919 10.8477 13.5938V26.4497C10.8477 27.1245 11.3972 27.6738 12.0721 27.6738H24.928C25.6028 27.6738 26.1537 27.1245 26.1537 26.4497V13.5938C26.1537 12.9189 25.6045 12.3695 24.928 12.3695H12.0721Z"
+  fill="white"/>
+<path
+  d="M14.9046 13.7202C14.6706 13.7202 14.4824 13.5303 14.4824 13.2979V10.4221C14.4824 10.1882 14.6723 10 14.9046 10C15.1369 10 15.3286 10.1899 15.3286 10.4221V13.2979C15.3268 13.5302 15.1369 13.7202 14.9046 13.7202Z"
+  fill="white"/>
+<path
+  d="M22.0313 13.7202C21.7972 13.7202 21.6074 13.5303 21.6074 13.298V10.4223C21.6074 10.1883 21.7972 10 22.0313 10C22.2653 10 22.4535 10.1899 22.4535 10.4223V13.298C22.4552 13.5302 22.2653 13.7202 22.0313 13.7202Z"
+  fill="white"/>
+<path
+  d="M26.5761 16.3015H10.4239C10.1899 16.3015 10 16.1115 10 15.8793C10 15.647 10.1899 15.457 10.4239 15.457H26.5761C26.8101 15.457 27 15.647 27 15.8793C27 16.1115 26.8101 16.3015 26.5761 16.3015Z"
+  fill="white"/>
+</svg>
+
+                                  </span>
+                            </div>
+                          </div>
+                          <div class="filterBlock-ordersBlock-tabs__inputBlock">
+                            <label for="secondDate" class="filterBlock-ordersBlock-tabs__textInput">до</label>
+                            <div class="filterBlock-ordersBlock-tabs__input">
+                              <input id="secondDate" min="2000-1-1" type="date" name="form[]"
+                                     placeholder="дд/мм/гггг"
+                                     class="input">
+                              <span>
+                                    <svg width="38" height="38" viewBox="0 0 38 38" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+<rect width="38" height="38" rx="8" fill="#80A4DE"/>
+<path
+  d="M24.928 28.5199H12.0721C10.9309 28.5199 10.002 27.5907 10.002 26.4496V13.5937C10.002 12.4525 10.9309 11.5234 12.0721 11.5234H24.928C26.0709 11.5234 26.9982 12.4526 26.9982 13.5937V26.4496C26.9998 27.5924 26.0708 28.5199 24.928 28.5199ZM12.0721 12.3695C11.3972 12.3695 10.8477 12.919 10.8477 13.5938V26.4497C10.8477 27.1245 11.3972 27.6738 12.0721 27.6738H24.928C25.6028 27.6738 26.1537 27.1245 26.1537 26.4497V13.5938C26.1537 12.9189 25.6045 12.3695 24.928 12.3695H12.0721Z"
+  fill="white"/>
+<path
+  d="M14.9046 13.7202C14.6706 13.7202 14.4824 13.5303 14.4824 13.2979V10.4221C14.4824 10.1882 14.6723 10 14.9046 10C15.1369 10 15.3286 10.1899 15.3286 10.4221V13.2979C15.3268 13.5302 15.1369 13.7202 14.9046 13.7202Z"
+  fill="white"/>
+<path
+  d="M22.0313 13.7202C21.7972 13.7202 21.6074 13.5303 21.6074 13.298V10.4223C21.6074 10.1883 21.7972 10 22.0313 10C22.2653 10 22.4535 10.1899 22.4535 10.4223V13.298C22.4552 13.5302 22.2653 13.7202 22.0313 13.7202Z"
+  fill="white"/>
+<path
+  d="M26.5761 16.3015H10.4239C10.1899 16.3015 10 16.1115 10 15.8793C10 15.647 10.1899 15.457 10.4239 15.457H26.5761C26.8101 15.457 27 15.647 27 15.8793C27 16.1115 26.8101 16.3015 26.5761 16.3015Z"
+  fill="white"/>
+</svg>
+
+                                  </span>
+                            </div>
+
+
+                          </div>
+                          <button id="filterBtn" class="filterBlock-ordersBlock-tabs__btn _blueBtn">Показать</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="cashListBody" class="cashBlock__list list-cashBlock">
+                    <div class="list-cashBlock__body">
+                      <div class="list-cashBlock__line _head">
+                        <div class="list-cashBlock__row">Заказ №</div>
+                        <div class="list-cashBlock__row">Дата</div>
+                        <div class="list-cashBlock__row">Комментарии</div>
+                        <div class="list-cashBlock__row">Сумма</div>
+                      </div>
+                      <div data-date="2022-11-03" class="list-cashBlock__line">
+                        <div class="list-cashBlock__row">00000000001</div>
+                        <div class="list-cashBlock__row">03.11.2022</div>
+                        <div class="list-cashBlock__row">Комментарий для пользователя</div>
+                        <div class="list-cashBlock__row">3 000 000 ₽</div>
+                      </div>
+                      <div data-date="2022-11-03" class="list-cashBlock__line">
+                        <div class="list-cashBlock__row">00000000001</div>
+                        <div class="list-cashBlock__row">03.11.2022</div>
+                        <div class="list-cashBlock__row">Комментарий для пользователя</div>
+                        <div class="list-cashBlock__row">3 000 000 ₽</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+  @@include('html/_footer.htm',{})
+  @@include('html/_fixed.htm',{})
+
+</div>
+@@include('html/_js.htm',{})
+</body>
+</html>

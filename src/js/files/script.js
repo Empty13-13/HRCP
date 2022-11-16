@@ -400,6 +400,7 @@ if (productListTrash) {
   let deleteItemTrashBtns = document.querySelectorAll('#deleteItemTrashBtn')
   let goToFavouriteBtns = document.querySelectorAll('#goToFavouriteBtn');
   let goAllToFavouriteBtnTrash = document.querySelector('#goAllToFavouriteBtnTrash');
+  let deleteBtnFeedback = document.querySelector('#deleteBtnFeedback')
 
 
   if (checkboxes) {
@@ -443,6 +444,17 @@ if (productListTrash) {
             }
           })
         })
+      })
+    }
+    if (deleteBtnFeedback) {
+      deleteBtnFeedback.addEventListener("click", () => {
+        initConfirm(() => {
+          checkboxes.forEach(item => {
+            if (item.checked) {
+              item.closest('li').remove()
+            }
+          })
+        }, 'Удалить выбранные обзоры/отзывы?')
       })
     }
     if (deleteAllBtnTrash) {
@@ -1176,21 +1188,28 @@ function getData() {
 // endregion
 
 // region Notices
-let notices = document.querySelector('.notices')
+let notices = document.querySelector('.notices__body')
 if (notices) {
   let blocksNotices = document.querySelectorAll('[data-blockNotices]')
   let noticesHeader = document.querySelector('[data-notices]')
   let answerBlocks = document.querySelectorAll('[data-noticesanswerblock]')
 
-  if (blocksNotices.length && noticesHeader) {
+  if (noticesHeader) {
     noticesHeader.innerHTML = Array.from(blocksNotices).filter(item => item.classList.contains('_unread')).length
+  }
+
+  //Просмотр блока
+  if (blocksNotices.length && noticesHeader) {
     blocksNotices.forEach(item => {
       item.addEventListener("click", function (e) {
         if (item.classList.contains('_unread')) {
           item.classList.remove('_unread')
-          noticesHeader.innerHTML = +noticesHeader.innerHTML - 1
-          if (+noticesHeader.innerHTML < 1) {
-            noticesHeader.remove()
+
+          if (noticesHeader) {
+            noticesHeader.innerHTML = +noticesHeader.innerHTML - 1
+            if (+noticesHeader.innerHTML < 1) {
+              noticesHeader.remove()
+            }
           }
 
           let leftNotice = item.querySelector('[data-leftNotice]')
@@ -1207,6 +1226,7 @@ if (notices) {
     answerBlocks.forEach(block => {
       let btn = block.querySelector('button')
       let textarea = block.querySelector('textarea')
+      let pendingReviewNotice = block.closest('.right-block-notices').querySelector('[data-pendingReviewNotice]')
 
       btn.addEventListener("click", function (e) {
         if (textarea.value.trim().length < 1) {
@@ -1215,11 +1235,14 @@ if (notices) {
           return true
         }
 
+        if (pendingReviewNotice) {
+          pendingReviewNotice.hidden = true
+        }
+
         let answer = document.createElement('p')
 
         answer.classList.add('right-block-notices__text')
         answer.innerHTML = textarea.value
-
 
         block.parentNode.append(answer)
 
@@ -1709,86 +1732,7 @@ if (ordersBlock) {
 
       if (filterBtn) {
         filterBtn.addEventListener("click", function (e) {
-          let firstDate = null
-          let secondDate = null
-          let filterStatus = null
-
-          //Очистка ошибок
-          firstDateInp.classList.remove('_error')
-          secondDateInp.classList.remove('_error')
-
-          //Проверка существования фильтров
-          if (firstDateInp) {
-            firstDate = firstDateInp.value && new Date(firstDateInp.value)
-            if (firstDate) {
-              firstDate.setHours(0, 0, 0, 0);
-            }
-          }
-          if (secondDateInp) {
-            secondDate = secondDateInp.value && new Date(secondDateInp.value)
-            if (secondDate) {
-              secondDate.setHours(23, 59, 59, 999);
-            }
-          }
-          if (filterSelect) {
-            filterStatus = +filterSelect.value
-          }
-
-          //Проверка на правильность дат
-          if (firstDate && secondDate && (firstDate > secondDate)) {
-            firstDateInp.classList.add('_error')
-            secondDateInp.classList.add('_error')
-            return
-          }
-
-
-          lines.forEach(line => {
-            //Если даты существуют и их выбрали
-            if ((firstDate || secondDate) &&
-              line.dataset.date) {
-              let lineDate = new Date(line.dataset.date)
-
-              if ((firstDate && lineDate < firstDate) ||
-                (secondDate && lineDate > new Date(secondDate))) {
-                line.classList.add('_hidden')
-              } else {
-                line.classList.remove('_hidden')
-              }
-            } else {
-              line.classList.remove('_hidden')
-            }
-
-            //Проверка на статус заказа
-            // 1 - любой
-            // 2 - не обработан
-            // 3 - Ожидает подтверждение
-            // 4 - Ожидает оплаты
-            // 5 - Оплачен
-            // 6 - Готов к отправке
-            // 7 - Заказан
-            // 8 - Получен на склад
-            // 9 - Отменен
-            // 10 - Ожидает доплаты
-            // 11 - Выдан
-
-            if (!line.classList.contains('_hidden')) {
-              if (filterStatus && line.dataset.status) {
-                let lineStatus = +line.dataset.status
-                if (filterStatus < 2) {
-                  line.classList.remove("_hidden")
-                  return
-                }
-
-                if (lineStatus !== filterStatus) {
-                  line.classList.add("_hidden")
-                } else {
-                  line.classList.remove("_hidden")
-                }
-              }
-            }
-          })
-
-
+          filterPeriod({firstDateInp, secondDateInp, filterSelect, lines})
         });
       }
     })
@@ -1825,10 +1769,299 @@ if (ordersBlock) {
 // region orderNumber
 let checkoutOrderBtn = document.querySelector('#checkoutOrderBtn')
 if (checkoutOrderBtn) {
-  checkoutOrderBtn.addEventListener("click",function(e) {
+  checkoutOrderBtn.addEventListener("click", function (e) {
     initConfirm(() => {
       alert('Заказ успешно оформлен')
     }, "Оформить заказ?")
   });
 }
 // endregion
+
+// region Feedback
+
+//Фильтрация и изменение комментария
+let feedbackListWrapper = document.querySelector('#feedbackListWrapper')
+if (feedbackListWrapper) {
+  let firstDateInp = document.querySelector('#firstDate')
+  let secondDateInp = document.querySelector('#secondDate')
+  let filterBtn = document.querySelector('#filterBtn')
+  let lines = document.querySelectorAll('[data-date]')
+
+  //Фильтрация
+  if (filterBtn) {
+    filterBtn.addEventListener("click", function (e) {
+      filterPeriod({firstDateInp, secondDateInp, lines})
+    });
+  }
+
+  //Изменение комментария
+  let items = feedbackListWrapper.querySelectorAll('li')
+  if (items.length) {
+    items.forEach(item => {
+      let text = item.querySelector('#editCommentText')
+      let btn = item.querySelector('#editCommentBtn')
+
+      if (text && btn) {
+        let input = text.parentNode.querySelector('textarea[type=text]')
+        if (!input) {
+          return
+        }
+
+        btn.addEventListener("click", function (e) {
+          if (text.hidden) {
+            if (input.value.length < 1) {
+              input.classList.add('_error')
+              return
+            }
+            text.hidden = false
+
+            text.textContent = input.value
+            input.hidden = true
+
+            btn.textContent = "Редактировать обзор/отзыв"
+            btn.classList.remove('_blueBtn')
+          } else {
+            text.hidden = true
+
+            input.value = text.textContent
+            input.hidden = false
+
+            btn.textContent = "Сохранить обзор/отзыв"
+            btn.classList.add('_blueBtn')
+          }
+        });
+      }
+    })
+  }
+}
+
+//Удалить обзор/отзыв
+let deleteItemFeedBackBtns = document.querySelectorAll('#deleteItemFeedBackBtn')
+if (deleteItemFeedBackBtns.length) {
+  deleteItemFeedBackBtns.forEach(item => {
+    item.addEventListener("click", () => {
+      initConfirm(() => {
+        item.closest('li').remove()
+      }, 'Удалить обзор/отзыв?')
+    })
+  })
+}
+
+
+// endregion
+
+// region Cash
+//Фильтрация
+let cashListBody = document.querySelector('#cashListBody')
+if (cashListBody) {
+  let firstDateInp = document.querySelector('#firstDate')
+  let secondDateInp = document.querySelector('#secondDate')
+  let filterBtn = document.querySelector('#filterBtn')
+  let lines = document.querySelectorAll('[data-date]')
+
+  if (filterBtn) {
+    filterBtn.addEventListener("click", function (e) {
+      filterPeriod({firstDateInp, secondDateInp, lines})
+    });
+  }
+}
+
+// endregion
+
+// region CashOut
+let cashOutBtn = document.querySelector('#cashOutBtn')
+if (cashOutBtn) {
+  cashOutBtn.addEventListener("click", function (e) {
+    let amount = document.querySelector('#amount')
+
+    if (amount) {
+      //Если не написали сумму, то ничего не делаем
+      if (!amount.value) {
+        return
+      }
+
+      amount = +amount.value
+    } else {
+      amount = null
+    }
+    initConfirm(() => {
+      alert('Заданная сумма успешно выведена')
+    }, amount ? `Вы действительно хотите вывести средства в размере ${amount}?` : "Вы действительно хотите вывести данную сумму?")
+  });
+}
+
+// endregion
+
+// region notificationService
+
+//Делаем проверку на основной лист, с которым будет идти взаимодействие
+let notificationServiceList = document.querySelector('#notificationServiceList')
+if (notificationServiceList) {
+  let firstDateInp = document.querySelector('#firstDate')
+  let secondDateInp = document.querySelector('#secondDate')
+  let filterBtn = document.querySelector('#filterBtn')
+  let lines = document.querySelectorAll('[data-date]')
+
+  //Фильтрация
+  if (filterBtn) {
+    filterBtn.addEventListener("click", () => {
+      filterPeriod({firstDateInp, secondDateInp, lines})
+    });
+  }
+
+  //Добавление сообщение по клику
+  let addMessageBtn = document.querySelector('#addMessageBtn')
+  if (addMessageBtn) {
+
+    addMessageBtn.addEventListener("click", function (e) {
+      //Создание нового элемента
+      const getMessageBlock = () => {
+        let div = document.createElement('div')
+        div.classList.add('notices__block', 'block-notices')
+        div.setAttribute('data-date', [new Date().getFullYear(),new Date().getMonth()+1,new Date().getDate()].join('-'))
+        div.setAttribute('data-blockNotices', "")
+        div.innerHTML = `
+                        <div class="block-notices__body">
+                          <div data-leftNotice class="block-notices__left left-block-notices">
+                            <div class="left-block-notices__title">Сообщение в чате</div>
+                            <div class="left-block-notices__date">${(new Date()).toLocaleString().split(',')[0]}</div>
+                          </div>
+                          <div class="block-notices__right right-block-notices">
+                            <div class="right-block-notices__group">
+                              <div class="right-block-notices__title">Ваше сообщение:</div>
+                              <div data-noticesanswerblock
+                                   class="right-block-notices__answer-block-notices answer-block-notices">
+                                <textarea autocomplete="off" name="form[]"
+                                          class="answer-block-notices__input input"></textarea>
+                                <button class="answer-block-notices__btn _blueBtn">Ответить</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+      `
+
+        //Устанавливаем обработчик событий на элемент
+        let block = div.querySelector('[data-noticesanswerblock]')
+        let btn = block.querySelector('button')
+        let textarea = block.querySelector('textarea')
+        btn.addEventListener("click", function (e) {
+          //Если нет сообщения
+          if (textarea.value.trim().length < 1) {
+            textarea.focus()
+            textarea.classList.add('_error')
+            return true
+          }
+
+          //Генерируем новое сообщение
+          let answer = document.createElement('p')
+          answer.classList.add('right-block-notices__text')
+          answer.innerHTML = textarea.value
+
+          //Заменяем "Ваше сообщение" на "Я"
+          block.parentNode.querySelector('.right-block-notices__title').textContent = "Я"
+
+          //Вставляем новое сообщение и удаляем textarea
+          block.parentNode.append(answer)
+          block.remove()
+        })
+
+        return div
+      }
+
+      //Вставка нового элемента
+      notificationServiceList.appendChild(getMessageBlock())
+
+      //Обновление фильтрации
+      lines = document.querySelectorAll('[data-date]')
+    });
+  }
+}
+
+// endregion
+
+function filterPeriod({firstDateInp = null, secondDateInp = null, filterSelect = null, lines}) {
+  if (!lines || !lines.length) {
+    return false;
+  }
+
+  let firstDate = null
+  let secondDate = null
+  let filterStatus = null
+
+  //Очистка ошибок
+
+  //Проверка существования фильтров
+  if (firstDateInp) {
+    firstDateInp.classList.remove('_error')
+    firstDate = firstDateInp.value && new Date(firstDateInp.value)
+    if (firstDate) {
+      firstDate.setHours(0, 0, 0, 0);
+    }
+  }
+  if (secondDateInp) {
+    secondDateInp.classList.remove('_error')
+    secondDate = secondDateInp.value && new Date(secondDateInp.value)
+    if (secondDate) {
+      secondDate.setHours(23, 59, 59, 999);
+    }
+  }
+  if (filterSelect) {
+    filterStatus = +filterSelect.value
+  }
+
+  //Проверка на правильность дат
+  if (firstDate && secondDate && (firstDate > secondDate)) {
+    firstDateInp.classList.add('_error')
+    secondDateInp.classList.add('_error')
+    return
+  }
+
+  //Фильтрация
+  lines.forEach(line => {
+    //Фильтрация по дате
+    if ((firstDate || secondDate) &&
+      line.dataset.date) {
+      let lineDate = new Date(line.dataset.date)
+
+      if ((firstDate && lineDate < firstDate) ||
+        (secondDate && lineDate > new Date(secondDate))) {
+        line.classList.add('_hidden')
+      } else {
+        line.classList.remove('_hidden')
+      }
+    } else {
+      line.classList.remove('_hidden')
+    }
+
+    //Проверка на статус заказа
+    // 1 - любой
+    // 2 - не обработан
+    // 3 - Ожидает подтверждение
+    // 4 - Ожидает оплаты
+    // 5 - Оплачен
+    // 6 - Готов к отправке
+    // 7 - Заказан
+    // 8 - Получен на склад
+    // 9 - Отменен
+    // 10 - Ожидает доплаты
+    // 11 - Выдан
+
+
+    //Фильтрация по статусу
+    if (!line.classList.contains('_hidden')) {
+      if (filterStatus && line.dataset.status) {
+        let lineStatus = +line.dataset.status
+        if (filterStatus < 2) {
+          line.classList.remove("_hidden")
+          return
+        }
+
+        if (lineStatus !== filterStatus) {
+          line.classList.add("_hidden")
+        } else {
+          line.classList.remove("_hidden")
+        }
+      }
+    }
+  })
+}

@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4586aba3-eec5-4675-b038-8de1450240a0" name="Changes" comment="Закончил страницы:&#10;Учетная запись - userAccount.html&#10;Данные личные/организации  - data.html&#10;Адреса доставки - adresses.html&#10;Контакты - profileContacts.html&#10;Реквизиты - profileDetails.html">
-      <change afterPath="$PROJECT_DIR$/src/img/icons/calendar.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/orderNumber.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/productForSale.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scss/orders.scss" afterDir="false" />
+    <list default="true" id="4586aba3-eec5-4675-b038-8de1450240a0" name="Changes" comment="Закончил страницы:&#10;Заказ № - orderNumber.html&#10;Заказы - orders.html&#10;Ваши товары на продажу - productForSale.html">
+      <change afterPath="$PROJECT_DIR$/src/cash.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/cashOut.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/discounts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/feedback.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/notificationService.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scss/cash.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scss/notificationService.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/files/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/files/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/orders.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/orders.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/home.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/home.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/base/confirm.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/base/confirm.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/base/ui.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/base/ui.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/orders.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/orders.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scss/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/style.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scss/trash.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/trash.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trash.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/trash.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +49,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="npm.dev">
+  <component name="RunManager" selected="npm.build">
     <configuration default="true" type="js.build_tools.gulp">
       <node-interpreter>project</node-interpreter>
       <node-options />
@@ -109,7 +112,17 @@
       <workItem from="1667316796835" duration="8117000" />
       <workItem from="1667742038163" duration="834000" />
       <workItem from="1667906697380" duration="1362000" />
-      <workItem from="1668030236341" duration="1496000" />
+      <workItem from="1668030236341" duration="2361000" />
+      <workItem from="1668078646218" duration="917000" />
+      <workItem from="1668277760077" duration="902000" />
+      <workItem from="1668424450171" duration="4186000" />
+      <workItem from="1668428877770" duration="164000" />
+      <workItem from="1668480765606" duration="3930000" />
+      <workItem from="1668489468025" duration="1742000" />
+      <workItem from="1668508218520" duration="796000" />
+      <workItem from="1668513856797" duration="693000" />
+      <workItem from="1668575314059" duration="4748000" />
+      <workItem from="1668589749330" duration="3030000" />
     </task>
     <task id="LOCAL-00001" summary="Закончил страницы:&#10;Учетная запись - userAccount.html&#10;Данные личные/организации  - data.html&#10;Адреса доставки - adresses.html&#10;Контакты - profileContacts.html&#10;Реквизиты - profileDetails.html">
       <created>1667225822154</created>
@@ -118,7 +131,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667225822154</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Закончил страницы:&#10;Заказ № - orderNumber.html&#10;Заказы - orders.html&#10;Ваши товары на продажу - productForSale.html">
+      <created>1668031856660</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1668031856660</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -138,6 +158,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Закончил страницы:&#10;Учетная запись - userAccount.html&#10;Данные личные/организации  - data.html&#10;Адреса доставки - adresses.html&#10;Контакты - profileContacts.html&#10;Реквизиты - profileDetails.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Закончил страницы:&#10;Учетная запись - userAccount.html&#10;Данные личные/организации  - data.html&#10;Адреса доставки - adresses.html&#10;Контакты - profileContacts.html&#10;Реквизиты - profileDetails.html" />
+    <MESSAGE value="Закончил страницы:&#10;Заказ № - orderNumber.html&#10;Заказы - orders.html&#10;Ваши товары на продажу - productForSale.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Закончил страницы:&#10;Заказ № - orderNumber.html&#10;Заказы - orders.html&#10;Ваши товары на продажу - productForSale.html" />
   </component>
 </project>

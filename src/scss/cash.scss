@@ -1,0 +1,139 @@
+.cashBlock {
+
+}
+
+.list-cashBlock {
+  display: flex;
+  align-items: flex-end;
+  
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.2;
+  padding-bottom: 20px;
+  
+  &__body {
+    width: 100%;
+  }
+  
+  &__btn {
+    white-space: nowrap;
+    margin-left: 15px;
+  }
+  
+  &__line {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    min-height: 38px;
+    
+    &._head {
+      background: #E9F1FF;
+    }
+    
+    &:first-child {
+      border-top: 1px solid #80A4DE;
+    }
+  }
+  
+  &__row {
+    padding: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 1px solid #80A4DE;
+    border-top: none;
+    border-left: none;
+    
+    &:first-child {
+      border-left: 1px solid #80A4DE;
+    }
+  }
+}
+
+
+//====================================================================================================
+.cashOutBlock {
+  
+  &__body {
+  }
+  
+  &__line {
+    display: flex;
+    margin-bottom: 25px;
+  }
+  
+  &__inputBlock {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.2;
+    
+    label {
+      margin-bottom: 10px;
+    }
+    
+    input,textarea {
+      padding: 10px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 1.2;
+      width: 100%;
+    }
+  }
+  
+  &__btn {
+  }
+}
+
+
+//====================================================================================================
+.discounts {
+  
+  &__warning {
+    margin-top: 35px;
+  }
+}
+
+.table-discounts {
+  
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.2;
+  padding-bottom: 20px;
+  
+  &__body {
+    width: 100%;
+  }
+  
+  &__line {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    min-height: 38px;
+    
+    &._head {
+      background: #E9F1FF;
+    }
+    
+    &:first-child {
+      border-top: 1px solid #80A4DE;
+    }
+  }
+  
+  &__row {
+    padding: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 1px solid #80A4DE;
+    border-top: none;
+    border-left: none;
+    
+    &:first-child {
+      border-left: 1px solid #80A4DE;
+    }
+  }
+}

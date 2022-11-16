@@ -66,6 +66,14 @@
   &__filterBlocks {
     display: flex;
     gap: 20px;
+    
+    &._big {
+     .filterBlock-ordersBlock-tabs {
+       flex: 0 1 620px;
+       margin-left: 0;
+       margin-right: 0;
+     }
+    }
   }
 }
 
