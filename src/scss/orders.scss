@@ -74,6 +74,18 @@
        margin-right: 0;
      }
     }
+    
+    &._auto {
+      .filterBlock-ordersBlock-tabs {
+        flex: 1 1 auto;
+        margin-left: 0;
+        margin-right: 0;
+      }
+      
+      .filterBlock-ordersBlock-tabs__line {
+        gap: 13px;
+      }
+    }
   }
 }
 
@@ -102,6 +114,7 @@
   &__line {
     display: flex;
     gap: 20px;
+    align-items: center;
   }
   
   &__inputBlock {

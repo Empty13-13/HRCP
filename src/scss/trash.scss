@@ -123,6 +123,12 @@
 .infoBlock-trash {
   margin-bottom: 17px;
   
+  &._wrap {
+    .infoBlock-trash__list {
+      flex-wrap: wrap;
+    }
+  }
+  
   &__list {
     display: inline-flex;
     

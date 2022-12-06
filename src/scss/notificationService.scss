@@ -1,9 +1,27 @@
 .notificationService {
   
   &__body {
+    margin-bottom: 20px;
   }
   
   &__addBtn {
     margin-top: 20px;
+  }
+  
+  &__warning {
+    margin-top: 20px;
+  }
+}
+
+.choose-notificationService {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  
+  &__name {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.2;
+    margin-right: 25px;
   }
 }

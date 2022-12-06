@@ -12,6 +12,9 @@
 <!--Внимательно с полями textarea при редактировании комментария. Они чувствительны к любым переносам строк и пробелам в html-->
 <!--Поэтому если понадобится загружать в них текст извне - лучше убедиться что он загружается в одну строку без лишних переносов и пробелов -->
 
+<!--При удалении какого-либо обзора/отзыва в окнах "Количество обзоров/отзывов" и "Выведено на страницу" меняется число -->
+<!--(см. верху над обзорами, отзывами)-->
+
 
 <div class="wrapper">
   <header class="header">
@@ -152,7 +155,7 @@
                             Заказы
                           </a>
                           <a href="" class="spollers__title _none _pad">
-                            Обзоры/отзывы
+                            Ваши товары на продажу
                           </a>
                           <a href="" class="spollers__title _none _pad">
                             Обзоры/отзывы
@@ -388,7 +391,7 @@
                     <div class="trash__products products-trash">
                       <div id="feedbackListWrapper" class="products-trash__body">
                         <ol id="productListTrash" class="products-trash__list _marginNone">
-                          <li data-date="2022-11-03">
+                          <li data-date="2022-11-08">
                             <div class="item-products-trash">
                               <div class="item-products-trash__checkbox checkbox">
                                 <input type="checkbox" id="product1" class="item-products-trash__input checkbox__input">
@@ -405,28 +408,26 @@
                                   </div>
                                 </div>
                                 <div class="item-products-trash__right right-item-products-trash">
-                                  <h3 class="right-item-products-trash__title">10 м водонепроницаемый Самоклеящиеся обои
-                                                                               чистый
-                                                                               пигмент цветная сетка красный Обои флип
-                                                                               новый
-                                                                               Стикер бумага спальня теплый фон
-                                                                               украшения
-                                                                               стены</h3>
+                                  <h3 class="right-item-products-trash__title"> Флип
+                                                                                новый
+                                                                                Стикер бумага спальня теплый фон
+                                                                                украшения
+                                                                                стены</h3>
                                   <div
                                     class="right-item-products-trash__description description-right-item-products-trash">
                                     <div class="description-right-item-products-trash__title">Описание товара:</div>
                                     <ul class="description-right-item-products-trash__list">
                                       <li class="description-right-item-products-trash__item">
-                                        <div class="description-right-item-products-trash__value">1285152</div>
+                                        <div class="description-right-item-products-trash__value">7756198</div>
                                       </li>
                                       <li class="description-right-item-products-trash__item">
-                                        <div class="description-right-item-products-trash__value">ID: 15452284</div>
+                                        <div class="description-right-item-products-trash__value">ID: 7756198</div>
                                       </li>
                                       <li class="description-right-item-products-trash__item">
                                         <div class="description-right-item-products-trash__value">ASM ANNA</div>
                                       </li>
                                       <li class="description-right-item-products-trash__item">
-                                        <div class="description-right-item-products-trash__value">Название магазина
+                                        <div class="description-right-item-products-trash__value">Название магазина 2
                                         </div>
                                       </li>
                                       <li class="description-right-item-products-trash__item">
@@ -481,7 +482,7 @@
                                         <div class="description-right-item-products-trash__value">2 кг (брутто)</div>
                                       </li>
                                       <li class="description-right-item-products-trash__item">
-                                        <div class="description-right-item-products-trash__value">0,005х0,004х0,003 м
+                                        <div class="description-right-item-products-trash__value">8х3х4 м
                                                                                                   (нетто)
                                         </div>
                                       </li>
@@ -500,7 +501,7 @@
                                   </div>
                                 </div>
                               </div>
-                              <p class="left-item-products-trash__text">Дата написания обзора/отзыва: 03.11.2022</p>
+                              <p class="left-item-products-trash__text">Дата написания обзора/отзыва: 08.11.2022</p>
                               <div class="left-item-products-trash__rating _line">
                                 Оценка товара:
                                 <div class="rating _small">
@@ -519,19 +520,7 @@
                               </div>
                               <div class="left-item-products-trash__feedback">
                                 <p class="left-item-products-trash__text">Отзыв, обзор:</p>
-                                <div id="editCommentText" class="left-item-products-trash__feedback-text">Отличный
-                                                                                                          товар, удобный
-                                                                                                          в
-                                                                                                          использовании.
-                                                                                                          Буду
-                                                                                                          заказывать
-                                                                                                          еще.
-                                                                                                          Соответствует
-                                                                                                          описанию и
-                                                                                                          фотографиям.
-                                                                                                          Доставка в
-                                                                                                          срок.
-                                </div>
+                                <div id="editCommentText" class="left-item-products-trash__feedback-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam asperiores blanditiis deserunt earum ex explicabo facere ipsum libero natus nihil nisi officiis quae quas sed, sit, temporibus vero voluptatem voluptates?</div>
                                 <textarea hidden autocomplete="off" type="text" name="form[]"
                                           placeholder="Введите обзор/отзыв" class="input"></textarea>
                               </div>

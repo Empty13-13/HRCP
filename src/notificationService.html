@@ -9,6 +9,62 @@
 <!--активной кнопкой "Ответить", только у тех сообщений, которые пользователь/заказчик еще не просматривал и увидел их в-->
 <!--первые, как только открыл подраздел "Сообщения/уведомления".-->
 
+<!--При создании нового сообщения, кнопка "Опубликовать/отправить" (находится рядом правее кнопки "Ответить" и имеет такой же дизайн) -->
+<!--при нажатии которой новое созданное сообщение публикуется, отправляется, а само созданное сообщение перемещается в верх списка и имеет-->
+<!--желтый фон, пока его не просмотрят. Также важно, чтобы в начале списка сообщений, уведомлений были более ранее, а затем-->
+<!--более поздние и так далее по дальности времени публикации сообщений и уведомлений-->
+<!--Например:-->
+<!--05.11-->
+<!--04.11-->
+<!--30.10-->
+
+<!--при нажатии кнопки "Уведомления" с колокольчиком в шапки страницы на которой находится пользователь, в т.ч. и на-->
+<!--"Главной", если он зашел "под собой", то он переходит в "Личный кабинет" на страницу "Сообщения/уведомления", а если-->
+<!--нажимает данную кнопку "Уведомления" с колокольчиком без авторизации, то ему выходит поле на экран с письменным-->
+<!--уведомлением. Чтобы увидеть все свои сообщения/уведомления, он должен вначале авторизоваться на сайте, а уже после-->
+<!--нажать кнопку "Уведомления" с колокольчиком;-->
+
+<!--В шапке сообщения, уведомления могут быть следующие участники в переписке на сайте:-->
+<!--Я (пользователь),-->
+<!--Тех. поддержка,-->
+<!--Оператор сайта,-->
+<!--Администратор сайта,-->
+<!--Менеджер;-->
+
+<!--Нажав в шапке страниц кнопку "Уведомления" или в меню "Пользователю" перейдя в раздел "Помощь, поддержка", а затем в-->
+<!--подраздел "Служба поддержки" и нажав надпись "Сообщения/Уведомления", перейдет в Личный кабинет на страницу-->
+<!--"Сообщения/Уведомления".-->
+
+<!--При увеличении количества сообщений и уведомлений, происходит увеличение числа в поле "Количество сообщений/уведомлений:-->
+<!--4", которое расположено над полем "Период с ...", а при удалении, т.е. уменьшения количества сообщений и уведомлений,-->
+<!--происходит уменьшение числа в поле "Количество сообщений/уведомлений: 4-->
+
+<!--В верхней части поля в сообщениях, уведомлениях с окном выбора есть select, который показывает видеть кто пишет и-->
+<!--публикует его из списка: Я (пользователь), Тех. поддержка, Оператор сайта, Администратор сайта, Менеджер, и выбор может-->
+<!--осуществляться только согласно прав и допусков установленных на сайте. Например, "Я (пользователь), авторизовавшись на-->
+<!--сайте, не может писать сообщения под ником "Оператор сайта", он может это делать только под собой выбрав "Я-->
+<!--пользователь", а "Тех. поддержка" не может писать и публиковать сообщение или уведомление под ником "Я пользователь" и т.д.-->
+
+<!--Непрочитанные уведомления выделены желтым цветом. Просмотренные уведомления на белом фоне.-->
+
+<!--Когда на рамку наводят курсор или вносят запись, то она меняет цвет на синий, как и для всех полей (окон) на которые можно наводить курсор или вносить текст-->
+
+<!--При наличии уведомлений в строке пользователя в “Уведомлениях” появляется желтый прямоугольник-->
+<!--с количеством уведомлений. После просмотра пользователем уведомлений он исчезает.-->
+
+<!--Когда открыта страница “Сообщения/уведомления” открыта, то кнопка "Уведомления" в шапке странице в строке меню-->
+<!--пользователя становится неактивной (светло-голубого цвета)-->
+
+<!--Когда на рамку наводят курсор или вносят запись, то она меняет цвет на синий, как и для всех полей (окон) на которые можно наводить курсор или вносить текст-->
+
+<!--Значения select при выборе имени публикации сообщения-->
+<!--1 - Я (пользователь)-->
+<!--2 - Тех. поддержка-->
+<!--3 - Оператор сайта-->
+<!--4 - Администратор сайта-->
+<!--5 - Менеджер-->
+
+
 <div class="wrapper">
   <header class="header">
     <div class="header__container">
@@ -257,7 +313,33 @@
 
                 <div class="notificationService">
                   <div class="notificationService__body">
-                    <div class="ordersBlock-tabs__filterBlocks _big">
+                    <div class="infoBlock-trash _wrap">
+                      <ul class="infoBlock-trash__list">
+                        <li>
+                          <div class="infoBlock-trash__text">Количество сообщений/уведомлений:</div>
+                          <div class="infoBlock-trash__num">4</div>
+                        </li>
+                        <li>
+                          <div class="infoBlock-trash__text">Выведено на страницу:</div>
+                          <div class="infoBlock-trash__num"> 1-4 из 4</div>
+                        </li>
+                        <li>
+                          <div class="infoBlock-trash__text">Сообщений/уведомлений на странице:</div>
+                          <ul class="quantity-sorting-catalog__groupNumber">
+                            <li class="quantity-sorting-catalog__num">
+                              <button type="button" class="quantity-sorting-catalog__btn _active">16</button>
+                            </li>
+                            <li class="quantity-sorting-catalog__num">
+                              <button type="button" class="quantity-sorting-catalog__btn">24</button>
+                            </li>
+                            <li class="quantity-sorting-catalog__num">
+                              <button type="button" class="quantity-sorting-catalog__btn">32</button>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="ordersBlock-tabs__filterBlocks _auto">
                       <div class="filterBlock-ordersBlock-tabs">
                         <div class="filterBlock-ordersBlock-tabs__body">
                           <div class="filterBlock-ordersBlock-tabs__line">
@@ -317,28 +399,93 @@
 
 
                             </div>
-                            <button id="filterBtn" class="filterBlock-ordersBlock-tabs__btn _blueBtn">Показать</button>
+                            <div class="filterBlock-ordersBlock-tabs__inputBlock">
+                              <button id="filterBtn" class="filterBlock-ordersBlock-tabs__btn _blueBtn">Показать
+                              </button>
+                            </div>
+                            <div class="filterBlock-ordersBlock-tabs__inputBlock">
+                              <div id="addMessageBtn" data-upNewBtn class="_blueBtn">Новое сообщение</div>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
                     <div id="notificationServiceList" class="notices__body">
-                      <div data-blockNotices data-date="2022-11-03" class="notices__block block-notices _unread">
+                      <div data-blockNotices data-date="2022-11-05" class="notices__block block-notices">
                         <div class="block-notices__body">
                           <div data-leftNotice class="block-notices__left left-block-notices">
                             <div class="left-block-notices__title">Сообщение в чате</div>
-                            <div class="left-block-notices__date">03.11.2022</div>
+                            <div class="left-block-notices__date">05.11.2022</div>
+                            <div class="left-block-notices__date">Просмотрено: 05.11.2022</div>
+                            <div class="left-block-notices__theme">
+                              <label class="left-block-notices__theme-title">Тема сообщения*</label>
+                              <div class="left-block-notices__theme-input">
+                                <textarea id="theme" maxlength="50" name="form[]" placeholder=""
+                                          class="input">Проверка товара</textarea>
+                              </div>
+                            </div>
                           </div>
                           <div class="block-notices__right right-block-notices">
                             <div class="right-block-notices__group">
-                              <div class="right-block-notices__title">Ответ на обращение в тех. поддержку</div>
+                              <div class="right-block-notices__title">Тех. поддержка</div>
                               <p class="right-block-notices__text">Мы проверили наличие товара у продавца. К сожалению,
                                                                    товара, который вас заинтересовал, сейчас нет в
                                                                    наличии. Когда он появится, мы оповестим вас.
                                                                    Извините за неудобства!</p>
                             </div>
                             <div class="right-block-notices__group">
-                              <div class="right-block-notices__title">Ваш ответ:</div>
+                              <div class="right-block-notices__title">Ответ:</div>
+                              <p class="right-block-notices__text">Спасибо за информацию!</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div data-blockNotices data-date="2022-11-04" class="notices__block block-notices">
+                        <div class="block-notices__body">
+                          <div data-leftNotice class="block-notices__left left-block-notices">
+                            <div class="left-block-notices__title">Сообщение в чате</div>
+                            <div class="left-block-notices__date">04.11.2022</div>
+                            <div class="left-block-notices__date">Просмотрено: 04.11.2022</div>
+                            <div class="left-block-notices__theme">
+                              <label class="left-block-notices__theme-title">Тема сообщения*</label>
+                              <div class="left-block-notices__theme-input">
+                                <textarea id="theme" maxlength="50" name="form[]" placeholder=""
+                                          class="input">Приход заказа</textarea>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="block-notices__right right-block-notices">
+                            <div class="right-block-notices__group">
+                              <div class="right-block-notices__title">Оператор сайта</div>
+                              <p class="right-block-notices__text">Вы можете забрать свой заказ по адресу: г. Москва,
+                                                                   ул. Советская, 222</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div data-blockNotices data-date="2022-11-03" class="notices__block block-notices _unread">
+                        <div class="block-notices__body">
+                          <div data-leftNotice class="block-notices__left left-block-notices">
+                            <div class="left-block-notices__title">Сообщение в чате</div>
+                            <div class="left-block-notices__date">03.11.2022</div>
+                            <div class="left-block-notices__theme">
+                              <label class="left-block-notices__theme-title">Тема сообщения*</label>
+                              <div class="left-block-notices__theme-input">
+                                <textarea id="theme" maxlength="50" name="form[]" placeholder=""
+                                          class="input">Проверка товара</textarea>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="block-notices__right right-block-notices">
+                            <div class="right-block-notices__group">
+                              <div class="right-block-notices__title">Тех. поддержка</div>
+                              <p class="right-block-notices__text">Мы проверили наличие товара у продавца. К сожалению,
+                                                                   товара, который вас заинтересовал, сейчас нет в
+                                                                   наличии. Когда он появится, мы оповестим вас.
+                                                                   Извините за неудобства!</p>
+                            </div>
+                            <div class="right-block-notices__group">
+                              <div class="right-block-notices__title">Ответ:</div>
                               <div data-noticesAnswerBlock
                                    class="right-block-notices__answer-block-notices answer-block-notices">
                                 <textarea autocomplete="off" name="form[]"
@@ -354,16 +501,23 @@
                           <div data-leftNotice class="block-notices__left left-block-notices">
                             <div class="left-block-notices__title">Сообщение в чате</div>
                             <div class="left-block-notices__date">03.11.2022</div>
+                            <div class="left-block-notices__theme">
+                              <label class="left-block-notices__theme-title">Тема сообщения*</label>
+                              <div class="left-block-notices__theme-input">
+                                <textarea id="theme" maxlength="50" name="form[]" placeholder=""
+                                          class="input">Запрос о товаре</textarea>
+                              </div>
+                            </div>
                           </div>
                           <div class="block-notices__right right-block-notices">
                             <div class="right-block-notices__group">
-                              <div class="right-block-notices__title">Я</div>
+                              <div class="right-block-notices__title">Я (пользователь)</div>
                               <p class="right-block-notices__text">Товар не доступен к закзу, когда он появится в
                                                                    наличии?</p>
                               <p data-pendingReviewNotice class="_warning">Ожидает ответа</p>
                             </div>
                             <div class="right-block-notices__group">
-                              <div class="right-block-notices__title">Ваш ответ:</div>
+                              <div class="right-block-notices__title">Ответ:</div>
                               <div data-noticesAnswerBlock
                                    class="right-block-notices__answer-block-notices answer-block-notices">
                                 <textarea autocomplete="off" name="form[]"
@@ -380,22 +534,29 @@
                             <div class="left-block-notices__title">Сообщение в чате</div>
                             <div class="left-block-notices__date">03.11.2022</div>
                             <div class="left-block-notices__date">Просмотрено: 03.11.2022</div>
+                            <div class="left-block-notices__theme">
+                              <label class="left-block-notices__theme-title">Тема сообщения*</label>
+                              <div class="left-block-notices__theme-input">
+                                <textarea id="theme" maxlength="50" name="form[]" placeholder=""
+                                          class="input">Запрос о товаре</textarea>
+                              </div>
+                            </div>
                           </div>
                           <div class="block-notices__right right-block-notices">
                             <div class="right-block-notices__group">
-                              <div class="right-block-notices__title">Я</div>
+                              <div class="right-block-notices__title">Я (пользователь)</div>
                               <p class="right-block-notices__text">Товар не доступен к закзу, когда он появится в
                                                                    наличии?</p>
                             </div>
                             <div class="right-block-notices__group">
-                              <div class="right-block-notices__title">Ответ на обращение в тех. поддержку</div>
+                              <div class="right-block-notices__title">Тех. поддержка</div>
                               <p class="right-block-notices__text">Мы проверили наличие товара у продавца. К сожалению,
                                                                    товара, который вас заинтересовал, сейчас нет в
                                                                    наличии. Когда он появится, мы оповестим вас.
                                                                    Извините за неудобства!</p>
                             </div>
                             <div class="right-block-notices__group">
-                              <div class="right-block-notices__title">Ваш ответ:</div>
+                              <div class="right-block-notices__title">Ответ:</div>
                               <div data-noticesAnswerBlock
                                    class="right-block-notices__answer-block-notices answer-block-notices">
                                 <textarea autocomplete="off" name="form[]"
@@ -406,46 +567,39 @@
                           </div>
                         </div>
                       </div>
-                      <div data-blockNotices data-date="2022-11-04" class="notices__block block-notices">
-                        <div class="block-notices__body">
-                          <div data-leftNotice class="block-notices__left left-block-notices">
-                            <div class="left-block-notices__title">Ваш заказ прибыл в пункт назначения</div>
-                            <div class="left-block-notices__date">04.11.2022</div>
-                            <div class="left-block-notices__date">Просмотрено: 04.11.2022</div>
-                          </div>
-                          <div class="block-notices__right right-block-notices">
-                            <div class="right-block-notices__group">
-                              <div class="right-block-notices__title">Товар прибыл!</div>
-                              <p class="right-block-notices__text">Вы можете забрать свой заказ по адресу: г. Москва,
-                                                                   ул. Советская, 222</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div data-blockNotices data-date="2022-11-05" class="notices__block block-notices">
-                        <div class="block-notices__body">
-                          <div data-leftNotice class="block-notices__left left-block-notices">
-                            <div class="left-block-notices__title">Сообщение в чате</div>
-                            <div class="left-block-notices__date">05.11.2022</div>
-                            <div class="left-block-notices__date">Просмотрено: 05.11.2022</div>
-                          </div>
-                          <div class="block-notices__right right-block-notices">
-                            <div class="right-block-notices__group">
-                              <div class="right-block-notices__title">Ответ на обращение в тех. поддержку</div>
-                              <p class="right-block-notices__text">Мы проверили наличие товара у продавца. К сожалению,
-                                                                   товара, который вас заинтересовал, сейчас нет в
-                                                                   наличии. Когда он появится, мы оповестим вас.
-                                                                   Извините за неудобства!</p>
-                            </div>
-                            <div class="right-block-notices__group">
-                              <div class="right-block-notices__title">Ваш ответ:</div>
-                              <p class="right-block-notices__text">Спасибо за информацию!</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
                     </div>
-                    <div id="addMessageBtn" class="notificationService__addBtn _blueBtn">Новое сообщение </div>
+                    <div id="addMessageBtn" class="notificationService__addBtn _blueBtn">Новое сообщение</div>
+                    <div class="notificationService__warning _warning">
+                      * максимальное количество вводимых символов 50
+                    </div>
+                  </div>
+                  <div class="nav-products-catalog">
+                    <div class="nav-products-catalog__body">
+                      <ul class="nav-products-catalog__list">
+                        <li>
+                          <button type="button" class="nav-products-catalog__btn _active">1</button>
+                        </li>
+                        <li>
+                          <button type="button" class="nav-products-catalog__btn">2</button>
+                        </li>
+                        <li>
+                          <button type="button" class="nav-products-catalog__btn">3</button>
+                        </li>
+                        <li>
+                          <button type="button" class="nav-products-catalog__btn _dotts">...</button>
+                        </li>
+                        <li>
+                          <button type="button" class="nav-products-catalog__btn">248</button>
+                        </li>
+                      </ul>
+                      <button class="nav-products-catalog__btn-next"><span>Вперёд</span>
+                        <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M0.428185 14.208C0.232923 14.4032 0.232923 14.7198 0.428185 14.9151C0.623447 15.1103 0.940029 15.1103 1.13529 14.9151L0.428185 14.208ZM7.56308 7.78018L7.91664 8.13373L8.27019 7.78017L7.91663 7.42662L7.56308 7.78018ZM1.13529 0.645465C0.940022 0.450206 0.623439 0.45021 0.42818 0.645475C0.232921 0.84074 0.232925 1.15732 0.42819 1.35258L1.13529 0.645465ZM1.13529 14.9151L7.91664 8.13373L7.20953 7.42663L0.428185 14.208L1.13529 14.9151ZM0.42819 1.35258L7.20953 8.13374L7.91663 7.42662L1.13529 0.645465L0.42819 1.35258Z"
+                            fill="#80A4DE"/>
+                        </svg>
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>

@@ -3,6 +3,7 @@
 import {_slideDown, _slideUp, _slideToggle} from "./functions.js";
 import {gotoBlock} from "./scroll/gotoblock.js";
 import {initConfirm} from './myConfirm.js'
+import {selectModule} from "./forms/select.js";
 import {formRating} from './forms/forms.js'
 import "../libs/smoothScroll.js";
 
@@ -1208,7 +1209,7 @@ if (notices) {
           if (noticesHeader) {
             noticesHeader.innerHTML = +noticesHeader.innerHTML - 1
             if (+noticesHeader.innerHTML < 1) {
-              noticesHeader.remove()
+              noticesHeader.classList.add('_hidden')
             }
           }
 
@@ -1910,70 +1911,183 @@ if (notificationServiceList) {
   }
 
   //Добавление сообщение по клику
-  let addMessageBtn = document.querySelector('#addMessageBtn')
-  if (addMessageBtn) {
+  let addMessageBtns = document.querySelectorAll('#addMessageBtn')
+  if (addMessageBtns.length) {
+    addMessageBtns.forEach(addMessageBtn => {
+      addMessageBtn.addEventListener("click", function (e) {
+        //Создание нового элемента
+        const getMessageBlock = () => {
+          let div = document.createElement('div')
+          div.classList.add('notices__block', 'block-notices')
+          div.setAttribute('data-date', [new Date().getFullYear(), new Date().getMonth() + 1, new Date().getDate()].join('-'))
+          div.setAttribute('data-blockNotices', "")
 
-    addMessageBtn.addEventListener("click", function (e) {
-      //Создание нового элемента
-      const getMessageBlock = () => {
-        let div = document.createElement('div')
-        div.classList.add('notices__block', 'block-notices')
-        div.setAttribute('data-date', [new Date().getFullYear(),new Date().getMonth()+1,new Date().getDate()].join('-'))
-        div.setAttribute('data-blockNotices', "")
-        div.innerHTML = `
+          //Шаблон нового сообщения
+          div.innerHTML = `
                         <div class="block-notices__body">
                           <div data-leftNotice class="block-notices__left left-block-notices">
                             <div class="left-block-notices__title">Сообщение в чате</div>
                             <div class="left-block-notices__date">${(new Date()).toLocaleString().split(',')[0]}</div>
+                            <div class="left-block-notices__theme">
+                              <label class="left-block-notices__theme-title">Тема сообщения*</label>
+                              <div class="left-block-notices__theme-input">
+                                <textarea id="theme" maxlength="50" name="form[]" placeholder="" class="input"></textarea>
+                              </div>
+                            </div>
+
                           </div>
                           <div class="block-notices__right right-block-notices">
-                            <div class="right-block-notices__group">
+                          <div id="selectGroup" class="right-block-notices__group">
+                            <p class="right-block-notices__text">Писать и публиковать от имени</p>
+                            <div class="right-block-notices__select">
+                              <select id="personaSelect" name="form[]" class="large">
+                                <option value="1" selected="selected">Я (пользователь)</option>
+                                <option value="2">Тех. поддержка</option>
+                                <option value="3">Оператор сайта</option>
+                                <option value="4">Администратор сайта</option>
+                                <option value="5">Менеджер</option>
+                             </select>
+                            </div>
+                           <button id="chooseBtn" class="right-block-notices__select-btn _blueBtn">Написать/составить</button>
+                          </div>
+                            
+                          <div id="textGroup" hidden class="right-block-notices__group">
                               <div class="right-block-notices__title">Ваше сообщение:</div>
                               <div data-noticesanswerblock
                                    class="right-block-notices__answer-block-notices answer-block-notices">
                                 <textarea autocomplete="off" name="form[]"
                                           class="answer-block-notices__input input"></textarea>
-                                <button class="answer-block-notices__btn _blueBtn">Ответить</button>
+                                <div class="answer-block-notices__line">
+                                  <button class="answer-block-notices__btn _blueBtn">Ответить</button>
+                                  <button data-sendBtn class="answer-block-notices__btn _blueBtn">Опубликовать/отправить</button>
+                                </div>
                               </div>
                             </div>
                           </div>
                         </div>
       `
+          //Обозначение имени от которого будут писать сообщение пользователи
+          let nameText = 'Я (пользователь)'
 
-        //Устанавливаем обработчик событий на элемент
-        let block = div.querySelector('[data-noticesanswerblock]')
-        let btn = block.querySelector('button')
-        let textarea = block.querySelector('textarea')
-        btn.addEventListener("click", function (e) {
-          //Если нет сообщения
-          if (textarea.value.trim().length < 1) {
-            textarea.focus()
-            textarea.classList.add('_error')
-            return true
+          // region Работа с селектом
+
+          //Иницализация селекта
+          let select = []
+          select.push(div.querySelector('#personaSelect'))
+          selectModule.selectsInit(select)
+
+          //Клик по кнопке "Выбрать"
+          let chooseBtn = div.querySelector('#chooseBtn')
+          if (chooseBtn) {
+            chooseBtn.addEventListener("click", function (e) {
+              let personaSelect = div.querySelector('#personaSelect')
+              if (personaSelect) {
+                let valuePersona = ['Я (пользователь)', 'Тех. поддержка', 'Оператор сайта', 'Администратор сайта', 'Менеджер']
+                nameText = valuePersona[+personaSelect.value - 1]
+
+                div.querySelector('#selectGroup').hidden = true
+                div.querySelector('#textGroup').hidden = false
+              }
+            });
           }
 
-          //Генерируем новое сообщение
-          let answer = document.createElement('p')
-          answer.classList.add('right-block-notices__text')
-          answer.innerHTML = textarea.value
+          // endregion
 
-          //Заменяем "Ваше сообщение" на "Я"
-          block.parentNode.querySelector('.right-block-notices__title').textContent = "Я"
+          // region Работа с текстовым блоком
 
-          //Вставляем новое сообщение и удаляем textarea
-          block.parentNode.append(answer)
-          block.remove()
-        })
+          //Ищем основном блок со всеми элементами
+          let block = div.querySelector('[data-noticesanswerblock]')
 
-        return div
-      }
+          //Обработчик событий по клику на "Ответить"
+          let btn = block.querySelector('button')
+          let textarea = block.querySelector('textarea')
+          btn.addEventListener("click", function (e) {
+            //Если нет сообщения
+            if (textarea.value.trim().length < 1) {
+              textarea.focus()
+              textarea.classList.add('_error')
+              return true
+            }
 
-      //Вставка нового элемента
-      notificationServiceList.appendChild(getMessageBlock())
+            //Генерируем новое сообщение
+            let answer = document.createElement('p')
+            answer.classList.add('right-block-notices__text')
+            answer.innerHTML = textarea.value
 
-      //Обновление фильтрации
-      lines = document.querySelectorAll('[data-date]')
-    });
+            //Добавление +1 к хедеру уведомлений
+            let noticesHeader = document.querySelector('[data-notices]')
+            if (noticesHeader.classList.contains('_hidden')) {
+              noticesHeader.classList.remove('_hidden')
+            }
+            noticesHeader.textContent = +noticesHeader.textContent + 1
+
+            //Заменяем "Ваше сообщение" на "Я"
+            block.parentNode.querySelector('.right-block-notices__title').textContent = nameText
+
+            //Вставляем новое сообщение и удаляем textarea
+            block.parentNode.append(answer)
+            block.remove()
+          })
+
+          //Обработчик событий по клику на "Опубликовать/отправить"
+          let sendBtn = block.querySelector('[data-sendBtn]')
+          sendBtn.addEventListener("click", function (e) {
+            //Если нет сообщения
+            if (textarea.value.trim().length < 1) {
+              textarea.focus()
+              textarea.classList.add('_error')
+              return true
+            }
+
+            //Генерируем новое сообщение
+            let answer = document.createElement('p')
+            answer.classList.add('right-block-notices__text')
+            answer.innerHTML = textarea.value
+
+            //Заменяем "Ваше сообщение" на "Я"
+            block.parentNode.querySelector('.right-block-notices__title').textContent = nameText
+
+            //Добавление +1 к хедеру уведомлений
+            let noticesHeader = document.querySelector('[data-notices]')
+            if (noticesHeader.classList.contains('_hidden')) {
+              noticesHeader.classList.remove('_hidden')
+            }
+            noticesHeader.textContent = +noticesHeader.textContent + 1
+
+            //Добавляем желтый фон
+            block.closest('.block-notices').classList.add('_unread')
+            //Переставляем блок вверх
+            notificationServiceList.prepend(div)
+            //Скрываем кнопку "Опубликовать/отправить"
+            sendBtn.classList.add('_hidden')
+
+            //Вставляем новое сообщение и удаляем textarea
+            block.parentNode.append(answer)
+            block.remove()
+
+            //Двигаем экран вверх
+            if (addMessageBtn.dataset.upnewbtn !== "") {
+              gotoBlock('.block-notices', true, 200)
+            }
+          });
+
+          // endregion
+
+          return div
+        }
+
+        //Вставка нового элемента
+        if (addMessageBtn.dataset.upnewbtn === "") {
+          notificationServiceList.prepend(getMessageBlock())
+        } else {
+          notificationServiceList.appendChild(getMessageBlock())
+        }
+
+        //Обновление фильтрации
+        lines = document.querySelectorAll('[data-date]')
+
+      });
+    })
   }
 }
 

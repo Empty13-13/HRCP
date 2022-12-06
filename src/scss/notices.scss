@@ -55,6 +55,25 @@
     color: #80A4DE;
     margin-bottom: 5px;
   }
+  
+  &__theme {
+  
+  }
+  
+  &__theme-title {
+    margin-bottom: 10px;
+    display: flex;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+  }
+  
+  &__theme-input{
+    input {
+      font-size: 12px;
+      padding: 6px;
+    }
+  }
 }
 
 .right-block-notices {
@@ -81,6 +100,15 @@
     font-size: 16px;
     line-height: 20px;
     color: #000000;
+  }
+  
+  &__select {
+    margin-bottom: 15px;
+    margin-top: 7px;
+  }
+  
+  &__select-btn {
+    margin-bottom: 15px;
   }
 }
 
@@ -118,5 +146,10 @@
   
   &__btn {
     display: flex;
+  }
+  
+  &__line {
+    display: flex;
+    gap: 15px;
   }
 }
