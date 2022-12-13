@@ -10,6 +10,17 @@
   
   &__warning {
     margin-top: 20px;
+    
+    a {
+      color: $blueColor;
+      transition: color 0.2s ease 0s;
+      
+      @media (any-hover: hover){
+        &:hover{
+          color: $blackBlueColor;
+        }
+      }
+    }
   }
 }
 

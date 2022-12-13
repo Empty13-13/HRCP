@@ -1,0 +1,68 @@
+.bonuses {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.2;
+  
+  &__body {
+  }
+  
+}
+.infoTable-bonuses {
+  
+  &__body {
+  }
+  
+  &__line {
+    display: flex;
+    padding: 10px 0;
+    border-bottom: 0.5px solid #80A4DE;
+  }
+  
+  &__title {
+    flex: 0 0 173px;
+    font-weight: 700;
+    margin-right: 15px;
+    color: #3567AC;
+  }
+  
+  &__text {
+    text-overflow: ellipsis;
+    display: inline-block;
+    margin: auto 0;
+    margin-right: 10%;
+    font-weight: 500;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #000000;
+  }
+}
+.userTable-bonuses {
+  
+  &__body {
+  }
+  
+  &__line {
+    display: flex;
+    border-bottom: 0.5px solid #80A4DE;
+  
+    &:first-child{
+      color: #3567AC;
+      font-weight: 700;
+    }
+  }
+  
+  &__column {
+    padding: 15px;
+    flex: 0 0 50%;
+    
+    &:first-child{
+      border-right: 0.5px solid #80A4DE;
+    }
+  }
+  
+  &__text {
+    display: flex;
+    align-items: center;
+    
+  }
+}

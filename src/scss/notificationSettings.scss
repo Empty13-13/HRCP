@@ -1,0 +1,35 @@
+.notificationSettings {
+  
+  &__body {
+  }
+  
+  &__list {
+    margin-bottom: 35px;
+    
+    li {
+      margin-bottom: 20px;
+    }
+    
+    
+    .checkbox {
+      
+      &__input {
+      }
+      
+      &__label {
+      }
+      
+      &__text {
+        line-height: 1.5;
+        
+        &:before {
+          margin-bottom: 3px;
+        }
+        
+      }
+    }
+  }
+  
+  &__warning {
+  }
+}

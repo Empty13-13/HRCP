@@ -2093,6 +2093,54 @@ if (notificationServiceList) {
 
 // endregion
 
+// region notificationSettings
+let notificationSettingsBody = document.querySelector('.notificationSettings')
+if (notificationSettingsBody) {
+  let checkAll = notificationSettingsBody.querySelector('#c_1')
+  let checkboxes = notificationSettingsBody.querySelectorAll('input[type=checkbox]')
+
+  checkAll.addEventListener("click", function (e) {
+    if (checkAll.checked) {
+      checkboxes.forEach(item => {
+        item.checked = true
+      })
+    } else {
+      checkboxes.forEach(item => {
+        item.checked = false
+      })
+    }
+  });
+
+  checkboxes.forEach(item => {
+    item.addEventListener("click", function (e) {
+      if (!item.checked) {
+        checkAll.checked = false
+      }
+    });
+  })
+}
+
+// endregion
+
+// region Bonuses
+let bonusesBody = document.querySelector('.bonuses__body')
+if (bonusesBody) {
+  let copyLinkBtn = bonusesBody.querySelector('#copyLink')
+  if (copyLinkBtn) {
+    copyLinkBtn.addEventListener("click", function (e) {
+      navigator.clipboard.writeText(copyLinkBtn.parentNode.querySelector('p').textContent)
+        .then(() => {
+          alert('Успешно скопировано в буфер обмена')
+        })
+        .catch(err => {
+          alert('Произошла ошибка при копировании в буфер обмена')
+        });
+    });
+  }
+}
+
+// endregion
+
 function filterPeriod({firstDateInp = null, secondDateInp = null, filterSelect = null, lines}) {
   if (!lines || !lines.length) {
     return false;
