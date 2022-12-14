@@ -1,24 +1,9 @@
 <!DOCTYPE html>
 <html lang="ru">
 @@include('html/_head.htm',{
-"title":"Реферальная система/Партнерская программа/Бонусы/Баллы"
+"title":"Email-уведомления"
 })
 <body>
-
-<!--Присвоение очередной категории пользователя/заказчика (реферера) осуществляется сотрудником сайта согласно процедуре и-->
-<!--правил описанных в "Личном кабинете", в разделе "Общая информация", в подразделах "Реферальная система", "Бонусы", "Баллы"-->
-
-<!--Если пользователь на страницах "Личного кабинета" в левом боковом меню выбирает и нажимает на "Бонусы" или "Баллы", то-->
-<!--он каждый раз попадает (открывает) страницу "Реферальная система/Партнерская программа/Бонусы/Баллы"-->
-
-<!--На странице "Реферальная система/Партнерская программа/Бонусы/Баллы" в таблице "Привлеченные пользователи" очередность-->
-<!--строится в следующем порядке: в верху в начале таблицы последние привлеченные пользователи с ближайшей датой к текущей-->
-<!--дате, далее ниже располагаются в списке по мере удаленности от текущей даты к перовому привлеченному пользователю-->
-<!--согласно реферальной системе на данном сайте-->
-
-<!--В строке (поле) "Ваша категория" меняется категория пользователя/заказчика (реферер) в зависимости от заказов-->
-<!--привлеченных им новых пользователей с присвоением ему очередной категории: "Участник", "Начинающий", "Продвинутый",-->
-<!--"Гуру"".-->
 
 <div class="wrapper">
   <header class="header">
@@ -89,8 +74,8 @@
             <ul class="bottom-header__breadcrumb breadcrumb">
               <li><a class="breadcrumb__link _href" href="#">Главная</a></li>
               <li class=""><a class="breadcrumb__link" href="">Личный кабинет</a></li>
-              <li class=""><a class="breadcrumb__link" href="">Реферальная система</a></li>
-              <li class="_active"><a class="breadcrumb__link" href="">Бонусы</a></li>
+              <li class=""><a class="breadcrumb__link" href="">Настройка уведомлений</a></li>
+              <li class="_active"><a class="breadcrumb__link" href="">Email-уведомления</a></li>
             </ul>
           </div>
         </div>
@@ -257,71 +242,100 @@
           </div>
           <div class="information__column">
             <div class="information__textBlock textBlock-information">
-              <div class="textBlock-information__title">
-                Последнее посещение пользователем личного кабинета: 09.02.2022 в 17 ч 02 м 36 с
-              </div>
               <div class="textBlock-information__body">
                 <h1 class="textBlock-information__bodyTitle">
-                  Реферальная система/Партнерская программа/Бонусы/Баллы <br>
-                  <span>Поделитесь ссылкой и зарабатывайте в месте с сайтом!</span>
+                  Email-уведомления
                 </h1>
 
-                <div class="bonuses">
-                  <div class="bonuses__body">
-                    <div class="bonuses__infoTable infoTable-bonuses">
-                      <div class="infoTable-bonuses__body">
-                        <div class="infoTable-bonuses__line">
-                          <div class="infoTable-bonuses__title">Ваша реферальная
-                                                                ссылка:
-                          </div>
-                          <p class="infoTable-bonuses__text"
-                             title="https://horecaprof.ru/?p=subcategory&cid=otc-4517&Provider=p1&asdhkj1$&4917">
-                            https://horecaprof.ru/?p=subcategory&cid=otc-4517&Provider=p1&asdhkj1$&4917</p>
-                          <button id="copyLink" class="_blueBtn">Копировать</button>
+                <div class="notificationSettings">
+                  <div class="notificationSettings__body">
+                    <ul class="notificationSettings__list">
+                      <li>
+                        <div class="checkbox">
+                          <input id="c_1" class="checkbox__input" type="checkbox" name="form[]">
+                          <label for="c_1" class="checkbox__label">
+                            <span class="checkbox__text _blueText">Выбрать все</span>
+                          </label>
                         </div>
-                        <div class="infoTable-bonuses__line">
-                          <div class="infoTable-bonuses__title">Ваш бонус/балл/ <br>
-                                                                заработано
-                          </div>
-                          <p class="infoTable-bonuses__text">500.00</p>
+                      </li>
+                      <li>
+                        <div class="checkbox">
+                          <input id="c_2" class="checkbox__input" type="checkbox" name="form[]">
+                          <label for="c_2" class="checkbox__label">
+                            <span class="checkbox__text">Результаты регистрации на сайте</span>
+                          </label>
                         </div>
-                        <div class="infoTable-bonuses__line">
-                          <div class="infoTable-bonuses__title">Ваша <br>
-                                                                категория:
-                          </div>
-                          <p class="infoTable-bonuses__text">Начинающий</p>
+                      </li>
+                      <li>
+                        <div class="checkbox">
+                          <input id="c_3" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                          <label for="c_3" class="checkbox__label">
+                            <span class="checkbox__text">Изменения пароля</span>
+                          </label>
                         </div>
-                      </div>
-                    </div>
-                    <div class="bonuses__title _title">Привлеченные пользователи</div>
-                    <div class="bonuses__userTable userTable-bonuses">
-                      <div class="userTable-bonuses__body">
-                        <div class="userTable-bonuses__line">
-                          <div class="userTable-bonuses__column">
-                            <p class="userTable-bonuses__text">Пользователь</p>
-                          </div>
-                          <div class="userTable-bonuses__column">
-                            <p class="userTable-bonuses__text">Заказы</p>
-                          </div>
+                      </li>
+                      <li>
+                        <div class="checkbox">
+                          <input id="c_4" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                          <label for="c_4" class="checkbox__label">
+                            <span class="checkbox__text">Смена телефона</span>
+                          </label>
                         </div>
-                        <div class="userTable-bonuses__line">
-                          <div class="userTable-bonuses__column">
-                            <p class="userTable-bonuses__text">Иванов Иван Иванович</p>
-                          </div>
-                          <div class="userTable-bonuses__column">
-                            <p class="userTable-bonuses__text">14.03.2022</p>
-                          </div>
+                      </li>
+                      <li>
+                        <div class="checkbox">
+                          <input id="c_5" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                          <label for="c_5" class="checkbox__label">
+                            <span class="checkbox__text">Изменение личных данных</span>
+                          </label>
                         </div>
-                        <div class="userTable-bonuses__line">
-                          <div class="userTable-bonuses__column">
-                            <p class="userTable-bonuses__text">Сергеев Сергей Сергеевич</p>
-                          </div>
-                          <div class="userTable-bonuses__column">
-                            <p class="userTable-bonuses__text">13.03.2022</p>
-                          </div>
+                      </li>
+                      <li>
+                        <div class="checkbox">
+                          <input id="c_6" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                          <label for="c_6" class="checkbox__label">
+                            <span class="checkbox__text">Состоянии корзины</span>
+                          </label>
                         </div>
-                      </div>
-                    </div>
+                      </li>
+                      <li>
+                        <div class="checkbox">
+                          <input id="c_7" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                          <label for="c_7" class="checkbox__label">
+                            <span class="checkbox__text">Состояния (статуса) заказа с возможным предоставлением трек-номера</span>
+                          </label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="checkbox">
+                          <input id="c_8" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                          <label for="c_8" class="checkbox__label">
+                            <span class="checkbox__text">Процесс доставки</span>
+                          </label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="checkbox">
+                          <input id="c_9" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                          <label for="c_9" class="checkbox__label">
+                            <span
+                              class="checkbox__text">Состоянии счета (личного кошелька) с подтверждением платежей</span>
+                          </label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="checkbox">
+                          <input id="c_10" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                          <label for="c_10" class="checkbox__label">
+                            <span class="checkbox__text">Информационные сообщения</span>
+                          </label>
+                        </div>
+                      </li>
+                    </ul>
+                    <p class="notificationSettings__warning _warning">
+                      Электронные письма будут приходить на электронную почту, которую пользователь/заказчик указал в
+                      учетной записи в личном кабинете при регистрации на сайте
+                    </p>
                   </div>
                 </div>
               </div>

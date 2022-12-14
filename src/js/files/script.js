@@ -2125,10 +2125,12 @@ if (notificationSettingsBody) {
 // region Bonuses
 let bonusesBody = document.querySelector('.bonuses__body')
 if (bonusesBody) {
+
+  //Копирование реферальной ссылки
   let copyLinkBtn = bonusesBody.querySelector('#copyLink')
   if (copyLinkBtn) {
     copyLinkBtn.addEventListener("click", function (e) {
-      navigator.clipboard.writeText(copyLinkBtn.parentNode.querySelector('p').textContent)
+      navigator.clipboard.writeText(copyLinkBtn.parentNode.querySelector('p').textContent.trim())
         .then(() => {
           alert('Успешно скопировано в буфер обмена')
         })

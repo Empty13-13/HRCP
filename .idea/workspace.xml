@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4586aba3-eec5-4675-b038-8de1450240a0" name="Changes" comment="Полные правки для страниц:&#10;Обзоры/Отзывы - feedback.html&#10;Счет - cash.html&#10;Вывести средства - cashOut.html &#10;Скидки - discounts.html&#10;Сообщения/Уведомления - notificationService.html">
-      <change afterPath="$PROJECT_DIR$/src/bonuses.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/forum.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/notificationSettings.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scss/bonuses.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scss/notificationSettings.scss" afterDir="false" />
+    <list default="true" id="4586aba3-eec5-4675-b038-8de1450240a0" name="Changes" comment="Правки страниц:&#10;Форум - forum.html&#10;Email уведомления - notificationSettingsEmail.html&#10;SMS уведомления - notificationSettingsSMS.html&#10;Реферальная система/Партнерская программа/Баллы - bonuses.html">
+      <change afterPath="$PROJECT_DIR$/src/notificationSettingsSMS.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bonuses.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/bonuses.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/forum.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/forum.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/files/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/files/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/notificationService.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/notificationService.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/information.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/information.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/notificationService.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/notificationService.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/notificationSettings.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/notificationSettingsEmail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/notificationSettings.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/notificationSettings.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,6 +125,8 @@
       <workItem from="1670321904454" duration="649000" />
       <workItem from="1670843826502" duration="3071000" />
       <workItem from="1670881253019" duration="1300000" />
+      <workItem from="1670929410962" duration="573000" />
+      <workItem from="1671050782468" duration="714000" />
     </task>
     <task id="LOCAL-00001" summary="Закончил страницы:&#10;Учетная запись - userAccount.html&#10;Данные личные/организации  - data.html&#10;Адреса доставки - adresses.html&#10;Контакты - profileContacts.html&#10;Реквизиты - profileDetails.html">
       <created>1667225822154</created>
@@ -157,7 +156,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670321944479</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Добавлены страницы:&#10;Форум - forum.html&#10;Email и SMS уведомления - notificationSettings.html&#10;Реферальная система/Партнерская программа/Баллы - bonuses.html">
+      <created>1670929543310</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1670929543310</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -180,6 +186,8 @@
     <MESSAGE value="Закончил страницы:&#10;Заказ № - orderNumber.html&#10;Заказы - orders.html&#10;Ваши товары на продажу - productForSale.html" />
     <MESSAGE value="Добавил страницы:&#10;Обзоры/Отзывы - feedback.html&#10;Счет - cash.html&#10;Вывести средства - cashOut.html &#10;Скидки - discounts.html&#10;Сообщения/Уведомления - notificationService.html" />
     <MESSAGE value="Полные правки для страниц:&#10;Обзоры/Отзывы - feedback.html&#10;Счет - cash.html&#10;Вывести средства - cashOut.html &#10;Скидки - discounts.html&#10;Сообщения/Уведомления - notificationService.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Полные правки для страниц:&#10;Обзоры/Отзывы - feedback.html&#10;Счет - cash.html&#10;Вывести средства - cashOut.html &#10;Скидки - discounts.html&#10;Сообщения/Уведомления - notificationService.html" />
+    <MESSAGE value="Добавлены страницы:&#10;Форум - forum.html&#10;Email и SMS уведомления - notificationSettings.html&#10;Реферальная система/Партнерская программа/Баллы - bonuses.html" />
+    <MESSAGE value="Правки страниц:&#10;Форум - forum.html&#10;Email уведомления - notificationSettingsEmail.html&#10;SMS уведомления - notificationSettingsSMS.html&#10;Реферальная система/Партнерская программа/Баллы - bonuses.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Правки страниц:&#10;Форум - forum.html&#10;Email уведомления - notificationSettingsEmail.html&#10;SMS уведомления - notificationSettingsSMS.html&#10;Реферальная система/Партнерская программа/Баллы - bonuses.html" />
   </component>
 </project>
