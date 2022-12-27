@@ -8,23 +8,31 @@ import {formRating} from './forms/forms.js'
 import "../libs/smoothScroll.js";
 
 // region Fixed Html
-let callbackBtn = document.querySelector('[data-callbackBtn]');
-let messageBtn = document.querySelector('[data-messageBtn]');
+let callbackBtns = document.querySelectorAll('[data-callbackBtn]');
+let messageBtns = document.querySelectorAll('[data-messageBtn]');
 let callbackForms = document.querySelectorAll('[data-callbackForm]')
 let callbackForms1 = document.querySelectorAll('[data-callbackForm1]')
 let callbackForms2 = document.querySelectorAll('[data-callbackForm2]')
 
-callbackBtn?.addEventListener("click", function (e) {
-  callbackForms1.forEach(callbackForm => {
-    callbackForm.classList.toggle('_active')
+if(callbackBtns.length){
+  callbackBtns.forEach(callbackBtn => {
+    callbackBtn.addEventListener("click", function (e) {
+      callbackForms1.forEach(callbackForm => {
+        callbackForm.classList.toggle('_active')
+      })
+    });
   })
-});
+}
 
-messageBtn?.addEventListener("click", function (e) {
-  callbackForms2.forEach(callbackForm => {
-    callbackForm.classList.toggle('_active')
+if(messageBtns.length){
+  messageBtns.forEach(messageBtn => {
+    messageBtn?.addEventListener("click", function (e) {
+      callbackForms2.forEach(callbackForm => {
+        callbackForm.classList.toggle('_active')
+      })
+    });
   })
-});
+}
 
 if (callbackForms.length) {
   callbackForms.forEach(callbackForm => {
@@ -2130,7 +2138,7 @@ if (bonusesBody) {
   let copyLinkBtn = bonusesBody.querySelector('#copyLink')
   if (copyLinkBtn) {
     copyLinkBtn.addEventListener("click", function (e) {
-      navigator.clipboard.writeText(copyLinkBtn.parentNode.querySelector('p').textContent.trim())
+      navigator.clipboard.writeText(copyLinkBtn.closest('.infoTable-bonuses__line').querySelector('p').textContent.trim())
         .then(() => {
           alert('Успешно скопировано в буфер обмена')
         })

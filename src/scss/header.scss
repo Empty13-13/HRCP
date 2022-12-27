@@ -109,6 +109,14 @@
     display: flex;
     justify-content:center;
     align-items: center;
+    
+    @media (any-hover: hover){
+      &:hover{
+        path {
+          stroke: $blackBlueColor;
+        }
+      }
+    }
   }
   
   &__search {

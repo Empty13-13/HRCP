@@ -1,15 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="4586aba3-eec5-4675-b038-8de1450240a0" name="Changes" comment="Правки страниц:&#10;Форум - forum.html&#10;Email уведомления - notificationSettingsEmail.html&#10;SMS уведомления - notificationSettingsSMS.html&#10;Реферальная система/Партнерская программа/Баллы - bonuses.html">
-      <change afterPath="$PROJECT_DIR$/src/notificationSettingsSMS.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/HowToOrder.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/howToOrder/11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/howToOrder/12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/howToOrder/21.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/howToOrder/22.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/howToOrder/23.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/howToOrder/31.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/howToOrder/32.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/howToOrder/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/howToOrder/5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/howToOrder/6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/howToOrder/7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/howToOrder/8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scss/404.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scss/howToOrder.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bonuses.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/bonuses.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/forum.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/forum.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/files/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/files/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/notificationService.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/notificationService.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/notificationSettings.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/notificationSettingsEmail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/notificationSettings.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/notificationSettings.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/notificationSettingsEmail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/notificationSettingsEmail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/notificationSettingsSMS.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/notificationSettingsSMS.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/base/ui.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/base/ui.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/bonuses.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/bonuses.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/header.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/style.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,20 +51,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;js.buildTools.gulp.gulp_package_dir&quot;: &quot;Y:/Webstrom/HRCP/node_modules/gulp&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Webstrom/HRCP&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "javascript.nodejs.core.library.configured.version": "18.12.1",
+    "javascript.nodejs.core.library.typings.version": "18.11.18",
+    "js.buildTools.gulp.gulp_package_dir": "Y:/Webstrom/HRCP/node_modules/gulp",
+    "last_opened_file_path": "D:/Webstrom/HRCP",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager" selected="npm.build">
+}]]></component>
+  <component name="RunManager" selected="npm.dev">
     <configuration default="true" type="js.build_tools.gulp">
       <node-interpreter>project</node-interpreter>
       <node-options />
@@ -126,7 +155,17 @@
       <workItem from="1670843826502" duration="3071000" />
       <workItem from="1670881253019" duration="1300000" />
       <workItem from="1670929410962" duration="573000" />
-      <workItem from="1671050782468" duration="714000" />
+      <workItem from="1671050782468" duration="1246000" />
+      <workItem from="1671152515821" duration="892000" />
+      <workItem from="1671191036987" duration="498000" />
+      <workItem from="1671596353085" duration="977000" />
+      <workItem from="1671598759646" duration="826000" />
+      <workItem from="1671702351800" duration="26000" />
+      <workItem from="1671702389937" duration="208000" />
+      <workItem from="1671776548642" duration="42000" />
+      <workItem from="1672156679389" duration="3060000" />
+      <workItem from="1672159785294" duration="533000" />
+      <workItem from="1672160330922" duration="1944000" />
     </task>
     <task id="LOCAL-00001" summary="Закончил страницы:&#10;Учетная запись - userAccount.html&#10;Данные личные/организации  - data.html&#10;Адреса доставки - adresses.html&#10;Контакты - profileContacts.html&#10;Реквизиты - profileDetails.html">
       <created>1667225822154</created>
@@ -163,7 +202,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670929543310</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Правки страниц:&#10;Форум - forum.html&#10;Email уведомления - notificationSettingsEmail.html&#10;SMS уведомления - notificationSettingsSMS.html&#10;Реферальная система/Партнерская программа/Баллы - bonuses.html">
+      <created>1671051514540</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1671051514540</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

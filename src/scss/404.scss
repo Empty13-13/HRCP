@@ -1,0 +1,35 @@
+.errorBlock {
+  margin-bottom: 80px;
+  
+  &__body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  &__img {
+  }
+  
+  &__text {
+    text-align: center;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.2;
+    max-width: 800px;
+    margin-bottom: 37px;
+  }
+  
+  &__line {
+    margin-bottom: 20px;
+  }
+  
+  &__btn {
+    height: 38px;
+    margin-right: 15px;
+    
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

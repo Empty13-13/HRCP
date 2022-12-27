@@ -7,6 +7,7 @@
   }
   
 }
+
 .infoTable-bonuses {
   
   &__body {
@@ -16,6 +17,11 @@
     display: flex;
     padding: 10px 0;
     border-bottom: 0.5px solid #80A4DE;
+  
+    button {
+      margin-left: auto;
+      width: 140px;
+    }
   }
   
   &__title {
@@ -23,6 +29,8 @@
     font-weight: 700;
     margin-right: 15px;
     color: #3567AC;
+    display: flex;
+    align-items: center;
   }
   
   &__text {
@@ -35,7 +43,13 @@
     white-space: nowrap;
     color: #000000;
   }
+  
+  &__select {
+    min-width: 153px;
+  }
+  
 }
+
 .userTable-bonuses {
   
   &__body {
@@ -44,8 +58,8 @@
   &__line {
     display: flex;
     border-bottom: 0.5px solid #80A4DE;
-  
-    &:first-child{
+    
+    &:first-child {
       color: #3567AC;
       font-weight: 700;
     }
@@ -55,7 +69,7 @@
     padding: 15px;
     flex: 0 0 50%;
     
-    &:first-child{
+    &:first-child {
       border-right: 0.5px solid #80A4DE;
     }
   }
