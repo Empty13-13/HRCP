@@ -1,9 +1,9 @@
 .delivery {
   margin-bottom: 80px;
-  
+
   &__container {
   }
-  
+
   &__title {
     margin-top: 30px;
     font-family: 'Montserrat';
@@ -15,19 +15,19 @@
     margin-bottom: 25px;
     display: block;
   }
-  
+
   &__body {
     & > ol {
       /* убираем стандартную нумерацию */
       list-style: none;
       /* Идентифицируем счетчик и даем ему имя li. Значение счетчика не указано - по умолчанию оно равно 0 */
       counter-reset: li;
-      
+
       & > li:before {
         counter-increment: li;
         content: counters(li, ".") ". ";
       }
-      
+
       //
       //li > ol .delivery__text:before {
       //  counter-increment: li;
@@ -37,22 +37,22 @@
         counter-reset: li2;
         list-style: none;
       }
-      
+
       & > li > ol > li .delivery__text:before {
         counter-increment: li2;
         content: counters(li, '.') '.' counter(li2);
-        
+
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 700;
         font-size: 18px;
         line-height: 22px;
-        
+
         color: #3567AC;
       }
     }
   }
-  
+
   &__text {
     font-family: 'Montserrat';
     font-style: normal;
@@ -61,34 +61,53 @@
     line-height: 22px;
     color: #000000;
     margin-bottom: 20px;
+
+    &._warning {
+      background: #FFE585;
+      border-radius: 8px;
+      padding: 8px 20px;
+
+      &::before {
+        display: none;
+      }
+    }
   }
-  
+
+  a {
+    color: $blueColor;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $blackBlueColor;
+      }
+    }
+  }
+
   &__list {
     & > li {
-      font-family: 'Montserrat';
-      font-style: normal;
       font-weight: 700;
       font-size: 24px;
       line-height: 29px;
       color: #3567AC;
     }
+
     & > li > ol {
       margin-top: 15px;
     }
   }
-  
+
   &__line {
     display: grid;
     grid-template-columns: 1fr 680px;
     justify-content: space-between;
   }
-  
+
   &__column {
     &:first-child {
       margin-right: 50px;
     }
   }
-  
+
   &__img {
     border: 1px solid #80A4DE;
     border-radius: 8px;
@@ -96,18 +115,71 @@
     margin-bottom: 15px;
     max-width: 413px;
     cursor: pointer;
-    
+
     img {
       max-width: 100%;
       transition: transform 0.3s ease 0s;
     }
-    
+
     @media (any-hover: hover) {
       &:hover {
         img {
           transform: scale(1.3);
         }
       }
+    }
+  }
+
+  &._find {
+    .delivery__column {
+      &:first-child {
+        margin-right: 50px;
+      }
+    }
+
+    p {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 22px;
+      color: #000000;
+      margin-bottom: 20px;
+    }
+
+    .delivery__column > p:not(.delivery__text) {
+      &::before {
+        content: counters(li, ".") ". ";
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 22px;
+        color: #3567AC;
+      }
+    }
+  }
+
+  &._payment {
+    .delivery__text-add {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 22px;
+      color: #000000;
+      margin-bottom: 20px;
+    }
+
+    .delivery__body > ol > li > ol > li > ol {
+      counter-reset: li3;
+    }
+
+    .delivery__body > ol > li > ol > li > ol > li .delivery__text-add:before {
+      counter-increment: li3;
+      content: counters(li, '.') '.' counter(li2) '.' counter(li3);
+
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 22px;
+
+      color: #3567AC;
     }
   }
 }
