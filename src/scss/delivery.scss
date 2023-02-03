@@ -1,6 +1,10 @@
 .delivery {
   margin-bottom: 80px;
 
+  li {
+    list-style: none;
+  }
+
   &__container {
   }
 
@@ -40,7 +44,7 @@
 
       & > li > ol > li .delivery__text:before {
         counter-increment: li2;
-        content: counters(li, '.') '.' counter(li2);
+        content: counters(li, '.') '.' counter(li2) '.';
 
         font-family: 'Montserrat';
         font-style: normal;
@@ -171,7 +175,7 @@
 
     .delivery__body > ol > li > ol > li > ol > li .delivery__text-add:before {
       counter-increment: li3;
-      content: counters(li, '.') '.' counter(li2) '.' counter(li3);
+      content: counters(li, '.') '.' counter(li2) '.' counter(li3) '.';
 
       font-family: 'Montserrat';
       font-style: normal;

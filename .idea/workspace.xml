@@ -4,89 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4586aba3-eec5-4675-b038-8de1450240a0" name="Changes" comment="Добавил страницу:&#10;Как сделать заказ - HowToOrder.html">
-      <change afterPath="$PROJECT_DIR$/src/howToFind.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/howToFind/11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/howToFind/12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/howToFind/13.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/howToFind/14.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/howToFind/15.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/howToFind/152.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/howToFind/16.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/howToFind/17.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/howToFind/18.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/howToFind/2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/howToFind/21.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/howToFind/22.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/howToFind/23.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/howToFind/24.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/howToFind/25.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/howToFind/26.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/howToFind/262.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/howToFind/27.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/howToFind/28.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/howToFind/29.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/howToFind/31.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/howToFind/312.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/howToFind/32.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/howToFind/33.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/howToFind/34.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/howToFind/35.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/howToFind/36.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/howToFind/37.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/howToFind/38.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/howToFind/41.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/howToFind/42.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/howToFind/43.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/howToFind/44.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/howToFind/45.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/howToFind/46.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/howToFind/47.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/howToFind/5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/howToFind/510.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/howToFind/52.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/howToFind/53.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/howToFind/54.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/howToFind/542.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/howToFind/55.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/howToFind/56.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/howToFind/57.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/howToFind/58.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/howToFind/59.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/jointShopping/11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/jointShopping/12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/jointShopping/13.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/jointShopping/21.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/paymentForServices/11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/paymentForServices/111.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/paymentForServices/112.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/paymentForServices/113.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/paymentForServices/114.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/paymentForServices/115.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/paymentForServices/12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/paymentForServices/13.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/paymentForServices/14.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/paymentForServices/17.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/paymentForServices/18.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/paymentForServices/21.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/paymentForServices/22.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/paymentForServices/222.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/paymentForServices/23.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/paymentForServices/24.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/paymentForServices/242.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/paymentForServices/25.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/paymentForServices/31.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/paymentForServices/32.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/paymentForServices/321.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/paymentForServices/322.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/paymentForServices/323.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/paymentForServices/324.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/paymentForServices/325.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/paymentForServices/326.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/paymentForServices/327.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jointShopping.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/paymentForServices.html" afterDir="false" />
+    <list default="true" id="4586aba3-eec5-4675-b038-8de1450240a0" name="Changes" comment="Добавил страницы:&#10;Как сделать заказ - HowToOrder.html&#10;Поиск товара, как найти нужный продукт - howToFind.html&#10;Совместные покупки (складчина) - jointShopping.html&#10;Оплата за Услуги, Товары (ТМЦ) - paymentForServices.html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HowToOrder.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/HowToOrder.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/howToFind.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/howToFind.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/howToOrder/11.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/howToOrder/11.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/howToOrder/21.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/howToOrder/21.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/howToOrder/23.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/howToOrder/23.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/howToOrder/31.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/howToOrder/31.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/howToOrder/32.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/howToOrder/32.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/howToOrder/4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/howToOrder/4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/howToOrder/5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/howToOrder/5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/howToOrder/6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/howToOrder/6.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/howToOrder/7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/howToOrder/7.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/howToOrder/8.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/howToOrder/8.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jointShopping.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/jointShopping.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/paymentForServices.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/paymentForServices.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scss/delivery.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/delivery.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -129,7 +62,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="npm.build">
+  <component name="RunManager" selected="npm.dev">
     <configuration default="true" type="js.build_tools.gulp">
       <node-interpreter>project</node-interpreter>
       <node-options />
@@ -225,7 +158,21 @@
       <workItem from="1672160330922" duration="2312000" />
       <workItem from="1673482432392" duration="1916000" />
       <workItem from="1673500561421" duration="2199000" />
-      <workItem from="1673566764901" duration="4430000" />
+      <workItem from="1673566764901" duration="4604000" />
+      <workItem from="1674029320925" duration="1915000" />
+      <workItem from="1674106842787" duration="523000" />
+      <workItem from="1674195129432" duration="235000" />
+      <workItem from="1674490100486" duration="759000" />
+      <workItem from="1674556635599" duration="22000" />
+      <workItem from="1674581378032" duration="233000" />
+      <workItem from="1674581708025" duration="175000" />
+      <workItem from="1674583935839" duration="14000" />
+      <workItem from="1674583960862" duration="6000" />
+      <workItem from="1674584078103" duration="746000" />
+      <workItem from="1674648111637" duration="348000" />
+      <workItem from="1674810968090" duration="606000" />
+      <workItem from="1674831798648" duration="5000" />
+      <workItem from="1675161147693" duration="59000" />
     </task>
     <task id="LOCAL-00001" summary="Закончил страницы:&#10;Учетная запись - userAccount.html&#10;Данные личные/организации  - data.html&#10;Адреса доставки - adresses.html&#10;Контакты - profileContacts.html&#10;Реквизиты - profileDetails.html">
       <created>1667225822154</created>
@@ -276,7 +223,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672162526579</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Добавил страницы:&#10;Как сделать заказ - HowToOrder.html&#10;Поиск товара, как найти нужный продукт - howToFind.html&#10;Совместные покупки (складчина) - jointShopping.html&#10;Оплата за Услуги, Товары (ТМЦ) - paymentForServices.html">
+      <created>1673574194800</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1673574194800</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -302,6 +256,7 @@
     <MESSAGE value="Добавлены страницы:&#10;Форум - forum.html&#10;Email и SMS уведомления - notificationSettings.html&#10;Реферальная система/Партнерская программа/Баллы - bonuses.html" />
     <MESSAGE value="Правки страниц:&#10;Форум - forum.html&#10;Email уведомления - notificationSettingsEmail.html&#10;SMS уведомления - notificationSettingsSMS.html&#10;Реферальная система/Партнерская программа/Баллы - bonuses.html" />
     <MESSAGE value="Добавил страницу:&#10;Как сделать заказ - HowToOrder.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавил страницу:&#10;Как сделать заказ - HowToOrder.html" />
+    <MESSAGE value="Добавил страницы:&#10;Как сделать заказ - HowToOrder.html&#10;Поиск товара, как найти нужный продукт - howToFind.html&#10;Совместные покупки (складчина) - jointShopping.html&#10;Оплата за Услуги, Товары (ТМЦ) - paymentForServices.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавил страницы:&#10;Как сделать заказ - HowToOrder.html&#10;Поиск товара, как найти нужный продукт - howToFind.html&#10;Совместные покупки (складчина) - jointShopping.html&#10;Оплата за Услуги, Товары (ТМЦ) - paymentForServices.html" />
   </component>
 </project>
