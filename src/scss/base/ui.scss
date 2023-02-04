@@ -35,13 +35,13 @@
 
 ._btnHover {
   transition: all 0.3s ease 0s;
-  
+
   @media (any-hover: hover) {
     &:hover {
       background: $blueColor;
     }
   }
-  
+
   &:active, &:focus {
     background: #3567AC;
   }
@@ -53,13 +53,13 @@
 
 ._hhv {
   transition: all 0.3s ease 0s;
-  
+
   @media (any-hover: hover) {
     &:hover {
       background: #3567AC;
     }
   }
-  
+
   &:active, &:focus {
     background: #3567AC;
   }
@@ -81,28 +81,28 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  
+
   span {
     margin-right: 6px;
     padding-top: 2px;
   }
-  
+
   path {
     transition: all 0.3s ease 0s;
   }
-  
+
   @media (any-hover: hover) {
     &:hover {
       background-color: $blueColor;
       color: white;
-      
+
       path {
         fill: white;
         stroke: white;
       }
     }
   }
-  
+
   &:disabled {
     border: 1px solid #C3DAFF;
     color: #C3DAFF;
@@ -111,7 +111,7 @@
         border: 1px solid #C3DAFF;
         color: #C3DAFF;
         background-color: white;
-        
+
         path {
           fill: $blueColor;
           stroke: $blueColor;
@@ -136,18 +136,18 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  
+
   span {
     margin-right: 5px;
     padding-top: 3px;
   }
-  
+
   @media (any-hover: hover) {
     &:hover {
       background: #3567AC;
     }
   }
-  
+
   &:disabled {
     background: #C3DAFF;
     @media (any-hover: hover) {
@@ -164,7 +164,7 @@
   color: $blackBlueColor;
   font-size: 14px;
   line-height: 17px;
-  
+
   &::placeholder {
     border-radius: 8px;
     padding: 10px 17px;
@@ -185,28 +185,28 @@
   border: 0.5px solid #80A4DE;
   border-radius: 8px;
   transition: all 0.3s ease 0s;
-  
+
   &::placeholder {
     color: #80A4DE;
   }
-  
+
   &._focus {
     border: 0.5px solid $blackBlueColor;
   }
-  
+
   &._error {
     border: 1px solid rgba(224, 99, 99, 0.98);
   }
-  
+
   &::placeholder{
     transition: color 0.3s ease 0s;
   }
-  
+
   @media (any-hover: hover) {
     &:hover {
       border: 0.5px solid $blackBlueColor;
       color: $blackBlueColor;
-  
+
       &::placeholder {
         color: $blackBlueColor;
       }
@@ -220,13 +220,13 @@ textarea {
 
 ._blueText {
   color: #3567AC;
-  
+
   @media (any-hover: hover) {
     &:hover {
       color: #80A4DE;
     }
   }
-  
+
   &:active {
     color: #3567AC;
   }
@@ -237,4 +237,21 @@ textarea {
   font-size: 12px;
   line-height: 1.2;
   color: #3567AC;
+}
+
+._attachedLists {
+  ol {
+    counter-reset: section; /*Создаёт новый счётчик для каждого тега <ol>*/
+    list-style-type: none;
+
+    li::before {
+      counter-increment: section;
+      /*Инкрементируется только счётчик текущего уровня вложенности*/
+      content: counters(section, ".") ".";
+      /*Добавляем значения всех уровней вложенности, используя разделитель '.'*/
+      /*Если необходима поддержка < IE8,
+         необходимо убедиться, что после
+         разделителя ('.') не стоит пробел*/
+    }
+  }
 }

@@ -4,23 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4586aba3-eec5-4675-b038-8de1450240a0" name="Changes" comment="Добавил страницы:&#10;Как сделать заказ - HowToOrder.html&#10;Поиск товара, как найти нужный продукт - howToFind.html&#10;Совместные покупки (складчина) - jointShopping.html&#10;Оплата за Услуги, Товары (ТМЦ) - paymentForServices.html">
+    <list default="true" id="4586aba3-eec5-4675-b038-8de1450240a0" name="Changes" comment="Сделал страницу:&#10;Гид по размерам и как правильно снимать размеры для подбора одежды - sizeGuide.html">
+      <change afterPath="$PROJECT_DIR$/src/img/sizeGuide/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/sizeGuide/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/sizeGuide/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scss/sizeGuide.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sizeGuide.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HowToOrder.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/HowToOrder.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/howToFind.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/howToFind.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/howToOrder/11.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/howToOrder/11.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/howToOrder/21.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/howToOrder/21.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/howToOrder/23.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/howToOrder/23.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/howToOrder/31.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/howToOrder/31.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/howToOrder/32.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/howToOrder/32.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/howToOrder/4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/howToOrder/4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/howToOrder/5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/howToOrder/5.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/howToOrder/6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/howToOrder/6.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/howToOrder/7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/howToOrder/7.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/howToOrder/8.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/howToOrder/8.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jointShopping.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/jointShopping.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/paymentForServices.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/paymentForServices.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/delivery.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/delivery.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/base/ui.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/base/ui.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/style.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,28 +33,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;18.12.1&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;18.11.18&quot;,
-    &quot;js.buildTools.gulp.gulp_package_dir&quot;: &quot;Y:/Webstrom/HRCP/node_modules/gulp&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Webstrom/Select By Empty&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editing.templates&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "javascript.nodejs.core.library.configured.version": "18.12.1",
+    "javascript.nodejs.core.library.typings.version": "18.11.18",
+    "js.buildTools.gulp.gulp_package_dir": "Y:/Webstrom/HRCP/node_modules/gulp",
+    "last_opened_file_path": "D:/Webstrom/Select By Empty",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "settings.nodejs",
+    "ts.external.directory.path": "A:\\WebStorm 2022.1.3\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager" selected="npm.dev">
+}]]></component>
+  <component name="RunManager" selected="npm.build">
     <configuration default="true" type="js.build_tools.gulp">
       <node-interpreter>project</node-interpreter>
       <node-options />
@@ -173,6 +166,11 @@
       <workItem from="1674810968090" duration="606000" />
       <workItem from="1674831798648" duration="5000" />
       <workItem from="1675161147693" duration="59000" />
+      <workItem from="1675433564317" duration="662000" />
+      <workItem from="1675434243347" duration="37000" />
+      <workItem from="1675434290298" duration="6597000" />
+      <workItem from="1675442061909" duration="3000" />
+      <workItem from="1675462626215" duration="10221000" />
     </task>
     <task id="LOCAL-00001" summary="Закончил страницы:&#10;Учетная запись - userAccount.html&#10;Данные личные/организации  - data.html&#10;Адреса доставки - adresses.html&#10;Контакты - profileContacts.html&#10;Реквизиты - profileDetails.html">
       <created>1667225822154</created>
@@ -230,7 +228,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673574194800</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Правки страниц:&#10;Как сделать заказ - HowToOrder.html&#10;Поиск товара, как найти нужный продукт - howToFind.html&#10;Совместные покупки (складчина) - jointShopping.html&#10;Оплата за Услуги, Товары (ТМЦ) - paymentForServices.html">
+      <created>1675433685378</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1675433685378</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -257,6 +262,8 @@
     <MESSAGE value="Правки страниц:&#10;Форум - forum.html&#10;Email уведомления - notificationSettingsEmail.html&#10;SMS уведомления - notificationSettingsSMS.html&#10;Реферальная система/Партнерская программа/Баллы - bonuses.html" />
     <MESSAGE value="Добавил страницу:&#10;Как сделать заказ - HowToOrder.html" />
     <MESSAGE value="Добавил страницы:&#10;Как сделать заказ - HowToOrder.html&#10;Поиск товара, как найти нужный продукт - howToFind.html&#10;Совместные покупки (складчина) - jointShopping.html&#10;Оплата за Услуги, Товары (ТМЦ) - paymentForServices.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавил страницы:&#10;Как сделать заказ - HowToOrder.html&#10;Поиск товара, как найти нужный продукт - howToFind.html&#10;Совместные покупки (складчина) - jointShopping.html&#10;Оплата за Услуги, Товары (ТМЦ) - paymentForServices.html" />
+    <MESSAGE value="Правки страниц:&#10;Как сделать заказ - HowToOrder.html&#10;Поиск товара, как найти нужный продукт - howToFind.html&#10;Совместные покупки (складчина) - jointShopping.html&#10;Оплата за Услуги, Товары (ТМЦ) - paymentForServices.html" />
+    <MESSAGE value="Сделал страницу:&#10;Гид по размерам и как правильно снимать размеры для подбора одежды - sizeGuide.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Сделал страницу:&#10;Гид по размерам и как правильно снимать размеры для подбора одежды - sizeGuide.html" />
   </component>
 </project>
