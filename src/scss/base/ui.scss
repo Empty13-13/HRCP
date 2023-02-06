@@ -255,3 +255,38 @@ textarea {
     }
   }
 }
+
+.imgTextBlock {
+
+  &__img-ibg {
+    height: 320px;
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid #80A4DE;
+    border-radius: 8px;
+    overflow: hidden;
+
+    img  {
+      border-radius: 8px;
+    }
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.2;
+    color: #000000;
+    margin-bottom: 25px;
+    text-align: justify;
+
+    a {
+      color: $blueColor;
+
+      @media (any-hover: hover){
+        &:hover{
+          color: $blackBlueColor;
+        }
+      }
+    }
+  }
+}

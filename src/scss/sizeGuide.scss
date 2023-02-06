@@ -103,8 +103,6 @@
       td, th {
         &:first-child {
           width: 33.3%;
-          word-break: break-all;
-          word-wrap: break-word;
         }
 
         width: 11.13%;
@@ -117,6 +115,8 @@
       td, th {
         &:first-child {
           width: 12.17%;
+          word-break: break-all;
+          word-wrap: break-word;
         }
 
         &:nth-child(2), &:nth-child(3), &:nth-child(6), &:nth-child(7) {
