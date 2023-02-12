@@ -4,21 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4586aba3-eec5-4675-b038-8de1450240a0" name="Changes" comment="Сделал страницу:&#10;Гид по размерам и как правильно снимать размеры для подбора одежды - sizeGuide.html">
-      <change afterPath="$PROJECT_DIR$/src/affiliateProgram.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/customerProtection.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/guarantees.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/affiliateProgram/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/customerProtection/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/guarantees/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/service/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scss/guarantees.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/service.html" afterDir="false" />
+    <list default="true" id="4586aba3-eec5-4675-b038-8de1450240a0" name="Changes" comment="Правки страниц:&#10;Гид по размерам и как правильно снимать размеры для подбора одежды - sizeGuide.html&#10;Гарантии - guarantees.html&#10;Защита клиента - customerProtection.html&#10;Сервис - service.html&#10;Партнерская программа - affiliateProgram.html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/base.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/base.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/affiliateProgram.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/affiliateProgram.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/customerProtection.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/customerProtection.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/guarantees.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/guarantees.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scss/base/ui.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/base/ui.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/sizeGuide.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/sizeGuide.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/service.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sizeGuide.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/sizeGuide.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -62,7 +54,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="npm.build">
+  <component name="RunManager" selected="npm.dev">
     <configuration default="true" type="js.build_tools.gulp">
       <node-interpreter>project</node-interpreter>
       <node-options />
@@ -179,7 +171,9 @@
       <workItem from="1675442061909" duration="3000" />
       <workItem from="1675462626215" duration="11330000" />
       <workItem from="1675678366528" duration="2098000" />
-      <workItem from="1675693515817" duration="555000" />
+      <workItem from="1675693515817" duration="818000" />
+      <workItem from="1675860318630" duration="2137000" />
+      <workItem from="1676064809881" duration="627000" />
     </task>
     <task id="LOCAL-00001" summary="Закончил страницы:&#10;Учетная запись - userAccount.html&#10;Данные личные/организации  - data.html&#10;Адреса доставки - adresses.html&#10;Контакты - profileContacts.html&#10;Реквизиты - profileDetails.html">
       <created>1667225822154</created>
@@ -251,7 +245,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675473044064</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Правки страницы:&#10;Гид по размерам и как правильно снимать размеры для подбора одежды - sizeGuide.html&#10;&#10;Создал страницы:&#10;Гарантии - guarantees.html&#10;Защита клиента - customerProtection.html&#10;Сервис - service.html&#10;Партнерская программа - affiliateProgram.html">
+      <created>1675694201663</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1675694201663</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -280,6 +281,8 @@
     <MESSAGE value="Добавил страницы:&#10;Как сделать заказ - HowToOrder.html&#10;Поиск товара, как найти нужный продукт - howToFind.html&#10;Совместные покупки (складчина) - jointShopping.html&#10;Оплата за Услуги, Товары (ТМЦ) - paymentForServices.html" />
     <MESSAGE value="Правки страниц:&#10;Как сделать заказ - HowToOrder.html&#10;Поиск товара, как найти нужный продукт - howToFind.html&#10;Совместные покупки (складчина) - jointShopping.html&#10;Оплата за Услуги, Товары (ТМЦ) - paymentForServices.html" />
     <MESSAGE value="Сделал страницу:&#10;Гид по размерам и как правильно снимать размеры для подбора одежды - sizeGuide.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Сделал страницу:&#10;Гид по размерам и как правильно снимать размеры для подбора одежды - sizeGuide.html" />
+    <MESSAGE value="Правки страницы:&#10;Гид по размерам и как правильно снимать размеры для подбора одежды - sizeGuide.html&#10;&#10;Создал страницы:&#10;Гарантии - guarantees.html&#10;Защита клиента - customerProtection.html&#10;Сервис - service.html&#10;Партнерская программа - affiliateProgram.html" />
+    <MESSAGE value="Правки страниц:&#10;Гид по размерам и как правильно снимать размеры для подбора одежды - sizeGuide.html&#10;Гарантии - guarantees.html&#10;Защита клиента - customerProtection.html&#10;Сервис - service.html&#10;Партнерская программа - affiliateProgram.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Правки страниц:&#10;Гид по размерам и как правильно снимать размеры для подбора одежды - sizeGuide.html&#10;Гарантии - guarantees.html&#10;Защита клиента - customerProtection.html&#10;Сервис - service.html&#10;Партнерская программа - affiliateProgram.html" />
   </component>
 </project>

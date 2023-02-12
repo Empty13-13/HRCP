@@ -198,7 +198,7 @@
     border: 1px solid rgba(224, 99, 99, 0.98);
   }
 
-  &::placeholder{
+  &::placeholder {
     transition: color 0.3s ease 0s;
   }
 
@@ -246,12 +246,11 @@ textarea {
 
     li::before {
       counter-increment: section;
-      /*Инкрементируется только счётчик текущего уровня вложенности*/
       content: counters(section, ".") ".";
-      /*Добавляем значения всех уровней вложенности, используя разделитель '.'*/
       /*Если необходима поддержка < IE8,
-         необходимо убедиться, что после
-         разделителя ('.') не стоит пробел*/
+              необходимо убедиться, что после
+              разделителя ('.') не стоит пробел*/
+      margin-right: 5px;
     }
   }
 }
@@ -266,7 +265,7 @@ textarea {
     border-radius: 8px;
     overflow: hidden;
 
-    img  {
+    img {
       border-radius: 8px;
     }
   }
@@ -282,8 +281,8 @@ textarea {
     a {
       color: $blueColor;
 
-      @media (any-hover: hover){
-        &:hover{
+      @media (any-hover: hover) {
+        &:hover {
           color: $blackBlueColor;
         }
       }
