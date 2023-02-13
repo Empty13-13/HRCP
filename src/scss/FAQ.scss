@@ -1,0 +1,42 @@
+.FAQ {
+  margin-bottom: 80px;
+
+  a {
+    color: $blueColor;
+    @media (any-hover: hover){
+      &:hover{
+        color: $blackBlueColor;
+      }
+    }
+  }
+
+  &__container {
+  }
+
+  &__title {
+  }
+
+  &__body {
+  }
+
+  &__list {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.2;
+    text-align: justify;
+    color: #000000;
+    margin-bottom: 25px;
+
+    counter-reset: section; /*Создаёт новый счётчик для каждого тега <ol>*/
+    list-style-type: none;
+
+    & > li::before {
+      counter-increment: section;
+      content: counters(section, ".") ".";
+      /*Если необходима поддержка < IE8,
+              необходимо убедиться, что после
+              разделителя ('.') не стоит пробел*/
+      margin-right: 5px;
+    }
+  }
+}

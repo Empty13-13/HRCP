@@ -289,3 +289,17 @@ textarea {
     }
   }
 }
+
+.dottedList {
+  li {
+    position: relative;
+
+    &:before {
+      content: '·';
+      position: absolute;
+      left: -15px;
+      font-weight: 700;
+    }
+
+  }
+}

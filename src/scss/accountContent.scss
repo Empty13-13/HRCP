@@ -1,0 +1,42 @@
+.accountContent {
+  margin-bottom: 80px;
+
+  &__container {
+  }
+
+  &__title {
+  }
+
+  &__body {
+    margin-bottom: 30px;
+  }
+
+  &__textBlock {
+  }
+}
+
+.textBlock-accountContent {
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 500;
+  margin-bottom: 23px;
+
+  &__title {
+    color: $blackBlueColor;
+    font-weight: 700;
+  }
+
+  &__text {
+    text-align: justify;
+
+    a {
+      color: $blueColor;
+
+      @media (any-hover: hover) {
+        &:hover {
+          color: $blackBlueColor;
+        }
+      }
+    }
+  }
+}
