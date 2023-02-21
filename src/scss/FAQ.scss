@@ -3,8 +3,8 @@
 
   a {
     color: $blueColor;
-    @media (any-hover: hover){
-      &:hover{
+    @media (any-hover: hover) {
+      &:hover {
         color: $blackBlueColor;
       }
     }
@@ -30,6 +30,26 @@
     counter-reset: section; /*Создаёт новый счётчик для каждого тега <ol>*/
     list-style-type: none;
 
+    & > li {
+      position: relative;
+      padding-left: 20px;
+
+      a {
+        cursor: pointer;
+        color: black;
+
+        &._href {
+          color: $blueColor;
+        }
+
+        @media (any-hover: hover) {
+          &:hover {
+            color: $blackBlueColor;
+          }
+        }
+      }
+    }
+
     & > li::before {
       counter-increment: section;
       content: counters(section, ".") ".";
@@ -37,6 +57,10 @@
               необходимо убедиться, что после
               разделителя ('.') не стоит пробел*/
       margin-right: 5px;
+      color: inherit;
+      position: absolute;
+      width: 15px;
+      left: 0;
     }
   }
 }

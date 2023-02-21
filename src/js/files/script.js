@@ -1,10 +1,10 @@
 // Импорт функционала ==============================================================================================================================================================================================================================================================================================================================
 
-import {_slideDown, _slideUp, _slideToggle} from "./functions.js";
-import {gotoBlock} from "./scroll/gotoblock.js";
-import {initConfirm} from './myConfirm.js'
-import {selectModule} from "./forms/select.js";
-import {formRating} from './forms/forms.js'
+import { _slideDown, _slideUp, _slideToggle } from "./functions.js";
+import { gotoBlock } from "./scroll/gotoblock.js";
+import { initConfirm } from './myConfirm.js'
+import { selectModule } from "./forms/select.js";
+import { formRating } from './forms/forms.js'
 import "../libs/smoothScroll.js";
 
 // region Fixed Html
@@ -14,9 +14,9 @@ let callbackForms = document.querySelectorAll('[data-callbackForm]')
 let callbackForms1 = document.querySelectorAll('[data-callbackForm1]')
 let callbackForms2 = document.querySelectorAll('[data-callbackForm2]')
 
-if(callbackBtns.length){
+if (callbackBtns.length) {
   callbackBtns.forEach(callbackBtn => {
-    callbackBtn.addEventListener("click", function (e) {
+    callbackBtn.addEventListener("click", function(e) {
       callbackForms1.forEach(callbackForm => {
         callbackForm.classList.toggle('_active')
       })
@@ -24,9 +24,9 @@ if(callbackBtns.length){
   })
 }
 
-if(messageBtns.length){
+if (messageBtns.length) {
   messageBtns.forEach(messageBtn => {
-    messageBtn?.addEventListener("click", function (e) {
+    messageBtn?.addEventListener("click", function(e) {
       callbackForms2.forEach(callbackForm => {
         callbackForm.classList.toggle('_active')
       })
@@ -140,13 +140,13 @@ let lineBtn = document.querySelector('#lineBtn');
 if (columnBtn && lineBtn) {
   let blocksProduct = document.querySelectorAll('.block-products-catalog');
   if (blocksProduct.length > 0) {
-    lineBtn.addEventListener("click", function (e) {
+    lineBtn.addEventListener("click", function(e) {
       blocksProduct.forEach(item => {
         item.classList.add('_big')
       })
     });
 
-    columnBtn.addEventListener("click", function (e) {
+    columnBtn.addEventListener("click", function(e) {
       blocksProduct.forEach(item => {
         item.classList.remove('_big')
       })
@@ -183,7 +183,7 @@ if (inputsNumberGroup.length > 0) {
 let resetAll = document.querySelectorAll('.filter-catalog__btn');
 if (resetAll.length > 0) {
   resetAll.forEach(reset => {
-    reset.addEventListener("click", function (e) {
+    reset.addEventListener("click", function(e) {
       let forms = document.querySelectorAll('form ');
       if (forms.length > 0) {
         forms.forEach(item => {
@@ -197,7 +197,7 @@ if (resetAll.length > 0) {
 let resetBtns = document.querySelectorAll('.subSpoller-filter-catalog__reset-btn');
 if (resetBtns.length > 0) {
   resetBtns.forEach(item => {
-    item.addEventListener("click", function (e) {
+    item.addEventListener("click", function(e) {
       item.closest('form').reset()
     });
   })
@@ -210,7 +210,7 @@ if (openBtn) {
   let bodies = document.querySelectorAll('.spollers__body');
   let titles = document.querySelectorAll('.spollers__title')
 
-  openBtn.addEventListener("click", function (e) {
+  openBtn.addEventListener("click", function(e) {
     if (isOpen) {
       bodies.forEach(item => {
         _slideUp(item, 500);
@@ -228,7 +228,7 @@ if (openBtn) {
     }
     isOpen = !isOpen
   });
-  filtrBtn.addEventListener("click", function (e) {
+  filtrBtn.addEventListener("click", function(e) {
     if (isOpen) {
       bodies.forEach(item => {
         _slideUp(item, 500);
@@ -260,7 +260,7 @@ if (spollers.length > 0) {
 let navBtns = document.querySelectorAll('.nav-products-catalog__btn');
 if (navBtns.length > 0) {
   navBtns.forEach(item => {
-    item.addEventListener("click", function (e) {
+    item.addEventListener("click", function(e) {
       if (!item.classList.contains('_dotts')) {
         navBtns.forEach(i => {
           i.classList.remove('_active')
@@ -278,19 +278,19 @@ let footer = document.querySelector('.footer')
 
 let upBtnFixed = document.querySelector('.scrollActions__up')
 if (upBtnFixed) {
-  upBtnFixed.addEventListener("click", function (e) {
+  upBtnFixed.addEventListener("click", function(e) {
     gotoBlock('header', 500)
   });
 }
 let downBtnFixed = document.querySelector('.scrollActions__bottom')
 if (downBtnFixed) {
-  downBtnFixed.addEventListener("click", function (e) {
+  downBtnFixed.addEventListener("click", function(e) {
     gotoBlock('footer', 500)
   });
 }
 let centerBtnFixe = document.querySelector('.scrollActions__center')
 if (centerBtnFixe) {
-  centerBtnFixe.addEventListener("click", function (e) {
+  centerBtnFixe.addEventListener("click", function(e) {
     let options = {
       speedAsDuration: true, speed: 500, header: 'header.header', offset: 0, easing: 'easeOutQuad',
     };
@@ -300,7 +300,7 @@ if (centerBtnFixe) {
 
 if (upBtnFixed && downBtnFixed) {
   setActiveFixed()
-  window.addEventListener('scroll', function () {
+  window.addEventListener('scroll', function() {
     setActiveFixed()
   });
 }
@@ -309,7 +309,7 @@ if (upBtnFixed && downBtnFixed) {
 // region Functions
 function addActive(massive) {
   massive.forEach(item => {
-    item.addEventListener("click", function (e) {
+    item.addEventListener("click", function(e) {
       massive.forEach(i => {
         i.classList.remove('_active')
       })
@@ -340,7 +340,7 @@ if (allBtnsList.length > 0) {
     let filterBtns = listBtn.querySelectorAll('.filters-body-main-product__item');
     if (filterBtns.length > 0) {
       filterBtns.forEach(item => {
-        item.addEventListener("click", function (e) {
+        item.addEventListener("click", function(e) {
           filterBtns.forEach(item => {
             item.classList.remove('_active')
           })
@@ -357,7 +357,7 @@ let allMainSlide = document.querySelectorAll('.info-product__slide');
 
 if (allThumbsSlider.length > 0 && allMainSlide.length > 0) {
   allThumbsSlider.forEach(slide => {
-    slide.addEventListener("click", function (e) {
+    slide.addEventListener("click", function(e) {
       allThumbsSlider.forEach(item => {
         item.classList.remove('_active')
       })
@@ -382,7 +382,7 @@ if (moreSelects.length) {
 
     if (optionsBtn.length && lists.length) {
       optionsBtn.forEach((item, index) => {
-        item.addEventListener("click", function (e) {
+        item.addEventListener("click", function(e) {
           lists.forEach(child => {
             child.classList.add("_hidden")
           })
@@ -414,7 +414,7 @@ if (productListTrash) {
 
   if (checkboxes) {
     checkboxes.forEach(item => {
-      item.addEventListener("click", function (e) {
+      item.addEventListener("click", function(e) {
         if (!item.checked) {
           allChecksTrash.checked = false
         }
@@ -510,7 +510,7 @@ let packingSellerCheck = document.querySelector('#packingSeller');
 let packingAddCheck = document.querySelector('#packingAdd');
 let insuranceCheck = document.querySelector('#insurance');
 if (packingSellerCheck && packingAddCheck && insuranceCheck) {
-  packingSellerCheck.addEventListener("click", function (e) {
+  packingSellerCheck.addEventListener("click", function(e) {
     if (packingSellerCheck.checked) {
       packingAddCheck.checked = false;
       insuranceCheck.checked = false;
@@ -521,7 +521,7 @@ if (packingSellerCheck && packingAddCheck && insuranceCheck) {
       insuranceCheck.disabled = false;
     }
   });
-  packingAddCheck.addEventListener("click", function (e) {
+  packingAddCheck.addEventListener("click", function(e) {
     if (packingAddCheck.checked) {
       packingSellerCheck.checked = false;
       packingSellerCheck.disabled = true;
@@ -531,7 +531,7 @@ if (packingSellerCheck && packingAddCheck && insuranceCheck) {
     }
   });
 
-  insuranceCheck.addEventListener("click", function (e) {
+  insuranceCheck.addEventListener("click", function(e) {
     if (!packingSellerCheck.checked) {
       packingAddCheck.checked = true
     }
@@ -548,7 +548,7 @@ function move() {
   if (warningTrash) {
     let closeBtn = warningTrash.querySelector('#closebtn')
     if (closeBtn) {
-      closeBtn.addEventListener("click", function (e) {
+      closeBtn.addEventListener("click", function(e) {
         warningTrash.classList.remove('_active')
         document.body.classList.remove('lock')
       });
@@ -657,7 +657,7 @@ if (orderMain) {
 
           console.error('Не найден элемент')
           return false
-        }
+        },
       })
 
       table.addEventListener('click', (e) => {
@@ -678,7 +678,7 @@ if (orderMain) {
       }
 
       if (acceptBtn) {
-        acceptBtn.addEventListener("click", function (e) {
+        acceptBtn.addEventListener("click", function(e) {
           inputs = table.querySelectorAll('input[type=radio]')
           let item = Array.from(inputs).find(item => item.checked)
           if (item) {
@@ -703,7 +703,7 @@ if (orderMain) {
     let checkboxies = checkboxBlock.querySelectorAll('input[type=checkbox]');
     if (checkboxies.length) {
       checkboxies.forEach(item => {
-        item.addEventListener("click", function (e) {
+        item.addEventListener("click", function(e) {
           let none = Array.from(checkboxies).filter(check => !check.checked)
           proxyOrderData.isAllChecked = !none.length;
         });
@@ -722,7 +722,7 @@ if (orderMain) {
     form.addEventListener('submit', (e) => {
       e.preventDefault()
     })
-    addAddressPopup.addEventListener("click", function (e) {
+    addAddressPopup.addEventListener("click", function(e) {
       setTimeout(() => {
         let tables = orderMain.querySelectorAll('table')
         let inputs = addAddressPopup.parentNode.elements['form[]']
@@ -790,7 +790,7 @@ let fixBtnOrder = document.querySelector('#fixBtnOrder')
 if (fixBtnOrder) {
   let isFixed = false;
 
-  fixBtnOrder.addEventListener("click", function (e) {
+  fixBtnOrder.addEventListener("click", function(e) {
     let products = document.querySelector('.products-right-order')
     let bodyFixBlock = document.querySelector('#bodyFixBlock');
     let header = document.querySelector('header')
@@ -872,7 +872,7 @@ if (fixBtn && fixBlock) {
 let choices = document.querySelectorAll('[data-choice]');
 if (choices.length) {
   choices.forEach(item => {
-    item.addEventListener("click", function (e) {
+    item.addEventListener("click", function(e) {
       choices.forEach(choise => {
         choise.classList.remove('_active')
       })
@@ -902,7 +902,7 @@ if (productList) {
       target[key] = value
       target.length = target.checkboxes.length
       return true
-    }
+    },
   })
 
   if (productList && checkboxes.length) {
@@ -915,35 +915,35 @@ if (productList) {
 
     if (deleteCheck.length) {
       deleteCheck.forEach(item => {
-        item.addEventListener("click", function (e) {
+        item.addEventListener("click", function(e) {
           deleteChecked({checkboxes: proxyNum.checkboxes, question1, question2})
         });
       })
     }
     if (deleteCheckFast.length) {
       deleteCheckFast.forEach(item => {
-        item.addEventListener("click", function (e) {
+        item.addEventListener("click", function(e) {
           deleteChecked({checkboxes: proxyNum.checkboxes, question1, question2, isQuestion: false})
         });
       })
     }
     if (deleteAllBtn.length) {
       deleteAllBtn.forEach(item => {
-        item.addEventListener("click", function (e) {
+        item.addEventListener("click", function(e) {
           deleteAll({checkboxes: proxyNum.checkboxes, question1})
         });
       })
     }
     if (deleteProductBtns.length) {
       deleteProductBtns.forEach(item => {
-        item.addEventListener("click", function (e) {
+        item.addEventListener("click", function(e) {
           deleteProduct({item, text: question2})
         });
       })
     }
     if (deleteProductFastBtn.length) {
       deleteProductFastBtn.forEach(item => {
-        item.addEventListener("click", function (e) {
+        item.addEventListener("click", function(e) {
           deleteProduct({item, isQuestion: false})
         });
       })
@@ -958,27 +958,27 @@ if (productList) {
 
     if (deleteSeller.length) {
       deleteSeller.forEach(item => {
-        item.addEventListener("click", function (e) {
+        item.addEventListener("click", function(e) {
           deleteProduct({item, text: questionSeller2})
         });
       })
     }
     if (deleteAllSeller.length) {
       deleteAllSeller.forEach(item => {
-        item.addEventListener("click", function (e) {
+        item.addEventListener("click", function(e) {
           deleteAll({checkboxes: proxyNum.checkboxes, isProxy: false, text: questionSeller1})
         });
       })
     }
     if (deleteCheckSeller.length) {
       deleteCheckSeller.forEach(item => {
-        item.addEventListener("click", function (e) {
+        item.addEventListener("click", function(e) {
           deleteChecked({
-            checkboxes: proxyNum.checkboxes,
-            isProxy: false,
-            question1: questionSeller1,
-            question2: questionSeller2
-          })
+                          checkboxes: proxyNum.checkboxes,
+                          isProxy: false,
+                          question1: questionSeller1,
+                          question2: questionSeller2,
+                        })
         });
       })
     }
@@ -1000,8 +1000,8 @@ if (productList) {
               item.closest('li').remove()
             }
           })
-          isProxy ? proxyNum.checkboxes = productList.querySelectorAll('input[type="checkbox"]') : null;
-        }, Array.from(checkboxes).filter(item => item.checked).length > 1 ? question1 : question2)
+          isProxy? proxyNum.checkboxes = productList.querySelectorAll('input[type="checkbox"]') : null;
+        }, Array.from(checkboxes).filter(item => item.checked).length > 1? question1 : question2)
         return true
       }
       checkboxes.forEach((item, index) => {
@@ -1009,7 +1009,7 @@ if (productList) {
           item.closest('li').remove()
         }
       })
-      isProxy ? proxyNum.checkboxes = productList.querySelectorAll('input[type="checkbox"]') : null;
+      isProxy? proxyNum.checkboxes = productList.querySelectorAll('input[type="checkbox"]') : null;
     }
   }
 
@@ -1027,16 +1027,16 @@ if (productList) {
     }
   }
 
-  function deleteProduct({item, isQuestion = true, text = "", isProxy = true},) {
+  function deleteProduct({item, isQuestion = true, text = "", isProxy = true}) {
     if (isQuestion) {
       initConfirm(() => {
         item.closest('li').remove()
-        isProxy ? proxyNum.checkboxes = productList.querySelectorAll('input[type="checkbox"]') : null;
+        isProxy? proxyNum.checkboxes = productList.querySelectorAll('input[type="checkbox"]') : null;
       }, text)
       return true
     }
     item.closest('li').remove()
-    isProxy ? proxyNum.checkboxes = productList.querySelectorAll('input[type="checkbox"]') : null;
+    isProxy? proxyNum.checkboxes = productList.querySelectorAll('input[type="checkbox"]') : null;
   }
 }
 // endregion
@@ -1052,7 +1052,7 @@ if (recently) {
   products = recently.querySelectorAll('.block-products-recently')
   productsBody = products[0].parentNode
 
-  productsBody.addEventListener("click", function (e) {
+  productsBody.addEventListener("click", function(e) {
     let item = e.target.closest('button')
     if (item) {
       initConfirm(() => {
@@ -1067,7 +1067,7 @@ if (recently) {
   let favourites = recently.querySelectorAll('[data-favourite]')
   if (favourites.length) {
     favourites.forEach(item => {
-      item.addEventListener("click", function (e) {
+      item.addEventListener("click", function(e) {
         item.classList.toggle('_active')
         initConfirm(() => {
           item.closest('.block-products-recently').remove()
@@ -1087,13 +1087,13 @@ if (recently) {
     let lineBtn = recently.querySelector('#lineBtn')
 
     if (columnBtn && lineBtn) {
-      lineBtn.addEventListener("click", function (e) {
+      lineBtn.addEventListener("click", function(e) {
         productsBody.classList.add('_line')
         products.forEach(item => {
           item.classList.add("_line")
         })
       });
-      columnBtn.addEventListener("click", function (e) {
+      columnBtn.addEventListener("click", function(e) {
         productsBody.classList.remove('_line')
         products.forEach(item => {
           item.classList.remove("_line")
@@ -1108,14 +1108,14 @@ if (recently) {
     actualProducts = dataProducts.slice()
 
     if (searchInput) {
-      searchInput.addEventListener("keypress", function (e) {
+      searchInput.addEventListener("keypress", function(e) {
         if (e.key === "Enter") {
           btnSearch.click()
         }
       });
 
       let btnSearch = searchInput.parentNode.querySelector('button')
-      btnSearch.addEventListener("click", function (e) {
+      btnSearch.addEventListener("click", function(e) {
         searchByInputValue(searchInput.value)
       });
 
@@ -1144,7 +1144,7 @@ export function filterByItem(text) {
       actualProducts.sort((item, item2) => item2.ratingSeller - item.ratingSeller)
       break;
     case "По алфавиту":
-      actualProducts.sort(function (a, b) {
+      actualProducts.sort(function(a, b) {
         if (a.title > b.title) {
           return 1;
         }
@@ -1210,7 +1210,7 @@ if (notices) {
   //Просмотр блока
   if (blocksNotices.length && noticesHeader) {
     blocksNotices.forEach(item => {
-      item.addEventListener("click", function (e) {
+      item.addEventListener("click", function(e) {
         if (item.classList.contains('_unread')) {
           item.classList.remove('_unread')
 
@@ -1237,7 +1237,7 @@ if (notices) {
       let textarea = block.querySelector('textarea')
       let pendingReviewNotice = block.closest('.right-block-notices').querySelector('[data-pendingReviewNotice]')
 
-      btn.addEventListener("click", function (e) {
+      btn.addEventListener("click", function(e) {
         if (textarea.value.trim().length < 1) {
           textarea.focus()
           textarea.classList.add('_error')
@@ -1270,7 +1270,7 @@ if (notices) {
 let printBtn = document.querySelectorAll('[data-printBtn]')
 if (printBtn.length) {
   printBtn.forEach(item => {
-    item.addEventListener("click", function (e) {
+    item.addEventListener("click", function(e) {
       window.print()
     });
   })
@@ -1278,7 +1278,7 @@ if (printBtn.length) {
 // endregion
 
 // region Calculator
-document.addEventListener("DOMContentLoaded", function (event) {
+document.addEventListener("DOMContentLoaded", function(event) {
   if (document.querySelector('.calculatorPage')) {
     let form = document.querySelector('form');
     let selects = form.querySelectorAll('select')
@@ -1365,9 +1365,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
       let tableData = []
       factor.forEach(c => {
         tableData.push({
-          num2: ((resultNum1 * c).toFixed(2)),
-          num1: ((resultNum2 * c).toFixed(2))
-        })
+                         num2: ((resultNum1 * c).toFixed(2)),
+                         num1: ((resultNum2 * c).toFixed(2)),
+                       })
       })
 
       //Запись в таблицу
@@ -1389,7 +1389,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 // endregion
 
 // region exchangeRate
-document.addEventListener("DOMContentLoaded", function (event) {
+document.addEventListener("DOMContentLoaded", function(event) {
   let exchangeBody = document.querySelector('.exchangeRate__body')
   if (exchangeBody) {
     let rateValues = [
@@ -1435,10 +1435,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
       updateRate()
     })
 
-    convertBtn.addEventListener("click", function (e) {
+    convertBtn.addEventListener("click", function(e) {
       updateRate()
     });
-    flipBtn.addEventListener("click", function (e) {
+    flipBtn.addEventListener("click", function(e) {
       let all1 = body1.children
       let all2 = body2.children
       let i1 = input1.value
@@ -1470,7 +1470,7 @@ if (codePrint && codeInput) {
   let code = 0
   updateCode()
 
-  updateBtn.addEventListener("click", function (e) {
+  updateBtn.addEventListener("click", function(e) {
     updateCode()
   });
   codeInput.addEventListener('input', (e) => {
@@ -1506,7 +1506,7 @@ let deleteAccountBtn = document.querySelector('#deleteAccountBtn')
 if (deleteAccountBtn) {
   let form = deleteAccountBtn.closest('form')
 
-  deleteAccountBtn.addEventListener("click", function (e) {
+  deleteAccountBtn.addEventListener("click", function(e) {
     let currentPass = document.querySelector('#currentPass')
 
     //Проверка ошибок
@@ -1533,7 +1533,7 @@ if (deleteAccountBtn) {
 // region data
 let deleteAllDataBtn = document.querySelector('#deleteAllDataBtn')
 if (deleteAllDataBtn) {
-  deleteAllDataBtn.addEventListener("click", function (e) {
+  deleteAllDataBtn.addEventListener("click", function(e) {
     initConfirm(() => {
       alert('Все данные успешно удалены')
     }, "Удалить данные личные/организации?")
@@ -1566,7 +1566,7 @@ if (dataForm) {
 // region Adresses
 let deleteAllAdressesBtn = document.querySelector('#deleteAllAdressesBtn')
 if (deleteAllAdressesBtn) {
-  deleteAllAdressesBtn.addEventListener("click", function (e) {
+  deleteAllAdressesBtn.addEventListener("click", function(e) {
     initConfirm(() => {
       let tds = document.querySelector('[data-requiredtable]')?.querySelectorAll('td')
       if (tds.length) {
@@ -1581,7 +1581,7 @@ if (deleteAllAdressesBtn) {
 
 let addressesForm = document.querySelector('#addressesForm')
 if (addressesForm) {
-  addressesForm.addEventListener("submit", function (e) {
+  addressesForm.addEventListener("submit", function(e) {
     e.preventDefault()
     initConfirm(() => {
       alert('Адреса успешно изменены/сохранены')
@@ -1597,7 +1597,7 @@ if (profileContactsForm) {
   //Вводить телефон можно только цифрами
   let phone = profileContactsForm.querySelector('input[type="tel"]')
   if (phone) {
-    phone.addEventListener('keydown', function (event) {
+    phone.addEventListener('keydown', function(event) {
       // Разрешаем: backspace, delete, tab, + и escape
       if (event.keyCode === 46 || event.keyCode === 8 || event.keyCode === 9 || event.keyCode === 27 || event.keyCode === 187 ||
         // Разрешаем: Ctrl+A
@@ -1656,7 +1656,7 @@ if (profileContactsForm) {
   //Вывод сообщения при удалении
   let deleteBtn = profileContactsForm.querySelector('#deleteAllProfileDataBtn')
   if (deleteBtn) {
-    deleteBtn.addEventListener("click", function (e) {
+    deleteBtn.addEventListener("click", function(e) {
       initConfirm(() => {
         profileContactsForm.querySelectorAll('input').forEach(item => {
           item.value = ""
@@ -1672,7 +1672,7 @@ if (profileContactsForm) {
 // region profileDetails
 let deletePorfileDetailsDataBtn = document.querySelector('#deletePorfileDetailsDataBtn')
 if (deletePorfileDetailsDataBtn) {
-  deletePorfileDetailsDataBtn.addEventListener("click", function (e) {
+  deletePorfileDetailsDataBtn.addEventListener("click", function(e) {
     initConfirm(() => {
       document.querySelectorAll('input').forEach(item => {
         item.value = ""
@@ -1716,7 +1716,7 @@ if (profileDetailsForm) {
 let cashInForm = document.querySelector('#cashInForm')
 let cashInBtn = document.querySelector('#cashInBtn')
 if (cashInForm && cashInBtn) {
-  cashInBtn.addEventListener("click", function (e) {
+  cashInBtn.addEventListener("click", function(e) {
     _slideToggle(cashInForm, 500)
   });
 }
@@ -1740,7 +1740,7 @@ if (ordersBlock) {
       let lines = tab.querySelectorAll('[data-date]')
 
       if (filterBtn) {
-        filterBtn.addEventListener("click", function (e) {
+        filterBtn.addEventListener("click", function(e) {
           filterPeriod({firstDateInp, secondDateInp, filterSelect, lines})
         });
       }
@@ -1751,7 +1751,7 @@ if (ordersBlock) {
   let payOrderBtn = ordersBlock.querySelectorAll('#payOrderBtn')
   if (payOrderBtn.length) {
     payOrderBtn.forEach(btn => {
-      btn.addEventListener("click", function (e) {
+      btn.addEventListener("click", function(e) {
         initConfirm(() => {
           alert('Заказ успешно оплачен')
         }, "Оплатить выбранный заказ?")
@@ -1761,7 +1761,7 @@ if (ordersBlock) {
   let cancelOrderBtn = ordersBlock.querySelectorAll('#cancelOrderBtn')
   if (cancelOrderBtn.length) {
     cancelOrderBtn.forEach(btn => {
-      btn.addEventListener("click", function (e) {
+      btn.addEventListener("click", function(e) {
         initConfirm(() => {
           alert('Заказ успешно отменен')
         }, "Отменить выбранный заказ?")
@@ -1778,7 +1778,7 @@ if (ordersBlock) {
 // region orderNumber
 let checkoutOrderBtn = document.querySelector('#checkoutOrderBtn')
 if (checkoutOrderBtn) {
-  checkoutOrderBtn.addEventListener("click", function (e) {
+  checkoutOrderBtn.addEventListener("click", function(e) {
     initConfirm(() => {
       alert('Заказ успешно оформлен')
     }, "Оформить заказ?")
@@ -1798,7 +1798,7 @@ if (feedbackListWrapper) {
 
   //Фильтрация
   if (filterBtn) {
-    filterBtn.addEventListener("click", function (e) {
+    filterBtn.addEventListener("click", function(e) {
       filterPeriod({firstDateInp, secondDateInp, lines})
     });
   }
@@ -1816,7 +1816,7 @@ if (feedbackListWrapper) {
           return
         }
 
-        btn.addEventListener("click", function (e) {
+        btn.addEventListener("click", function(e) {
           if (text.hidden) {
             if (input.value.length < 1) {
               input.classList.add('_error')
@@ -1869,7 +1869,7 @@ if (cashListBody) {
   let lines = document.querySelectorAll('[data-date]')
 
   if (filterBtn) {
-    filterBtn.addEventListener("click", function (e) {
+    filterBtn.addEventListener("click", function(e) {
       filterPeriod({firstDateInp, secondDateInp, lines})
     });
   }
@@ -1880,7 +1880,7 @@ if (cashListBody) {
 // region CashOut
 let cashOutBtn = document.querySelector('#cashOutBtn')
 if (cashOutBtn) {
-  cashOutBtn.addEventListener("click", function (e) {
+  cashOutBtn.addEventListener("click", function(e) {
     let amount = document.querySelector('#amount')
 
     if (amount) {
@@ -1895,7 +1895,7 @@ if (cashOutBtn) {
     }
     initConfirm(() => {
       alert('Заданная сумма успешно выведена')
-    }, amount ? `Вы действительно хотите вывести средства в размере ${amount}?` : "Вы действительно хотите вывести данную сумму?")
+    }, amount? `Вы действительно хотите вывести средства в размере ${amount}?` : "Вы действительно хотите вывести данную сумму?")
   });
 }
 
@@ -1922,7 +1922,7 @@ if (notificationServiceList) {
   let addMessageBtns = document.querySelectorAll('#addMessageBtn')
   if (addMessageBtns.length) {
     addMessageBtns.forEach(addMessageBtn => {
-      addMessageBtn.addEventListener("click", function (e) {
+      addMessageBtn.addEventListener("click", function(e) {
         //Создание нового элемента
         const getMessageBlock = () => {
           let div = document.createElement('div')
@@ -1987,7 +1987,7 @@ if (notificationServiceList) {
           //Клик по кнопке "Выбрать"
           let chooseBtn = div.querySelector('#chooseBtn')
           if (chooseBtn) {
-            chooseBtn.addEventListener("click", function (e) {
+            chooseBtn.addEventListener("click", function(e) {
               let personaSelect = div.querySelector('#personaSelect')
               if (personaSelect) {
                 let valuePersona = ['Я (пользователь)', 'Тех. поддержка', 'Оператор сайта', 'Администратор сайта', 'Менеджер']
@@ -2009,7 +2009,7 @@ if (notificationServiceList) {
           //Обработчик событий по клику на "Ответить"
           let btn = block.querySelector('button')
           let textarea = block.querySelector('textarea')
-          btn.addEventListener("click", function (e) {
+          btn.addEventListener("click", function(e) {
             //Если нет сообщения
             if (textarea.value.trim().length < 1) {
               textarea.focus()
@@ -2039,7 +2039,7 @@ if (notificationServiceList) {
 
           //Обработчик событий по клику на "Опубликовать/отправить"
           let sendBtn = block.querySelector('[data-sendBtn]')
-          sendBtn.addEventListener("click", function (e) {
+          sendBtn.addEventListener("click", function(e) {
             //Если нет сообщения
             if (textarea.value.trim().length < 1) {
               textarea.focus()
@@ -2107,7 +2107,7 @@ if (notificationSettingsBody) {
   let checkAll = notificationSettingsBody.querySelector('#c_1')
   let checkboxes = notificationSettingsBody.querySelectorAll('input[type=checkbox]')
 
-  checkAll.addEventListener("click", function (e) {
+  checkAll.addEventListener("click", function(e) {
     if (checkAll.checked) {
       checkboxes.forEach(item => {
         item.checked = true
@@ -2120,7 +2120,7 @@ if (notificationSettingsBody) {
   });
 
   checkboxes.forEach(item => {
-    item.addEventListener("click", function (e) {
+    item.addEventListener("click", function(e) {
       if (!item.checked) {
         checkAll.checked = false
       }
@@ -2137,14 +2137,14 @@ if (bonusesBody) {
   //Копирование реферальной ссылки
   let copyLinkBtn = bonusesBody.querySelector('#copyLink')
   if (copyLinkBtn) {
-    copyLinkBtn.addEventListener("click", function (e) {
+    copyLinkBtn.addEventListener("click", function(e) {
       navigator.clipboard.writeText(copyLinkBtn.closest('.infoTable-bonuses__line').querySelector('p').textContent.trim())
-        .then(() => {
-          alert('Успешно скопировано в буфер обмена')
-        })
-        .catch(err => {
-          alert('Произошла ошибка при копировании в буфер обмена')
-        });
+               .then(() => {
+                 alert('Успешно скопировано в буфер обмена')
+               })
+               .catch(err => {
+                 alert('Произошла ошибка при копировании в буфер обмена')
+               });
     });
   }
 }
@@ -2237,3 +2237,21 @@ function filterPeriod({firstDateInp = null, secondDateInp = null, filterSelect =
     }
   })
 }
+
+// region FAQ
+
+let faqList = document.querySelector('.FAQ__list')
+if (faqList) {
+  let items = faqList.querySelectorAll('[data-goto]')
+  console.log(items)
+  if (items.length) {
+    items.forEach(item => {
+      item.addEventListener("click",function(e) {
+        e.preventDefault()
+        gotoBlock(item.dataset.goto,true,300,0)
+      });
+    })
+  }
+}
+
+//endregion

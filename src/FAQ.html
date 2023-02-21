@@ -4,6 +4,14 @@
 "title":"Что содержит Личный кабинет пользователя"
 })
 <body>
+
+
+<!-- Необходимо в шапке данной странице сделать кликабельными пункты перечня часто задаваемых вопросов, чтобы при наведении -->
+<!-- курсора менялся шрифт пункта, на который наведен курсор, как это сделано на других страницах сайта, а при нажатии на -->
+<!-- выбранный пункт, автоматически пользователя "проваливался" по тексту данной страницы на начало соответствующего пункта -->
+<!-- данной страницы -->
+
+
 <div class="wrapper">
   <header class="header">
     <div class="header__container">
@@ -75,7 +83,7 @@
         <div class="header__bottom bottom-header">
           <div class="bottom-header__body">
             <ul class="bottom-header__breadcrumb breadcrumb">
-              <li><a class="breadcrumb__link _href" href="#">Главная</a></li>
+              <li><a class="breadcrumb__link _href" data-goto="#">Главная</a></li>
               <li class=""><a class="breadcrumb__link" href="">Пользователю</a></li>
               <li class=""><a class="breadcrumb__link" href="">Помощь FAQ</a></li>
               <li class="_active"><a class="breadcrumb__link" href=""></a>Часто задаваемые вопросы</li>
@@ -92,20 +100,51 @@
         <h1 class="FAQ__title _title">Часто задаваемые вопросы</h1>
         <div class="FAQ__body">
           <ol class="FAQ__list">
-            <li>Как работает интернет-платформа <a target="_blank" href='https://HoReCaProf.ru'>HoReCaProf.ru</a></li>
-            <li>Не смогли найти нужный товар, что делать?</li>
-            <li>Соответствует ли фотография в карточке товара реальному товару?</li>
-            <li>Как узнать стоимость отправления по Китаю?</li>
-            <li>Как узнать стоимость товара на сайте Taobao (<a target="_blank" href='https://world.taobao.com'>world.taobao.com</a>)?
+            <li>
+              <a data-goto="#part1">
+                Как работает интернет-платформа <a target="_blank" href='https://HoReCaProf.ru' class="_href">HoReCaProf.ru</a>
+              </a>
             </li>
-            <li>Как определить вес товара на Таобао
-                (<a target="_blank" href='https://world.taobao.com'>world.taobao.com</a>)?
+            <li>
+              <a data-goto="#part2">
+                Не смогли найти нужный товар, что делать?
+              </a>
             </li>
-            <li>Как происходит проверка товара на брак и комплектность?</li>
-            <li>Как заказать производство товаров на фабрике за рубежом в том числе в Китае?</li>
+            <li>
+              <a data-goto="#part3">
+                Соответствует ли фотография в карточке товара реальному товару?
+              </a>
+            </li>
+            <li>
+              <a data-goto="#part4">
+                Как узнать стоимость отправления по Китаю?
+              </a>
+            </li>
+            <li>
+              <a data-goto="#part5">
+                Как узнать стоимость товара на сайте Taobao
+                (<a target="_blank" href='https://world.taobao.com' class="_href">world.taobao.com</a>)?
+              </a>
+            </li>
+            <li>
+              <a data-goto="#part6">
+                Как определить вес товара на Таобао
+                (<a target="_blank" href='https://world.taobao.com' class="_href">world.taobao.com</a>)?
+              </a>
+            </li>
+            <li>
+              <a data-goto="#part7">
+                Как происходит проверка товара на брак и комплектность?
+              </a>
+            </li>
+            <li>
+              <a data-goto="#part8">
+                Как заказать производство товаров на фабрике за рубежом в том числе в Китае?
+              </a>
+            </li>
           </ol>
           <ol class="delivery__list _FAQ ">
-            <li>
+            <li id="part1">
               Как работает интернет-платформа HoReCaProf.ru.
               <div class="delivery__line">
                 <div data-gallery class="delivery__column">
@@ -138,8 +177,9 @@
                     <li>Вы даете согласие на обработку ваших персональных данных и принимаете нашу политику по их
                         обработке;
                     </li>
-                    <li>Вы подтверждаете, что Вам исполнилось 18 лет; - вы выбираете способ доставки из предложенных
-                        вариантов на сайте или можете предложить свой вариант доставки до вас груза;
+                    <li>Вы подтверждаете, что Вам исполнилось 18 лет;<br>
+                        Вы выбираете способ доставки из предложенных вариантов на сайте или можете предложить свой
+                        вариант доставки до вас груза;
                     </li>
                     <li>Вы выбираете способ оплаты из предложенных вариантов, согласно выбранного вами способа
                         сотрудничества с нашей компанией в рамках юридической процедуры, через договор или публичную
@@ -164,7 +204,8 @@
                         письмом
                         на нашу электронную почту, с указанием предприятия или ФИО по заказу и суммы оплаты, после
                         получения от вас письма, на вашу почту, будет отправлен вам ответ от менеджера компании с 8 до
-                        20 часов по Владивостокскому времени ежедневно в рабочие дни, о поступлении от вас денежных
+                        20 часов по Владивостокскому времени (часовой пояс по Гринвичу (UTC) +15 часов) ежедневно в
+                        рабочие дни, о поступлении от вас денежных
                         средств, способы оплаты: через офис, On-line оплата, переводом через расчетный счет;
                     </li>
                     <li>Мы выкупаем товар у зарубежных поставщиков, согласно выбранных вами позиций, если на момент
@@ -206,10 +247,10 @@
                 </div>
               </div>
             </li>
-            <li>
+            <li id="part2">
               Как найти нужный товар.
               <div class="delivery__line">
-                <div class="delivery__column">
+                <div data-gallery class="delivery__column">
                   <div class="delivery__img" href="img/FAQ/21.jpg"><img src="img/FAQ/21.jpg" alt=""></div>
                 </div>
                 <div class="delivery__column">
@@ -221,7 +262,7 @@
                 </div>
               </div>
               <div class="delivery__line">
-                <div class="delivery__column">
+                <div data-gallery class="delivery__column">
                   <div class="delivery__img" href="img/FAQ/22.jpg"><img src="img/FAQ/22.jpg" alt=""></div>
                 </div>
                 <div class="delivery__column">
@@ -231,7 +272,7 @@
                 </div>
               </div>
               <div class="delivery__line">
-                <div class="delivery__column">
+                <div data-gallery class="delivery__column">
                   <div class="delivery__img" href="img/FAQ/23.jpg"><img src="img/FAQ/23.jpg" alt=""></div>
                 </div>
                 <div class="delivery__column">
@@ -241,7 +282,7 @@
                 </div>
               </div>
               <div class="delivery__line">
-                <div class="delivery__column">
+                <div data-gallery class="delivery__column">
                   <div class="delivery__img" href="img/FAQ/24.jpg"><img src="img/FAQ/24.jpg" alt=""></div>
                 </div>
                 <div class="delivery__column">
@@ -255,7 +296,7 @@
                 </div>
               </div>
               <div class="delivery__line">
-                <div class="delivery__column">
+                <div data-gallery class="delivery__column">
                   <div class="delivery__img" href="img/FAQ/25.jpg"><img src="img/FAQ/25.jpg" alt=""></div>
                   <div class="delivery__img" href="img/FAQ/26.jpg">
                     <img src="img/FAQ/26.jpg" alt="">
@@ -267,7 +308,7 @@
                 </div>
               </div>
               <div class="delivery__line">
-                <div class="delivery__column">
+                <div data-gallery class="delivery__column">
                   <div class="delivery__img" href="img/FAQ/27.jpg"><img src="img/FAQ/27.jpg" alt=""></div>
                 </div>
                 <div class="delivery__column">
@@ -276,14 +317,13 @@
                 </div>
               </div>
               <div class="delivery__line">
-                <div class="delivery__column">
+                <div data-gallery class="delivery__column">
                   <div class="delivery__img" href="img/FAQ/28.jpg">
                     <img src="img/FAQ/28.jpg" alt="">
                   </div>
                 </div>
                 <div class="delivery__column">
-                  или в «Фильтре» в правом боковом меню «Каталога» нужно выбрать и нажать «Весь ассортимент
-                  товаров».
+                  или в «Фильтре» в левом боковом меню «Каталога» нужно выбрать и нажать «Весь ассортимент товаров».
                   Откроется страница со списком всех категорий и подкатегорий (разделов и подразделов), которые есть
                   на сайте. Выберите и нажмите на любой раздел, подраздел каталога, затем выберите сток (собственные
                   товары со склада) или поисковый агрегатор/маркетплейс
@@ -296,18 +336,18 @@
                 </div>
               </div>
               <div class="delivery__line">
-                <div class="delivery__column">
+                <div data-gallery class="delivery__column">
                   <div class="delivery__img" href="img/FAQ/29.jpg"><img src="img/FAQ/29.jpg" alt=""></div>
                 </div>
                 <div class="delivery__column">
                   В конечном выбранном разделе, подразделе (категории, подкатегории) каталога выберите для дальнейшего
                   изучения подходящий Вам товар нажав на одну представленных карточек товара (изображение с названием,
-                  оценкой, ценой товара). А если товар Вам сразу понравился или подходит то можете переместить его в
+                  оценкой, ценой товара). А если товар Вам сразу понравился или подходит, то можете переместить его в
                   «Избранное», нажав на значок «Сердечко» или переместить в корзину, нажав на кнопку «В корзину».
                 </div>
               </div>
               <div class="delivery__line">
-                <div class="delivery__column">
+                <div data-gallery class="delivery__column">
                   <div class="delivery__img" href="img/FAQ/210.jpg"><img src="img/FAQ/210.jpg" alt=""></div>
                 </div>
                 <div class="delivery__column">
@@ -324,7 +364,7 @@
                 </div>
               </div>
               <div class="delivery__line">
-                <div class="delivery__column">
+                <div data-gallery class="delivery__column">
                   <div class="delivery__img" href="img/FAQ/211.jpg"><img src="img/FAQ/211.jpg" alt=""></div>
                 </div>
                 <div class="delivery__column">
@@ -347,7 +387,7 @@
                 </div>
               </div>
               <div class="delivery__line">
-                <div class="delivery__column">
+                <div data-gallery class="delivery__column">
                   <div class="delivery__img" href="img/FAQ/212.jpg"><img src="img/FAQ/212.jpg" alt=""></div>
                 </div>
                 <div class="delivery__column">
@@ -362,7 +402,7 @@
                 </div>
               </div>
               <div class="delivery__line">
-                <div class="delivery__column">
+                <div data-gallery class="delivery__column">
                   <div class="delivery__img" href="img/FAQ/213.jpg"><img src="img/FAQ/213.jpg" alt=""></div>
                 </div>
                 <div class="delivery__column">Зайти в карточку товара, который Вам максимально подходит и нажать
@@ -370,7 +410,7 @@
                 </div>
               </div>
               <div class="delivery__line">
-                <div class="delivery__column">
+                <div data-gallery class="delivery__column">
                   <div class="delivery__img" href="img/FAQ/214.jpg"><img src="img/FAQ/214.jpg" alt=""></div>
                 </div>
                 <div class="delivery__column">
@@ -383,7 +423,7 @@
                 </div>
               </div>
               <div class="delivery__line">
-                <div class="delivery__column">
+                <div data-gallery class="delivery__column">
                   <div class="delivery__img" href="img/FAQ/215.jpg"><img src="img/FAQ/215.jpg" alt=""></div>
                 </div>
                 <div class="delivery__column">
@@ -404,7 +444,7 @@
                 </div>
               </div>
               <div class="delivery__line">
-                <div class="delivery__column">
+                <div data-gallery class="delivery__column">
                   <div class="delivery__img" href="img/FAQ/216.jpg"><img src="img/FAQ/216.jpg" alt=""></div>
                 </div>
                 <div class="delivery__column">
@@ -413,7 +453,7 @@
                 </div>
               </div>
               <div class="delivery__line">
-                <div class="delivery__column">
+                <div data-gallery class="delivery__column">
                   <div class="delivery__img" href="img/FAQ/217.jpg"><img src="img/FAQ/217.jpg" alt=""></div>
                 </div>
                 <div class="delivery__column">
@@ -424,7 +464,7 @@
                 </div>
               </div>
               <div class="delivery__line">
-                <div class="delivery__column">
+                <div data-gallery class="delivery__column">
                   <div class="delivery__img" href="img/FAQ/218.jpg"><img src="img/FAQ/218.jpg" alt=""></div>
                 </div>
                 <div class="delivery__column">
@@ -433,7 +473,7 @@
                 </div>
               </div>
               <div class="delivery__line">
-                <div class="delivery__column">
+                <div data-gallery class="delivery__column">
                   <div class="delivery__img" href="img/FAQ/219.jpg"><img src="img/FAQ/219.jpg" alt=""></div>
                 </div>
                 <div class="delivery__column">
@@ -444,7 +484,7 @@
                 </div>
               </div>
               <div class="delivery__line">
-                <div class="delivery__column">
+                <div data-gallery class="delivery__column">
                   <div class="delivery__img" href="img/FAQ/220.jpg"><img src="img/FAQ/220.jpg" alt=""></div>
                 </div>
                 <div class="delivery__column">
@@ -484,7 +524,7 @@
                 </div>
               </div>
               <div class="delivery__line">
-                <div class="delivery__column">
+                <div data-gallery class="delivery__column">
                   <div class="delivery__img" href="img/FAQ/221.jpg"><img src="img/FAQ/221.jpg" alt=""></div>
                   <div class="delivery__img" href="img/FAQ/222.jpg"><img src="img/FAQ/222.jpg" alt=""></div>
 
@@ -495,7 +535,7 @@
                 </div>
               </div>
               <div class="delivery__line">
-                <div class="delivery__column">
+                <div data-gallery class="delivery__column">
                   <div class="delivery__img" href="img/FAQ/223.jpg"><img src="img/FAQ/223.jpg" alt=""></div>
                 </div>
                 <div class="delivery__column">
@@ -507,7 +547,7 @@
                 </div>
               </div>
               <div class="delivery__line">
-                <div class="delivery__column">
+                <div data-gallery class="delivery__column">
                   <div class="delivery__img" href="img/FAQ/224.jpg"><img src="img/FAQ/224.jpg" alt=""></div>
                 </div>
                 <div class="delivery__column">
@@ -516,7 +556,7 @@
                 </div>
               </div>
               <div class="delivery__line">
-                <div class="delivery__column">
+                <div data-gallery class="delivery__column">
                   <div class="delivery__img" href="img/FAQ/225.jpg"><img src="img/FAQ/225.jpg" alt=""></div>
                 </div>
                 <div class="delivery__column">
@@ -526,7 +566,7 @@
                 </div>
               </div>
               <div class="delivery__line">
-                <div class="delivery__column">
+                <div data-gallery class="delivery__column">
                   <div class="delivery__img" href="img/FAQ/226.jpg"><img src="img/FAQ/226.jpg" alt=""></div>
                 </div>
                 <div class="delivery__column">
@@ -549,7 +589,7 @@
                 </div>
               </div>
               <div class="delivery__line">
-                <div class="delivery__column">
+                <div data-gallery class="delivery__column">
                   <div class="delivery__img" href="img/FAQ/227.jpg"><img src="img/FAQ/227.jpg" alt=""></div>
                   <div class="delivery__img" href="img/FAQ/227.jpg"><img src="img/FAQ/227.jpg" alt=""></div>
                 </div>
@@ -563,7 +603,7 @@
                 </div>
               </div>
               <div class="delivery__line">
-                <div class="delivery__column">
+                <div data-gallery class="delivery__column">
                   <div class="delivery__img" href="img/FAQ/229.jpg"><img src="img/FAQ/229.jpg" alt=""></div>
                 </div>
                 <div class="delivery__column">
@@ -575,7 +615,7 @@
                 </div>
               </div>
               <div class="delivery__line">
-                <div class="delivery__column">
+                <div data-gallery class="delivery__column">
                   <div class="delivery__img" href="img/FAQ/230.jpg"><img src="img/FAQ/230.jpg" alt=""></div>
                 </div>
                 <div class="delivery__column">
@@ -585,7 +625,7 @@
                 </div>
               </div>
               <div class="delivery__line">
-                <div class="delivery__column">
+                <div data-gallery class="delivery__column">
                   <div class="delivery__img" href="img/FAQ/231.jpg"><img src="img/FAQ/231.jpg" alt=""></div>
                 </div>
                 <div class="delivery__column">
@@ -599,7 +639,7 @@
                 </div>
               </div>
               <div class="delivery__line">
-                <div class="delivery__column">
+                <div data-gallery class="delivery__column">
                   <div class="delivery__img" href="img/FAQ/232.jpg"><img src="img/FAQ/232.jpg" alt=""></div>
                 </div>
                 <div class="delivery__column">
@@ -623,7 +663,7 @@
                 </div>
               </div>
               <div class="delivery__line">
-                <div class="delivery__column">
+                <div data-gallery class="delivery__column">
                   <div class="delivery__img" href="img/FAQ/2331.jpg"><img src="img/FAQ/233.jpg" alt=""></div>
                 </div>
                 <div class="delivery__column">
@@ -638,7 +678,7 @@
                 </div>
               </div>
               <div class="delivery__line">
-                <div class="delivery__column">
+                <div data-gallery class="delivery__column">
                   <div class="delivery__img" href="img/FAQ/234.jpg"><img src="img/FAQ/234.jpg" alt=""></div>
                 </div>
                 <div class="delivery__column">
@@ -668,10 +708,10 @@
                  стоимости и сроков поставки администраторы сайта или наши менеджеры компании свяжутся с Вами в
                  ближайшее время.</p>
             </li>
-            <li>
+            <li id="part3">
               Соответствие фотографий в карточке товара реальному товару.
               <div class="delivery__line">
-                <div class="delivery__column">
+                <div data-gallery class="delivery__column">
                   <div class="delivery__img" href="img/FAQ/3.jpg"><img src="img/FAQ/3.jpg" alt=""></div>
                 </div>
                 <div class="delivery__column">
@@ -689,11 +729,11 @@
                                     различных мониторов, экранов компьютеров, гаджетов, ноутбуков и планшетов.
               </p>
             </li>
-            <li>
+            <li id="part4">
               Как узнать стоимость отправления по Китаю.
 
               <div class="delivery__line">
-                <div class="delivery__column">
+                <div data-gallery class="delivery__column">
                   <div class="delivery__img" href="img/FAQ/41.jpg"><img src="img/FAQ/41.jpg" alt=""></div>
                 </div>
                 <div class="delivery__column">
@@ -703,7 +743,7 @@
                 </div>
               </div>
               <div class="delivery__line">
-                <div class="delivery__column">
+                <div data-gallery class="delivery__column">
                   <div class="delivery__img" href="img/FAQ/42.jpg"><img src="img/FAQ/42.jpg" alt=""></div>
 
                 </div>
@@ -714,9 +754,9 @@
                 </div>
               </div>
               <div class="delivery__line">
-                <div class="delivery__column">
-                  <div class="delivery__img" href="img/FAQ/43.jpg"><img src="img/FAQ/44.jpg" alt=""></div>
-                  <div class="delivery__img" href="img/FAQ/44.jpg"><img src="img/FAQ/43.jpg" alt=""></div>
+                <div data-gallery class="delivery__column">
+                  <div class="delivery__img" href="img/FAQ/43.jpg"><img src="img/FAQ/43.jpg" alt=""></div>
+                  <div class="delivery__img" href="img/FAQ/44.jpg"><img src="img/FAQ/44.jpg" alt=""></div>
                 </div>
                 <div class="delivery__column">
                   В разделе доставки выбрать службу доставки (перевозки), после чего выбрать конечный населенный пункт
@@ -724,7 +764,7 @@
                 </div>
               </div>
               <div class="delivery__line">
-                <div class="delivery__column">
+                <div data-gallery class="delivery__column">
                   <div class="delivery__img" href="img/FAQ/45.jpg"><img src="img/FAQ/45.jpg" alt=""></div>
 
                 </div>
@@ -737,11 +777,11 @@
               </div>
 
             </li>
-            <li>
+            <li id="part5">
               Как узнать стоимость товара на сайте Taobao (https://world.taobao.com/).
 
               <div class="delivery__line">
-                <div class="delivery__column">
+                <div data-gallery class="delivery__column">
                   <div class="delivery__img" href="img/FAQ/51.jpg"><img src="img/FAQ/51.jpg" alt=""></div>
                   <div class="delivery__img" href="img/FAQ/52.jpg"><img src="img/FAQ/52.jpg" alt=""></div>
                   <div class="delivery__img" href="img/FAQ/53.jpg"><img src="img/FAQ/53.jpg" alt=""></div>
@@ -765,11 +805,11 @@
                 заказ, но еще не успели его проплатить.
               </p>
             </li>
-            <li>
-              Как узнать стоимость товара на сайте Taobao (https://world.taobao.com/).
+            <li id="part6">
+              Как определить вес товара на сайте Taobao (https://world.taobao.com/).
 
               <div class="delivery__line">
-                <div class="delivery__column">
+                <div data-gallery class="delivery__column">
                   <div class="delivery__img" href="img/FAQ/61.jpg"><img src="img/FAQ/61.jpg" alt=""></div>
                   <div class="delivery__img" href="img/FAQ/62.jpg"><img src="img/FAQ/62.jpg" alt=""></div>
                   <div class="delivery__img" href="img/FAQ/63.jpg"><img src="img/FAQ/63.jpg" alt=""></div>
@@ -812,8 +852,8 @@
                     <td>320</td>
                   </tr>
                   <tr>
-                    <td rowspan="7">Брюки, шорты, леггинсы</td>
-                    <td>женские</td>
+                    <td rowspan="7">Брюки, шорты, леггинсы женские</td>
+                    <td>Бриджи</td>
                     <td>390</td>
                   </tr>
                   <tr>
@@ -841,8 +881,8 @@
                     <td>350</td>
                   </tr>
                   <tr>
-                    <td rowspan="2">Верхняя одежда, куртки,</td>
-                    <td>ветровки женские</td>
+                    <td rowspan="2">Верхняя одежда, куртки, ветровки женские</td>
+                    <td>Плащ</td>
                     <td>850</td>
                   </tr>
                   <tr>
@@ -948,7 +988,7 @@
                     <td>350</td>
                   </tr>
                   <tr>
-                    <td>Платье до колена с коротким рукавом (шерсть</td>
+                    <td>Платье до колена с коротким рукавом (шерсть)</td>
                     <td>520</td>
                   </tr>
                   <tr>
@@ -987,7 +1027,7 @@
                     <td>850</td>
                   </tr>
                   <tr>
-                    <td>Полупальто (шерсть</td>
+                    <td>Полупальто (шерсть)</td>
                     <td>1200</td>
                   </tr>
                   <tr>
@@ -1082,8 +1122,8 @@
                     <td>200</td>
                   </tr>
                   <tr>
-                    <td rowspan="6">Юбки, платья, сарафаны</td>
-                    <td>детские</td>
+                    <td rowspan="6">Юбки, платья, сарафаны детские</td>
+                    <td>Юбка (шерсть)</td>
                     <td>400</td>
                   </tr>
                   <tr>
@@ -1107,8 +1147,8 @@
                     <td>180</td>
                   </tr>
                   <tr>
-                    <td rowspan="4">Комбинезоны, Ползунки,</td>
-                    <td>Распашонки детские</td>
+                    <td rowspan="4">Комбинезоны, Ползунки, Распашонки детские</td>
+                    <td>Ползунки</td>
                     <td>100</td>
                   </tr>
                   <tr>
@@ -1273,8 +1313,8 @@
                     <td>600</td>
                   </tr>
                   <tr>
-                    <td rowspan="3">Сандалии, мокасины, туфли</td>
-                    <td>мужские</td>
+                    <td rowspan="3">Сандалии, мокасины, туфли мужские</td>
+                    <td>Сандалии</td>
                     <td>600</td>
                   </tr>
                   <tr>
@@ -1300,8 +1340,8 @@
                     <td>800</td>
                   </tr>
                   <tr>
-                    <td rowspan="5">Головные уборы, кепки,</td>
-                    <td>шапки, шляпы</td>
+                    <td rowspan="5">Головные уборы, кепки, шапки, шляпы</td>
+                    <td>Шапка (шерсть)</td>
                     <td>250</td>
                   </tr>
                   <tr>
@@ -1321,8 +1361,8 @@
                     <td>250</td>
                   </tr>
                   <tr>
-                    <td rowspan="6">Шарфы, шелковые платки,</td>
-                    <td>палантины</td>
+                    <td rowspan="6">Шарфы, шелковые платки, палантины</td>
+                    <td>Шарф (шерсть)</td>
                     <td>460</td>
                   </tr>
                   <tr>
@@ -1371,8 +1411,8 @@
                     <td>300</td>
                   </tr>
                   <tr>
-                    <td rowspan="5">Пояса, ремни, цепочки на</td>
-                    <td>талию</td>
+                    <td rowspan="5">Пояса, ремни, цепочки на талию</td>
+                    <td>Ремень кожаный с небольшой пряжкой</td>
                     <td>300</td>
                   </tr>
                   <tr>
@@ -1392,8 +1432,8 @@
                     <td>500</td>
                   </tr>
                   <tr>
-                    <td rowspan="3">Бумажники, кошельки,</td>
-                    <td>портмоне</td>
+                    <td rowspan="3">Бумажники, кошельки, портмоне</td>
+                    <td>Кошелек (кожаный, кож. зам)</td>
                     <td>500</td>
                   </tr>
                   <tr>
@@ -1443,8 +1483,8 @@
                     <td>400</td>
                   </tr>
                   <tr>
-                    <td rowspan="2">Телефоны мобильные,</td>
-                    <td>сотовые</td>
+                    <td rowspan="2">Телефоны мобильные, сотовые</td>
+                    <td>Телефон мобильный, сотовый</td>
                     <td>150</td>
                   </tr>
                   <tr>
@@ -1526,7 +1566,7 @@
                 товара взвешивается вновь по приходу в страну получателя заказа.
               </p>
             </li>
-            <li>
+            <li id="part7">
               Как происходит проверка товара на брак и комплектность.
               <p>
                 Проверка одежды происходит путем тщательного ее осмотра. 100 % товара проверяется на явные дефекты и
@@ -1554,7 +1594,7 @@
                 приходит в негодность, то мы заново выкупаем товар за свой счет и отправляем его Вам.
               </p>
             </li>
-            <li>
+            <li id="part8">
               Как заказать производство товаров на фабрике за рубежом в том числе в Китае.
               <p>
                 За рубежом можно разместить производство любых товаров. У нас имеются договоренности и заключены
