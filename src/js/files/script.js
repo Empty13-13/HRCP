@@ -6,6 +6,7 @@ import { initConfirm } from './myConfirm.js'
 import { selectModule } from "./forms/select.js";
 import { formRating } from './forms/forms.js'
 import "../libs/smoothScroll.js";
+import { Chart } from "chart.js/auto";
 
 // region Fixed Html
 let callbackBtns = document.querySelectorAll('[data-callbackBtn]');
@@ -2246,12 +2247,206 @@ if (faqList) {
   console.log(items)
   if (items.length) {
     items.forEach(item => {
-      item.addEventListener("click",function(e) {
+      item.addEventListener("click", function(e) {
         e.preventDefault()
-        gotoBlock(item.dataset.goto,true,300,0)
+        gotoBlock(item.dataset.goto, true, 300, 0)
       });
     })
   }
 }
 
+//endregion
+
+// region news
+
+let newsList = document.querySelector(".news__list")
+if (newsList) {
+  let firstDateInp = document.querySelector('#firstDate')
+  let secondDateInp = document.querySelector('#secondDate')
+  let filterBtn = document.querySelector('#filterBtn')
+  let lines = document.querySelectorAll('[data-date]')
+
+  if (lines) {
+    //Фильтрация
+    if (filterBtn) {
+      filterBtn.addEventListener("click", () => {
+        filterPeriod({firstDateInp, secondDateInp, lines})
+      });
+    }
+
+
+    //Поиск по названию
+    let searchBtn = document.querySelector('[data-searchBtn]')
+    let searchInput = document.querySelector('[data-searchInput]')
+    if (searchInput && searchBtn) {
+      searchInput.addEventListener("keypress", function(e) {
+        if (e.key === "Enter") {
+          searchBtn.click()
+        }
+      });
+
+      searchBtn.addEventListener("click", function(e) {
+        let value = searchInput.value.trim();
+        if (value.length < 1) {
+          lines.forEach(line => {
+            line.classList.remove("_hidden");
+          })
+        } else {
+          lines.forEach(line => {
+            let title = line.querySelector('.card-news__title').innerText
+            if (title.toLowerCase().includes(value.toLowerCase())) {
+              line.classList.remove("_hidden");
+            } else {
+              line.classList.add("_hidden");
+            }
+          })
+        }
+      });
+    }
+  }
+}
+
+//endregion
+
+// region Metrics
+
+let yandexMetrics = document.querySelector('#yandexMetrics');
+let googleMetrics = document.querySelector('#googleMetrics');
+
+if (yandexMetrics || googleMetrics) {
+  const newLegendClickHandler = function(e, legendItem, legend) {
+    const index = legendItem.datasetIndex;
+    const ci = legend.chart;
+    if (ci.isDatasetVisible(index)) {
+      ci.hide(index);
+      legendItem.hidden = true;
+    } else {
+      ci.show(index);
+      legendItem.hidden = false;
+    }
+  };
+
+  if (googleMetrics) {
+
+    let data = {
+      labels: ['01.06', '02.06', '03.06', '04.06', '05.06', '06.06', '07.06'],
+      datasets: [
+        {
+          label: 'Сеансы',
+          data: [50, 90, 210, 100, 150, 70, 0],
+          borderWidth: 3,
+          backgroundColor: 'rgba(11, 143, 198, 0.2)',
+          borderColor: '#0B8FC6',
+          fill: true,
+          order: 2,
+        }],
+    }
+    let options = {
+      plugins: {
+        legend: {
+          onClick: newLegendClickHandler,
+          labels: {
+            color: 'black',
+          },
+          position: 'top',
+        },
+      },
+      scales: {
+        y: {
+          title: {
+            display: false,
+          },
+        },
+      },
+      interface: {
+        border: {
+          color: '#80A4DE',
+        },
+      },
+    }
+    createChart(googleMetrics, 'line', data, options)
+  }
+
+  if (yandexMetrics) {
+    let data = {
+      labels: ['01.06', '02.06', '03.06', '04.06', '05.06', '06.06', '07.06'],
+      datasets: [
+        {
+          label: 'Просмотры',
+          data: [3, 5, 3, 7, 2, 3, 1],
+          borderWidth: 1,
+          backgroundColor: '#FF7711',
+          inflateAmount: 10,
+          order: 2,
+        },
+        {
+          label: 'Посетители',
+          data: [4, 7, 4, 9, 10, 6, 8],
+          backgroundColor: '#C3B0FA',
+          order: 100,
+          inflateAmount: 10,
+        },
+        {
+          label: 'Визиты',
+          data: [10, 15, 13, 20, 20, 31, 13],
+          borderWidth: 1,
+          backgroundColor: '#FCD202',
+          inflateAmount: 10,
+          order: 3,
+        }],
+    }
+    let options = {
+      plugins: {
+        legend: {
+          onClick: newLegendClickHandler,
+          labels: {
+            color: 'black',
+          },
+          position: 'bottom',
+        },
+      },
+      scales: {
+        y: {
+          title: {
+            display: false,
+          },
+        },
+      },
+      interface: {
+        border: {
+          color: '#80A4DE',
+        },
+      },
+    }
+    createChart(yandexMetrics, 'bar', data, options)
+  }
+
+  function createChart(canvasItem, type, data = {}, options = {}) {
+    new Chart(canvasItem, {
+      type: type,
+      data: data,
+      options: options,
+    });
+
+    let link = canvasItem.closest('li').querySelector('.footer__link')
+    let metric = canvasItem.closest('.metric')
+
+    console.log(link)
+    if (link && metric) {
+      link.addEventListener("click", function(e) {
+        metric.classList.toggle('_hidden')
+        link.classList.toggle('_active')
+      });
+    }
+  }
+
+  document.body.addEventListener("click", function(e) {
+    if (!e.target.closest('.metric') && !e.target.classList.contains('footer__link')) {
+      googleMetrics.closest('.metric').classList.add('_hidden')
+      googleMetrics.closest('li').querySelector('.footer__link').classList.remove('_active')
+      yandexMetrics.closest('.metric').classList.add('_hidden')
+      yandexMetrics.closest('li').querySelector('.footer__link').classList.remove('_active')
+    }
+  });
+}
 //endregion

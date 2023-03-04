@@ -20,7 +20,7 @@
 	"devDependencies": {
 		"copy-webpack-plugin": "latest",
 		"css-loader": "latest",
-		"del":"^6.1.1",
+		"del": "^6.1.1",
 		"file-include-webpack-plugin-replace": "latest",
 		"gulp": "latest",
 		"gulp-autoprefixer": "latest",
@@ -68,6 +68,7 @@
 		"webpack-stream": "latest"
 	},
 	"dependencies": {
+		"chart.js": "^4.2.1",
 		"simplebar": "latest"
 	}
 }

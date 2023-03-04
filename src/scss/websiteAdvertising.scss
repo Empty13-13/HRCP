@@ -1,0 +1,79 @@
+.websiteAdvertising {
+  margin-bottom: 80px;
+  a {
+    color: $blueColor;
+    transition: all 0.3s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        color: $blackBlueColor;
+      }
+    }
+  }
+
+  &__container {
+  }
+
+  &__title {
+  }
+
+  &__body {
+  }
+
+}
+
+.block-websiteAdvertising {
+  font-size: 18px;
+  line-height: 1.2;
+  text-align: justify;
+  margin-bottom: 20px;
+  font-weight: 500;
+
+  &__title {
+    color: $blackBlueColor;
+    font-weight: 700;
+
+    &._marginBottom {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__text {
+  }
+
+  &__imgBlock {
+    display: flex;
+    border: 1px solid #80A4DE;
+    border-radius: 8px;
+    padding: 10px;
+    gap: 5px;
+    max-height: 275px;
+
+    & > div {
+      display: inline-flex;
+    }
+
+    img {
+      max-height: 100%;
+      max-width: 100%;
+    }
+  }
+
+  &__line {
+    display: flex;
+    margin-bottom: 20px;
+  }
+
+  &__img {
+    cursor: pointer;
+    margin-right: 20px;
+    border: 1px solid #80A4DE;
+    border-radius: 8px;
+
+    img {
+      border-radius: 8px;
+      overflow: hidden;
+    }
+  }
+
+
+}

@@ -1,0 +1,29 @@
+.article {
+  margin-bottom: 80px;
+
+  &__container {
+  }
+
+  &__title {
+  }
+
+  &__date {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.2;
+    color: $blueColor;
+    margin-bottom: 25px;
+  }
+
+  &__body {
+  }
+
+}
+.imgTextBlock {
+
+  &__img-ibg {
+  }
+
+  &__text {
+  }
+}

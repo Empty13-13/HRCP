@@ -1,0 +1,44 @@
+.paymentSystem {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.2;
+  margin-bottom: 80px;
+
+  a {
+    color: $blueColor;
+    transition: all 0.3s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        color: $blackBlueColor;
+      }
+    }
+  }
+
+  &__container {
+  }
+
+  &__title {
+  }
+
+  &__body {
+  }
+
+  &__text {
+    margin-bottom: 20px;
+  }
+
+  ol {
+    & > li > a {
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+
+    & > li {
+      &:before{
+        bottom: 7px;
+        position: relative;
+      }
+
+    }
+  }
+}

@@ -1,0 +1,47 @@
+.searchEngine {
+  margin-bottom: 80px;
+
+  &__container {
+  }
+
+  &__title {
+  }
+
+  &__body {
+
+  }
+
+  &__input {
+    width: 100%;
+    border: 1px solid $blueColor;
+    border-radius: 8px;
+    display: flex;
+    margin-bottom: 25px;
+
+    input {
+      width: 100%;
+      border: none;
+      padding: 10px 15px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 1.2;
+      border-radius: 8px;
+      color: black;
+
+      &::placeholder {
+        color: $blueColor;
+      }
+    }
+
+    button {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.2;
+      padding: 9px 25px;
+      max-height: 38px;
+    }
+  }
+
+  &__resultBlock {
+  }
+}
