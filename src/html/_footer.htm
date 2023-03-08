@@ -3,7 +3,8 @@
     <div class="footer__body">
       <nav class="footer__nav">
         <ul class="footer__list">
-          <li><a href="" class="footer__link">Отзывы</a></li>
+          <li><a href="notificationService.html?category=feedback" id="feedbackLink" class="footer__link">Отзывы</a>
+          </li>
           <li><a href="" class="footer__link">Новости</a></li>
           <li><a href="" class="footer__link">Карта сайта</a></li>
           <li><a href="" class="footer__link">Реклама на сайте</a></li>
@@ -44,3 +45,34 @@
     </div>
   </div>
 </footer>
+
+<div id="feedbackWarning" class="warning">
+  <div class="warning__container">
+    <div class="warning__block">
+      <div class="warning__header header-warning">
+        <p class="header-warning__title">Внимание</p>
+        <button type="button" class="header-warning__closeBtn" id="closebtn">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.00012 11L10.7159 1.28427" stroke="#0E0E0E" stroke-linecap="round" />
+            <path d="M10.7157 11L0.999968 1.28427" stroke="#0E0E0E" stroke-linecap="round" />
+          </svg>
+        </button>
+      </div>
+      <div class="warning__body body-warning">
+        <div class="body-warning__img">
+          <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="27" cy="27" r="24.5" stroke="#3567AC" stroke-width="5" />
+            <path
+                d="M24.4157 31.794H29.6237L30.9257 12.6H23.1137L24.4157 31.794ZM27.0197 42.336C29.3717 42.336 31.0517 40.614 31.0517 38.514C31.0517 36.372 29.3717 34.776 27.0197 34.776C24.6677 34.776 22.9877 36.372 22.9877 38.514C22.9877 40.614 24.6677 42.336 27.0197 42.336Z"
+                fill="#3567AC" />
+          </svg>
+        </div>
+        <p class="body-warning__text">
+          Для ознакомления с отзывами на сайте необходимо зарегистрироваться на сайте.<br>
+          Если вы уже зарегистрированы, то необходимо авторизоваться, нажав кнопку "Вход/регистрация" в шапке сайта,
+          после чего сможете ознакомиться с отзывами или оставить свой отзыв, нажав кнопку "Отзывы".
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

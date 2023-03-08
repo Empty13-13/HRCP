@@ -69,9 +69,21 @@
   }
   
   &__theme-input{
-    input {
-      font-size: 12px;
-      padding: 6px;
+    textarea {
+      padding: 5px;
+      padding-left: 10px;
+    }
+
+    margin-bottom: 10px;
+  }
+
+  &__category {
+    margin-bottom: 10px;
+
+    .select__body {
+      display: inline-flex;
+      min-width: 189px;
+      
     }
   }
 }

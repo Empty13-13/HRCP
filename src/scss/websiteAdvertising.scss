@@ -1,5 +1,6 @@
 .websiteAdvertising {
   margin-bottom: 80px;
+
   a {
     color: $blueColor;
     transition: all 0.3s ease 0s;
@@ -38,6 +39,20 @@
   }
 
   &__text {
+  }
+
+  &__list {
+    li {
+      position: relative;
+      margin-left: 24px;
+
+      &::before {
+        content: "·";
+        position: absolute;
+        left: -12px;
+        font-weight: 700;
+      }
+    }
   }
 
   &__imgBlock {

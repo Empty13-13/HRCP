@@ -4,40 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4586aba3-eec5-4675-b038-8de1450240a0" name="Changes" comment="Правки страниц:&#10;Что содержит Личный кабинет пользователя - accountContent.html&#10;Часто задаваемые вопросы - FAQ.html">
-      <change afterPath="$PROJECT_DIR$/src/article.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/article/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/metrics/google.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/metrics/yandex.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/news/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/tellAboutUs/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/websiteAdvertising/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/websiteAdvertising/2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/websiteAdvertising/3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/websiteAdvertising/4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/news.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/paymentSystem.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scss/article.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scss/news.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scss/paymentSystem.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scss/searchEngine.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scss/sitemap.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scss/websiteAdvertising.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/searchBKRS.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/searchBaidu.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/searchGoogle.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sitemap.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tellAboutUs.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/websiteAdvertising.html" afterDir="false" />
+    <list default="true" id="4586aba3-eec5-4675-b038-8de1450240a0" name="Changes" comment="Сделал страницы:&#10;Аналогичные &quot;Поисковик Google&quot; - searchGoogle.html&#10;&quot;Поисковик Яндекс&quot; - searchYandex.html&#10;&quot;Поисковик БКРС&quot; - searchBKRS.html&#10;&quot;Поисковик Baidu&quot; - searchBaidu.html&#10;Новости - news.html&#10;Новость - article.html&#10;Реклама на сайте - websiteAdvertising.html&#10;Расскажите о нас - tellAboutUs.html&#10;Платежные системы - paymentSystem.html&#10;Карта сайта (развернутое и свернутое меню вместе) - sitemap.html&#10;Яндекс и гугл метрики - в футере страниц">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/findGoogle.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/searchYandex.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/article.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/article.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/html/_footer.htm" beforeDir="false" afterPath="$PROJECT_DIR$/src/html/_footer.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/files/forms/forms.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/files/forms/forms.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/files/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/files/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/footer.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/style.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sizeGuide.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/sizeGuide.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/news.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/news.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/notificationService.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/notificationService.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/paymentSystem.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/paymentSystem.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/notices.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/notices.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/websiteAdvertising.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/websiteAdvertising.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/searchBKRS.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/searchBKRS.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/searchBaidu.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/searchBaidu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/searchGoogle.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/searchGoogle.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/searchYandex.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/searchYandex.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sitemap.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/sitemap.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tellAboutUs.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/tellAboutUs.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/websiteAdvertising.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/websiteAdvertising.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +69,7 @@
       <recent name="D:\Webstrom\HRCP\src" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.build">
+  <component name="RunManager" selected="npm.dev">
     <configuration default="true" type="js.build_tools.gulp">
       <node-interpreter>project</node-interpreter>
       <node-options />
@@ -219,7 +203,9 @@
       <workItem from="1677755237112" duration="5186000" />
       <workItem from="1677834613106" duration="5590000" />
       <workItem from="1677928317773" duration="3536000" />
-      <workItem from="1677954530991" duration="193000" />
+      <workItem from="1677954530991" duration="476000" />
+      <workItem from="1678187320784" duration="33000" />
+      <workItem from="1678267507183" duration="9529000" />
     </task>
     <task id="LOCAL-00001" summary="Закончил страницы:&#10;Учетная запись - userAccount.html&#10;Данные личные/организации  - data.html&#10;Адреса доставки - adresses.html&#10;Контакты - profileContacts.html&#10;Реквизиты - profileDetails.html">
       <created>1667225822154</created>
@@ -326,7 +312,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677585922544</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Сделал страницы:&#10;Аналогичные &quot;Поисковик Google&quot; - searchGoogle.html&#10;&quot;Поисковик Яндекс&quot; - searchYandex.html&#10;&quot;Поисковик БКРС&quot; - searchBKRS.html&#10;&quot;Поисковик Baidu&quot; - searchBaidu.html&#10;Новости - news.html&#10;Новость - article.html&#10;Реклама на сайте - websiteAdvertising.html&#10;Расскажите о нас - tellAboutUs.html&#10;Платежные системы - paymentSystem.html&#10;Карта сайта (развернутое и свернутое меню вместе) - sitemap.html&#10;Яндекс и гугл метрики - в футере страниц">
+      <created>1677954981200</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1677954981200</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -359,7 +352,8 @@
     <MESSAGE value="Правки страниц:&#10;Гид по размерам и как правильно снимать размеры для подбора одежды - sizeGuide.html&#10;Гарантии - guarantees.html&#10;Защита клиента - customerProtection.html&#10;Сервис - service.html&#10;Партнерская программа - affiliateProgram.html" />
     <MESSAGE value="Сделал страницы:&#10;Что содержит Личный кабинет пользователя - accountContent.html&#10;Часто задаваемые вопросы - FAQ.html" />
     <MESSAGE value="Правки страниц:&#10;Что содержит Личный кабинет пользователя - accountContent.html&#10;Часто задаваемые вопросы - FAQ.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Правки страниц:&#10;Что содержит Личный кабинет пользователя - accountContent.html&#10;Часто задаваемые вопросы - FAQ.html" />
+    <MESSAGE value="Сделал страницы:&#10;Аналогичные &quot;Поисковик Google&quot; - searchGoogle.html&#10;&quot;Поисковик Яндекс&quot; - searchYandex.html&#10;&quot;Поисковик БКРС&quot; - searchBKRS.html&#10;&quot;Поисковик Baidu&quot; - searchBaidu.html&#10;Новости - news.html&#10;Новость - article.html&#10;Реклама на сайте - websiteAdvertising.html&#10;Расскажите о нас - tellAboutUs.html&#10;Платежные системы - paymentSystem.html&#10;Карта сайта (развернутое и свернутое меню вместе) - sitemap.html&#10;Яндекс и гугл метрики - в футере страниц" />
+    <option name="LAST_COMMIT_MESSAGE" value="Сделал страницы:&#10;Аналогичные &quot;Поисковик Google&quot; - searchGoogle.html&#10;&quot;Поисковик Яндекс&quot; - searchYandex.html&#10;&quot;Поисковик БКРС&quot; - searchBKRS.html&#10;&quot;Поисковик Baidu&quot; - searchBaidu.html&#10;Новости - news.html&#10;Новость - article.html&#10;Реклама на сайте - websiteAdvertising.html&#10;Расскажите о нас - tellAboutUs.html&#10;Платежные системы - paymentSystem.html&#10;Карта сайта (развернутое и свернутое меню вместе) - sitemap.html&#10;Яндекс и гугл метрики - в футере страниц" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

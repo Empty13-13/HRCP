@@ -1943,7 +1943,34 @@ if (notificationServiceList) {
                                 <textarea id="theme" maxlength="50" name="form[]" placeholder="" class="input"></textarea>
                               </div>
                             </div>
-
+                            <div class="left-block-notices__category">
+                              <label class="left-block-notices__theme-title">Категория сообщения</label>
+                              <select id="category" name="form[]" class="large">
+                                <option value="question">Вопрос</option>
+                                <option value="complain">Жалоба</option>
+                                <option value="inquiry" selected>Запрос</option>
+                                <option value="response">Ответ</option>
+                                <option value="feedback">Отзыв</option>
+                                <option value="suggestion">Предложение</option>
+                                <option value="warning">Предупреждение</option>
+                                <option value="notification">Уведомление</option>
+                              </select>
+                            </div>
+                            <div class="left-block-notices__rating _hidden">
+                              <div class='rating rating_set'>
+                                <div class='rating__body'>
+                                  <div class='rating__active'></div>
+                                  <div class='rating__items'>
+                                    <input type='radio' class='rating__item' value='1' name='rating'>
+                                    <input type='radio' class='rating__item' value='2' name='rating'>
+                                    <input type='radio' class='rating__item' value='3' name='rating'>
+                                    <input type='radio' class='rating__item' value='4' name='rating'>
+                                    <input type='radio' class='rating__item' value='5' name='rating'>
+                                  </div>
+                                </div>
+                                <div class='rating__value'>0</div>
+                              </div>
+                            </div>
                           </div>
                           <div class="block-notices__right right-block-notices">
                           <div id="selectGroup" class="right-block-notices__group">
@@ -1983,6 +2010,7 @@ if (notificationServiceList) {
           //Иницализация селекта
           let select = []
           select.push(div.querySelector('#personaSelect'))
+          select.push(div.querySelector('#category'))
           selectModule.selectsInit(select)
 
           //Клик по кнопке "Выбрать"
@@ -2010,51 +2038,47 @@ if (notificationServiceList) {
           //Обработчик событий по клику на "Ответить"
           let btn = block.querySelector('button')
           let textarea = block.querySelector('textarea')
+
           btn.addEventListener("click", function(e) {
-            //Если нет сообщения
-            if (textarea.value.trim().length < 1) {
-              textarea.focus()
-              textarea.classList.add('_error')
-              return true
+            if(!isMessage()){
+              return false
             }
 
-            //Генерируем новое сообщение
-            let answer = document.createElement('p')
-            answer.classList.add('right-block-notices__text')
-            answer.innerHTML = textarea.value
-
-            //Добавление +1 к хедеру уведомлений
-            let noticesHeader = document.querySelector('[data-notices]')
-            if (noticesHeader.classList.contains('_hidden')) {
-              noticesHeader.classList.remove('_hidden')
-            }
-            noticesHeader.textContent = +noticesHeader.textContent + 1
-
-            //Заменяем "Ваше сообщение" на "Я"
-            block.parentNode.querySelector('.right-block-notices__title').textContent = nameText
-
-            //Вставляем новое сообщение и удаляем textarea
-            block.parentNode.append(answer)
-            block.remove()
+            createMessage();
           })
 
           //Обработчик событий по клику на "Опубликовать/отправить"
           let sendBtn = block.querySelector('[data-sendBtn]')
           sendBtn.addEventListener("click", function(e) {
+            if(!isMessage()){
+              return false
+            }
+
+            //Добавляем желтый фон
+            block.closest('.block-notices').classList.add('_unread')
+            //Переставляем блок вверх
+            notificationServiceList.prepend(div)
+
+            createMessage()
+
+          });
+
+          function isMessage() {
             //Если нет сообщения
             if (textarea.value.trim().length < 1) {
               textarea.focus()
               textarea.classList.add('_error')
-              return true
+              return false
             }
+            return true
+          }
+
+          function createMessage() {
 
             //Генерируем новое сообщение
             let answer = document.createElement('p')
             answer.classList.add('right-block-notices__text')
             answer.innerHTML = textarea.value
-
-            //Заменяем "Ваше сообщение" на "Я"
-            block.parentNode.querySelector('.right-block-notices__title').textContent = nameText
 
             //Добавление +1 к хедеру уведомлений
             let noticesHeader = document.querySelector('[data-notices]')
@@ -2063,12 +2087,8 @@ if (notificationServiceList) {
             }
             noticesHeader.textContent = +noticesHeader.textContent + 1
 
-            //Добавляем желтый фон
-            block.closest('.block-notices').classList.add('_unread')
-            //Переставляем блок вверх
-            notificationServiceList.prepend(div)
-            //Скрываем кнопку "Опубликовать/отправить"
-            sendBtn.classList.add('_hidden')
+            //Заменяем "Ваше сообщение" на "Я"
+            block.parentNode.querySelector('.right-block-notices__title').textContent = nameText
 
             //Вставляем новое сообщение и удаляем textarea
             block.parentNode.append(answer)
@@ -2078,7 +2098,14 @@ if (notificationServiceList) {
             if (addMessageBtn.dataset.upnewbtn !== "") {
               gotoBlock('.block-notices', true, 200)
             }
-          });
+
+            //Рейтинг
+            if (div.querySelector('select#category').value === 'feedback') {
+              div.querySelector('.left-block-notices__rating').classList.remove('_hidden');
+            }
+
+            return true
+          }
 
           // endregion
 
@@ -2095,9 +2122,13 @@ if (notificationServiceList) {
         //Обновление фильтрации
         lines = document.querySelectorAll('[data-date]')
 
+        //Обновление рейтинга
+        formRating();
+
       });
     })
   }
+
 }
 
 // endregion
@@ -2308,7 +2339,7 @@ if (newsList) {
 
 //endregion
 
-// region Metrics
+// region Footer
 
 let yandexMetrics = document.querySelector('#yandexMetrics');
 let googleMetrics = document.querySelector('#googleMetrics');
@@ -2431,7 +2462,6 @@ if (yandexMetrics || googleMetrics) {
     let link = canvasItem.closest('li').querySelector('.footer__link')
     let metric = canvasItem.closest('.metric')
 
-    console.log(link)
     if (link && metric) {
       link.addEventListener("click", function(e) {
         metric.classList.toggle('_hidden')
@@ -2447,6 +2477,26 @@ if (yandexMetrics || googleMetrics) {
       yandexMetrics.closest('.metric').classList.add('_hidden')
       yandexMetrics.closest('li').querySelector('.footer__link').classList.remove('_active')
     }
+  });
+}
+
+//Кнопка "Отзывы"
+let feedbackWarning = document.querySelector('#feedbackWarning')
+let feedbackLink = document.querySelector('#feedbackLink')
+
+if (feedbackWarning && feedbackLink) {
+  let closeBtn = feedbackWarning.querySelector('#closebtn')
+  if (closeBtn) {
+    closeBtn.addEventListener("click", function(e) {
+      feedbackWarning.classList.remove('_active')
+      document.body.classList.remove('lock')
+    });
+  }
+
+  feedbackLink.addEventListener("click", function(e) {
+    document.body.classList.add('lock')
+    feedbackWarning.classList.add('_active')
+    e.preventDefault()
   });
 }
 //endregion

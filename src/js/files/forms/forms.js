@@ -1,6 +1,6 @@
 // Импорт функционала ==============================================================================================================================================================================================================================================================================================================================
 // Вспомогательные функции
-import {isMobile, _slideUp, _slideDown, _slideToggle} from "../functions.js";
+import { isMobile, _slideUp, _slideDown, _slideToggle } from "../functions.js";
 // Модуль попапа
 // import { popupItem } from "../popups.js";
 // Модуль прокрутки к блоку
@@ -24,7 +24,7 @@ export function formFieldsInit() {
       formField.dataset.placeholder = formField.placeholder;
     });
   }
-  document.body.addEventListener("focusin", function (e) {
+  document.body.addEventListener("focusin", function(e) {
     const targetElement = e.target;
     if ((targetElement.tagName === 'INPUT' || targetElement.tagName === 'TEXTAREA')) {
       if (targetElement.dataset.placeholder) {
@@ -36,7 +36,7 @@ export function formFieldsInit() {
       formValidate.removeError(targetElement);
     }
   });
-  document.body.addEventListener("focusout", function (e) {
+  document.body.addEventListener("focusout", function(e) {
     const targetElement = e.target;
     if ((targetElement.tagName === 'INPUT' || targetElement.tagName === 'TEXTAREA')) {
       if (targetElement.dataset.placeholder) {
@@ -158,7 +158,7 @@ export let formValidate = {
   },
   emailTest(formRequiredItem) {
     return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(formRequiredItem.value);
-  }
+  },
 }
 
 /* Отправка форм */
@@ -172,21 +172,21 @@ export function formSubmit(validate) {
 
   async function formSubmit(e) {
     const form = e.target;
-    const error = validate ? formValidate.getErrors(form) : 0;
+    const error = validate? formValidate.getErrors(form) : 0;
     if (error === 0) {
       const message = form.getAttribute('data-message');
       const ajax = form.hasAttribute('data-ajax');
       //SendForm
       if (ajax) {
         e.preventDefault();
-        const formAction = form.getAttribute('action') ? form.getAttribute('action').trim() : '#';
-        const formMethod = form.getAttribute('method') ? form.getAttribute('method').trim() : 'GET';
+        const formAction = form.getAttribute('action')? form.getAttribute('action').trim() : '#';
+        const formMethod = form.getAttribute('method')? form.getAttribute('method').trim() : 'GET';
         const formData = new FormData(form);
 
         form.classList.add('_sending');
         const response = await fetch(formAction, {
           method: formMethod,
-          body: formData
+          body: formData,
         });
         if (response.ok) {
           let responseResult = await response.json();
@@ -223,11 +223,11 @@ export function formSubmit(validate) {
 
 /* Модуь формы "показать пароль" */
 export function formViewpass() {
-  document.addEventListener("click", function (e) {
+  document.addEventListener("click", function(e) {
     let targetElement = e.target;
     if (targetElement.closest('[class*="__viewpass"]')) {
       targetElement = targetElement.closest('[class*="__viewpass"]')
-      let inputType = targetElement.classList.contains('active') ? "password" : "text";
+      let inputType = targetElement.classList.contains('active')? "password" : "text";
       console.log(targetElement)
       targetElement.parentElement.querySelector('input').setAttribute("type", inputType);
       targetElement.classList.toggle('active');
@@ -237,7 +237,7 @@ export function formViewpass() {
 
 /* Модуь формы "колличество" */
 export function formQuantity() {
-  document.addEventListener("click", function (e) {
+  document.addEventListener("click", function(e) {
     let targetElement = e.target;
     if (targetElement.closest('.quantity__button')) {
       let value = parseInt(targetElement.closest('.quantity').querySelector('input').value);
@@ -267,7 +267,7 @@ export function formRating() {
     let ratingActive, ratingValue;
     let resetRating = document.querySelector('#resetRating')
     if (resetRating) {
-      resetRating.addEventListener("click", function (e) {
+      resetRating.addEventListener("click", function(e) {
         let rating1 = document.querySelector('#rating1')
         let rating2 = document.querySelector('#rating2')
         if (rating1 && rating2) {
@@ -317,17 +317,17 @@ export function formRating() {
       const ratingItems = rating.querySelectorAll('.rating__item');
       for (let index = 0; index < ratingItems.length; index++) {
         const ratingItem = ratingItems[index];
-        ratingItem.addEventListener("mouseover", function (e) {
+        ratingItem.addEventListener("mouseover", function(e) {
           // Обновление переменных
           initRatingVars(rating);
           // Обновление активных звезд
           setRatingActiveWidth(ratingItem.value);
         });
-        ratingItem.addEventListener("mouseout", function (e) {
+        ratingItem.addEventListener("mouseout", function(e) {
           // Обновление активных звезд
           setRatingActiveWidth();
         });
-        ratingItem.addEventListener("click", function (e) {
+        ratingItem.addEventListener("click", function(e) {
           // Обновление переменных
           initRatingVars(rating);
 
@@ -342,12 +342,15 @@ export function formRating() {
                 ratingValue.innerHTML = index + 1;
                 setRatingActiveWidth();
               }
+            } else if (rating2 >= index + 1) {
+              rating1 = index + 1
+              ratingValue.innerHTML = index + 1;
+              setRatingActiveWidth();
+
             } else {
-              if (rating2 >= index + 1) {
-                rating1 = index + 1
-                ratingValue.innerHTML = index + 1;
-                setRatingActiveWidth();
-              }
+              // Отобразить указанную оценку
+              ratingValue.innerHTML = index + 1;
+              setRatingActiveWidth();
             }
           }
         });

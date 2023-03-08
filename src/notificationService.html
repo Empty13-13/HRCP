@@ -79,10 +79,30 @@
 <!--всплывать окно с уведомлением для пользователя: "Чтобы перейти по ссылки на выбранную страницу, Вам необходимо пройти-->
 <!--авторизацию на данном сайте" с соответствующей кликабельной кнопкой "Вход/Регистрация"-->
 
-<!--Если пользователь на страницах "Личного кабинета" в левом боковом меню в подразделе "Служба поддержки" выбирает и-->
-<!--нажимает на "Сообщения/уведомления", "Чат", "Звонок", "Сообщить об ошибки", "Электронная почта", то он переходит-->
-<!--(открывает) на страницу "Сообщение/уведомление"-->
 
+<!--  -->
+<!--  -->
+<!--  -->
+<!-- НОВЫЕ КОММЕНТАРИИ -->
+<!--  -->
+<!--  -->
+<!--  -->
+
+<!-- Если Пользователь на страницах "Личного кабинета" в левом боковом меню в подразделе "Служба поддержки" выберет и нажмет -->
+<!-- на "Сообщения/уведомления", "Чат", "Звонок", "Сообщить об ошибке", "Электронная почта", а также в подвале сайта выберет -->
+<!-- и нажмет на "Отзывы" то он переходит (открывает) на страницу "Сообщения/уведомления" -->
+
+<!-- Звездочный рейтинг отображается полностью через CSS. При добавлении нового сообщения происходит переопределение всех -->
+<!-- звездочных рейтингов (чтобы цепануть новый) и отображается он только в том случае, если select.value = "feedback" -->
+<!-- У всех этих селектов id="category" -->
+
+<!-- Виды категорий выводятся для выбора в окне при клике пользователем на него курсора (через селект) -->
+
+<!-- Выбор оценки осуществляется путем наведения и нажатия курсором на соответствующую в очередности звезду, после чего данная звезда и все предшествующие окрашиваются в желтый цвет. -->
+<!-- При клике на "Отзывы" вылазит окно предупреждения (в случае отсутствия авторизации), которое сообщает что если Пользователь хочет ознакомиться с отзывами -->
+<!-- на сайте, то он должен на нем зарегистрироваться, а если он уже зарегистрировался, то должен авторизоваться нажав кнопку -->
+<!-- "Вход/регистрация" в шапке сайта, после чего может ознакомиться с отзывами или оставить свой отзыв, нажав кнопку -->
+<!-- "Отзывы". -->
 
 
 <div class="wrapper">
@@ -111,11 +131,11 @@
                   <button class="search-up-header__photo">
                     <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path
-                        d="M21.4717 6.66022V17.5589C21.4717 18.88 20.4617 19.9671 19.2057 19.9671H3.266C2.02294 19.9671 1 18.8937 1 17.5589V6.66022C1 5.33916 2.00999 4.25204 3.266 4.25204H6.16648L6.74916 0.770508H15.8002L16.3181 4.25204H19.2057C20.4617 4.25204 21.4717 5.3254 21.4717 6.66022Z"
-                        stroke="black" stroke-miterlimit="10" stroke-linejoin="round"/>
+                          d="M21.4717 6.66022V17.5589C21.4717 18.88 20.4617 19.9671 19.2057 19.9671H3.266C2.02294 19.9671 1 18.8937 1 17.5589V6.66022C1 5.33916 2.00999 4.25204 3.266 4.25204H6.16648L6.74916 0.770508H15.8002L16.3181 4.25204H19.2057C20.4617 4.25204 21.4717 5.3254 21.4717 6.66022Z"
+                          stroke="black" stroke-miterlimit="10" stroke-linejoin="round" />
                       <path
-                        d="M11 16.6937C13.2091 16.6937 15 14.7926 15 12.4474C15 10.1023 13.2091 8.20117 11 8.20117C8.79086 8.20117 7 10.1023 7 12.4474C7 14.7926 8.79086 16.6937 11 16.6937Z"
-                        stroke="black" stroke-miterlimit="10" stroke-linejoin="round"/>
+                          d="M11 16.6937C13.2091 16.6937 15 14.7926 15 12.4474C15 10.1023 13.2091 8.20117 11 8.20117C8.79086 8.20117 7 10.1023 7 12.4474C7 14.7926 8.79086 16.6937 11 16.6937Z"
+                          stroke="black" stroke-miterlimit="10" stroke-linejoin="round" />
                     </svg>
                   </button>
                   <button class="search-up-header__button"><img src="img/icons/search.svg" alt=""><span>Найти</span>
@@ -134,7 +154,7 @@
             <span class="line"></span>
             <div class="center-header__block _href"><a href="" class="center-header__btn ">
               <img src="img/icons/header/bell.svg" alt="bells" class="center-header__img">Уведомления <span
-              data-notices>1</span></a>
+                data-notices>1</span></a>
             </div>
             <span class="line"></span>
             <div class="center-header__block _href"><a href="" class="center-header__btn ">
@@ -310,8 +330,8 @@
                                             <svg width="16" height="19" viewBox="0 0 16 19" fill="none"
                                                  xmlns="http://www.w3.org/2000/svg">
                     <path
-                      d="M15.3328 0.788429H3.90412C3.72917 0.788429 3.56129 0.857885 3.43754 0.981651C3.31378 1.10542 3.24415 1.2733 3.24415 1.44841V4.14331C3.24415 4.379 3.37006 4.59692 3.57414 4.71472C3.77839 4.83273 4.02986 4.83273 4.23412 4.71472C4.43821 4.59688 4.56411 4.37897 4.56411 4.14331V2.1046H14.6766V17.1682H4.57127V14.9782V14.9784C4.57127 14.7425 4.44553 14.5246 4.24145 14.4068C4.0372 14.2889 3.78573 14.2889 3.58147 14.4068C3.3772 14.5246 3.25148 14.7425 3.25148 14.9784V17.8282C3.25247 18.0025 3.32241 18.1693 3.44602 18.2925C3.56978 18.4154 3.737 18.4844 3.91147 18.4844H15.3402C15.5151 18.4844 15.683 18.4149 15.8068 18.2912C15.9305 18.1674 16 17.9995 16 17.8244V1.44456C15.9992 1.26895 15.9281 1.10091 15.8028 0.977804C15.6776 0.85453 15.5084 0.786392 15.3328 0.788368L15.3328 0.788429ZM6.71696 5.88701L10.0129 9.18299L10.0462 9.21986H10.046C10.1351 9.32355 10.1892 9.45242 10.2009 9.58853C10.2048 9.63017 10.2048 9.67214 10.2009 9.71378C10.191 9.87211 10.1244 10.0214 10.0129 10.1341L6.7502 13.3969C6.62808 13.5275 6.45807 13.6031 6.27915 13.6061C6.10025 13.609 5.92793 13.5394 5.80136 13.4128C5.67496 13.2864 5.60517 13.1139 5.60814 12.935C5.61126 12.7563 5.68681 12.5863 5.81749 12.4642L7.95577 10.3259H0.659921C0.424234 10.3259 0.206311 10.2001 0.0885057 9.99588C-0.0295019 9.79163 -0.0295019 9.54017 0.0885057 9.33591C0.206349 9.13182 0.424259 9.00608 0.659921 9.00608H7.96335L5.78458 6.81973C5.6539 6.69761 5.57836 6.52775 5.5754 6.34884C5.57244 6.16994 5.64205 5.99746 5.76862 5.87105C5.89502 5.74448 6.06751 5.67487 6.24641 5.67783C6.42515 5.68079 6.59517 5.75633 6.7173 5.88701H6.71696Z"
-                      fill="white"/>
+                        d="M15.3328 0.788429H3.90412C3.72917 0.788429 3.56129 0.857885 3.43754 0.981651C3.31378 1.10542 3.24415 1.2733 3.24415 1.44841V4.14331C3.24415 4.379 3.37006 4.59692 3.57414 4.71472C3.77839 4.83273 4.02986 4.83273 4.23412 4.71472C4.43821 4.59688 4.56411 4.37897 4.56411 4.14331V2.1046H14.6766V17.1682H4.57127V14.9782V14.9784C4.57127 14.7425 4.44553 14.5246 4.24145 14.4068C4.0372 14.2889 3.78573 14.2889 3.58147 14.4068C3.3772 14.5246 3.25148 14.7425 3.25148 14.9784V17.8282C3.25247 18.0025 3.32241 18.1693 3.44602 18.2925C3.56978 18.4154 3.737 18.4844 3.91147 18.4844H15.3402C15.5151 18.4844 15.683 18.4149 15.8068 18.2912C15.9305 18.1674 16 17.9995 16 17.8244V1.44456C15.9992 1.26895 15.9281 1.10091 15.8028 0.977804C15.6776 0.85453 15.5084 0.786392 15.3328 0.788368L15.3328 0.788429ZM6.71696 5.88701L10.0129 9.18299L10.0462 9.21986H10.046C10.1351 9.32355 10.1892 9.45242 10.2009 9.58853C10.2048 9.63017 10.2048 9.67214 10.2009 9.71378C10.191 9.87211 10.1244 10.0214 10.0129 10.1341L6.7502 13.3969C6.62808 13.5275 6.45807 13.6031 6.27915 13.6061C6.10025 13.609 5.92793 13.5394 5.80136 13.4128C5.67496 13.2864 5.60517 13.1139 5.60814 12.935C5.61126 12.7563 5.68681 12.5863 5.81749 12.4642L7.95577 10.3259H0.659921C0.424234 10.3259 0.206311 10.2001 0.0885057 9.99588C-0.0295019 9.79163 -0.0295019 9.54017 0.0885057 9.33591C0.206349 9.13182 0.424259 9.00608 0.659921 9.00608H7.96335L5.78458 6.81973C5.6539 6.69761 5.57836 6.52775 5.5754 6.34884C5.57244 6.16994 5.64205 5.99746 5.76862 5.87105C5.89502 5.74448 6.06751 5.67487 6.24641 5.67783C6.42515 5.68079 6.59517 5.75633 6.7173 5.88701H6.71696Z"
+                        fill="white" />
                     </svg>
                                           </span>
                     Выход
@@ -372,19 +392,19 @@
                                 <span>
                                     <svg width="38" height="38" viewBox="0 0 38 38" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
-<rect width="38" height="38" rx="8" fill="#80A4DE"/>
+<rect width="38" height="38" rx="8" fill="#80A4DE" />
 <path
-  d="M24.928 28.5199H12.0721C10.9309 28.5199 10.002 27.5907 10.002 26.4496V13.5937C10.002 12.4525 10.9309 11.5234 12.0721 11.5234H24.928C26.0709 11.5234 26.9982 12.4526 26.9982 13.5937V26.4496C26.9998 27.5924 26.0708 28.5199 24.928 28.5199ZM12.0721 12.3695C11.3972 12.3695 10.8477 12.919 10.8477 13.5938V26.4497C10.8477 27.1245 11.3972 27.6738 12.0721 27.6738H24.928C25.6028 27.6738 26.1537 27.1245 26.1537 26.4497V13.5938C26.1537 12.9189 25.6045 12.3695 24.928 12.3695H12.0721Z"
-  fill="white"/>
+    d="M24.928 28.5199H12.0721C10.9309 28.5199 10.002 27.5907 10.002 26.4496V13.5937C10.002 12.4525 10.9309 11.5234 12.0721 11.5234H24.928C26.0709 11.5234 26.9982 12.4526 26.9982 13.5937V26.4496C26.9998 27.5924 26.0708 28.5199 24.928 28.5199ZM12.0721 12.3695C11.3972 12.3695 10.8477 12.919 10.8477 13.5938V26.4497C10.8477 27.1245 11.3972 27.6738 12.0721 27.6738H24.928C25.6028 27.6738 26.1537 27.1245 26.1537 26.4497V13.5938C26.1537 12.9189 25.6045 12.3695 24.928 12.3695H12.0721Z"
+    fill="white" />
 <path
-  d="M14.9046 13.7202C14.6706 13.7202 14.4824 13.5303 14.4824 13.2979V10.4221C14.4824 10.1882 14.6723 10 14.9046 10C15.1369 10 15.3286 10.1899 15.3286 10.4221V13.2979C15.3268 13.5302 15.1369 13.7202 14.9046 13.7202Z"
-  fill="white"/>
+    d="M14.9046 13.7202C14.6706 13.7202 14.4824 13.5303 14.4824 13.2979V10.4221C14.4824 10.1882 14.6723 10 14.9046 10C15.1369 10 15.3286 10.1899 15.3286 10.4221V13.2979C15.3268 13.5302 15.1369 13.7202 14.9046 13.7202Z"
+    fill="white" />
 <path
-  d="M22.0313 13.7202C21.7972 13.7202 21.6074 13.5303 21.6074 13.298V10.4223C21.6074 10.1883 21.7972 10 22.0313 10C22.2653 10 22.4535 10.1899 22.4535 10.4223V13.298C22.4552 13.5302 22.2653 13.7202 22.0313 13.7202Z"
-  fill="white"/>
+    d="M22.0313 13.7202C21.7972 13.7202 21.6074 13.5303 21.6074 13.298V10.4223C21.6074 10.1883 21.7972 10 22.0313 10C22.2653 10 22.4535 10.1899 22.4535 10.4223V13.298C22.4552 13.5302 22.2653 13.7202 22.0313 13.7202Z"
+    fill="white" />
 <path
-  d="M26.5761 16.3015H10.4239C10.1899 16.3015 10 16.1115 10 15.8793C10 15.647 10.1899 15.457 10.4239 15.457H26.5761C26.8101 15.457 27 15.647 27 15.8793C27 16.1115 26.8101 16.3015 26.5761 16.3015Z"
-  fill="white"/>
+    d="M26.5761 16.3015H10.4239C10.1899 16.3015 10 16.1115 10 15.8793C10 15.647 10.1899 15.457 10.4239 15.457H26.5761C26.8101 15.457 27 15.647 27 15.8793C27 16.1115 26.8101 16.3015 26.5761 16.3015Z"
+    fill="white" />
 </svg>
 
                                   </span>
@@ -399,19 +419,19 @@
                                 <span>
                                     <svg width="38" height="38" viewBox="0 0 38 38" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
-<rect width="38" height="38" rx="8" fill="#80A4DE"/>
+<rect width="38" height="38" rx="8" fill="#80A4DE" />
 <path
-  d="M24.928 28.5199H12.0721C10.9309 28.5199 10.002 27.5907 10.002 26.4496V13.5937C10.002 12.4525 10.9309 11.5234 12.0721 11.5234H24.928C26.0709 11.5234 26.9982 12.4526 26.9982 13.5937V26.4496C26.9998 27.5924 26.0708 28.5199 24.928 28.5199ZM12.0721 12.3695C11.3972 12.3695 10.8477 12.919 10.8477 13.5938V26.4497C10.8477 27.1245 11.3972 27.6738 12.0721 27.6738H24.928C25.6028 27.6738 26.1537 27.1245 26.1537 26.4497V13.5938C26.1537 12.9189 25.6045 12.3695 24.928 12.3695H12.0721Z"
-  fill="white"/>
+    d="M24.928 28.5199H12.0721C10.9309 28.5199 10.002 27.5907 10.002 26.4496V13.5937C10.002 12.4525 10.9309 11.5234 12.0721 11.5234H24.928C26.0709 11.5234 26.9982 12.4526 26.9982 13.5937V26.4496C26.9998 27.5924 26.0708 28.5199 24.928 28.5199ZM12.0721 12.3695C11.3972 12.3695 10.8477 12.919 10.8477 13.5938V26.4497C10.8477 27.1245 11.3972 27.6738 12.0721 27.6738H24.928C25.6028 27.6738 26.1537 27.1245 26.1537 26.4497V13.5938C26.1537 12.9189 25.6045 12.3695 24.928 12.3695H12.0721Z"
+    fill="white" />
 <path
-  d="M14.9046 13.7202C14.6706 13.7202 14.4824 13.5303 14.4824 13.2979V10.4221C14.4824 10.1882 14.6723 10 14.9046 10C15.1369 10 15.3286 10.1899 15.3286 10.4221V13.2979C15.3268 13.5302 15.1369 13.7202 14.9046 13.7202Z"
-  fill="white"/>
+    d="M14.9046 13.7202C14.6706 13.7202 14.4824 13.5303 14.4824 13.2979V10.4221C14.4824 10.1882 14.6723 10 14.9046 10C15.1369 10 15.3286 10.1899 15.3286 10.4221V13.2979C15.3268 13.5302 15.1369 13.7202 14.9046 13.7202Z"
+    fill="white" />
 <path
-  d="M22.0313 13.7202C21.7972 13.7202 21.6074 13.5303 21.6074 13.298V10.4223C21.6074 10.1883 21.7972 10 22.0313 10C22.2653 10 22.4535 10.1899 22.4535 10.4223V13.298C22.4552 13.5302 22.2653 13.7202 22.0313 13.7202Z"
-  fill="white"/>
+    d="M22.0313 13.7202C21.7972 13.7202 21.6074 13.5303 21.6074 13.298V10.4223C21.6074 10.1883 21.7972 10 22.0313 10C22.2653 10 22.4535 10.1899 22.4535 10.4223V13.298C22.4552 13.5302 22.2653 13.7202 22.0313 13.7202Z"
+    fill="white" />
 <path
-  d="M26.5761 16.3015H10.4239C10.1899 16.3015 10 16.1115 10 15.8793C10 15.647 10.1899 15.457 10.4239 15.457H26.5761C26.8101 15.457 27 15.647 27 15.8793C27 16.1115 26.8101 16.3015 26.5761 16.3015Z"
-  fill="white"/>
+    d="M26.5761 16.3015H10.4239C10.1899 16.3015 10 16.1115 10 15.8793C10 15.647 10.1899 15.457 10.4239 15.457H26.5761C26.8101 15.457 27 15.647 27 15.8793C27 16.1115 26.8101 16.3015 26.5761 16.3015Z"
+    fill="white" />
 </svg>
 
                                   </span>
@@ -431,6 +451,58 @@
                       </div>
                     </div>
                     <div id="notificationServiceList" class="notices__body">
+                      <div data-blockNotices data-date="2023-03-01" class="notices__block block-notices">
+                        <div class="block-notices__body">
+                          <div data-leftNotice class="block-notices__left left-block-notices">
+                            <div class="left-block-notices__title">Сообщение в чате</div>
+                            <div class="left-block-notices__date">01.03.2022</div>
+                            <div class="left-block-notices__date">Просмотрено: 01.03.2022</div>
+                            <div class="left-block-notices__theme">
+                              <label class="left-block-notices__theme-title">Тема сообщения*</label>
+                              <div class="left-block-notices__theme-input">
+                                <textarea id="theme" maxlength="50" name="form[]" placeholder=""
+                                          class="input">Отзыв по товару</textarea>
+                              </div>
+                            </div>
+                            <div class="left-block-notices__category">
+                              <label class="left-block-notices__theme-title">Категория сообщения</label>
+                              <select id="category" name="form[]" class="large">
+                                <option value="question">Вопрос</option>
+                                <option value="complain">Жалоба</option>
+                                <option value="inquiry">Запрос</option>
+                                <option value="response">Ответ</option>
+                                <option value="feedback" selected>Отзыв</option>
+                                <option value="suggestion">Предложение</option>
+                                <option value="warning">Предупреждение</option>
+                                <option value="notification">Уведомление</option>
+                              </select>
+                            </div>
+                            <div class="left-block-notices__rating">
+                              <div class='rating rating_set'>
+                                <div class='rating__body'>
+                                  <div class='rating__active'></div>
+                                  <div class='rating__items'>
+                                    <input type='radio' class='rating__item' value='1' name='rating'>
+                                    <input type='radio' class='rating__item' value='2' name='rating'>
+                                    <input type='radio' class='rating__item' value='3' name='rating'>
+                                    <input type='radio' class='rating__item' value='4' name='rating'>
+                                    <input type='radio' class='rating__item' value='5' name='rating'>
+                                  </div>
+                                </div>
+                                <div class='rating__value'>0</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="block-notices__right right-block-notices">
+                            <div class="right-block-notices__group">
+                              <div class="right-block-notices__title">Я (пользователь)</div>
+                              <p class="right-block-notices__text">Товар пришел быстро, в отличном состоянии. Всем
+                                                                   рекомендую.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
                       <div data-blockNotices data-date="2022-11-05" class="notices__block block-notices">
                         <div class="block-notices__body">
                           <div data-leftNotice class="block-notices__left left-block-notices">
@@ -442,6 +514,35 @@
                               <div class="left-block-notices__theme-input">
                                 <textarea id="theme" maxlength="50" name="form[]" placeholder=""
                                           class="input">Проверка товара</textarea>
+                              </div>
+                            </div>
+
+                            <div class="left-block-notices__category">
+                              <label class="left-block-notices__theme-title">Категория сообщения</label>
+                              <select id="category" name="form[]" class="large">
+                                <option value="question">Вопрос</option>
+                                <option value="complain">Жалоба</option>
+                                <option value="inquiry">Запрос</option>
+                                <option value="response" selected>Ответ</option>
+                                <option value="feedback">Отзыв</option>
+                                <option value="suggestion">Предложение</option>
+                                <option value="warning">Предупреждение</option>
+                                <option value="notification">Уведомление</option>
+                              </select>
+                            </div>
+                            <div class="left-block-notices__rating">
+                              <div class='rating rating_set'>
+                                <div class='rating__body'>
+                                  <div class='rating__active'></div>
+                                  <div class='rating__items'>
+                                    <input type='radio' class='rating__item' value='1' name='rating'>
+                                    <input type='radio' class='rating__item' value='2' name='rating'>
+                                    <input type='radio' class='rating__item' value='3' name='rating'>
+                                    <input type='radio' class='rating__item' value='4' name='rating'>
+                                    <input type='radio' class='rating__item' value='5' name='rating'>
+                                  </div>
+                                </div>
+                                <div class='rating__value'>0</div>
                               </div>
                             </div>
                           </div>
@@ -473,6 +574,35 @@
                                           class="input">Приход заказа</textarea>
                               </div>
                             </div>
+
+                            <div class="left-block-notices__category">
+                              <label class="left-block-notices__theme-title">Категория сообщения</label>
+                              <select id="category" name="form[]" class="large">
+                                <option value="question">Вопрос</option>
+                                <option value="complain">Жалоба</option>
+                                <option value="inquiry">Запрос</option>
+                                <option value="response">Ответ</option>
+                                <option value="feedback">Отзыв</option>
+                                <option value="suggestion">Предложение</option>
+                                <option value="warning">Предупреждение</option>
+                                <option value="notification" selected>Уведомление</option>
+                              </select>
+                            </div>
+                            <div class="left-block-notices__rating">
+                              <div class='rating rating_set'>
+                                <div class='rating__body'>
+                                  <div class='rating__active'></div>
+                                  <div class='rating__items'>
+                                    <input type='radio' class='rating__item' value='1' name='rating'>
+                                    <input type='radio' class='rating__item' value='2' name='rating'>
+                                    <input type='radio' class='rating__item' value='3' name='rating'>
+                                    <input type='radio' class='rating__item' value='4' name='rating'>
+                                    <input type='radio' class='rating__item' value='5' name='rating'>
+                                  </div>
+                                </div>
+                                <div class='rating__value'>0</div>
+                              </div>
+                            </div>
                           </div>
                           <div class="block-notices__right right-block-notices">
                             <div class="right-block-notices__group">
@@ -493,6 +623,35 @@
                               <div class="left-block-notices__theme-input">
                                 <textarea id="theme" maxlength="50" name="form[]" placeholder=""
                                           class="input">Проверка товара</textarea>
+                              </div>
+                            </div>
+
+                            <div class="left-block-notices__category">
+                              <label class="left-block-notices__theme-title">Категория сообщения</label>
+                              <select id="category" name="form[]" class="large">
+                                <option value="question">Вопрос</option>
+                                <option value="complain">Жалоба</option>
+                                <option value="inquiry">Запрос</option>
+                                <option value="response" selected>Ответ</option>
+                                <option value="feedback">Отзыв</option>
+                                <option value="suggestion">Предложение</option>
+                                <option value="warning">Предупреждение</option>
+                                <option value="notification">Уведомление</option>
+                              </select>
+                            </div>
+                            <div class="left-block-notices__rating">
+                              <div class='rating rating_set'>
+                                <div class='rating__body'>
+                                  <div class='rating__active'></div>
+                                  <div class='rating__items'>
+                                    <input type='radio' class='rating__item' value='1' name='rating'>
+                                    <input type='radio' class='rating__item' value='2' name='rating'>
+                                    <input type='radio' class='rating__item' value='3' name='rating'>
+                                    <input type='radio' class='rating__item' value='4' name='rating'>
+                                    <input type='radio' class='rating__item' value='5' name='rating'>
+                                  </div>
+                                </div>
+                                <div class='rating__value'>0</div>
                               </div>
                             </div>
                           </div>
@@ -526,6 +685,35 @@
                               <div class="left-block-notices__theme-input">
                                 <textarea id="theme" maxlength="50" name="form[]" placeholder=""
                                           class="input">Запрос о товаре</textarea>
+                              </div>
+                            </div>
+
+                            <div class="left-block-notices__category">
+                              <label class="left-block-notices__theme-title">Категория сообщения</label>
+                              <select id="category" name="form[]" class="large">
+                                <option value="question">Вопрос</option>
+                                <option value="complain">Жалоба</option>
+                                <option value="inquiry" selected>Запрос</option>
+                                <option value="response">Ответ</option>
+                                <option value="feedback">Отзыв</option>
+                                <option value="suggestion">Предложение</option>
+                                <option value="warning">Предупреждение</option>
+                                <option value="notification">Уведомление</option>
+                              </select>
+                            </div>
+                            <div class="left-block-notices__rating">
+                              <div class='rating rating_set'>
+                                <div class='rating__body'>
+                                  <div class='rating__active'></div>
+                                  <div class='rating__items'>
+                                    <input type='radio' class='rating__item' value='1' name='rating'>
+                                    <input type='radio' class='rating__item' value='2' name='rating'>
+                                    <input type='radio' class='rating__item' value='3' name='rating'>
+                                    <input type='radio' class='rating__item' value='4' name='rating'>
+                                    <input type='radio' class='rating__item' value='5' name='rating'>
+                                  </div>
+                                </div>
+                                <div class='rating__value'>0</div>
                               </div>
                             </div>
                           </div>
@@ -559,6 +747,35 @@
                               <div class="left-block-notices__theme-input">
                                 <textarea id="theme" maxlength="50" name="form[]" placeholder=""
                                           class="input">Запрос о товаре</textarea>
+                              </div>
+                            </div>
+
+                            <div class="left-block-notices__category">
+                              <label class="left-block-notices__theme-title">Категория сообщения</label>
+                              <select id="category" name="form[]" class="large">
+                                <option value="question">Вопрос</option>
+                                <option value="complain">Жалоба</option>
+                                <option value="inquiry" selected>Запрос</option>
+                                <option value="response">Ответ</option>
+                                <option value="feedback">Отзыв</option>
+                                <option value="suggestion">Предложение</option>
+                                <option value="warning">Предупреждение</option>
+                                <option value="notification">Уведомление</option>
+                              </select>
+                            </div>
+                            <div class="left-block-notices__rating">
+                              <div class='rating rating_set'>
+                                <div class='rating__body'>
+                                  <div class='rating__active'></div>
+                                  <div class='rating__items'>
+                                    <input type='radio' class='rating__item' value='1' name='rating'>
+                                    <input type='radio' class='rating__item' value='2' name='rating'>
+                                    <input type='radio' class='rating__item' value='3' name='rating'>
+                                    <input type='radio' class='rating__item' value='4' name='rating'>
+                                    <input type='radio' class='rating__item' value='5' name='rating'>
+                                  </div>
+                                </div>
+                                <div class='rating__value'>0</div>
                               </div>
                             </div>
                           </div>
@@ -612,9 +829,9 @@
                                                                        телефона с указанием кода страны и региона.
                     </div>
                     <div class="notificationService__warning _warning">* С нами можно общаться по электронной почте <a
-                      href="mailto:office@horecaprof.ru">office@horecaprof.ru</a></div>
+                        href="mailto:office@horecaprof.ru">office@horecaprof.ru</a></div>
                     <div class="notificationService__warning _warning">* С нами можно связаться по номеру телефона <a
-                      href="tel:+79025573616">+7 902 557-36-16</a></div>
+                        href="tel:+79025573616">+7 902 557-36-16</a></div>
                     <div class="notificationService__warning _warning">* Мы работаем каждый день с 10-00 до 17-00
                                                                        местного времени, по UTC +10
                     </div>
@@ -641,8 +858,8 @@
                       <button class="nav-products-catalog__btn-next"><span>Вперёд</span>
                         <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path
-                            d="M0.428185 14.208C0.232923 14.4032 0.232923 14.7198 0.428185 14.9151C0.623447 15.1103 0.940029 15.1103 1.13529 14.9151L0.428185 14.208ZM7.56308 7.78018L7.91664 8.13373L8.27019 7.78017L7.91663 7.42662L7.56308 7.78018ZM1.13529 0.645465C0.940022 0.450206 0.623439 0.45021 0.42818 0.645475C0.232921 0.84074 0.232925 1.15732 0.42819 1.35258L1.13529 0.645465ZM1.13529 14.9151L7.91664 8.13373L7.20953 7.42663L0.428185 14.208L1.13529 14.9151ZM0.42819 1.35258L7.20953 8.13374L7.91663 7.42662L1.13529 0.645465L0.42819 1.35258Z"
-                            fill="#80A4DE"/>
+                              d="M0.428185 14.208C0.232923 14.4032 0.232923 14.7198 0.428185 14.9151C0.623447 15.1103 0.940029 15.1103 1.13529 14.9151L0.428185 14.208ZM7.56308 7.78018L7.91664 8.13373L8.27019 7.78017L7.91663 7.42662L7.56308 7.78018ZM1.13529 0.645465C0.940022 0.450206 0.623439 0.45021 0.42818 0.645475C0.232921 0.84074 0.232925 1.15732 0.42819 1.35258L1.13529 0.645465ZM1.13529 14.9151L7.91664 8.13373L7.20953 7.42663L0.428185 14.208L1.13529 14.9151ZM0.42819 1.35258L7.20953 8.13374L7.91663 7.42662L1.13529 0.645465L0.42819 1.35258Z"
+                              fill="#80A4DE" />
                         </svg>
                       </button>
                     </div>
