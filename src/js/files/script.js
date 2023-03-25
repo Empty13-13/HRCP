@@ -1944,7 +1944,7 @@ if (notificationServiceList) {
                               </div>
                             </div>
                             <div class="left-block-notices__category">
-                              <label class="left-block-notices__theme-title">Категория сообщения</label>
+                              <label class="left-block-notices__theme-title">Категория сообщения*</label>
                               <select id="category" name="form[]" class="large">
                                 <option value="question">Вопрос</option>
                                 <option value="complain">Жалоба</option>
@@ -2341,6 +2341,7 @@ if (newsList) {
 
 // region Footer
 
+//Метрики
 let yandexMetrics = document.querySelector('#yandexMetrics');
 let googleMetrics = document.querySelector('#googleMetrics');
 
